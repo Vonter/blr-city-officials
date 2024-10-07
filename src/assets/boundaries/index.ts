@@ -1,6 +1,5 @@
 import {
   format_default,
-  format_bid,
 } from './format';
 
 export type BoundaryId =
@@ -12,6 +11,7 @@ export type BoundaryId =
   | 'bwssb_service_station'
   | 'police_city'
   | 'police_traffic'
+  | 'pincode'
   | 'admin_district'
   | 'admin_taluk'
   | 'election_ac'
@@ -123,6 +123,16 @@ export const layers: ILayers = {
     description_url: '',
     icon: '🚔',
     formatUrl: name => 'https://btp.gov.in/',
+    formatContent: name => name
+  },
+  pincode: {
+    name: 'PIN Code',
+    name_long: 'Pin Codes',
+    description:
+      '',
+    description_url: '',
+    icon: '📮',
+    formatUrl: name => 'https://www.indiapost.gov.in/sites/PostalCircles/Karnataka/Pages/cpio.aspx',
     formatContent: name => name
   },
   admin_district: {

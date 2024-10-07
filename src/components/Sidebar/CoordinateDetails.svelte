@@ -19,7 +19,7 @@
   async function queryAllDistrictsForCoordinates(lngLat: LngLat) {
     districtsIntersectingAddress = [];
     isLoading = true;
-    const intersectsUrl = `./boundaries/${boundaryId}.geojson`;
+    const intersectsUrl = `./boundaries/${boundaryId}.topojson`;
     await fetch(intersectsUrl)
       .then(res => res.json())
       .then(({ features }) => {

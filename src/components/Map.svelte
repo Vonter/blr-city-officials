@@ -6,6 +6,7 @@
     hoveredDistrictId
   } from '../stores';
   import type { Feature } from 'geojson';
+  import * as topojson from 'topojson-client';
   import maplibregl from 'maplibre-gl';
   import 'maplibre-gl/dist/maplibre-gl.css';
   import { layers } from '../assets/boundaries';
@@ -55,8 +56,10 @@
 
     map.on('click', () => onDistrictChange(null));
 
-    $mapStore = map;
-    $mapStore.resize();
+    map.on('style.load', () => {
+      $mapStore = map;
+      $mapStore.resize();
+    });
 
     return {
       destroy: () => {
@@ -85,8 +88,10 @@
 
     // Load source if not already loaded
     if ($mapStore && !$mapStore.getSource(boundaryId)) {
-      const url = `./boundaries/${boundaryId}.geojson`;
-      const data = await fetch(url).then(res => res.json());
+      const url = `./boundaries/${boundaryId}.topojson`;
+      const data = await fetch(url)
+        .then(res => res.json())
+        .then(json => topojson.feature(json, json.objects[boundaryId]));
 
       $mapStore
         .addSource(boundaryId, {
