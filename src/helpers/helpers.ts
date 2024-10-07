@@ -89,3 +89,14 @@ export function zoomToBound(map: mapboxgl.Map, bounds: turf.BBox) {
 export function resetZoom(map: mapboxgl.Map) {
   map.flyTo(defaultZoom);
 }
+
+export function getDownloadableUrl(content: Object, geojson: boolean) {
+  if (geojson) {
+    const jsonContent = JSON.stringify(content, null, 2);
+    const blob = new Blob([jsonContent], {type: 'application/json'});
+    return URL.createObjectURL(blob);
+  } else {
+    const blob = new Blob([content]);
+    return URL.createObjectURL(blob);
+  }
+}

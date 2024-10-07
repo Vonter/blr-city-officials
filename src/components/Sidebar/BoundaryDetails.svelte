@@ -8,15 +8,23 @@
     mapStore
   } from '../../stores';
   import { clickOutside } from 'svelte-use-click-outside';
-  import { resetZoom, sortedDistricts } from '../../helpers/helpers';
+  import {
+    resetZoom,
+    sortedDistricts,
+    getDownloadableUrl
+  } from '../../helpers/helpers';
   import DistrictLink from './DistrictLink.svelte';
   import Loader from '../Loader.svelte';
+  import * as topojson from 'topojson-client';
   import type { Feature } from 'geojson';
+  import { toKML } from '@placemarkio/tokml';
 
   let value = '';
   let districts: Feature[] = [];
   let isLoading: boolean;
   let isDetailPaneOpen: boolean = false;
+  let geojsonDownloadUrl: string = '';
+  let kmlDownloadUrl: string = '';
 
   function onDistrictMouseOver(districtId: string) {
     if ($hoveredDistrictId && $selectedBoundaryMap) {
@@ -51,19 +59,20 @@
     resetZoom($mapStore);
   }
 
-  async function queryAllDistrictsForMap(boundaryId: string) {
-    isLoading = true;
-    const url = `./boundaries/${boundaryId}.geojson`;
-    await fetch(url)
-      .then(res => res.json())
-      .then(({ features }) => {
-        isLoading = false;
-        districts = sortedDistricts(features);
+  function getDistricts(boundaryId: string, map: maplibregl.Map) {
+    if (map.isStyleLoaded() && map.getSource(boundaryId)) {
+      map.getSource(boundaryId).getData().then(data => {
+        districts = sortedDistricts(data.features);
+        geojsonDownloadUrl = getDownloadableUrl(data, true);
+        kmlDownloadUrl = getDownloadableUrl(toKML(data), false);
       });
+    } else {
+      setTimeout(() => getDistricts(boundaryId, map), 100)
+    }
   }
 
-  $: {
-    $selectedBoundaryMap && queryAllDistrictsForMap($selectedBoundaryMap);
+  $: if ($mapStore) {
+    getDistricts($selectedBoundaryMap, $mapStore)
   }
 </script>
 
@@ -133,7 +142,8 @@
             >
           {/if}
           <a
-            href="./boundaries/{$selectedBoundaryMap}.geojson"
+            href={geojsonDownloadUrl}
+            download="{$selectedBoundaryMap}.geojson"
             class="flex items-center py-1 px-3 -ml-4 text-gray-400
                     hover:text-gray-900 focus:outline-none focus:ring focus:ring-blue-500"
             target="_blank"
@@ -155,6 +165,31 @@
               />
             </svg>
             GeoJSON
+          </a>
+          <a
+            href={kmlDownloadUrl}
+            download="{$selectedBoundaryMap}.kml"
+            class="flex items-center py-1 px-3 -ml-4 text-gray-400
+                    hover:text-gray-900 focus:outline-none focus:ring focus:ring-blue-500"
+            target="_blank"
+            title="KML"
+            rel="noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-5 w-5 inline-block mr-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+              />
+            </svg>
+            KML
           </a>
         </div>
       </div>

@@ -11,8 +11,10 @@
     "lint:fix": "eslint --fix './src/**/*.{js,ts,svelte}'"
   },
   "devDependencies": {
+    "@placemarkio/tokml": "^0.3.4",
     "@sveltejs/vite-plugin-svelte": "^3.1.2",
     "@tsconfig/svelte": "^5.0.4",
+    "@types/topojson-client": "^3.1.5",
     "@typescript-eslint/parser": "^8.8.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.12.0",
@@ -27,6 +29,7 @@
     "svelte-eslint-parser": "^0.41.1",
     "svelte-preprocess": "^6.0.3",
     "tailwindcss": "^3.4.13",
+    "topojson-client": "^3.1.0",
     "tslib": "^2.7.0",
     "typescript": "^5.6.2",
     "vite": "^5.4.8"
