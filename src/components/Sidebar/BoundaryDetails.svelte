@@ -61,18 +61,21 @@
 
   function getDistricts(boundaryId: string, map: maplibregl.Map) {
     if (map.isStyleLoaded() && map.getSource(boundaryId)) {
-      map.getSource(boundaryId).getData().then(data => {
-        districts = sortedDistricts(data.features);
-        geojsonDownloadUrl = getDownloadableUrl(data, true);
-        kmlDownloadUrl = getDownloadableUrl(toKML(data), false);
-      });
+      map
+        .getSource(boundaryId)
+        .getData()
+        .then(data => {
+          districts = sortedDistricts(data.features);
+          geojsonDownloadUrl = getDownloadableUrl(data, true);
+          kmlDownloadUrl = getDownloadableUrl(toKML(data), false);
+        });
     } else {
-      setTimeout(() => getDistricts(boundaryId, map), 100)
+      setTimeout(() => getDistricts(boundaryId, map), 100);
     }
   }
 
   $: if ($mapStore) {
-    getDistricts($selectedBoundaryMap, $mapStore)
+    getDistricts($selectedBoundaryMap, $mapStore);
   }
 </script>
 
