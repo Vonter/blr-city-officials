@@ -59,6 +59,7 @@
     map.on('style.load', () => {
       $mapStore = map;
       $mapStore.resize();
+      $mapStore.removeLayer('boundary_county');
     });
 
     return {
