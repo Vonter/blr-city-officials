@@ -1,11 +1,13 @@
 import polylabel from '@mapbox/polylabel';
 import type { Feature, Position } from 'geojson';
-import * as turf from '@turf/turf';
+import turfArea from '@turf/area';
+import * as turf from '@turf/bbox';
+import turfUnion from '@turf/union';
 import type maplibregl from 'maplibre-gl';
 
 export const defaultZoom: Partial<maplibregl.MapOptions> = {
   zoom: 9.6,
-  center: [77.590,12.997]
+  center: [77.600,12.988]
 };
 
 export function findPolylabel(feature: Feature) {
@@ -19,7 +21,7 @@ export function findPolylabel(feature: Feature) {
       maxPolygon: Position[][] = [];
     for (let i = 0, l = feature.geometry.coordinates.length; i < l; i++) {
       const p = feature.geometry.coordinates[i];
-      const area = turf.area({ type: 'Polygon', coordinates: p });
+      const area = turfArea({ type: 'Polygon', coordinates: p });
       if (area > maxArea) {
         maxPolygon = p;
         maxArea = area;
@@ -45,7 +47,7 @@ export function sortedDistricts(features: Feature[]) {
 }
 
 export function getDistrictFromSource(
-  map: mapboxgl.Map,
+  map: maplibregl.Map,
   sourceId: string,
   districtId: string
 ) {
@@ -57,7 +59,7 @@ export function getDistrictFromSource(
 
   const mergedFeature = features.reduce((polygon, feature) => {
     if (polygon) {
-      return turf.union(polygon, feature.toJSON().geometry);
+      return turfUnion(polygon, feature.toJSON().geometry);
     } else {
       return feature.toJSON().geometry;
     }
@@ -73,7 +75,7 @@ export function getDistrictFromSource(
   }
 }
 
-export function zoomToBound(map: mapboxgl.Map, bounds: turf.BBox) {
+export function zoomToBound(map: maplibregl.Map, bounds: turf.BBox) {
   // Turf's bbox can return either Box2D (4-item array) or Box3D (6-item array)
   // fitBounds() only accepts a 4-item array, so we need to save the output before using it
   // See https://github.com/Turfjs/turf/issues/1807
@@ -86,7 +88,7 @@ export function zoomToBound(map: mapboxgl.Map, bounds: turf.BBox) {
   });
 }
 
-export function resetZoom(map: mapboxgl.Map) {
+export function resetZoom(map: maplibregl.Map) {
   map.flyTo(defaultZoom);
 }
 

@@ -5,27 +5,31 @@
     addressMarker,
     coordinatesMarker,
     isSelectingCoordinates,
-    selectedCoordinates
+    selectedCoordinates,
+    boundaries
   } from '../../stores';
   import OverlapList from './OverlapList.svelte';
   import type { Feature } from 'geojson';
   import type { LngLat } from 'maplibre-gl';
   import maplibregl from 'maplibre-gl';
   import { resetZoom } from '../../helpers/helpers';
+  import PolygonLookup from 'polygon-lookup';
 
   let districtsIntersectingAddress: Feature[];
   let isLoading = false;
+  let lookup: Object | null = null;
 
-  async function queryAllDistrictsForCoordinates(lngLat: LngLat) {
+  function queryAllDistrictsForCoordinates(lngLat: LngLat) {
     districtsIntersectingAddress = [];
+    console.log(lngLat);
     isLoading = true;
-    const intersectsUrl = `./boundaries/${boundaryId}.topojson`;
-    await fetch(intersectsUrl)
-      .then(res => res.json())
-      .then(({ features }) => {
-        isLoading = false;
-        districtsIntersectingAddress = features;
-      });
+    console.log($boundaries);
+    lookup = new PolygonLookup($boundaries)
+    console.log(lookup);
+    districtsIntersectingAddress = lookup.search(lngLat.lng, lngLat.lat, -1).features;
+    console.log(lookup.search(lngLat.lng, lngLat.lat, -1));
+    console.log(districtsIntersectingAddress);
+    isLoading = false;
   }
 
   function getCoordinateTitle(lngLat: LngLat | null) {
@@ -39,7 +43,7 @@
     resetZoom($mapStore);
   }
 
-  $: if ($mapStore && $selectedCoordinates) {
+  $: if ($mapStore && $selectedCoordinates && $boundaries) {
     queryAllDistrictsForCoordinates($selectedCoordinates);
     $mapStore.flyTo({ center: $selectedCoordinates, zoom: 13 });
 
@@ -55,7 +59,7 @@
       $mapStore.getCanvas().style.cursor = 'crosshair';
 
       $mapStore.once('click', e => {
-        selectedCoordinates.set(e.lngLat);
+        selectedCoordinates.set({lat: e.lngLat.lat.toFixed(5), lng: e.lngLat.lng.toFixed(5)});
         isSelectingCoordinates.set(false);
       });
     } else {
@@ -70,8 +74,6 @@
 />
 <div class="py-2">
   {#if $selectedCoordinates}
-    <!--
     <OverlapList districts={districtsIntersectingAddress} {isLoading} />
--->
   {/if}
 </div>
