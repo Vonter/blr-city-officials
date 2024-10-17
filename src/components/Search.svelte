@@ -1,19 +1,39 @@
 <script lang="ts">
   import maplibregl from 'maplibre-gl';
+  import { onMount } from 'svelte';
   import {
     mapStore,
     addressMarker,
     coordinatesMarker,
     selectedBoundaryMap,
+    isMapReady,
     selectedDistrict,
     selectedCoordinates,
-    isSelectingCoordinates,
+    isSelectingCoordinates
   } from '../stores';
 
   let value: string;
 
+  onMount(() => {
+    const unsubscribe = isMapReady.subscribe(ready => {
+      if (ready) {
+        initializeMarkers();
+      }
+    });
+
+    return unsubscribe;
+  });
+
+  function initializeMarkers() {
+    if ($selectedCoordinates) {
+      $coordinatesMarker = new maplibregl.Marker({ color: '#2463eb' })
+        .setLngLat($selectedCoordinates)
+        .addTo($mapStore);
+    }
+  }
+
   function onChange(e) {
-    if (e) {
+    if (e && $isMapReady) {
       selectedCoordinates.set(null);
       selectedBoundaryMap.set(null);
       selectedDistrict.set(null);

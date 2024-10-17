@@ -4,7 +4,8 @@
     selectedDistrict,
     mapStore,
     hoveredDistrictId,
-    boundaries
+    boundaries,
+    isMapReady
   } from '../stores';
   import type { Feature } from 'geojson';
   import maplibregl from 'maplibre-gl';
@@ -56,9 +57,14 @@
 
     map.on('click', () => onDistrictChange(null));
 
-    map.on('style.load', () => {
+    map.on('load', () => {
       $mapStore = map;
-      $mapStore.resize();
+      map.resize();
+
+      isMapReady.set(true);
+    });
+
+    map.on('style.load', () => {
       $mapStore.removeLayer('boundary_county');
     });
 
@@ -262,7 +268,7 @@
           $selectedDistrict
         );
         if (feature) {
-          zoomToBound($mapStore, turf.bbox(feature));
+          zoomToBound($mapStore, turfBbox(feature));
         }
       }
 
@@ -275,9 +281,13 @@
     prevDistrictId = $selectedDistrict;
   }
 
-  $: $boundaries && loadMap();
+  $: if ($isMapReady && $boundaries) {
+    loadMap();
+  }
 
-  $: isSourceLoaded && $selectedBoundaryMap ? showMap($selectedBoundaryMap) : clearMap();
+  $: isSourceLoaded && $selectedBoundaryMap
+    ? showMap($selectedBoundaryMap)
+    : clearMap();
 
   $: isSourceLoaded && onDistrictChange($selectedDistrict);
 </script>

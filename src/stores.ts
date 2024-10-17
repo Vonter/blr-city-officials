@@ -12,7 +12,10 @@ function getLngLatObjectFromUrl(
   if (!lng || !lat) {
     return null;
   }
-  return { lng: parseFloat(lng).toFixed(5), lat: parseFloat(lat).toFixed(5) } as LngLat;
+  return {
+    lng: parseFloat(lng).toFixed(5),
+    lat: parseFloat(lat).toFixed(5)
+  } as LngLat;
 }
 
 export const selectedBoundaryMap = writable<string | null>(params.get('map'));
@@ -32,10 +35,11 @@ export const boundaries = readable(null, set => {
     .then(topojson => feature(topojson, topojson.objects.Clipped))
     .then(geojson => set(geojson))
     .catch(error => {
-        console.error('Error fetching boundaries:', error);
-        set(null);
+      console.error('Error fetching boundaries:', error);
+      set(null);
     });
 
-  return () => {
-  }
+  return () => {};
 });
+
+export const isMapReady = writable<boolean>(false);
