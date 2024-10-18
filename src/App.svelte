@@ -6,6 +6,7 @@
   } from './stores';
   import Map from './components/Map.svelte';
   import Sidebar from './components/Sidebar/Sidebar.svelte';
+  import Controls from './components/Controls.svelte';
 
   const params = new URLSearchParams(window.location.search);
 
@@ -36,6 +37,7 @@
 >
   <Sidebar />
   <div class="relative flex-1 order-first md:order-last">
+    <Controls />
     <Map />
   </div>
 </main>

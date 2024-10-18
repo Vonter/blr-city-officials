@@ -3,20 +3,16 @@
     selectedBoundaryMap,
     selectedDistrict,
     mapStore,
-    hoveredDistrictId
+    hoveredDistrictId,
+    boundaries,
+    isMapReady
   } from '../stores';
   import type { Feature } from 'geojson';
-  import * as topojson from 'topojson-client';
   import maplibregl from 'maplibre-gl';
   import 'maplibre-gl/dist/maplibre-gl.css';
   import { layers } from '../assets/boundaries';
-  import * as turf from '@turf/turf';
-  import {
-    defaultZoom,
-    findPolylabel,
-    getDistrictFromSource,
-    zoomToBound
-  } from '../helpers/helpers';
+  import turfBbox from '@turf/bbox';
+  import { defaultZoom, findPolylabel, zoomToBound } from '../helpers/helpers';
 
   let map: maplibregl.Map;
   let isSourceLoaded = false;
@@ -56,10 +52,12 @@
 
     map.on('click', () => onDistrictChange(null));
 
-    map.on('style.load', () => {
+    map.on('load', () => {
       $mapStore = map;
-      $mapStore.resize();
-      $mapStore.removeLayer('boundary_county');
+      map.resize();
+      map.removeLayer('boundary_county');
+
+      isMapReady.set(true);
     });
 
     return {
@@ -84,27 +82,20 @@
     }
   }
 
-  async function showMap(boundaryId: string) {
-    clearMap();
-
+  async function loadMap() {
     // Load source if not already loaded
-    if ($mapStore && !$mapStore.getSource(boundaryId)) {
-      const url = `./boundaries/${boundaryId}.topojson`;
-      const data = await fetch(url)
-        .then(res => res.json())
-        .then(json => topojson.feature(json, json.objects[boundaryId]));
-
+    if ($mapStore && !$mapStore.getSource('boundaries')) {
       $mapStore
-        .addSource(boundaryId, {
+        .addSource('boundaries', {
           type: 'geojson',
           promoteId: 'namecol',
-          data
+          data: $boundaries
         })
-        .addSource(`${boundaryId}-centerpoints`, {
+        .addSource('boundaries-centerpoints', {
           type: 'geojson',
           data: {
             type: 'FeatureCollection',
-            features: data.features.map((feature: Feature) => {
+            features: $boundaries.features.map((feature: Feature) => {
               feature.geometry = {
                 type: 'Point',
                 coordinates: findPolylabel(feature)
@@ -115,19 +106,22 @@
         });
 
       $mapStore.on('sourcedata', source => {
-        if (source.sourceId === boundaryId && source.isSourceLoaded) {
-          const features = map?.querySourceFeatures(boundaryId);
-          isSourceLoaded = !!features?.length;
+        if (source.sourceId === 'boundaries' && source.isSourceLoaded) {
+          isSourceLoaded = true;
         }
       });
     }
+  }
+
+  async function showMap(boundaryId: string) {
+    clearMap();
 
     if ($mapStore) {
       $mapStore
         .addLayer({
           id: `${boundaryId}-layer`,
           type: 'fill',
-          source: boundaryId,
+          source: 'boundaries',
           paint: {
             'fill-color': '#2463eb',
             'fill-opacity': [
@@ -136,12 +130,13 @@
               0.2,
               0.05
             ]
-          }
+          },
+          filter: ['==', 'id', boundaryId]
         })
         .addLayer({
           id: `${boundaryId}-stroke-layer`,
           type: 'line',
-          source: boundaryId,
+          source: 'boundaries',
           paint: {
             'line-color': '#2463eb',
             'line-width': [
@@ -154,12 +149,13 @@
               2,
               1
             ]
-          }
+          },
+          filter: ['==', 'id', boundaryId]
         })
         .addLayer({
           id: `${boundaryId}-label-layer`,
           type: 'symbol',
-          source: `${boundaryId}-centerpoints`,
+          source: `boundaries-centerpoints`,
           paint: {
             'text-color': '#2463eb',
             'text-halo-color': 'rgba(255,255,255,0.9)',
@@ -168,7 +164,8 @@
           layout: {
             'text-field': ['get', 'namecol'],
             'text-size': ['interpolate', ['linear'], ['zoom'], 11, 12.5, 32, 60]
-          }
+          },
+          filter: ['==', 'id', boundaryId]
         });
 
       const popup = new maplibregl.Popup({
@@ -183,13 +180,13 @@
           if (e.features.length > 0) {
             if ($hoveredDistrictId !== null) {
               $mapStore?.setFeatureState(
-                { source: boundaryId, id: $hoveredDistrictId },
+                { source: 'boundaries', id: $hoveredDistrictId },
                 { hover: false }
               );
             }
             $hoveredDistrictId = e.features[0].properties?.namecol;
             $mapStore.setFeatureState(
-              { source: boundaryId, id: $hoveredDistrictId },
+              { source: 'boundaries', id: $hoveredDistrictId },
               { hover: true }
             );
           }
@@ -217,7 +214,7 @@
 
         if ($hoveredDistrictId !== null) {
           $mapStore.setFeatureState(
-            { source: boundaryId, id: $hoveredDistrictId },
+            { source: 'boundaries', id: $hoveredDistrictId },
             { hover: false }
           );
         }
@@ -229,7 +226,7 @@
 
       $mapStore.on('click', `${boundaryId}-layer`, e => {
         if (e.features) {
-          zoomToBound($mapStore, turf.bbox(e.features[0]));
+          zoomToBound($mapStore, turfBbox(e.features[0]));
           onDistrictChange(e.features[0].properties?.namecol, true);
         }
       });
@@ -246,7 +243,7 @@
     // Remove existing clicked states
     if (prevDistrictId && $selectedBoundaryMap) {
       $mapStore?.setFeatureState(
-        { source: $selectedBoundaryMap, id: prevDistrictId },
+        { source: 'boundaries', id: prevDistrictId },
         { selected: false }
       );
     }
@@ -257,18 +254,19 @@
     // If there interaction came from a click, it will fly in before the function.
     if ($mapStore && $selectedBoundaryMap && $selectedDistrict) {
       if (!interactionFromClick) {
-        const feature = getDistrictFromSource(
-          $mapStore,
-          $selectedBoundaryMap,
-          $selectedDistrict
-        );
+        const feature = $boundaries.features.filter(feature => {
+          return (
+            feature.properties?.namecol.toLowerCase() ==
+            $selectedDistrict.toLowerCase()
+          );
+        });
         if (feature) {
-          zoomToBound($mapStore, turf.bbox(feature));
+          zoomToBound($mapStore, turfBbox(feature[0]));
         }
       }
 
       $mapStore.setFeatureState(
-        { source: $selectedBoundaryMap, id: $selectedDistrict },
+        { source: 'boundaries', id: $selectedDistrict },
         { selected: true }
       );
     }
@@ -276,9 +274,14 @@
     prevDistrictId = $selectedDistrict;
   }
 
-  $: if ($mapStore) {
-    $selectedBoundaryMap ? showMap($selectedBoundaryMap) : clearMap();
+  $: if ($isMapReady && $boundaries) {
+    loadMap();
   }
+
+  $: isSourceLoaded && $selectedBoundaryMap
+    ? showMap($selectedBoundaryMap)
+    : clearMap();
+
   $: isSourceLoaded && onDistrictChange($selectedDistrict);
 </script>
 

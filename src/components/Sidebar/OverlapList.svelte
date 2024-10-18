@@ -68,7 +68,7 @@
     <h3 class="block text-lg mb-2 px-4 text-black-600 font-medium">Overlaps</h3>
     <DistrictCopyClipboard {layers} {districts} />
   </div>
-  {#each Object.entries(layers).filter(([key, _]) => key !== $selectedBoundaryMap) as [key, value]}
+  {#each Object.entries(layers).filter(([key, _]) => key !== 'boundaries') as [key, value]}
     {#if districts.filter(district => district.properties?.id === key).length}
       <div class="mb-1 w-full">
         <div class="block text-sm text-gray-600 pt-1.5 px-4">

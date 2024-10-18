@@ -5,7 +5,8 @@
     selectedBoundaryMap,
     selectedDistrict,
     hoveredDistrictId,
-    mapStore
+    mapStore,
+    boundaries
   } from '../../stores';
   import { clickOutside } from 'svelte-use-click-outside';
   import {
@@ -15,7 +16,6 @@
   } from '../../helpers/helpers';
   import DistrictLink from './DistrictLink.svelte';
   import Loader from '../Loader.svelte';
-  import * as topojson from 'topojson-client';
   import type { Feature } from 'geojson';
   import { toKML } from '@placemarkio/tokml';
 
@@ -29,7 +29,7 @@
   function onDistrictMouseOver(districtId: string) {
     if ($hoveredDistrictId && $selectedBoundaryMap) {
       $mapStore.setFeatureState(
-        { source: $selectedBoundaryMap, id: $hoveredDistrictId },
+        { source: 'boundaries', id: $hoveredDistrictId },
         { hover: false }
       );
     }
@@ -38,7 +38,7 @@
 
     if ($selectedBoundaryMap) {
       $mapStore.setFeatureState(
-        { source: $selectedBoundaryMap, id: $hoveredDistrictId },
+        { source: 'boundaries', id: $hoveredDistrictId },
         { hover: true }
       );
     }
@@ -47,7 +47,7 @@
   function onDistrictMouseOut(districtId: string) {
     if ($selectedBoundaryMap) {
       $mapStore.setFeatureState(
-        { source: $selectedBoundaryMap, id: districtId },
+        { source: 'boundaries', id: districtId },
         { hover: false }
       );
     }
@@ -59,23 +59,20 @@
     resetZoom($mapStore);
   }
 
-  function getDistricts(boundaryId: string, map: maplibregl.Map) {
-    if (map.isStyleLoaded() && map.getSource(boundaryId)) {
-      map
-        .getSource(boundaryId)
-        .getData()
-        .then(data => {
-          districts = sortedDistricts(data.features);
-          geojsonDownloadUrl = getDownloadableUrl(data, true);
-          kmlDownloadUrl = getDownloadableUrl(toKML(data), false);
-        });
-    } else {
-      setTimeout(() => getDistricts(boundaryId, map), 100);
-    }
+  function getDistricts(boundaryId: string) {
+    const data = {
+      type: 'FeatureCollection',
+      features: $boundaries.features.filter(
+        boundary => boundary.properties.id === boundaryId
+      )
+    };
+    districts = sortedDistricts(data.features);
+    geojsonDownloadUrl = getDownloadableUrl(data, true);
+    kmlDownloadUrl = getDownloadableUrl(toKML(data), false);
   }
 
-  $: if ($mapStore) {
-    getDistricts($selectedBoundaryMap, $mapStore);
+  $: if ($boundaries) {
+    getDistricts($selectedBoundaryMap);
   }
 </script>
 
@@ -207,7 +204,7 @@
   {:else}
     {#each districts.filter(district => district.properties?.namecol
         .toLowerCase()
-        .includes(value)) as district}
+        .includes(value.toLowerCase())) as district}
       <DistrictLink
         onMouseOver={() => onDistrictMouseOver(district.properties?.namecol)}
         onMouseOut={() => onDistrictMouseOut(district.properties?.namecol)}
