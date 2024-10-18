@@ -79,7 +79,7 @@
   title={getCoordinateTitle($selectedCoordinates)}
   onBack={handleBack}
 />
-<div class="py-2">
+<div class="py-2 dark:bg-neutral-900">
   {#if $selectedCoordinates}
     <OverlapList districts={districtsIntersectingAddress} {isLoading} />
   {/if}

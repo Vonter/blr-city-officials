@@ -13,7 +13,7 @@
 </script>
 
 <div
-  class="flex items-stretch hover:bg-gray-100 focus-within:bg-gray-100 focus:z-10"
+  class="flex items-stretch hover:bg-gray-100 focus-within:bg-gray-100 dark:hover:bg-white/20 dark:focus-within:bg-white/20 focus:z-10"
   on:mouseover={onMouseOver}
   on:focus={onMouseOver}
   on:mouseleave={onMouseOut}
@@ -38,7 +38,7 @@
   {#if formatUrl}
     <a
       href={formatUrl(nameCol)}
-      class="flex items-center py-1 px-3 -ml-4 text-gray-400
+      class="flex items-center py-1 px-3 -ml-4 text-gray-400 dark:text-gray-600
               hover:text-gray-900 focus:outline-none focus:ring focus:ring-blue-500"
       target="_blank"
       title="Visit official webpage"

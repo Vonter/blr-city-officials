@@ -4,13 +4,13 @@
 </script>
 
 <header
-  class="p-4 sticky top-0 bg-white/90 z-20 border-b border-gray-900/10 shadow-sm"
+  class="p-4 sticky top-0 bg-white/90 dark:bg-neutral-900 z-20 border-b border-gray-900/10 shadow-sm"
 >
   <div class="flex">
     {#if onBack}
       <button
         on:click={onBack}
-        class="w-8 h-8 mr-2 -ml-1 text-lg flex justify-center items-center rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-800"
+        class="w-8 h-8 mr-2 -ml-1 text-lg flex justify-center items-center rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-white/20 dark:hover:text-gray-200"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -18,11 +18,20 @@
   let isSourceLoaded = false;
   let prevLayerId: string | null = null;
   let prevDistrictId: string | null = null;
+  let darkMode: boolean | null = isDarkMode();
+
+  function isDarkMode() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? true
+      : false;
+  }
 
   function initMap(container: any) {
     map = new maplibregl.Map({
       container,
-      style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
+      style: darkMode
+        ? 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json'
+        : 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
       minZoom: 9,
       maxZoom: 16,
       maxBounds: [
@@ -31,11 +40,6 @@
       ],
       ...defaultZoom
     });
-
-    map.addControl(
-      new maplibregl.NavigationControl({ showCompass: false }),
-      'bottom-right'
-    );
 
     // Override default browser zoom hotkeys
     window.addEventListener(
@@ -123,12 +127,12 @@
           type: 'fill',
           source: 'boundaries',
           paint: {
-            'fill-color': '#2463eb',
+            'fill-color': darkMode ? '#b3bac5' : '#2463eb',
             'fill-opacity': [
               'case',
               ['boolean', ['feature-state', 'selected'], false],
-              0.2,
-              0.05
+              darkMode ? 0.4 : 0.2,
+              darkMode ? 0.2 : 0.05
             ]
           },
           filter: ['==', 'id', boundaryId]
@@ -138,7 +142,7 @@
           type: 'line',
           source: 'boundaries',
           paint: {
-            'line-color': '#2463eb',
+            'line-color': darkMode ? '#b3bac5' : '#2463eb',
             'line-width': [
               'case',
               [
@@ -157,8 +161,10 @@
           type: 'symbol',
           source: `boundaries-centerpoints`,
           paint: {
-            'text-color': '#2463eb',
-            'text-halo-color': 'rgba(255,255,255,0.9)',
+            'text-color': darkMode ? '#e2e8f0' : '#2463eb',
+            'text-halo-color': darkMode
+              ? 'rgba(0,0,0,0.75)'
+              : 'rgba(255,255,255,0.9)',
             'text-halo-width': 2
           },
           layout: {

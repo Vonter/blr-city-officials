@@ -7,7 +7,7 @@
   <div class="px-4 pb-4">
     <a
       href={formatUrl(districtId)}
-      class="inline-flex items-center text-gray-600 hover:text-blue-600 text-sm"
+      class="inline-flex items-center text-gray-600 hover:text-blue-600 text-sm dark:text-gray-400"
       target="_blank"
       rel="noreferrer"
     >

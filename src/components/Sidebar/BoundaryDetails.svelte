@@ -91,7 +91,7 @@
         name="filter"
         bind:value
         autocomplete="off"
-        class="block w-full py-1 px-3 pl-10 bg-gray-100 rounded focus:outline-none focus:ring focus:ring-blue-500"
+        class="block w-full py-1 px-3 pl-10 bg-gray-100 dark:hover:bg-white/20 rounded focus:outline-none focus:ring focus:ring-blue-500 dark:bg-neutral-700"
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -110,8 +110,9 @@
       <div class="relative" use:clickOutside={() => (isDetailPaneOpen = false)}>
         <button
           on:click={() => (isDetailPaneOpen = !isDetailPaneOpen)}
-          class={`w-8 h-8 ml-2 text-lg flex justify-center items-center rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-800 focus:outline-none focus:ring focus:ring-blue-500 ${
-            isDetailPaneOpen && 'bg-gray-100 text-gray-800'
+          class={`w-8 h-8 ml-2 text-lg flex justify-center items-center rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-white/20 hover:text-gray-800 dark:hover:text-gray-200 focus:outline-none focus:ring focus:ring-blue-500 ${
+            isDetailPaneOpen &&
+            'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'
           }`}
         >
           <svg
@@ -128,7 +129,7 @@
           </svg>
         </button>
         <div
-          class={`absolute top-full mt-2 right-0 w-72 bg-white rounded shadow-md p-2 py-4 mb-4 px-4 text-gray-800 text-sm ${
+          class={`absolute top-full mt-2 right-0 w-72 bg-white rounded shadow-md p-2 py-4 mb-4 px-4 text-gray-800 text-sm dark:text-gray-200 dark:bg-neutral-900 ${
             isDetailPaneOpen ? 'visible' : 'hidden'
           }`}
         >
@@ -144,7 +145,7 @@
           <a
             href={geojsonDownloadUrl}
             download="{$selectedBoundaryMap}.geojson"
-            class="flex items-center py-1 px-3 -ml-4 text-gray-400
+            class="flex items-center py-1 px-3 -ml-4 text-gray-400 dark:text-gray-400
                     hover:text-gray-900 focus:outline-none focus:ring focus:ring-blue-500"
             target="_blank"
             title="GeoJSON"
@@ -169,7 +170,7 @@
           <a
             href={kmlDownloadUrl}
             download="{$selectedBoundaryMap}.kml"
-            class="flex items-center py-1 px-3 -ml-4 text-gray-400
+            class="flex items-center py-1 px-3 -ml-4 text-gray-400 dark:text-gray-400
                     hover:text-gray-900 focus:outline-none focus:ring focus:ring-blue-500"
             target="_blank"
             title="KML"
@@ -196,7 +197,7 @@
     {/if}
   </div>
 </SidebarHeader>
-<div class="py-2">
+<div class="py-2 dark:bg-neutral-900">
   {#if isLoading}
     <div class="px-4">
       <Loader />
