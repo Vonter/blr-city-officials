@@ -93,7 +93,7 @@
     aria-label="Pick coordinates"
   >
     <div
-      class="invisible group-hover:visible absolute top-full right-0 mt-2 bg-black text-gray-100 rounded shadow-md px-2 py-0.5"
+      class="invisible group-hover:visible absolute top-full right-0 mt-2 bg-black text-gray-100 rounded shadow-md px-2 py-0.5 dark:bg-white dark:text-gray-900"
     >
       Pick coordinates
     </div>

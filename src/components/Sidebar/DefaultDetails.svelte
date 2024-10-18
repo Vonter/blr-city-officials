@@ -24,17 +24,19 @@
 
 <SidebarHeader title="BLR Boundaries" />
 
-<div class="p-4 grid gap-6">
+<div class="p-4 grid gap-6 dark:bg-neutral-900">
   {#each Object.entries(groupedLayers) as [group, groupLayers]}
     <div class="grid grid-cols-3 gap-4 items-start">
-      <h3 class="flex items-center text-sm font-semibold text-gray-600 whitespace-nowrap pt-2">
+      <h3
+        class="flex items-center text-sm font-semibold text-gray-600 dark:text-gray-400 whitespace-nowrap pt-2"
+      >
         <span class="mr-2">{groupLayers[0].value.icon}</span>
         <span>{group}</span>
       </h3>
       {#each groupLayers as { key, value }}
         <button
           on:click={() => selectedBoundaryMap.set(key)}
-          class="flex items-center justify-center px-2 w-fit-12 h-8 text-sm font-medium rounded-md border border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+          class="flex items-center justify-center px-2 w-fit-12 h-8 text-sm font-medium rounded-md border border-gray-300 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover-bg-white/20 hover:border-gray-400 dark:hover-bg-white/40 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
         >
           <span>{value.name}</span>
         </button>

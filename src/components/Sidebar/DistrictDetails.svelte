@@ -71,7 +71,7 @@
   title={getDistrictTitle($selectedBoundaryMap, $selectedDistrict)}
   onBack={handleBack}
 />
-<div class="py-4">
+<div class="py-4 dark:bg-neutral-900">
   {#if $selectedBoundaryMap}
     <DistrictMetadata
       formatUrl={layers[$selectedBoundaryMap].formatUrl}
