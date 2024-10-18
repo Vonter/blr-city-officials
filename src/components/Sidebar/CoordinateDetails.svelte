@@ -24,9 +24,13 @@
     console.log(lngLat);
     isLoading = true;
     console.log($boundaries);
-    lookup = new PolygonLookup($boundaries)
+    lookup = new PolygonLookup($boundaries);
     console.log(lookup);
-    districtsIntersectingAddress = lookup.search(lngLat.lng, lngLat.lat, -1).features;
+    districtsIntersectingAddress = lookup.search(
+      lngLat.lng,
+      lngLat.lat,
+      -1
+    ).features;
     console.log(lookup.search(lngLat.lng, lngLat.lat, -1));
     console.log(districtsIntersectingAddress);
     isLoading = false;
@@ -59,7 +63,10 @@
       $mapStore.getCanvas().style.cursor = 'crosshair';
 
       $mapStore.once('click', e => {
-        selectedCoordinates.set({lat: e.lngLat.lat.toFixed(5), lng: e.lngLat.lng.toFixed(5)});
+        selectedCoordinates.set({
+          lat: e.lngLat.lat.toFixed(5),
+          lng: e.lngLat.lng.toFixed(5)
+        });
         isSelectingCoordinates.set(false);
       });
     } else {

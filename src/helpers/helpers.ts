@@ -46,35 +46,6 @@ export function sortedDistricts(features: Feature[]) {
   );
 }
 
-export function getDistrictFromSource(
-  map: maplibregl.Map,
-  sourceId: string,
-  districtId: string
-) {
-  // Find features with districtId and merge (union) them into one. This fixes zoom issues later down.
-  // https://stackoverflow.com/questions/46511688/wrong-geometry-with-mapbox-queryrenderedfeatures
-  let features = map.querySourceFeatures(sourceId, {
-    filter: ['==', 'namecol', districtId]
-  });
-
-  const mergedFeature = features.reduce((polygon, feature) => {
-    if (polygon) {
-      return turfUnion(polygon, feature.toJSON().geometry);
-    } else {
-      return feature.toJSON().geometry;
-    }
-  }, null);
-
-  if (mergedFeature) {
-    return mergedFeature;
-  } else {
-    //fallback
-    features = map.querySourceFeatures(sourceId);
-    let district = features.find(i => i.properties?.namecol === districtId);
-    return district;
-  }
-}
-
 export function zoomToBound(map: maplibregl.Map, bounds: turf.BBox) {
   // Turf's bbox can return either Box2D (4-item array) or Box3D (6-item array)
   // fitBounds() only accepts a 4-item array, so we need to save the output before using it

@@ -61,8 +61,10 @@
 
   function getDistricts(boundaryId: string) {
     const data = {
-      type: "FeatureCollection",
-      features: $boundaries.features.filter(boundary => boundary.properties.id === boundaryId)
+      type: 'FeatureCollection',
+      features: $boundaries.features.filter(
+        boundary => boundary.properties.id === boundaryId
+      )
     };
     districts = sortedDistricts(data.features);
     geojsonDownloadUrl = getDownloadableUrl(data, true);

@@ -12,12 +12,7 @@
   import 'maplibre-gl/dist/maplibre-gl.css';
   import { layers } from '../assets/boundaries';
   import turfBbox from '@turf/bbox';
-  import {
-    defaultZoom,
-    findPolylabel,
-    getDistrictFromSource,
-    zoomToBound
-  } from '../helpers/helpers';
+  import { defaultZoom, findPolylabel, zoomToBound } from '../helpers/helpers';
 
   let map: maplibregl.Map;
   let isSourceLoaded = false;
@@ -60,12 +55,9 @@
     map.on('load', () => {
       $mapStore = map;
       map.resize();
+      map.removeLayer('boundary_county');
 
       isMapReady.set(true);
-    });
-
-    map.on('style.load', () => {
-      $mapStore.removeLayer('boundary_county');
     });
 
     return {
@@ -262,13 +254,14 @@
     // If there interaction came from a click, it will fly in before the function.
     if ($mapStore && $selectedBoundaryMap && $selectedDistrict) {
       if (!interactionFromClick) {
-        const feature = getDistrictFromSource(
-          $mapStore,
-          'boundaries',
-          $selectedDistrict
-        );
+        const feature = $boundaries.features.filter(feature => {
+          return (
+            feature.properties?.namecol.toLowerCase() ==
+            $selectedDistrict.toLowerCase()
+          );
+        });
         if (feature) {
-          zoomToBound($mapStore, turfBbox(feature));
+          zoomToBound($mapStore, turfBbox(feature[0]));
         }
       }
 
