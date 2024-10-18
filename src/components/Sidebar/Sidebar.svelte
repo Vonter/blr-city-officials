@@ -13,7 +13,7 @@
 
 <nav
   id="sidebar"
-  class="w-full h-1/2 md:h-full md:w-80 overflow-auto shadow-lg text-gray-900 flex flex-col"
+  class="w-full md:w-1/3 2xl:w-1/4 max-h-screen overflow-y-auto shadow-lg text-gray-900 flex flex-col"
 >
   <div class="flex-1">
     {#if $selectedBoundaryMap && $selectedDistrict}
