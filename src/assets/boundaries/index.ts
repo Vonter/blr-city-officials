@@ -1,19 +1,19 @@
 import { format_default } from './format';
 
 export type BoundaryId =
-  | 'bbmp_wards'
   | 'bbmp_zone'
+  | 'bbmp_wards'
   | 'bescom_division'
   | 'bescom_subdivision'
   | 'bwssb_division'
   | 'bwssb_service_station'
   | 'police_city'
   | 'police_traffic'
-  | 'pincode'
   | 'admin_district'
   | 'admin_taluk'
+  | 'election_pc'
   | 'election_ac'
-  | 'election_pc';
+  | 'pincode';
 
 export interface ILayer {
   /** Human-readable name, e.g. "Community District" */
@@ -46,9 +46,9 @@ type ILayers = {
 };
 
 export const layers: ILayers = {
-  bbmp_wards: {
-    name: 'Wards',
-    name_long: 'BBMP Wards',
+  bbmp_zone: {
+    name: 'Zone',
+    name_long: 'BBMP Zone',
     description: '',
     description_url: '',
     icon: '🏤',
@@ -56,9 +56,9 @@ export const layers: ILayers = {
     formatContent: name => name,
     group: 'BBMP'
   },
-  bbmp_zone: {
-    name: 'Zones',
-    name_long: 'BBMP Zones',
+  bbmp_wards: {
+    name: 'Ward',
+    name_long: 'BBMP Ward',
     description: '',
     description_url: '',
     icon: '🏤',
@@ -67,8 +67,8 @@ export const layers: ILayers = {
     group: 'BBMP'
   },
   bescom_division: {
-    name: 'Divisions',
-    name_long: 'BESCOM Divisions',
+    name: 'Division',
+    name_long: 'BESCOM Division',
     description: '',
     description_url: '',
     icon: '💡',
@@ -77,8 +77,8 @@ export const layers: ILayers = {
     group: 'BESCOM'
   },
   bescom_subdivision: {
-    name: 'Subdivisions',
-    name_long: 'BESCOM Subdivisions',
+    name: 'Subdivision',
+    name_long: 'BESCOM Subdivision',
     description: '',
     description_url: '',
     icon: '💡',
@@ -87,8 +87,8 @@ export const layers: ILayers = {
     group: 'BESCOM'
   },
   bwssb_division: {
-    name: 'Divisions',
-    name_long: 'BWSSB Divisions',
+    name: 'Division',
+    name_long: 'BWSSB Division',
     description: '',
     description_url: '',
     icon: '💧',
@@ -97,8 +97,8 @@ export const layers: ILayers = {
     group: 'BWSSB'
   },
   bwssb_service_station: {
-    name: 'Service Stations',
-    name_long: 'BWSSB Service Stations',
+    name: 'Service Station',
+    name_long: 'BWSSB Service Station',
     description: '',
     description_url: '',
     icon: '💧',
@@ -135,7 +135,7 @@ export const layers: ILayers = {
     icon: '🏦',
     formatUrl: name => 'https://karnataka.gov.in/',
     formatContent: name => name,
-    group: 'Admin'
+    group: 'Administrative'
   },
   admin_taluk: {
     name: 'Taluk',
@@ -145,17 +145,7 @@ export const layers: ILayers = {
     icon: '🏦',
     formatUrl: name => 'https://karnataka.gov.in/',
     formatContent: name => name,
-    group: 'Admin'
-  },
-  election_ac: {
-    name: 'State Assembly',
-    name_long: 'State Assembly',
-    description: '',
-    description_url: '',
-    icon: '🗳',
-    formatUrl: name => 'https://kla.kar.nic.in/',
-    formatContent: name => name,
-    group: 'Election'
+    group: 'Administrative'
   },
   election_pc: {
     name: 'Lok Sabha',
@@ -165,7 +155,17 @@ export const layers: ILayers = {
     icon: '🗳',
     formatUrl: name => 'https://sansad.in/ls/',
     formatContent: name => name,
-    group: 'Election'
+    group: 'Political'
+  },
+  election_ac: {
+    name: 'State Assembly',
+    name_long: 'State Assembly',
+    description: '',
+    description_url: '',
+    icon: '🗳',
+    formatUrl: name => 'https://kla.kar.nic.in/',
+    formatContent: name => name,
+    group: 'Political'
   },
   pincode: {
     name: 'PIN Code',
@@ -175,6 +175,7 @@ export const layers: ILayers = {
     icon: '📮',
     formatUrl: name =>
       'https://www.indiapost.gov.in/sites/PostalCircles/Karnataka/Pages/cpio.aspx',
-    formatContent: name => name
+    formatContent: name => name,
+    group: 'Other'
   }
 };
