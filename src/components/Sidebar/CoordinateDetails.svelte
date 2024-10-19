@@ -21,18 +21,15 @@
 
   function queryAllDistrictsForCoordinates(lngLat: LngLat) {
     districtsIntersectingAddress = [];
-    console.log(lngLat);
     isLoading = true;
-    console.log($boundaries);
-    lookup = new PolygonLookup($boundaries);
-    console.log(lookup);
+    if (!lookup) {
+      lookup = new PolygonLookup($boundaries);
+    }
     districtsIntersectingAddress = lookup.search(
       lngLat.lng,
       lngLat.lat,
       -1
     ).features;
-    console.log(lookup.search(lngLat.lng, lngLat.lat, -1));
-    console.log(districtsIntersectingAddress);
     isLoading = false;
   }
 
