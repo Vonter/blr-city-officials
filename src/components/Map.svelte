@@ -100,11 +100,13 @@
           data: {
             type: 'FeatureCollection',
             features: $boundaries.features.map((feature: Feature) => {
-              feature.geometry = {
-                type: 'Point',
-                coordinates: findPolylabel(feature)
+              return {
+                ...feature,
+                geometry: {
+                  type: 'Point',
+                  coordinates: findPolylabel(feature)
+                }
               };
-              return feature;
             })
           }
         });
