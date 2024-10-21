@@ -13,6 +13,8 @@ export type BoundaryId =
   | 'admin_taluk'
   | 'election_pc'
   | 'election_ac'
+  | 'stamps_dro'
+  | 'stamps_sro'
   | 'pincode';
 
 export interface ILayer {
@@ -166,6 +168,26 @@ export const layers: ILayers = {
     formatUrl: name => 'https://kla.kar.nic.in/',
     formatContent: name => name,
     group: 'Political'
+  },
+  stamps_dro: {
+    name: 'DRO',
+    name_long: 'DRO',
+    description: '',
+    description_url: '',
+    icon: '🏠',
+    formatUrl: name => 'https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en',
+    formatContent: name => name,
+    group: 'Revenue'
+  },
+  stamps_sro: {
+    name: 'SRO',
+    name_long: 'SRO',
+    description: '',
+    description_url: '',
+    icon: '🏠',
+    formatUrl: name => 'https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en',
+    formatContent: name => name,
+    group: 'Revenue'
   },
   pincode: {
     name: 'PIN Code',
