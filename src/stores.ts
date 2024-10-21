@@ -32,7 +32,7 @@ export const mapStore = writable<maplibregl.Map>();
 export const boundaries = readable(null, set => {
   fetch(`./boundaries.json`)
     .then(response => response.json())
-    .then(topojson => feature(topojson, topojson.objects.Clipped))
+    .then(topojson => feature(topojson, topojson.objects.boundaries))
     .then(geojson => set(geojson))
     .catch(error => {
       console.error('Error fetching boundaries:', error);
