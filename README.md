@@ -15,6 +15,10 @@ Based on and heavily inspired by the [NYC Boundaries Map](https://github.com/Bet
 - Start local dev server with `pnpm run dev` (or `npm run dev`)
 - Build site deployment assets with `pnpm run build` (or `npm run build`)
 
+### Data
+
+Documentation and scripts for processing the geospatial data are available in the [scripts/](scripts) directory.
+
 ## Copyright
 
 Please see the [LICENSE](https://github.com/Vonter/blr-boundaries/blob/master/LICENSE) file for details.
