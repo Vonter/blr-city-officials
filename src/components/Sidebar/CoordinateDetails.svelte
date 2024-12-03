@@ -36,7 +36,7 @@
   }
 
   function getCoordinateTitle(lngLat: LngLat | null) {
-    return lngLat ? `${lngLat.lng}, ${lngLat.lat}` : 'Click a point on the map';
+    return lngLat ? `${lngLat.lat}, ${lngLat.lng}` : 'Click a point on the map';
   }
 
   function handleBack() {

@@ -4,6 +4,7 @@
   import {
     selectedBoundaryMap,
     selectedDistrict,
+    selectedCoordinates,
     mapStore,
     hoveredDistrictId,
     boundaries,
@@ -21,6 +22,7 @@
   let prevLayerId: string | null = null;
   let prevDistrictId: string | null = null;
   let darkMode: boolean | null = isDarkMode();
+  let geolocateControl: maplibregl.GeolocateControl;
 
   function isDarkMode() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -41,6 +43,26 @@
         [78.25, 13.5] // Northeastern NYC bounds + buffer
       ],
       ...defaultZoom
+    });
+
+    // Add geolocate control
+    geolocateControl = new maplibregl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+      trackUserLocation: false,
+      showAccuracyCircle: false
+    });
+    
+    map.addControl(geolocateControl, 'bottom-left');
+
+    // Add geolocate event listener
+    geolocateControl.on('geolocate', (position: GeolocationPosition) => {
+      const { longitude, latitude } = position.coords;
+      selectedCoordinates.set({
+        lat: latitude.toFixed(5),
+        lng: longitude.toFixed(5)
+      });
     });
 
     // Override default browser zoom hotkeys
