@@ -52,7 +52,7 @@
       } else if (boundaryId === 'bid') {
         return `${layers[boundaryId].formatContent(districtId)} BID`;
       } else {
-        return `${layers[boundaryId].name} ${layers[boundaryId].formatContent(
+        return `${layers[boundaryId].icon} ${layers[boundaryId].name_long} ${layers[boundaryId].formatContent(
           districtId
         )}`;
       }

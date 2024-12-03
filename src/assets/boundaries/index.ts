@@ -131,7 +131,7 @@ export const layers: ILayers = {
 
   admin_district: {
     name: 'District',
-    name_long: 'Districts',
+    name_long: 'District',
     description: '',
     description_url: '',
     icon: '🏦',
@@ -141,7 +141,7 @@ export const layers: ILayers = {
   },
   admin_taluk: {
     name: 'Taluk',
-    name_long: 'Taluks',
+    name_long: 'Taluk',
     description: '',
     description_url: '',
     icon: '🏦',
@@ -192,7 +192,7 @@ export const layers: ILayers = {
     group: 'Revenue'
   },
   pincode: {
-    name: 'PIN Code',
+    name: 'Pin Code',
     name_long: 'Pin Codes',
     description: '',
     description_url: '',
