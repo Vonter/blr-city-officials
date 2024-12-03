@@ -13,6 +13,7 @@
     isSelectingCoordinates,
     boundaries
   } from '../stores';
+  import { layers } from '../assets/boundaries';
 
   let value: string = $state();
 
@@ -34,7 +35,8 @@
 
     return searchResults.map(result => ({
       id: result.properties.id,
-      namecol: result.properties.namecol
+      namecol: result.properties.namecol,
+      displayName: `${layers[result.properties.id].icon} ${result.properties.namecol}`
     }));
   }
 
@@ -67,7 +69,7 @@
       showLoadingIndicator
       inputClassName="l-0 t-0 r-0 py-2 px-3 pl-10 flex-1 w-full bg-white shadow-md rounded focus:outline-none focus:ring focus:ring-blue-500"
       dropdownClassName="border-none shadow-md rounded mt-1 py-2 bg-white t-100"
-      labelFieldName="namecol"
+      labelFieldName="displayName"
       hideArrow
     />
     <svg
