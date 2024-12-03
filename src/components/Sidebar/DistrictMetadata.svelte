@@ -1,6 +1,10 @@
 <script lang="ts">
-  export let districtId: string | null;
-  export let formatUrl: Function | undefined = undefined;
+  interface Props {
+    districtId: string | null;
+    formatUrl?: Function | undefined;
+  }
+
+  let { districtId, formatUrl = undefined }: Props = $props();
 </script>
 
 {#if districtId && formatUrl}

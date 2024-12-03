@@ -1,26 +1,42 @@
 <script lang="ts">
-  export let onMouseOver: () => void;
-  export let onMouseOut: () => void;
-  export let onClick: () => void;
-  export let formatContent: Function;
-  export let formatUrl: Function | undefined = undefined;
-  export let nameCol: string;
-  export let area: number;
-  export let searea: number;
-  export let icon: string;
+  interface Props {
+    onMouseOver: () => void;
+    onMouseOut: () => void;
+    onClick: () => void;
+    formatContent: Function;
+    formatUrl?: Function | undefined;
+    nameCol: string;
+    area: number;
+    searea: number;
+    icon: string;
+  }
 
-  $: intersectingPercentage = ((searea / area) * 100).toFixed(1) + '%';
+  let {
+    onMouseOver,
+    onMouseOut,
+    onClick,
+    formatContent,
+    formatUrl = undefined,
+    nameCol,
+    area,
+    searea,
+    icon
+  }: Props = $props();
+
+  let intersectingPercentage = $derived(
+    ((searea / area) * 100).toFixed(1) + '%'
+  );
 </script>
 
 <div
   class="flex items-stretch hover:bg-gray-100 focus-within:bg-gray-100 dark:hover:bg-white/20 dark:focus-within:bg-white/20 focus:z-10"
-  on:mouseover={onMouseOver}
-  on:focus={onMouseOver}
-  on:mouseleave={onMouseOut}
-  on:blur={onMouseOut}
+  onmouseover={onMouseOver}
+  onfocus={onMouseOver}
+  onmouseleave={onMouseOut}
+  onblur={onMouseOut}
 >
   <button
-    on:click={onClick}
+    onclick={onClick}
     class="flex-1 flex text-left py-1 px-4 focus:outline-none focus:ring focus:ring-blue-500 focus:z-10"
   >
     <div class="mr-2">{icon}</div>

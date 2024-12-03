@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import { layers } from '../../assets/boundaries';
   import SidebarHeader from './SidebarHeader.svelte';
   import {
@@ -19,12 +21,12 @@
   import type { Feature } from 'geojson';
   import { toKML } from '@placemarkio/tokml';
 
-  let value = '';
-  let districts: Feature[] = [];
+  let value = $state('');
+  let districts: Feature[] = $state([]);
   let isLoading: boolean;
-  let isDetailPaneOpen: boolean = false;
-  let geojsonDownloadUrl: string = '';
-  let kmlDownloadUrl: string = '';
+  let isDetailPaneOpen: boolean = $state(false);
+  let geojsonDownloadUrl: string = $state('');
+  let kmlDownloadUrl: string = $state('');
 
   function onDistrictMouseOver(districtId: string) {
     if ($hoveredDistrictId && $selectedBoundaryMap) {
@@ -71,9 +73,11 @@
     kmlDownloadUrl = getDownloadableUrl(toKML(data), false);
   }
 
-  $: if ($boundaries) {
-    getDistricts($selectedBoundaryMap);
-  }
+  run(() => {
+    if ($boundaries) {
+      getDistricts($selectedBoundaryMap);
+    }
+  });
 </script>
 
 <SidebarHeader
@@ -109,7 +113,7 @@
     {#if $selectedBoundaryMap}
       <div class="relative" use:clickOutside={() => (isDetailPaneOpen = false)}>
         <button
-          on:click={() => (isDetailPaneOpen = !isDetailPaneOpen)}
+          onclick={() => (isDetailPaneOpen = !isDetailPaneOpen)}
           class={`w-8 h-8 ml-2 text-lg flex justify-center items-center rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-white/20 hover:text-gray-800 dark:hover:text-gray-200 focus:outline-none focus:ring focus:ring-blue-500 ${
             isDetailPaneOpen &&
             'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'

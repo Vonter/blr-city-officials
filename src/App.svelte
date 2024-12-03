@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import {
     selectedBoundaryMap,
     selectedCoordinates,
@@ -10,7 +12,7 @@
 
   const params = new URLSearchParams(window.location.search);
 
-  $: {
+  run(() => {
     $selectedDistrict
       ? params.set('dist', $selectedDistrict)
       : params.delete('dist');
@@ -28,7 +30,7 @@
     }
 
     window.history.replaceState({}, '', `${location.pathname}?${params}`);
-  }
+  });
 </script>
 
 <main

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import { layers } from '../../assets/boundaries';
   import SidebarHeader from './SidebarHeader.svelte';
   import {
@@ -64,7 +66,9 @@
     selectedDistrict.set(null);
   }
 
-  $: debounceQueryInterDist($selectedBoundaryMap, $selectedDistrict);
+  run(() => {
+    debounceQueryInterDist($selectedBoundaryMap, $selectedDistrict);
+  });
 </script>
 
 <SidebarHeader

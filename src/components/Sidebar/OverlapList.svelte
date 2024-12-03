@@ -12,8 +12,12 @@
 
   import Loader from '../Loader.svelte';
 
-  export let districts: Feature[];
-  export let isLoading: boolean;
+  interface Props {
+    districts: Feature[];
+    isLoading: boolean;
+  }
+
+  let { districts, isLoading }: Props = $props();
 
   function showIntersectingDistrict(feature: Feature) {
     if (!$mapStore.getSource('intersecting-layer')) {
