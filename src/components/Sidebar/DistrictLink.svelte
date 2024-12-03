@@ -29,6 +29,7 @@
 </script>
 
 <div
+  role="group"
   class="flex items-stretch hover:bg-gray-100 focus-within:bg-gray-100 dark:hover:bg-white/20 dark:focus-within:bg-white/20 focus:z-10"
   onmouseover={onMouseOver}
   onfocus={onMouseOver}

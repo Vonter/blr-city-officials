@@ -7,7 +7,6 @@
   } from '../../stores';
   import { layers } from '../../assets/boundaries';
   import DistrictLink from './DistrictLink.svelte';
-  import DistrictCopyClipboard from './DistrictCopyClipboard.svelte';
   import type { Feature } from 'geojson';
 
   import Loader from '../Loader.svelte';
@@ -68,23 +67,11 @@
       'Make sure you select coordinates within BLR.'}
   </div>
 {:else}
-  <div class="flex items-ceter place-content-between">
-    <h3
-      class="block text-lg mb-2 px-4 text-black-600 dark:text-white-600 font-medium"
-    >
-      Overlaps
-    </h3>
-    <DistrictCopyClipboard {layers} {districts} />
-  </div>
   {#each Object.entries(layers).filter(([key, _]) => key !== 'boundaries') as [key, value]}
     {#if districts.filter(district => district.properties?.id === key).length}
       <div class="mb-1 w-full">
         <div class="block text-sm text-gray-600 dark:text-gray-400 pt-1.5 px-4">
-          {#if districts.filter(district => district.properties?.id === key).length <= 1}
-            {value.name}
-          {:else}
-            {value.name_long}
-          {/if}
+          {value.name_long}
         </div>
         <div class="w-full">
           {#each districts.filter(district => district.properties?.id === key) as district}
