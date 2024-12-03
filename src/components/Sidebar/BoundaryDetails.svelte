@@ -1,6 +1,6 @@
 <script lang="ts">
   import { run } from 'svelte/legacy';
-
+  import type { Feature, FeatureCollection } from 'geojson';
   import { layers } from '../../assets/boundaries';
   import SidebarHeader from './SidebarHeader.svelte';
   import {
@@ -13,24 +13,21 @@
   import { clickOutside } from 'svelte-use-click-outside';
   import {
     resetZoom,
-    sortedDistricts,
-    getDownloadableUrl
+    sortedDistricts
   } from '../../helpers/helpers';
   import DistrictLink from './DistrictLink.svelte';
   import Loader from '../Loader.svelte';
-  import type { Feature } from 'geojson';
-  import { toKML } from '@placemarkio/tokml';
+  import DownloadButtons from './DownloadButtons.svelte';
 
   let value = $state('');
   let districts: Feature[] = $state([]);
   let isLoading: boolean;
   let isDetailPaneOpen: boolean = $state(false);
-  let geojsonDownloadUrl: string = $state('');
-  let kmlDownloadUrl: string = $state('');
+  let boundaryData: FeatureCollection | null = $state(null);
 
   function onDistrictMouseOver(districtId: string) {
     if ($hoveredDistrictId && $selectedBoundaryMap) {
-      $mapStore.setFeatureState(
+      $mapStore?.setFeatureState(
         { source: 'boundaries', id: $hoveredDistrictId },
         { hover: false }
       );
@@ -39,7 +36,7 @@
     $hoveredDistrictId = districtId;
 
     if ($selectedBoundaryMap) {
-      $mapStore.setFeatureState(
+      $mapStore?.setFeatureState(
         { source: 'boundaries', id: $hoveredDistrictId },
         { hover: true }
       );
@@ -48,7 +45,7 @@
 
   function onDistrictMouseOut(districtId: string) {
     if ($selectedBoundaryMap) {
-      $mapStore.setFeatureState(
+      $mapStore?.setFeatureState(
         { source: 'boundaries', id: districtId },
         { hover: false }
       );
@@ -62,19 +59,19 @@
   }
 
   function getDistricts(boundaryId: string) {
-    const data = {
+    if (!$boundaries) return;
+    
+    boundaryData = {
       type: 'FeatureCollection',
       features: $boundaries.features.filter(
-        boundary => boundary.properties.id === boundaryId
+        (boundary: Feature) => boundary.properties?.id === boundaryId
       )
     };
-    districts = sortedDistricts(data.features);
-    geojsonDownloadUrl = getDownloadableUrl(data, true);
-    kmlDownloadUrl = getDownloadableUrl(toKML(data), false);
+    districts = sortedDistricts(boundaryData.features);
   }
 
   run(() => {
-    if ($boundaries) {
+    if ($boundaries && $selectedBoundaryMap) {
       getDistricts($selectedBoundaryMap);
     }
   });
@@ -114,6 +111,7 @@
       <div class="relative" use:clickOutside={() => (isDetailPaneOpen = false)}>
         <button
           onclick={() => (isDetailPaneOpen = !isDetailPaneOpen)}
+          aria-label="Show boundary information"
           class={`w-8 h-8 ml-2 text-lg flex justify-center items-center rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-white/20 hover:text-gray-800 dark:hover:text-gray-200 focus:outline-none focus:ring focus:ring-blue-500 ${
             isDetailPaneOpen &&
             'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'
@@ -146,56 +144,9 @@
               rel="noreferrer">Learn more</a
             >
           {/if}
-          <a
-            href={geojsonDownloadUrl}
-            download="{$selectedBoundaryMap}.geojson"
-            class="flex items-center py-1 px-3 -ml-4 text-gray-400 dark:text-gray-400
-                    hover:text-gray-900 focus:outline-none focus:ring focus:ring-blue-500"
-            target="_blank"
-            title="GeoJSON"
-            rel="noreferrer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-5 w-5 inline-block mr-1"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
-              />
-            </svg>
-            GeoJSON
-          </a>
-          <a
-            href={kmlDownloadUrl}
-            download="{$selectedBoundaryMap}.kml"
-            class="flex items-center py-1 px-3 -ml-4 text-gray-400 dark:text-gray-400
-                    hover:text-gray-900 focus:outline-none focus:ring focus:ring-blue-500"
-            target="_blank"
-            title="KML"
-            rel="noreferrer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-5 w-5 inline-block mr-1"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
-              />
-            </svg>
-            KML
-          </a>
+          {#if boundaryData}
+            <DownloadButtons data={boundaryData} filename={$selectedBoundaryMap} />
+          {/if}
         </div>
       </div>
     {/if}
