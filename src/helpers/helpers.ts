@@ -7,7 +7,7 @@ import type maplibregl from 'maplibre-gl';
 
 export const defaultZoom: Partial<maplibregl.MapOptions> = {
   zoom: 9.6,
-  center: [77.600,12.988]
+  center: [77.6, 12.988]
 };
 
 export function findPolylabel(feature: Feature) {
@@ -66,7 +66,7 @@ export function resetZoom(map: maplibregl.Map) {
 export function getDownloadableUrl(content: Object, geojson: boolean) {
   if (geojson) {
     const jsonContent = JSON.stringify(content, null, 2);
-    const blob = new Blob([jsonContent], {type: 'application/json'});
+    const blob = new Blob([jsonContent], { type: 'application/json' });
     return URL.createObjectURL(blob);
   } else {
     const blob = new Blob([content]);

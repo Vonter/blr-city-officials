@@ -175,7 +175,8 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '🏠',
-    formatUrl: name => 'https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en',
+    formatUrl: name =>
+      'https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en',
     formatContent: name => name,
     group: 'Revenue'
   },
@@ -185,7 +186,8 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '🏠',
-    formatUrl: name => 'https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en',
+    formatUrl: name =>
+      'https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en',
     formatContent: name => name,
     group: 'Revenue'
   },

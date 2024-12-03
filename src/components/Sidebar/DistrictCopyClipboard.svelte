@@ -1,7 +1,15 @@
 <script lang="ts">
-  export let layers: {};
-  export let districts: any[];
-  export let buttonText: string = 'Copy to clipboard';
+  interface Props {
+    layers: {};
+    districts: any[];
+    buttonText?: string;
+  }
+
+  let {
+    layers,
+    districts,
+    buttonText = $bindable('Copy to clipboard')
+  }: Props = $props();
 
   function updateClipboard() {
     if (districts.length === 0) return;
@@ -31,7 +39,7 @@
 <button
   class="mb-2 mx-2 px-2 py-0.5 text-gray-500 rounded hover:bg-gray-200
 hover:text-gray-900 focus:outline-none focus:ring focus:ring-blue-500"
-  on:click={updateClipboard}
+  onclick={updateClipboard}
   title="Copy overlaps to clipboard"
 >
   {buttonText}

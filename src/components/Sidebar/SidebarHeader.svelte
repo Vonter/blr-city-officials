@@ -1,6 +1,11 @@
 <script lang="ts">
-  export let title: string;
-  export let onBack: (() => void) | undefined = undefined;
+  interface Props {
+    title: string;
+    onBack?: (() => void) | undefined;
+    children?: import('svelte').Snippet;
+  }
+
+  let { title, onBack = undefined, children }: Props = $props();
 </script>
 
 <header
@@ -9,7 +14,7 @@
   <div class="flex">
     {#if onBack}
       <button
-        on:click={onBack}
+        onclick={onBack}
         class="w-8 h-8 mr-2 -ml-1 text-lg flex justify-center items-center rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-white/20 dark:hover:text-gray-200"
       >
         <svg
@@ -32,5 +37,5 @@
       {title}
     </h1>
   </div>
-  <slot />
+  {@render children?.()}
 </header>

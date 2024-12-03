@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import {
     selectedBoundaryMap,
     selectedDistrict,
@@ -15,7 +17,7 @@
   import { defaultZoom, findPolylabel, zoomToBound } from '../helpers/helpers';
 
   let map: maplibregl.Map;
-  let isSourceLoaded = false;
+  let isSourceLoaded = $state(false);
   let prevLayerId: string | null = null;
   let prevDistrictId: string | null = null;
   let darkMode: boolean | null = isDarkMode();
@@ -282,15 +284,21 @@
     prevDistrictId = $selectedDistrict;
   }
 
-  $: if ($isMapReady && $boundaries) {
-    loadMap();
-  }
+  run(() => {
+    if ($isMapReady && $boundaries) {
+      loadMap();
+    }
+  });
 
-  $: isSourceLoaded && $selectedBoundaryMap
-    ? showMap($selectedBoundaryMap)
-    : clearMap();
+  run(() => {
+    isSourceLoaded && $selectedBoundaryMap
+      ? showMap($selectedBoundaryMap)
+      : clearMap();
+  });
 
-  $: isSourceLoaded && onDistrictChange($selectedDistrict);
+  run(() => {
+    isSourceLoaded && onDistrictChange($selectedDistrict);
+  });
 </script>
 
-<div id="map" class="flex-1 h-full" use:initMap />
+<div id="map" class="flex-1 h-full" use:initMap></div>

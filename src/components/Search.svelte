@@ -14,7 +14,7 @@
     boundaries
   } from '../stores';
 
-  let value: string;
+  let value: string = $state();
 
   onMount(() => {
     const unsubscribe = isMapReady.subscribe(ready => {
@@ -84,7 +84,7 @@
     </svg>
   </div>
   <button
-    on:click={onCoordinateButtonClick}
+    onclick={onCoordinateButtonClick}
     class={`group w-10 h-10 flex items-center justify-center ${
       $isSelectingCoordinates
         ? 'bg-blue-600 text-white hover:bg-blue-700'
