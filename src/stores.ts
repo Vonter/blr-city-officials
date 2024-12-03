@@ -13,8 +13,8 @@ function getLngLatObjectFromUrl(
     return null;
   }
   return {
-    lng: parseFloat(lng).toFixed(5),
-    lat: parseFloat(lat).toFixed(5)
+    lat: parseFloat(lat),
+    lng: parseFloat(lng)
   } as LngLat;
 }
 
