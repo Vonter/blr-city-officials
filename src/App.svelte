@@ -39,7 +39,22 @@
 >
   <Sidebar />
   <div class="relative flex-1 order-first md:order-last">
-    <Controls />
     <Map />
+    <div
+      class="md:absolute md:top-3 md:left-3 md:right-3 absolute bottom-0 left-0 right-0 p-3 pointer-events-none"
+    >
+      <div class="pointer-events-auto">
+        <Controls />
+      </div>
+    </div>
   </div>
 </main>
+
+<style>
+  /* On mobile, hide the attribution */
+  @media (max-width: 768px) {
+    :global(.maplibregl-ctrl.maplibregl-ctrl-attrib) {
+      display: none;
+    }
+  }
+</style>

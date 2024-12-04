@@ -27,6 +27,7 @@ export const selectedCoordinates = writable<LngLat | null>(
 );
 export const coordinatesMarker = writable<maplibregl.Marker>();
 export const isSelectingCoordinates = writable<boolean>(false);
+export const isListingBoundaryMaps = writable<boolean>(false);
 export const mapStore = writable<maplibregl.Map>();
 
 export const boundaries = readable(null, set => {

@@ -9,11 +9,12 @@
 </script>
 
 <header
-  class="p-4 sticky top-0 bg-white/90 dark:bg-neutral-900 z-20 border-b border-gray-900/10 shadow-sm"
+  class="h-[72px] p-4 sticky top-0 bg-white/90 dark:bg-neutral-900 z-20 border-b border-gray-900/10 shadow-sm"
 >
-  <div class="flex">
+  <div class="flex items-center h-full">
     {#if onBack}
       <button
+        aria-label="Go back"
         onclick={onBack}
         class="w-8 h-8 mr-2 -ml-1 text-lg flex justify-center items-center rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-white/20 dark:hover:text-gray-200"
       >
@@ -33,9 +34,9 @@
         </svg>
       </button>
     {/if}
-    <h1 class="text-lg tracking-tight flex-1 mt-0.5">
+    <h1 class="text-lg tracking-tight flex-1">
       {title}
     </h1>
+    {@render children?.()}
   </div>
-  {@render children?.()}
 </header>

@@ -174,22 +174,22 @@ export const layers: ILayers = {
     name_long: 'DRO',
     description: '',
     description_url: '',
-    icon: '🏠',
+    icon: '📝',
     formatUrl: name =>
       'https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en',
     formatContent: name => name,
-    group: 'Revenue'
+    group: 'Registrar'
   },
   stamps_sro: {
     name: 'SRO',
     name_long: 'SRO',
     description: '',
     description_url: '',
-    icon: '🏠',
+    icon: '📝',
     formatUrl: name =>
       'https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en',
     formatContent: name => name,
-    group: 'Revenue'
+    group: 'Registrar'
   },
   pincode: {
     name: 'Pin Code',
