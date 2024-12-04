@@ -7,7 +7,7 @@ import type maplibregl from 'maplibre-gl';
 
 export const defaultZoom: Partial<maplibregl.MapOptions> = {
   zoom: 9.6,
-  center: [77.6, 12.988]
+  center: [77.6, 12.974]
 };
 
 export function findPolylabel(feature: Feature) {

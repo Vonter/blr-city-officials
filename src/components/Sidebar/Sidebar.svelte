@@ -3,12 +3,14 @@
     isSelectingCoordinates,
     selectedBoundaryMap,
     selectedCoordinates,
-    selectedDistrict
+    selectedDistrict,
+    isListingBoundaryMaps
   } from '../../stores';
   import DefaultDetails from './DefaultDetails.svelte';
   import BoundaryDetails from './BoundaryDetails.svelte';
   import DistrictDetails from './DistrictDetails.svelte';
   import CoordinateDetails from './CoordinateDetails.svelte';
+  import BoundaryList from './BoundaryList.svelte';
 </script>
 
 <nav
@@ -22,6 +24,8 @@
       <BoundaryDetails />
     {:else if $isSelectingCoordinates || $selectedCoordinates}
       <CoordinateDetails />
+    {:else if $isListingBoundaryMaps}
+      <BoundaryList />
     {:else}
       <DefaultDetails />
     {/if}
@@ -31,16 +35,16 @@
       href="https://boundaries.beta.nyc"
       class="mt-0.5 ml-2 text-xs text-gray-500 dark:text-gray-400 underline hover:text-gray-700 dark:hover:text-gray-200 mr-auto"
     >
-      Based on BetaNYC's Map
+      Inspired by BetaNYC
     </a>
     <a
       class="mt-0.5 text-xs text-gray-500 dark:text-gray-400 underline hover:text-gray-700 dark:hover:text-gray-200"
-      href="https://github.com/Vonter/blr-boundaries/blob/master/LICENSE"
-      >License</a
+      href="https://github.com/Vonter/blr-boundaries/blob/master/DATA.md"
+      >Data</a
     >
     <a
       class="mt-0.5 ml-2 text-xs text-gray-500 dark:text-gray-400 underline hover:text-gray-700 dark:hover:text-gray-200"
-      href="https://github.com/Vonter/blr-boundaries">Github</a
+      href="https://github.com/Vonter/blr-boundaries">Code</a
     >
   </footer>
 </nav>

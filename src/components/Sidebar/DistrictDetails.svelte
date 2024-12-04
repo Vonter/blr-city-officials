@@ -6,6 +6,8 @@
   import {
     selectedBoundaryMap,
     selectedDistrict,
+    selectedCoordinates,
+    isListingBoundaryMaps,
     mapStore
   } from '../../stores';
   import { sortedDistricts, resetZoom } from '../../helpers/helpers';
@@ -47,15 +49,9 @@
     districtId: string | null
   ) {
     if (boundaryId && districtId) {
-      if (boundaryId === 'nta') {
-        return districtId;
-      } else if (boundaryId === 'bid') {
-        return `${layers[boundaryId].formatContent(districtId)} BID`;
-      } else {
-        return `${layers[boundaryId].icon} ${layers[boundaryId].name_long} ${layers[boundaryId].formatContent(
-          districtId
-        )}`;
-      }
+      return `${layers[boundaryId].icon} \u00A0 ${layers[boundaryId].name_long} ${layers[
+        boundaryId
+      ].formatContent(districtId)}`;
     }
 
     return 'Unknown District';
@@ -64,6 +60,12 @@
   function handleBack() {
     resetZoom($mapStore);
     selectedDistrict.set(null);
+    if ($selectedCoordinates) {
+      selectedBoundaryMap.set(null);
+    }
+    if (!$isListingBoundaryMaps) {
+      selectedBoundaryMap.set(null);
+    }
   }
 
   run(() => {

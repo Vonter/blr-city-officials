@@ -18,14 +18,8 @@
     formatContent,
     formatUrl = undefined,
     nameCol,
-    area,
-    searea,
     icon
   }: Props = $props();
-
-  let intersectingPercentage = $derived(
-    ((searea / area) * 100).toFixed(1) + '%'
-  );
 </script>
 
 <div
@@ -38,6 +32,7 @@
 >
   <button
     onclick={onClick}
+    aria-label={`View details for ${formatContent(nameCol)}`}
     class="flex-1 flex text-left py-1 px-4 focus:outline-none focus:ring focus:ring-blue-500 focus:z-10"
   >
     <div class="mr-2">{icon}</div>
@@ -45,16 +40,12 @@
       <div class="flex flex-row">
         {formatContent(nameCol)}
       </div>
-      {#if area}
-        <p class="text-gray-500 tabular-nums ml-2">
-          {intersectingPercentage}
-        </p>
-      {/if}
     </div>
   </button>
   {#if formatUrl}
     <a
       href={formatUrl(nameCol)}
+      aria-label={`Visit official webpage for ${formatContent(nameCol)}`}
       class="flex items-center py-1 px-3 -ml-4 text-gray-400 dark:text-gray-600
               hover:text-gray-900 focus:outline-none focus:ring focus:ring-blue-500"
       target="_blank"

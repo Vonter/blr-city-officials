@@ -39,12 +39,12 @@
       displayName: `${layers[result.properties.id].icon} ${result.properties.namecol}`
     }));
   }
-
   function onChange(e) {
     if (e && $isMapReady) {
       selectedCoordinates.set(null);
       selectedBoundaryMap.set(e.id);
       selectedDistrict.set(e.namecol);
+      value = ''; // Clear the search input
     }
   }
 
@@ -56,42 +56,14 @@
   }
 </script>
 
-<div class="relative flex w-full justify-end">
-  <div class="relative flex flex-1">
-    <AutoComplete
-      delay="200"
-      searchFunction={getResults}
-      {onChange}
-      bind:selectedItem={value}
-      placeholder="Search"
-      className="relative flex-1"
-      noInputStyles
-      showLoadingIndicator
-      inputClassName="l-0 t-0 r-0 py-2 px-3 pl-10 flex-1 w-full bg-white shadow-md rounded focus:outline-none focus:ring focus:ring-blue-500"
-      dropdownClassName="border-none shadow-md rounded mt-1 py-2 bg-white t-100"
-      labelFieldName="displayName"
-      hideArrow
-    />
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-5 w-5 absolute left-2.5 top-2.5"
-      viewBox="0 0 20 20"
-      fill="currentColor"
-    >
-      <path
-        fill-rule="evenodd"
-        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-        clip-rule="evenodd"
-      />
-    </svg>
-  </div>
+<div class="relative flex w-full justify-end gap-4">
   <button
     onclick={onCoordinateButtonClick}
     class={`group w-10 h-10 flex items-center justify-center ${
       $isSelectingCoordinates
         ? 'bg-blue-600 text-white hover:bg-blue-700'
         : 'bg-white text-gray-600 hover:text-blue-600'
-    } shadow-md rounded ml-2  hover:text-focus:outline-none focus:ring focus:ring-blue-500`}
+    } shadow-md rounded hover:text-focus:outline-none focus:ring focus:ring-blue-500`}
     aria-label="Pick coordinates"
   >
     <div
@@ -112,4 +84,33 @@
       />
     </svg>
   </button>
+  <div class="relative flex flex-1">
+    <AutoComplete
+      id="search-autocomplete"
+      delay="200"
+      searchFunction={getResults}
+      {onChange}
+      bind:selectedItem={value}
+      placeholder="Search"
+      className="relative flex-1"
+      noInputStyles
+      showLoadingIndicator
+      inputClassName="l-0 t-0 r-0 py-2 px-3 pl-10 flex-1 w-full bg-white shadow-md rounded focus:outline-none focus:ring focus:ring-blue-500"
+      dropdownClassName="border-none shadow-md rounded mt-1 py-2 bg-white t-100"
+      labelFieldName="displayName"
+      hideArrow
+    ></AutoComplete>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-5 w-5 absolute left-2.5 top-2.5"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </div>
 </div>

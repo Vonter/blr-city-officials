@@ -11,10 +11,7 @@
     boundaries
   } from '../../stores';
   import { clickOutside } from 'svelte-use-click-outside';
-  import {
-    resetZoom,
-    sortedDistricts
-  } from '../../helpers/helpers';
+  import { resetZoom, sortedDistricts } from '../../helpers/helpers';
   import DistrictLink from './DistrictLink.svelte';
   import Loader from '../Loader.svelte';
   import DownloadButtons from './DownloadButtons.svelte';
@@ -60,7 +57,7 @@
 
   function getDistricts(boundaryId: string) {
     if (!$boundaries) return;
-    
+
     boundaryData = {
       type: 'FeatureCollection',
       features: $boundaries.features.filter(
@@ -79,34 +76,11 @@
 
 <SidebarHeader
   title={$selectedBoundaryMap
-    ? layers[$selectedBoundaryMap].name_long
+    ? `${layers[$selectedBoundaryMap].icon} \u00A0 ${layers[$selectedBoundaryMap].name_long}`
     : 'Loading&hellip;'}
   onBack={handleBack}
 >
-  <div class="flex mt-2">
-    <div class="relative flex-1">
-      <input
-        id="filter"
-        placeholder="Filter"
-        type="search"
-        name="filter"
-        bind:value
-        autocomplete="off"
-        class="block w-full py-1 px-3 pl-10 bg-gray-100 dark:hover:bg-white/20 rounded focus:outline-none focus:ring focus:ring-blue-500 dark:bg-neutral-700"
-      />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5 absolute left-1.5 top-1.5"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
+  <div>
     {#if $selectedBoundaryMap}
       <div class="relative" use:clickOutside={() => (isDetailPaneOpen = false)}>
         <button
@@ -145,7 +119,12 @@
             >
           {/if}
           {#if boundaryData}
-            <DownloadButtons data={boundaryData} filename={$selectedBoundaryMap} />
+            {#await import('./DownloadButtons.svelte') then DownloadButtonsModule}
+              <DownloadButtonsModule.default
+                data={boundaryData}
+                filename={$selectedBoundaryMap}
+              />
+            {/await}
           {/if}
         </div>
       </div>

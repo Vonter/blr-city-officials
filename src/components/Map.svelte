@@ -22,7 +22,6 @@
   let prevLayerId: string | null = null;
   let prevDistrictId: string | null = null;
   let darkMode: boolean | null = isDarkMode();
-  let geolocateControl: maplibregl.GeolocateControl;
 
   function isDarkMode() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -39,30 +38,10 @@
       minZoom: 9,
       maxZoom: 16,
       maxBounds: [
-        [77, 12.5], // Southwestern NYC bounds + buffer
-        [78.25, 13.5] // Northeastern NYC bounds + buffer
+        [77, 12.5], // Southwestern bounds + buffer
+        [78.25, 13.5] // Northeastern bounds + buffer
       ],
       ...defaultZoom
-    });
-
-    // Add geolocate control
-    geolocateControl = new maplibregl.GeolocateControl({
-      positionOptions: {
-        enableHighAccuracy: true
-      },
-      trackUserLocation: false,
-      showAccuracyCircle: false
-    });
-    
-    map.addControl(geolocateControl, 'bottom-left');
-
-    // Add geolocate event listener
-    geolocateControl.on('geolocate', (position: GeolocationPosition) => {
-      const { longitude, latitude } = position.coords;
-      selectedCoordinates.set({
-        lat: latitude.toFixed(5),
-        lng: longitude.toFixed(5)
-      });
     });
 
     // Override default browser zoom hotkeys

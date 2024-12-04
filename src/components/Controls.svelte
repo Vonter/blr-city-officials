@@ -2,6 +2,6 @@
   import Search from './Search.svelte';
 </script>
 
-<nav class="absolute z-50 l flex left-3 right-3 top-3">
+<nav class="z-50 w-full">
   <Search />
 </nav>
