@@ -137,15 +137,18 @@
       <Loader />
     </div>
   {:else}
-    {#each districts.filter(district => district.properties?.namecol
+    {#each [...new Set(districts
+      .filter(district => district.properties?.namecol
         .toLowerCase()
-        .includes(value.toLowerCase())) as district}
+        .includes(value.toLowerCase()))
+      .map(d => d.properties?.namecol))] as nameCol}
+      {@const district = districts.find(d => d.properties?.namecol === nameCol)}
       <DistrictLink
-        onMouseOver={() => onDistrictMouseOver(district.properties?.namecol)}
-        onMouseOut={() => onDistrictMouseOut(district.properties?.namecol)}
-        onClick={() => ($selectedDistrict = district.properties?.namecol)}
+        onMouseOver={() => onDistrictMouseOver(nameCol)}
+        onMouseOut={() => onDistrictMouseOut(nameCol)} 
+        onClick={() => ($selectedDistrict = nameCol)}
         icon={layers[district.properties?.id].icon}
-        nameCol={district.properties?.namecol}
+        nameCol={nameCol}
         formatContent={layers[district.properties?.id].formatContent}
         formatUrl={layers[district.properties?.id].formatUrl}
       />

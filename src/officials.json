@@ -1,0 +1,4702 @@
+[
+  {
+    "Department": "admin_district",
+    "Area": "Bengaluru Rural",
+    "Designation": "Deputy Commissioner",
+    "Name": "Shivashankara N",
+    "Phone": "080 29781022",
+    "E-Mail": "deo.bangalroer3@gmail.com",
+    "Notes": "",
+    "Source": "https://bengaluruurban.nic.in/en/aboutdistrict/whos-who/"
+  },
+  {
+    "Department": "admin_district",
+    "Area": "Bengaluru Urban",
+    "Designation": "Deputy Commissioner",
+    "Name": "Jagadeesha G",
+    "Phone": "080 22211292 ",
+    "E-Mail": "dcurban@nic.in",
+    "Notes": "",
+    "Source": "https://bangalorerural.nic.in/en/whos-who/"
+  },
+  {
+    "Department": "admin_taluk",
+    "Area": "Anekal",
+    "Designation": "Tahsildar",
+    "Name": "P Dinesh",
+    "Phone": "",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bengaluruurban.nic.in/contact-details/"
+  },
+  {
+    "Department": "admin_taluk",
+    "Area": "Bangalore East",
+    "Designation": "Tahsildar",
+    "Name": "Ajith Rai Saroke",
+    "Phone": "",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bengaluruurban.nic.in/contact-details/"
+  },
+  {
+    "Department": "admin_taluk",
+    "Area": "Bangalore North",
+    "Designation": "Tahsildar",
+    "Name": "Balakrishna",
+    "Phone": "22232050",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bengaluruurban.nic.in/contact-details/"
+  },
+  {
+    "Department": "admin_taluk",
+    "Area": "Bangalore South",
+    "Designation": "Tahsildar",
+    "Name": "HT Manjappa",
+    "Phone": "22223152",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bengaluruurban.nic.in/contact-details/"
+  },
+  {
+    "Department": "admin_taluk",
+    "Area": "Yelahanka",
+    "Designation": "Tahsildar",
+    "Name": "Narashimamurthy",
+    "Phone": "28560696",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bengaluruurban.nic.in/contact-details/"
+  },
+  {
+    "Department": "bbmp_ward",
+    "Area": "-",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": ""
+  },
+  {
+    "Department": "bbmp_zone",
+    "Area": "Bommanahalli",
+    "Designation": "Zonal Commissioner",
+    "Name": "Ramya S",
+    "Phone": "080 42152672, 9480683935",
+    "E-Mail": "zcbommanahalli@gmail.com",
+    "Notes": "",
+    "Source": "https://site.bbmp.gov.in/zonewiseofficers.html"
+  },
+  {
+    "Department": "bbmp_zone",
+    "Area": "Dasarahalli",
+    "Designation": "Zonal Commissioner",
+    "Name": "H C Girish",
+    "Phone": "9480683650",
+    "E-Mail": "zonalcommissionerdas@gmail.com",
+    "Notes": "",
+    "Source": "https://site.bbmp.gov.in/zonewiseofficers.html"
+  },
+  {
+    "Department": "bbmp_zone",
+    "Area": "East",
+    "Designation": "Zonal Commissioner",
+    "Name": "Snehal R",
+    "Phone": "9480685577",
+    "E-Mail": "zc-east@bbmp.gov.in",
+    "Notes": "",
+    "Source": "https://site.bbmp.gov.in/zonewiseofficers.html"
+  },
+  {
+    "Department": "bbmp_zone",
+    "Area": "Mahadevapura",
+    "Designation": "Zonal Commissioner",
+    "Name": "K N Ramesh",
+    "Phone": "9480683851",
+    "E-Mail": "zcmdpbbmp@gmail.com",
+    "Notes": "",
+    "Source": "https://site.bbmp.gov.in/zonewiseofficers.html"
+  },
+  {
+    "Department": "bbmp_zone",
+    "Area": "RR Nagara",
+    "Designation": "Zonal Commissioner",
+    "Name": "Sateesha B C",
+    "Phone": "9480683707",
+    "E-Mail": "zc-rrnagara@bbmp.gov.in",
+    "Notes": "",
+    "Source": "https://site.bbmp.gov.in/zonewiseofficers.html"
+  },
+  {
+    "Department": "bbmp_zone",
+    "Area": "South",
+    "Designation": "Zonal Commissioner",
+    "Name": "Vinoth Priya R",
+    "Phone": "9480683345",
+    "E-Mail": "zc-south@bbmp.gov.in",
+    "Notes": "",
+    "Source": "https://site.bbmp.gov.in/zonewiseofficers.html"
+  },
+  {
+    "Department": "bbmp_zone",
+    "Area": "West",
+    "Designation": "Zonal Commissioner",
+    "Name": "Archana M S",
+    "Phone": "9480685866",
+    "E-Mail": "zc-west@bbmp.gov.in",
+    "Notes": "",
+    "Source": "https://site.bbmp.gov.in/zonewiseofficers.html"
+  },
+  {
+    "Department": "bbmp_zone",
+    "Area": "Yelahanka",
+    "Designation": "Zonal Commissioner",
+    "Name": "Karee Gowda",
+    "Phone": "7760504651",
+    "E-Mail": "zcyel.bbmp@gmail.com ",
+    "Notes": "",
+    "Source": "https://site.bbmp.gov.in/zonewiseofficers.html"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "Hebbal",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "23516893",
+    "E-Mail": "eehebbala@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "HSR Layout",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "22584382",
+    "E-Mail": "eehsrlayout@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "Indiranagar",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "25207071",
+    "E-Mail": "eeindiranagar@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "Jalahalli",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "8277893904",
+    "E-Mail": "eejalahalli@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "Jayanagar",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "26711499",
+    "E-Mail": "eejayanagar@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "Kengeri",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "28488868",
+    "E-Mail": "eekengeri@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "Koramangala",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "25631788",
+    "E-Mail": "eekoramangala@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "Malleshwaram",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "944844606",
+    "E-Mail": "eemalleshwaram@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "Peenya",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "28365466",
+    "E-Mail": "eepeenya@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "Rajajinagar",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "23132292",
+    "E-Mail": "eerajajinagar@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "RR Nagar",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "26746875",
+    "E-Mail": "eerajarajeshwarinagara @bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "Shivajinagar",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "25493008",
+    "E-Mail": "eeshivajinagar@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "Vidhana Soudha",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "22353680",
+    "E-Mail": "eevidhanasoudha@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_division",
+    "Area": "Whitefield",
+    "Designation": "Executive Engineer",
+    "Name": "-",
+    "Phone": "8277893919",
+    "E-Mail": "eewf.work@gmail.com",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "Anekal",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "9448279092",
+    "E-Mail": "aeeanekal@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "C1 Rajajinagara 2nd Block",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23324232, 9449844641",
+    "E-Mail": "aeec1@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "C2 Malleshwaram",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23341286, 94498 44642",
+    "E-Mail": "aeec2@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "C3 Jalahalli",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23452535, 9449844643",
+    "E-Mail": "aeec3@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "C4 Hebbala",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23334199, 9449844644",
+    "E-Mail": "aeec4@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "C5 Kaval Byrasandra",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23651515, 9449844645",
+    "E-Mail": "aeec5@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "C6 Mattikere",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23608250, 94498 44646",
+    "E-Mail": "aeec6@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "C7 Yelahanka",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "28463541, 9449844647",
+    "E-Mail": "aeec7@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "C8 Sahakar Nagar",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23627446, 9449841574",
+    "E-Mail": "aeec8@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "C9 Vidyaranyapura",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "8277893915",
+    "E-Mail": "aeec9.work@gmail.com",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "Channapatna Urban",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "7255390, 9448279091",
+    "E-Mail": "aeechannapattanarural @bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "Doddaballapura",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "27623913, 9448279080",
+    "E-Mail": "aeedodaaballapura @bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "E1 Pillanna Garden",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "25462474, 9449844671",
+    "E-Mail": "aeee1@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "E10 Benniganahalli",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "28510001, 9449868808",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "E11 Ramamurthy Nagar",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "8277893923",
+    "E-Mail": "subhanbaig9@gmail.com",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "E12 Mahadevapura",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "8277893920",
+    "E-Mail": "aeee12.work@gmail.com",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "E2 Shivaji Nagar",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "22386368, 9449844672",
+    "E-Mail": "aeee2@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "E3 MG Road",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "25587203, 9449844673",
+    "E-Mail": "aeee3@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "E4 Whitefield",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "28518510, 9449844674",
+    "E-Mail": "aeee4@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "E5 Cooke Town",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "25465175, 9449844675",
+    "E-Mail": "aeee5@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "E6 Indiranagar",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "25279101, 9449844676",
+    "E-Mail": "aeee6@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "E7 Dooravani Nagar",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "25611752, 9449844677",
+    "E-Mail": "aeee7@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "E8 Banaswadi",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "25420980, 9449844678",
+    "E-Mail": "aeee8@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "E9 Nagawara",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "25441208, 9449877171",
+    "E-Mail": "aeee9@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "Hosakote",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "28562559, 9448279024",
+    "E-Mail": "eeyelahankadivision @bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "K1 Kengeri",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "28488891, 9449844687",
+    "E-Mail": "aeek1@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "K2 Anjananagara",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "9449844892",
+    "E-Mail": "aeek2@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "K3 Kaggalipura",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "28432893, 9449844893",
+    "E-Mail": "aeek3@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "K4 RR Layout",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "8277893934",
+    "E-Mail": "aeek4@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "N1 West Chord Road",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23324975, 9449844651",
+    "E-Mail": "aeen1@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "N10 Mudalapalya",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "N2 KHB Colony",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23111276, 9449844652",
+    "E-Mail": "aeen2@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "N3 Basaveshwaranagar",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23228823, 9449844653",
+    "E-Mail": "aeen3@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "N4 Peenya",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "28361551, 9449844654",
+    "E-Mail": "aeen4@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "N5 SRS Gate",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "28394283, 9449844655",
+    "E-Mail": "aeen5@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "N6 Sunkadhkatte",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23582122, 9449844656",
+    "E-Mail": "aeen6@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "N7 Kurubarahalli",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23490554, 9449844657",
+    "E-Mail": "aeen7@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "N8 Ullala",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23480041, 9449844897",
+    "E-Mail": "aeen8@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "N9 Soladevanahalli",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "9663511412",
+    "E-Mail": "aeen9.work@gmail.com",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "Ramanagara Urban",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "27273323, 9448279088",
+    "E-Mail": "aeeramanagarurban@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S1 Jayanagar",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "22447249, 9449844661",
+    "E-Mail": "aees1@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S10 Bannerghatta",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "26639476, 9449844670",
+    "E-Mail": "aees10@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S11 HSR Layout",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "22584384, 9449844826",
+    "E-Mail": "aees11@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S12 JP Nagar",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "26852740, 9449844827",
+    "E-Mail": "aees12@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S13 Electronic City",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "9449841593",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S14 JP Nagar 2nd Phase",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "8277893196",
+    "E-Mail": "bcs.s14aee@gmail.com",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S15 Kathriguppe",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "8277893192",
+    "E-Mail": "aee15.work@gmail.com",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S16 Madiwala SDO",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "8277893193",
+    "E-Mail": "s16aeebcs.work@gmail.com",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S17 HAL",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "8277893183",
+    "E-Mail": "bcss17aee@gmail.com",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S18 Chikka Kallasandra",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "8277893182",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S19 Vijaya Bank Layout",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "26532077, 8277893180",
+    "E-Mail": "aees19@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S2 Wilson Garden",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "22226936, 9449844662",
+    "E-Mail": "aees2@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S20 Agara",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "8277893186",
+    "E-Mail": "aees20.work@gmail.com",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S3 Austin Town",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "25716045, 9449844663",
+    "E-Mail": "aees3@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S4 Koramangala",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "25532339, 9449844664",
+    "E-Mail": "aees4@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S5 ISRO Layout",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "26669149, 9449844665",
+    "E-Mail": "aees5@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S6 JP Nagar",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "26549050, 9449844660",
+    "E-Mail": "aees6@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S7 Murugeshpalya",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "25220806, 9449844667",
+    "E-Mail": "aees7@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S8 Bommanahalli",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "25735623, 9449844668",
+    "E-Mail": "aees8@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "S9 Banashankari 2nd Stage",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "26715144, 9449844669",
+    "E-Mail": "aees9@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "Shidlagatta Urban",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "9448279074",
+    "E-Mail": "aeeshiddlagattaurban @bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "W1 NR Colony",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "26756491, 9449844681",
+    "E-Mail": "aeew1@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "W2 Chamarajapete",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "26706820, 9449844682",
+    "E-Mail": "aeew2@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "W3 Magadi Road",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "23140026, 9449844683",
+    "E-Mail": "aeew3@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "W4 AR Circle",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "22263506, 9449844688",
+    "E-Mail": "aeew4@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "W5 Cubbonpete",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "22106998, 9449844685",
+    "E-Mail": "aeew5@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "W6 Byatarayanapura",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "26748706, 9449844686",
+    "E-Mail": "aeew6@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "W7 Rajarajeshwarinagara",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "9449844894",
+    "E-Mail": "aeew7@bescom.co.in",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bescom_subdivision",
+    "Area": "W8 NR Colony",
+    "Designation": "Assistant Executive Engineer",
+    "Name": "-",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en"
+  },
+  {
+    "Department": "bwssb_division",
+    "Area": "Central",
+    "Designation": "Executive Engineer",
+    "Name": "Nagendra B",
+    "Phone": "22945187, 9845444078",
+    "E-Mail": "eec@bwssb.gov.in",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_division",
+    "Area": "East",
+    "Designation": "Executive Engineer",
+    "Name": "Mirza Anwar",
+    "Phone": "22945158, 9741969945",
+    "E-Mail": "eee@bwssb.gov.in",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_division",
+    "Area": "North",
+    "Designation": "Executive Engineer",
+    "Name": "Jayaprakash",
+    "Phone": "080 29565615, 7022227230",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_division",
+    "Area": "North East",
+    "Designation": "Executive Engineer",
+    "Name": "Roopa Neelagunda",
+    "Phone": "080 22945124, 9845444070 ",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_division",
+    "Area": "North West – 1",
+    "Designation": "Executive Engineer",
+    "Name": "Harinath R",
+    "Phone": "23491123, 9845444043",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_division",
+    "Area": "North West – 2",
+    "Designation": "Executive Engineer",
+    "Name": "Miraganje Manjunath",
+    "Phone": "23311337, 9743371110",
+    "E-Mail": "eenw@bwssb.gov.in",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_division",
+    "Area": "South",
+    "Designation": "Executive Engineer",
+    "Name": "Bharath Kumar S",
+    "Phone": "22945143, 9036560649",
+    "E-Mail": "ees2@bwssb.gov.in",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_division",
+    "Area": "South East – 1",
+    "Designation": "Executive Engineer",
+    "Name": "Nagaraj K",
+    "Phone": "22945159, 9845444049",
+    "E-Mail": "aeese1@bwssb.gov.in",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_division",
+    "Area": "South East – 2",
+    "Designation": "Executive Engineer",
+    "Name": "Basavaraj N",
+    "Phone": "080-22945389, 9113042980",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_division",
+    "Area": "South West",
+    "Designation": "Executive Engineer",
+    "Name": "Sneha V",
+    "Phone": "22945196, 8762892000",
+    "E-Mail": "eesw1@bwssb.gov.in",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_division",
+    "Area": "West",
+    "Designation": "Executive Engineer",
+    "Name": "T Chandrashekar Prasad",
+    "Phone": "22945171, 9845443138",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "AECS Layout-1",
+    "Designation": "Assistant Engineer",
+    "Name": " Manjunath / Sahanab begam",
+    "Phone": "22945234, 8431607550 8618792435",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "AECS Layout-2",
+    "Designation": "Assistant Engineer",
+    "Name": " Latheef Saheb",
+    "Phone": "22945115, 8867388732",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Agrahara Dasarahalli",
+    "Designation": "Assistant Engineer",
+    "Name": " Rajendra kumar",
+    "Phone": "22945185, 9845444076",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Ananda Nagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Kumar",
+    "Phone": "22945266, 9482798909",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Annapoorneswari Nagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Vishwanath",
+    "Phone": "9900629915",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Bahubali Nagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Karthik Manju",
+    "Phone": "23452696, 7026328863",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Baiyappanahalli",
+    "Designation": "Assistant Engineer",
+    "Name": " Poornima",
+    "Phone": "22945165, 7892388927",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Bellandur",
+    "Designation": "Assistant Engineer",
+    "Name": "",
+    "Phone": "9686566948",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Bhashyam Park",
+    "Designation": "Assistant Engineer",
+    "Name": " Kishore",
+    "Phone": "22945189, 8217296837",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "BTM I",
+    "Designation": "Assistant Engineer",
+    "Name": " Hanumantharaju C P",
+    "Phone": "22945151, 8660134057",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "BTM II",
+    "Designation": "Assistant Engineer",
+    "Name": " Hanumantharaju C P",
+    "Phone": "22945151, 8660134057",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Byrasandra",
+    "Designation": "Assistant Engineer",
+    "Name": " Shreeja",
+    "Phone": "22945149, 8951785741",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Challakere / Horamavu / Kalkere / Kothanur-Byrathi",
+    "Designation": "Assistant Engineer",
+    "Name": " Anand",
+    "Phone": "7090216187",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Chamarajpet",
+    "Designation": "Assistant Engineer",
+    "Name": " Praveen .G",
+    "Phone": "22945156, 9845444048",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Chandra Layout",
+    "Designation": "Assistant Engineer",
+    "Name": " Ramegowda",
+    "Phone": "22945174, 9739925888",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Chikkalalbhag",
+    "Designation": "Assistant Engineer",
+    "Name": " Seema",
+    "Phone": "22945188, 6362695183",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "CLR",
+    "Designation": "Assistant Engineer",
+    "Name": " D S Rangaiah",
+    "Phone": "22945161, 8197988300",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Coles Park",
+    "Designation": "Assistant Engineer",
+    "Name": " Rajesh S D",
+    "Phone": "22945192, 9972962038",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Devasandra",
+    "Designation": "Assistant Engineer",
+    "Name": " Dinesh Ballu",
+    "Phone": "9844888150",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Domlur",
+    "Designation": "Assistant Engineer",
+    "Name": " Mamatha M H",
+    "Phone": "8494985193",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Frazer Town",
+    "Designation": "Assistant Engineer",
+    "Name": " Rahul",
+    "Phone": "22945167, 9916524936",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Gangenahalli",
+    "Designation": "Assistant Engineer",
+    "Name": " Kumar",
+    "Phone": "22945142, 9482798909",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Girinagara",
+    "Designation": "Assistant Engineer",
+    "Name": " Usha C R",
+    "Phone": "9686566952",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "HAL 2nd Stage",
+    "Designation": "Assistant Engineer",
+    "Name": "",
+    "Phone": "22945165, 7892388927",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "HAL Airport",
+    "Designation": "Assistant Engineer",
+    "Name": " Ranjan",
+    "Phone": "9481428073",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "HBR",
+    "Designation": "Assistant Engineer",
+    "Name": " Daval sab Karnachi",
+    "Phone": "22945170, 9686566954",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Heggana Halli",
+    "Designation": "Assistant Engineer",
+    "Name": " Nadish",
+    "Phone": "29558007, 9632435522",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "HGR",
+    "Designation": "Assistant Engineer",
+    "Name": " Mahesh Kumar K.S",
+    "Phone": "22945191, 9900944041",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Hombe Gowda nagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Shreeja",
+    "Phone": "22945380, 8951785741",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Hoodi",
+    "Designation": "Assistant Engineer",
+    "Name": " Ravi Kumar",
+    "Phone": "22945234, 7349543768",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Hosahalli",
+    "Designation": "Assistant Engineer",
+    "Name": " Swathi",
+    "Phone": "22945186, 7026298455",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Hosakerehalli",
+    "Designation": "Assistant Engineer",
+    "Name": " Sridhar.S",
+    "Phone": "22945147, 9845444031",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "HRBR",
+    "Designation": "Assistant Engineer",
+    "Name": " Daval sab Karnachi",
+    "Phone": "22945170, 9686566954",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Ideal Home Layout",
+    "Designation": "Assistant Engineer",
+    "Name": " Rahul Rathod",
+    "Phone": "22945246, 7026266677",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Indiranagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Shashi Kumar",
+    "Phone": "22945164, 6361028870",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Ittamadu",
+    "Designation": "Assistant Engineer",
+    "Name": " Lingaraju",
+    "Phone": "22945147, 9901546377",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "J J Nagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Lakshmi Narayana Gowda",
+    "Phone": "22945156, 9845444086",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Jakkur",
+    "Designation": "Assistant Engineer",
+    "Name": " Pradeep",
+    "Phone": "7019003410",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Jayamahal",
+    "Designation": "Assistant Engineer",
+    "Name": " Jayashree",
+    "Phone": "22945137, 6360288305",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Jayanagar 4th ‘T’ block",
+    "Designation": "Assistant Engineer",
+    "Name": " Lakshmi",
+    "Phone": "22945150, 6361835615",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Jayanagar 4th block",
+    "Designation": "Assistant Engineer",
+    "Name": " Shreeja",
+    "Phone": "8951785741",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "JB Nagar",
+    "Designation": "Assistant Engineer",
+    "Name": "",
+    "Phone": "22945165, 9880814543",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Johnson Market",
+    "Designation": "Assistant Engineer",
+    "Name": " Murali C P",
+    "Phone": "22945160, 9845451382",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "JP Nagar 1st Phase",
+    "Designation": "Assistant Engineer",
+    "Name": " Lakshmi",
+    "Phone": "22945152, 6361835615",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "JP Nagar 2nd Phase",
+    "Designation": "Assistant Engineer",
+    "Name": " Akram",
+    "Phone": "9880927106",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Kamakshipalya/ Kamalanagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Shivakumar",
+    "Phone": "23235755, 9845444074",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Kathriguppe",
+    "Designation": "Assistant Engineer",
+    "Name": " Kumuda",
+    "Phone": "22945147, 9035903638",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Kengeri",
+    "Designation": "Assistant Engineer",
+    "Name": " Rahul Rathod",
+    "Phone": "22945175, 7026266677",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Kethamarana Halli",
+    "Designation": "Assistant Engineer",
+    "Name": " Pushpa",
+    "Phone": "22945178, 9611838985",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "KG Tower",
+    "Designation": "Assistant Engineer",
+    "Name": " Jayashree",
+    "Phone": "22945136, 6360288305",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Kodichikkanahalli",
+    "Designation": "Assistant Engineer",
+    "Name": " Vikas D S / Nagaraj S R",
+    "Phone": "22945154, 22945231, 9845444039, 9901288556",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Koramangala",
+    "Designation": "Assistant Engineer",
+    "Name": " Gajanana",
+    "Phone": "22945153, 9845444056",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Kothanurdinne",
+    "Designation": "Assistant Engineer",
+    "Name": " Akshay C",
+    "Phone": "9845444038",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Kumara Park",
+    "Designation": "Assistant Engineer",
+    "Name": " Dastagiri Basha",
+    "Phone": "22945138, 9108354491",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Kumaraswamy Layout",
+    "Designation": "Assistant Engineer",
+    "Name": " Preethi J",
+    "Phone": "22945146, 9845444034",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Lingarajapura",
+    "Designation": "Assistant Engineer",
+    "Name": " Rajini A",
+    "Phone": "22945200, 9844888239",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "LLR",
+    "Designation": "Assistant Engineer",
+    "Name": " Seema",
+    "Phone": "22945188, 6362695183",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Machalibetta",
+    "Designation": "Assistant Engineer",
+    "Name": " Mallappa Mali",
+    "Phone": "22945167, 9591209312",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Magadi Road",
+    "Designation": "Assistant Engineer",
+    "Name": " Dinesh",
+    "Phone": "22945181, 9901343001",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Mahalakshmi Layuot",
+    "Designation": "Assistant Engineer",
+    "Name": " Pushpa",
+    "Phone": "22945177, 9611838985",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Malleshwaram",
+    "Designation": "Assistant Engineer",
+    "Name": " Suhana",
+    "Phone": "22945134, 8147583759",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "MEI Layout (Dasarahalli)",
+    "Designation": "Assistant Engineer",
+    "Name": " Karthik Manju",
+    "Phone": "7760963670",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "MNK Park",
+    "Designation": "Assistant Engineer",
+    "Name": " Karthik M",
+    "Phone": "22945228, 9845444032",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Moodala Palya",
+    "Designation": "Assistant Engineer",
+    "Name": " Sathish T",
+    "Phone": "22945174, 7892580073",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Mount Joy",
+    "Designation": "Assistant Engineer",
+    "Name": " Sudarshan D N",
+    "Phone": "9845444105",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Mysore Road",
+    "Designation": "Assistant Engineer",
+    "Name": " Dinesh",
+    "Phone": "22945182, 9901343001",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Nagarabhavi",
+    "Designation": "Assistant Engineer",
+    "Name": " Harsha V",
+    "Phone": "23183260, 9986555502",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Nagendra Block",
+    "Designation": "Assistant Engineer",
+    "Name": " Usha C R",
+    "Phone": "9686566952",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Nandini Layout",
+    "Designation": "Assistant Engineer",
+    "Name": " Dushyanth",
+    "Phone": "22945177, 8904778179",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "New BEL Road",
+    "Designation": "Assistant Engineer",
+    "Name": " Dastagir Basha",
+    "Phone": "22945245, 9108354491",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "OMBR",
+    "Designation": "Assistant Engineer",
+    "Name": " Manjunatha",
+    "Phone": "22945200, 9590802503",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Peenya",
+    "Designation": "Assistant Engineer",
+    "Name": " Ganesh",
+    "Phone": "22945213, 9845444068",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Peenya Dasarahalli",
+    "Designation": "Assistant Engineer",
+    "Name": " Sandeep",
+    "Phone": "22945213, 9980914310",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Pillana Garden-1",
+    "Designation": "Assistant Engineer",
+    "Name": " Rahul",
+    "Phone": "22945167, 9916524936",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Pillana Garden-2",
+    "Designation": "Assistant Engineer",
+    "Name": " Mallappa Mali",
+    "Phone": "22945167, 9591209312",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "PP Layout",
+    "Designation": "Assistant Engineer",
+    "Name": " Shekar",
+    "Phone": "22945145, 7760990673",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Rajaji Nagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Pushpa",
+    "Phone": "22945177, 9611838985",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Ramamurthy Nagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Anand",
+    "Phone": "25663688, 7090216187",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "RT Nagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Kumar",
+    "Phone": "22945142, 9482798909",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Sahakar Nagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Chinthana K",
+    "Phone": "8861547061",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Sanjay Nagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Dastagiri Basha",
+    "Phone": "9108354491",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Srirampura",
+    "Designation": "Assistant Engineer",
+    "Name": " Siddaraju",
+    "Phone": "22945133, 9611445594",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Sudhama Nagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Suhas",
+    "Phone": "22945188, 9481469168",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Ulsoor",
+    "Designation": "Assistant Engineer",
+    "Name": " Ravi Kiran(i/c)",
+    "Phone": "9945856623",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Vidyaranyapura",
+    "Designation": "Assistant Engineer",
+    "Name": " Dhanalakshmi M",
+    "Phone": "9743070424",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Vignana Nagar",
+    "Designation": "Assistant Engineer",
+    "Name": " Mohammed Mudassir",
+    "Phone": "28510008, 9845444051",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Vijaya Bank layout",
+    "Designation": "Assistant Engineer",
+    "Name": " Nagaraj S R",
+    "Phone": "9901288556",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Vijnanapura",
+    "Designation": "Assistant Engineer",
+    "Name": " Anand",
+    "Phone": "7090216187",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Vjayanagar OHT",
+    "Designation": "Assistant Engineer",
+    "Name": " Ramegowda B",
+    "Phone": "22945246, 9739925888",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "VV Puram",
+    "Designation": "Assistant Engineer",
+    "Name": " Prahalad",
+    "Phone": "22945195, 9845444087",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "WCR-I",
+    "Designation": "Assistant Engineer",
+    "Name": " Rajendra kumar",
+    "Phone": "23235755, 9845444076",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Yelahanka New Town",
+    "Designation": "Assistant Engineer",
+    "Name": " Manjunatha Hallur",
+    "Phone": "22945140, 8971192116",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Yelahanka Old Town",
+    "Designation": "Assistant Engineer",
+    "Name": " Vinay kumar P B",
+    "Phone": "8184079109",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "bwssb_service_station",
+    "Area": "Yeshwanthpura",
+    "Designation": "Assistant Engineer",
+    "Name": " Kishore",
+    "Phone": "",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Anekal",
+    "Designation": "MLA",
+    "Name": "B Shivanna",
+    "Phone": "9845212583",
+    "E-Mail": "anekal.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "B.T.M Layout",
+    "Designation": "MLA",
+    "Name": "Ramalinga Reddy",
+    "Phone": "9845984444",
+    "E-Mail": "b.t.m.layout.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Bangalore South",
+    "Designation": "MLA",
+    "Name": "M Krishnappa",
+    "Phone": "9844014777",
+    "E-Mail": "bangaloresouth.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Basavanagudi",
+    "Designation": "MLA",
+    "Name": "Ravi Subramanya LA",
+    "Phone": "9845395380",
+    "E-Mail": "basavanagudi.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Bommanahalli",
+    "Designation": "MLA",
+    "Name": "Satish Reddy M",
+    "Phone": "9448051616",
+    "E-Mail": "bommanahalli.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Byatarayanapura",
+    "Designation": "MLA",
+    "Name": "Krishna Byregowda",
+    "Phone": "9448277977",
+    "E-Mail": "byatarayanapura.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "C.V. RamannNagar",
+    "Designation": "MLA",
+    "Name": "S Raghu",
+    "Phone": "9880080088",
+    "E-Mail": "c.v.ramannagar.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Chamrajapet",
+    "Designation": "MLA",
+    "Name": "BZ Zameer Ahmed Khan",
+    "Phone": "9449311111",
+    "E-Mail": "chamrajpet.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Channapatna",
+    "Designation": "MLA",
+    "Name": "",
+    "Phone": "",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Chickpet",
+    "Designation": "MLA",
+    "Name": "Uday B Garudachar",
+    "Phone": "9845046722",
+    "E-Mail": "chickpet.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Chikkaballapur",
+    "Designation": "MLA",
+    "Name": "Pradeep Eshwar",
+    "Phone": "9731167493",
+    "E-Mail": "chikkaballapur.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Dasarahalli",
+    "Designation": "MLA",
+    "Name": "S Muniraju",
+    "Phone": "9343772488",
+    "E-Mail": "dasarahalli.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Devanahalli",
+    "Designation": "MLA",
+    "Name": "KH Muniyappa",
+    "Phone": "9611835999",
+    "E-Mail": "devanahalli.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Doddaballapur",
+    "Designation": "MLA",
+    "Name": "Dheeraj Muniraj",
+    "Phone": "9916395222",
+    "E-Mail": "doddaballapur.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Gandhinagar",
+    "Designation": "MLA",
+    "Name": "Dinesh Gundu Rao",
+    "Phone": "9945803133",
+    "E-Mail": "gandhinagar.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Govindarajanagar",
+    "Designation": "MLA",
+    "Name": "Priya Krishna",
+    "Phone": "9448049279",
+    "E-Mail": "govindrajnagar.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Hebbal",
+    "Designation": "MLA",
+    "Name": "BS Suresha Byrathi",
+    "Phone": "9900445555",
+    "E-Mail": "hebbal.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Hosakote",
+    "Designation": "MLA",
+    "Name": "Sharathkumar Bachegowda",
+    "Phone": "9535194999",
+    "E-Mail": "hoskote.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Jayanagar",
+    "Designation": "MLA",
+    "Name": "CK Rama Murthy",
+    "Phone": "9845000683",
+    "E-Mail": "jayanagar.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "K.R. Pura",
+    "Designation": "MLA",
+    "Name": "BA Basavaraja",
+    "Phone": "9844029229",
+    "E-Mail": "k.r.pura.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Kanakapura",
+    "Designation": "MLA",
+    "Name": "DK Shivakumar",
+    "Phone": "9845156524",
+    "E-Mail": "kanakapura.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Koratagere",
+    "Designation": "MLA",
+    "Name": "G Parameshwara",
+    "Phone": "9663904139",
+    "E-Mail": "koratagere.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Magadi",
+    "Designation": "MLA",
+    "Name": "HC Balakrishna",
+    "Phone": "9663146939",
+    "E-Mail": "magadi.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Mahadevapura",
+    "Designation": "MLA",
+    "Name": "Manjula S",
+    "Phone": "9611347957",
+    "E-Mail": "mahadevapura.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Mahalakshmi Layout",
+    "Designation": "MLA",
+    "Name": "Gopalaiah K",
+    "Phone": "9731844753",
+    "E-Mail": "mllayout.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Malleshwaram",
+    "Designation": "MLA",
+    "Name": "Ashwath Narayan CN",
+    "Phone": "9845179709",
+    "E-Mail": "malleshwaram.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Malur",
+    "Designation": "MLA",
+    "Name": "KN Nanjegowda",
+    "Phone": "9481829999",
+    "E-Mail": "malur.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Nelamangala",
+    "Designation": "MLA",
+    "Name": "Shrinivasiah N",
+    "Phone": "9945144669",
+    "E-Mail": "nelamangala.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Padmanabanagar",
+    "Designation": "MLA",
+    "Name": "R Ashoka",
+    "Phone": "9880860845",
+    "E-Mail": "padmanabhanagar.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Pulakeshinagar",
+    "Designation": "MLA",
+    "Name": "AC Srinivasa",
+    "Phone": "9845123673",
+    "E-Mail": "pulakeshinagar.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Rajajinagar",
+    "Designation": "MLA",
+    "Name": "S Suresh Kumar",
+    "Phone": "9591814041",
+    "E-Mail": "rajajinagar.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Rajarajeshwarinagar",
+    "Designation": "MLA",
+    "Name": "Munirathna",
+    "Phone": "9845023405",
+    "E-Mail": "rrnagar.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Ramanagaram",
+    "Designation": "MLA",
+    "Name": "HA Iqbal Hussain",
+    "Phone": "9845255672",
+    "E-Mail": "ramanagaram.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Sarvagnanagar",
+    "Designation": "MLA",
+    "Name": "KJ George",
+    "Phone": "9845067437",
+    "E-Mail": "sarvagnanagar.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Shantinagar",
+    "Designation": "MLA",
+    "Name": "NA Haris",
+    "Phone": "9900009232",
+    "E-Mail": "shantinagar.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Shivajinagar",
+    "Designation": "MLA",
+    "Name": "Rizwan Arshad",
+    "Phone": "9845111995",
+    "E-Mail": "shivajinagar.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Sidlaghatta",
+    "Designation": "MLA",
+    "Name": "BN Ravi Kumar",
+    "Phone": "9845610989",
+    "E-Mail": "sidlaghatta.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Tumkur Rural",
+    "Designation": "MLA",
+    "Name": "B Suresh Gowda",
+    "Phone": "9844011338",
+    "E-Mail": "tumkurrural.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Vijayanagar",
+    "Designation": "MLA",
+    "Name": "M Krishnappa",
+    "Phone": "9845025556",
+    "E-Mail": "vijaynagar.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Yelahanka",
+    "Designation": "MLA",
+    "Name": "SR Vishwanath",
+    "Phone": "9845017811",
+    "E-Mail": "yelahanka.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_ac",
+    "Area": "Yeshwanthapura",
+    "Designation": "MLA",
+    "Name": "ST Somashekhar",
+    "Phone": "9844110779",
+    "E-Mail": "yeshvanthapura.mla@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/16membersaddress_eng.pdf"
+  },
+  {
+    "Department": "election_pc",
+    "Area": "Bangalore Central",
+    "Designation": "MP",
+    "Name": "PC Mohan",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/lsmembers.htm"
+  },
+  {
+    "Department": "election_pc",
+    "Area": "Bangalore North",
+    "Designation": "MP",
+    "Name": "Shobha Kanrandlaje",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/lsmembers.htm"
+  },
+  {
+    "Department": "election_pc",
+    "Area": "Bangalore Rural",
+    "Designation": "MP",
+    "Name": "CN Manjunath",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/lsmembers.htm"
+  },
+  {
+    "Department": "election_pc",
+    "Area": "Bangalore South",
+    "Designation": "MP",
+    "Name": "Tejasvi Surya",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/lsmembers.htm"
+  },
+  {
+    "Department": "election_pc",
+    "Area": "Chikkaballapur",
+    "Designation": "MP",
+    "Name": "K Sudhakar",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/lsmembers.htm"
+  },
+  {
+    "Department": "election_pc",
+    "Area": "Kolar",
+    "Designation": "MP",
+    "Name": "Mallesh M Babu",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/lsmembers.htm"
+  },
+  {
+    "Department": "election_pc",
+    "Area": "Tumkur",
+    "Designation": "MP",
+    "Name": "V Somanna",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://kla.kar.nic.in/assembly/member/lsmembers.htm"
+  },
+  {
+    "Department": "pincode",
+    "Area": "-",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": ""
+  },
+  {
+    "Department": "police_city",
+    "Area": "Adugodi PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942573",
+    "E-Mail": "adugodibcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Amruthahally PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22943644",
+    "E-Mail": "amruthahallipsbcp@ksp.gov.in",
+    "Notes": "Amrutha Halli PS",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Annapoorneshwari Nagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 23482644",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Ashokanagara PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942076",
+    "E-Mail": "anagarbcp@ksp.gov.in",
+    "Notes": "Ashoknagar PS",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Bagalgunte PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942258",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Bagalur PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 28463100",
+    "E-Mail": "bhagalurpsbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Banashankari PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942564",
+    "E-Mail": "bskbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Banaswadi PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942552",
+    "E-Mail": "bwadibcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Bandepalya PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942236",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Basavanagudi PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942561",
+    "E-Mail": "bgudibcp@ksp.gov.in",
+    "Notes": "Basavanagudi women PS, 080 22943250, bgudiwbcp@ksp.gov.in",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Basaveshwara Nagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942516",
+    "E-Mail": "bwnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Begur PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942551",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Bellanduru PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 25747771",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Bharathi Nagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942547",
+    "E-Mail": "bnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Bommanahalli PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942269",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Byappanahalli PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942545",
+    "E-Mail": "bpnhallibcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Byatarayanapura PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942507",
+    "E-Mail": "bypurabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "C.K.Acchukattu PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942380",
+    "E-Mail": "ckachukattubcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Chamarajpet PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942575",
+    "E-Mail": "cmpetbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Chandra Layout PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942512",
+    "E-Mail": "clayoutbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Chikkajala PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 28467200",
+    "E-Mail": "chikkajalabng@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "City Market PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942502",
+    "E-Mail": "marketbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Commercial Street PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942549",
+    "E-Mail": "commercialbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Cottenpet PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942508",
+    "E-Mail": "cotpetbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Cubbon Park PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942087",
+    "E-Mail": "cparkbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Devanahalli PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 27680333",
+    "E-Mail": "devanahallipsbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Devarajeevanahalli PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942550",
+    "E-Mail": "djhallibcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Electronic City PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22943469",
+    "E-Mail": "electroniccitybcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Gangammagudi PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942530",
+    "E-Mail": "gggudibcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Girinagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942577",
+    "E-Mail": "gnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "H.A.L. PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942542",
+    "E-Mail": "halbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "H.S.R.Layout PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22943474",
+    "E-Mail": "hsrlayoutbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Halasur PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942540",
+    "E-Mail": "halasoorbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Halasurgate PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942075",
+    "E-Mail": "hgatebcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Hanumathanagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942576",
+    "E-Mail": "hnagarbcp@ksp.gov.in",
+    "Notes": "Hanumanthanagar PS",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Hebbal PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942535",
+    "E-Mail": "hebbalbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Hennur PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942557",
+    "E-Mail": "hennurbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "High Ground PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942083",
+    "E-Mail": "hgroundbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Hulimavu PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22943470",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Indiranagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942541",
+    "E-Mail": "inagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "J.C. NagarPS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942534",
+    "E-Mail": "jcnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "J.P. Nagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942563",
+    "E-Mail": "jpnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Jagajeevanram Nagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942509",
+    "E-Mail": "jjnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Jalahalli PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942527",
+    "E-Mail": "jhallibcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Jayanagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942562",
+    "E-Mail": "jnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Jeevan Bheemanagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942543",
+    "E-Mail": "jbnagarbcp@ksp.gov.in",
+    "Notes": "J .B. Nagar PS",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Jnanabharathi PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942513",
+    "E-Mail": "jbharathibcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "K.G.Nagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942578",
+    "E-Mail": "kgnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "K.R. Puram PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942553",
+    "E-Mail": "krpurambcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Kadugodi PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22943471",
+    "E-Mail": "kadugodibcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Kadugondana Halli PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942556",
+    "E-Mail": "kghallibcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Kalasipalya PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942504",
+    "E-Mail": "klpalyabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Kamakshipalya PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942517",
+    "E-Mail": "kmpalyabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Kempapura Agrahara PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942518",
+    "E-Mail": "kpagaraharabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "kempegowda International Airport PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22001102",
+    "E-Mail": "biapsbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Kengeri PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942510",
+    "E-Mail": "kengeribcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Kodigehalli PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22943703",
+    "E-Mail": "kodigehallibcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Konanakunte PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942560",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Koramangala PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22943470",
+    "E-Mail": "kmangalabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Kothanur PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22943694",
+    "E-Mail": "kottanurbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Kumarswamy Layout PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942567",
+    "E-Mail": "kslayoutbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Madiwala PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942568",
+    "E-Mail": "madivalabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Magadi Road PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942515",
+    "E-Mail": "mroadbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Mahadevapura PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942546",
+    "E-Mail": "mdpurabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Mahalakshmi Layout PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942523",
+    "E-Mail": "mlayoutbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Malleshwarm PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942519",
+    "E-Mail": "mvmbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Marathahalli PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 25639999",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Mico layout Bangalore PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942569",
+    "E-Mail": "micobcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Nandini Layout PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942539",
+    "E-Mail": "nlayoutbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "parappana Agrahara",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22943468",
+    "E-Mail": "pagraharabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Peenya PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942532",
+    "E-Mail": "peenyabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Pulakeshinagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942548",
+    "E-Mail": "ftownbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Puttenahalli PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942566",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "R.T. Nagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942538",
+    "E-Mail": "rtnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Rajaji Nagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942522",
+    "E-Mail": "rnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Rajarajeshwarinagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942559",
+    "E-Mail": "rrnagar@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Rajgopal Nagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942525",
+    "E-Mail": "rgnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Ramamurthy Nagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942554",
+    "E-Mail": "rmnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "S.J. Park PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942079",
+    "E-Mail": "sjparkbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Sadashivanagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942085",
+    "E-Mail": "ssnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Sampangiramanagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942078",
+    "E-Mail": "srnagarbcp@ksp.gov.in",
+    "Notes": "S .R. Nagar PS",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Sampigehalli PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22943692",
+    "E-Mail": "sampigehallipsbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Sanjay Nagara PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942533",
+    "E-Mail": "sanjaynagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Seshadripuram PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942586",
+    "E-Mail": "sspurambcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Shankarapuram PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942528",
+    "E-Mail": "skpurabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Shivajinagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942597",
+    "E-Mail": "snagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Siddapura PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942572",
+    "E-Mail": "spurabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Soladevanahalli PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942529",
+    "E-Mail": "sdhallibcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Srirampura PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942520",
+    "E-Mail": "srpurambcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Subramanya Nagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942524",
+    "E-Mail": "sbnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Subramanyapura PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942565",
+    "E-Mail": "sbpurabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Suddaguntepalya PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942762",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Thalaghattapura PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942359",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Tilak Nagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942571",
+    "E-Mail": "tlknagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Upparpet PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942503",
+    "E-Mail": "upetbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "V.V. Puram PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942574",
+    "E-Mail": "",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Varthur PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 28539196",
+    "E-Mail": "varthurbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Vidhana Soudha PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942086",
+    "E-Mail": "vsoudhabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Vidhyaranyapura PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942528",
+    "E-Mail": "vrpurabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Vijayanagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942514",
+    "E-Mail": "vjnagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Viveknagar PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942080",
+    "E-Mail": "vknagarbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Vyalikaval PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942084",
+    "E-Mail": "vkavalbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Whitefield PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22943472",
+    "E-Mail": "whitefieldbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Wilsongarden PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942581",
+    "E-Mail": "piwgarden@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Yelahanka New Town PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942537",
+    "E-Mail": "ylkntbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Yelahanka PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942536",
+    "E-Mail": "ylankabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Yeshwanthapura PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942526",
+    "E-Mail": "yspurabcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_city",
+    "Area": "Yeshwanthpura RMC Yard PS",
+    "Designation": "-",
+    "Name": "-",
+    "Phone": "080 22942531",
+    "E-Mail": "rmcyardbcp@ksp.gov.in",
+    "Notes": "R.M.C. Yard PS",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-police-oficers-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Adugodi PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801822, 08022943125, 08022943119",
+    "E-Mail": "adugoditrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Ashokanagara PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801823, 08022943122, 08022943123",
+    "E-Mail": "anagartrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Banashankari PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801930, 08022942673",
+    "E-Mail": "bsktrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Banaswadi PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801819, 08022942217, 08022942280",
+    "E-Mail": "bwaditrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Basavanagudi PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801928, 08022942668, 08022943102",
+    "E-Mail": "bguditrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Byatarayanapura PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801919, 08022942657, 22943011",
+    "E-Mail": "bypuratrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Chickpet PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801916, 08022942664",
+    "E-Mail": "chickpettrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Chikkajala PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801934, 08028467559",
+    "E-Mail": "chikkajalatrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "City Market PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801917, 08022942808",
+    "E-Mail": "citymarkettrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Cubbon Park PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801828, 08022942675, 08022942912",
+    "E-Mail": "cparktrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Devanahalli PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801974, 08027681100",
+    "E-Mail": "bialtrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Electronic City PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801832, 08022943718",
+    "E-Mail": "electroniccitytrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "H.A.L. PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801817, 08022942678, 08022943115",
+    "E-Mail": "airporttrafficbcp@ksp.gov.in",
+    "Notes": "Airport PS",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "H.S.R.Layout PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9900992998, 08025747574",
+    "E-Mail": "hsrltrafficbcp@gmail.com",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Halasur PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801815, 08022942659, 08022942751",
+    "E-Mail": "halasoortrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Halasurgate PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801829, 08022942660, 08022943124",
+    "E-Mail": "hgatetrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Hebbal PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801931, 08022943023, 08022942663",
+    "E-Mail": "hebbaltrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "High Grounds PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801827, 08022942916, 08022942671",
+    "E-Mail": "hgroundtrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Hulimavu PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9980826817, 08022942884",
+    "E-Mail": "hulimavutrfeastbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Jalahalli PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9880332116, 08022943020",
+    "E-Mail": "jalahallitrfbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Jayanagar PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801927, 08022942669, 08022943105",
+    "E-Mail": "jnagartrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Jeevan Bheemanagar PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801816, 08022942658, 08022942919",
+    "E-Mail": "inagartrafficbcp@ksp.gov.in",
+    "Notes": "Indiranagara PS",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "K.R. Puram PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801818, 08022942812, 08022942927",
+    "E-Mail": "krpuramtrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Kadugondana Halli PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "8123924993, 08022942969",
+    "E-Mail": "kghallitrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Kamakshipalya PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801921, 08022943009",
+    "E-Mail": "kmpalyatrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Kengeri PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "8022943013",
+    "E-Mail": "kengeritrfbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Kumarswamy Layout PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801929, 08022943109, 08022943110",
+    "E-Mail": "kslyttrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Madiwala PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801824, 08022943116, 08022943117",
+    "E-Mail": "madivalatrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Magadi Road PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801918, 08022942672, 22943010",
+    "E-Mail": "mroadtrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Malleshwaram PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801922, 08022942810, 08022943014",
+    "E-Mail": "mvmtrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Mico layout Bangalore PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801825, 08022943118",
+    "E-Mail": "micolyttrafficbcp@ksp.gov.in",
+    "Notes": "MICO Layout PS",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Peenya PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801923, 08022942674, 08022943020",
+    "E-Mail": "peenyatrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Pulakeshinagar PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801820, 08022942925, 08022942924",
+    "E-Mail": "ftowntrafficbcp@ksp.gov.in",
+    "Notes": "Pulikeshi Nagara Traffic PS",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "R.T. Nagar PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801932, 08022942813, 08022943027",
+    "E-Mail": "rtnagartrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Rajaji Nagar PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801924, 08022942807, 08022943016",
+    "E-Mail": "rnagartrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Sadashivanagar PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801830, 08022942915, 08022942804",
+    "E-Mail": "ssnagartrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Shivajinagar PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801821, 08022942920, 08022942921",
+    "E-Mail": "shivajinagartrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Upparpet PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801915, 08022942665, 08022942910",
+    "E-Mail": "upettrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "V.V. Puram PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801926, 08022942670, 08022943029",
+    "E-Mail": "cmpettrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Vijayanagar PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801920, 08022942809",
+    "E-Mail": "vjnagartrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Whitefield PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801831, 08022943706",
+    "E-Mail": "whitefieldtrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Wilsongarden PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801826, 08022943120",
+    "E-Mail": "wgardentrafficbcp@ksp.gov.in",
+    "Notes": "Wilson Garden PS",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Yelahanka PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801933, 08022943025, 08022943024",
+    "E-Mail": "ylktrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "police_traffic",
+    "Area": "Yeshwanthapura PS",
+    "Designation": "Police Inspector Traffic",
+    "Name": "-",
+    "Phone": "9480801925, 08022942661",
+    "E-Mail": "yspuratrafficbcp@ksp.gov.in",
+    "Notes": "",
+    "Source": "https://data.opencity.in/dataset/bengaluru-city-police-contact-info/resource/bengaluru-city-traffic-police-(btp),-officers-and-traffic-police-stations-contact-numbers"
+  },
+  {
+    "Department": "stamps_dro",
+    "Area": "Bangalore Rural",
+    "Designation": "District Registrar",
+    "Name": "Sathish Kumar K",
+    "Phone": "9448449411",
+    "E-Mail": "dr.blrerural@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en"
+  },
+  {
+    "Department": "stamps_dro",
+    "Area": "Basavanagudi",
+    "Designation": "District Registrar",
+    "Name": "Savithalakshmi P Belagali",
+    "Phone": "9606208018",
+    "E-Mail": "dr.basavangudi@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en"
+  },
+  {
+    "Department": "stamps_dro",
+    "Area": "Chikkaballapura",
+    "Designation": "District Registrar",
+    "Name": "Mohammed Ali",
+    "Phone": "9448663110",
+    "E-Mail": "dr.chikbalapur@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en"
+  },
+  {
+    "Department": "stamps_dro",
+    "Area": "Gandhinagar",
+    "Designation": "District Registrar",
+    "Name": "AN Bharathi",
+    "Phone": "88844 51518",
+    "E-Mail": "dr.gandhinagar@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en"
+  },
+  {
+    "Department": "stamps_dro",
+    "Area": "Jayanagar",
+    "Designation": "District Registrar",
+    "Name": "BH Shankaregowda",
+    "Phone": "9740253479",
+    "E-Mail": "dr.jayanagar@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en"
+  },
+  {
+    "Department": "stamps_dro",
+    "Area": "Kolar",
+    "Designation": "District Registrar",
+    "Name": "N Shrinidhi",
+    "Phone": "9844526862",
+    "E-Mail": "dr.kolar@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en"
+  },
+  {
+    "Department": "stamps_dro",
+    "Area": "Rajajinagar",
+    "Designation": "District Registrar",
+    "Name": "Shashikala BN",
+    "Phone": "9482515847",
+    "E-Mail": "dr.rajajinagar@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en"
+  },
+  {
+    "Department": "stamps_dro",
+    "Area": "Ramanagara",
+    "Designation": "District Registrar",
+    "Name": "M Sridevi",
+    "Phone": "9980043279",
+    "E-Mail": "dr.ramanagara@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en"
+  },
+  {
+    "Department": "stamps_dro",
+    "Area": "Shivajinagar",
+    "Designation": "District Registrar",
+    "Name": "SB Davaleshwara",
+    "Phone": "9480739990",
+    "E-Mail": "dr.shivajinagr@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en"
+  },
+  {
+    "Department": "stamps_dro",
+    "Area": "Tumkur",
+    "Designation": "District Registrar",
+    "Name": "B Srikanth",
+    "Phone": "9448453538",
+    "E-Mail": "dr.tumkur@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Anekal",
+    "Designation": "Sub Registrar",
+    "Name": "Thimmareddy C",
+    "Phone": "9916887092",
+    "E-Mail": "sr.anekal@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Attibele",
+    "Designation": "Sub Registrar",
+    "Name": "Ramadase Gowda BG",
+    "Phone": "9448854499",
+    "E-Mail": "sr.attibele@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Banasawadi",
+    "Designation": "Sub Registrar",
+    "Name": "Satish Kumar N",
+    "Phone": "9611394920",
+    "E-Mail": "sr.banaswadi@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Banashankari",
+    "Designation": "Sub Registrar",
+    "Name": "Shankar Murthy",
+    "Phone": "9538778477",
+    "E-Mail": "sr.banshankari@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Basavanagudi",
+    "Designation": "Sub Registrar",
+    "Name": "A Raghavendra",
+    "Phone": "9916976967",
+    "E-Mail": "sr.basavangudi@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Begur",
+    "Designation": "Sub Registrar",
+    "Name": "Santhosh Kumar R Kattimani",
+    "Phone": "9035310805",
+    "E-Mail": "sr.begur@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Bidarahalli",
+    "Designation": "Sub Registrar",
+    "Name": "Lalitha Amruthesh",
+    "Phone": "9945368775",
+    "E-Mail": "sr.Bidarahalli@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Bommanahalli",
+    "Designation": "Sub Registrar",
+    "Name": "Prasanna G",
+    "Phone": "9739668848",
+    "E-Mail": "sr.bommanhalli@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "BTM Layout",
+    "Designation": "Sub Registrar",
+    "Name": "Kavya K Kora",
+    "Phone": "9036010030",
+    "E-Mail": "sr.btmlayout@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Byatarayanapura",
+    "Designation": "Sub Registrar",
+    "Name": "KV Ravikumar",
+    "Phone": "9845454206",
+    "E-Mail": "sr.byataraynpr@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Chamarajpet",
+    "Designation": "Sub Registrar",
+    "Name": "Uma Devi AS",
+    "Phone": "8217317671",
+    "E-Mail": "sr.chamarajpet@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Channapatna",
+    "Designation": "Sub Registrar",
+    "Name": "-",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Chikkaballapur",
+    "Designation": "Sub Registrar",
+    "Name": "-",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Dasanapura",
+    "Designation": "Sub Registrar",
+    "Name": "Shaik Gulam Rahamani",
+    "Phone": "9353484410",
+    "E-Mail": "sr.dasanapura@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Devanahalli",
+    "Designation": "Sub Registrar",
+    "Name": "Ravindra Goud KR",
+    "Phone": "9611510789",
+    "E-Mail": "sr.devanahalli@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Doddaballapura",
+    "Designation": "Sub Registrar",
+    "Name": "Sathish HS",
+    "Phone": "7338422777",
+    "E-Mail": "sr.doddbllapur@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Gandinagara",
+    "Designation": "Sub Registrar",
+    "Name": "Shashikala HP",
+    "Phone": "7026871995",
+    "E-Mail": "sr.gandhinagar@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Ganganagar",
+    "Designation": "Sub Registrar",
+    "Name": "MK Shanthamurthy",
+    "Phone": "9916499108",
+    "E-Mail": "sr.ganganagar@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Halsoor",
+    "Designation": "Sub Registrar",
+    "Name": "Prabhvathi R",
+    "Phone": "9448220308",
+    "E-Mail": "sr.halsoor@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Hebbal",
+    "Designation": "Sub Registrar",
+    "Name": "Chaitra BA",
+    "Phone": "6361552815",
+    "E-Mail": "sr.hebbal@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Hesaraghatta",
+    "Designation": "Sub Registrar",
+    "Name": "Manjunath N",
+    "Phone": "9008340333",
+    "E-Mail": "sr.hesarghatta@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Hosakote",
+    "Designation": "Sub Registrar",
+    "Name": "V Geetha",
+    "Phone": "9481521511",
+    "E-Mail": "sr.hoskote@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Indiranagar",
+    "Designation": "Sub Registrar",
+    "Name": "CJ Prabhakar",
+    "Phone": "8762268426",
+    "E-Mail": "sr.indiranagar@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Jala",
+    "Designation": "Sub Registrar",
+    "Name": "SS Swarnalatha",
+    "Phone": "8971226009",
+    "E-Mail": "sr.jala@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "jayanagar",
+    "Designation": "Sub Registrar",
+    "Name": "B Guru Raghavendra",
+    "Phone": "9880231893",
+    "E-Mail": "sr.jayanagar@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Jigani",
+    "Designation": "Sub Registrar",
+    "Name": "Anjali C",
+    "Phone": "9731145054",
+    "E-Mail": "sr.jigani@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "JP Nagara",
+    "Designation": "Sub Registrar",
+    "Name": "KR Devaraju",
+    "Phone": "9449277278",
+    "E-Mail": "sr.jpnagar@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Kacharakanahalli",
+    "Designation": "Sub Registrar",
+    "Name": "Srinivas V",
+    "Phone": "9448533240",
+    "E-Mail": "sr.kachknhalli@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Kanakapura",
+    "Designation": "Sub Registrar",
+    "Name": "-",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Kengeri",
+    "Designation": "Sub Registrar",
+    "Name": "YH Venkatesh",
+    "Phone": "9742064846",
+    "E-Mail": "sr.kengeri@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Koratagere",
+    "Designation": "Sub Registrar",
+    "Name": "-",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Krishnarajapuram",
+    "Designation": "Sub Registrar",
+    "Name": "R Ramaprasad",
+    "Phone": "9481253189",
+    "E-Mail": "sr.krpuram@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Laggere",
+    "Designation": "Sub Registrar",
+    "Name": "Kamala TR",
+    "Phone": "7022231478",
+    "E-Mail": "sr.laggere@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Madanayakanahalli",
+    "Designation": "Sub Registrar",
+    "Name": "MV Sathish",
+    "Phone": "9902036189",
+    "E-Mail": "dr.madanayak@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Magadi",
+    "Designation": "Sub Registrar",
+    "Name": "-",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Mahadevapura",
+    "Designation": "Sub Registrar",
+    "Name": "Ramya N",
+    "Phone": "9611581044",
+    "E-Mail": "sr.mahadevpura@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Malleshwaram",
+    "Designation": "Sub Registrar",
+    "Name": "Vikram K Magar",
+    "Phone": "9480995637",
+    "E-Mail": "sr.malleswaram@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Malur",
+    "Designation": "Sub Registrar",
+    "Name": "-",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Nagarabhavi",
+    "Designation": "Sub Registrar",
+    "Name": "Champa L",
+    "Phone": "9980110345",
+    "E-Mail": "sr.nagarabavi@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Nelamangala",
+    "Designation": "Sub Registrar",
+    "Name": "Ambika Patel JP",
+    "Phone": "9686756362",
+    "E-Mail": "sr.nelamangala@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Peenya",
+    "Designation": "Sub Registrar",
+    "Name": "Karibasava Gouda",
+    "Phone": "7349107727",
+    "E-Mail": "sr.peenya@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Rajajinagar",
+    "Designation": "Sub Registrar",
+    "Name": "Mohan Kumar G",
+    "Phone": "9972168595",
+    "E-Mail": "sr.rajajinagar@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Ramanagara",
+    "Designation": "Sub Registrar",
+    "Name": "-",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "RR Nagar",
+    "Designation": "Sub Registrar",
+    "Name": "M Girish",
+    "Phone": "9844050609",
+    "E-Mail": "sr.rajrajesngr@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Sarjapura",
+    "Designation": "Sub Registrar",
+    "Name": "Shivkumar D",
+    "Phone": "9611504279",
+    "E-Mail": "sr.sarjapura@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "shanthinagar",
+    "Designation": "Sub Registrar",
+    "Name": "Raghavendra",
+    "Phone": "8951691101",
+    "E-Mail": "sr.shantinagar@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Shidlaghatta",
+    "Designation": "Sub Registrar",
+    "Name": "-",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Shivajinagar",
+    "Designation": "Sub Registrar",
+    "Name": "Anita G Badiger",
+    "Phone": "9535741828",
+    "E-Mail": "sr.shivajinagr@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Sriramapura",
+    "Designation": "Sub Registrar",
+    "Name": "HS Aravind",
+    "Phone": "7259119363",
+    "E-Mail": "sr.srirampura@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Tavarekere",
+    "Designation": "Sub Registrar",
+    "Name": "Saroja YH",
+    "Phone": "8105097979",
+    "E-Mail": "sr.tavarekere@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Tumkur",
+    "Designation": "Sub Registrar",
+    "Name": "-",
+    "Phone": "-",
+    "E-Mail": "-",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Varthur",
+    "Designation": "Sub Registrar",
+    "Name": "Praveen kumar Gogi",
+    "Phone": "9448963316",
+    "E-Mail": "sr.varthur@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Vijayanagar",
+    "Designation": "Sub Registrar",
+    "Name": "Pramila GJ",
+    "Phone": "9448788610",
+    "E-Mail": "sr.vijayanagar@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Yalahanka",
+    "Designation": "Sub Registrar",
+    "Name": "Najeer Ahammad Nadaf",
+    "Phone": "9611557169",
+    "E-Mail": "sr.yelahanka@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  },
+  {
+    "Department": "stamps_sro",
+    "Area": "Yeshwathapura",
+    "Designation": "Sub Registrar",
+    "Name": "Suresh G",
+    "Phone": "9886474800",
+    "E-Mail": "sr.yeshwanthpr@karnataka.gov.in",
+    "Notes": "",
+    "Source": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en"
+  }
+]
