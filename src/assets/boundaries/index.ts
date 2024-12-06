@@ -54,7 +54,7 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '🏤',
-    formatUrl: name => 'https://bbmp.gov.in/',
+    formatUrl: name => 'https://site.bbmp.gov.in/zonewiseofficers.html',
     formatContent: name => name,
     group: 'BBMP'
   },
@@ -74,7 +74,7 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '💡',
-    formatUrl: name => 'https://bescom.co.in/',
+    formatUrl: name => 'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en',
     formatContent: name => name,
     group: 'BESCOM'
   },
@@ -84,7 +84,7 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '💡',
-    formatUrl: name => 'https://bescom.co.in/',
+    formatUrl: name => 'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en',
     formatContent: name => name,
     group: 'BESCOM'
   },
@@ -94,7 +94,7 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '💧',
-    formatUrl: name => 'https://bwssb.karnataka.gov.in/',
+    formatUrl: name => 'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en',
     formatContent: name => name,
     group: 'BWSSB'
   },
@@ -104,7 +104,7 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '💧',
-    formatUrl: name => 'https://bwssb.karnataka.gov.in/',
+    formatUrl: name => 'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en',
     formatContent: name => name,
     group: 'BWSSB'
   },
@@ -114,7 +114,7 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '👮',
-    formatUrl: name => 'https://bcp.karnataka.gov.in/',
+    formatUrl: name => 'https://bcp.karnataka.gov.in/24/law-&-order-/en',
     formatContent: name => name,
     group: 'Police'
   },
@@ -124,7 +124,7 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '🚔',
-    formatUrl: name => 'https://btp.gov.in/',
+    formatUrl: name => 'https://btp.gov.in/Contactus.aspx',
     formatContent: name => name,
     group: 'Police'
   },

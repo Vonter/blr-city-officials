@@ -196,10 +196,12 @@
               );
             }
             $hoveredDistrictId = e.features[0].properties?.namecol;
-            $mapStore.setFeatureState(
-              { source: 'boundaries', id: $hoveredDistrictId },
-              { hover: true }
-            );
+            if ($hoveredDistrictId !== null) {
+              $mapStore.setFeatureState(
+                { source: 'boundaries', id: $hoveredDistrictId },
+                { hover: true }
+              );
+            }
           }
 
           popup
