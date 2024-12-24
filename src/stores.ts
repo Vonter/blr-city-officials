@@ -29,8 +29,6 @@ export const selectedCoordinates = writable<LngLat | null>(
   getLngLatObjectFromUrl(params.get('lng'), params.get('lat'))
 );
 export const coordinatesMarker = writable<maplibregl.Marker>();
-export const isSelectingCoordinates = writable<boolean>(false);
-export const isListingBoundaryMaps = writable<boolean>(false);
 export const mapStore = writable<maplibregl.Map>();
 
 export const boundaries = readable(null, set => {
@@ -48,11 +46,16 @@ export const boundaries = readable(null, set => {
 
 export const isMapReady = writable<boolean>(false);
 
-export function getOfficialDetails(boundaryId: string | null, districtId: string | null) {
+export function getOfficialDetails(
+  boundaryId: string | null,
+  districtId: string | null
+) {
   if (!boundaryId || !districtId) return null;
-  
-  return officials.find(official => 
-    official.Department.toLowerCase() === boundaryId.toLowerCase() &&
-    official.Area.toLowerCase() === layers[boundaryId].formatContent(districtId).toLowerCase()
+
+  return officials.find(
+    official =>
+      official.Department.toLowerCase() === boundaryId.toLowerCase() &&
+      official.Area.toLowerCase() ===
+        layers[boundaryId].formatContent(districtId).toLowerCase()
   );
 }

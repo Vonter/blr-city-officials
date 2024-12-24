@@ -1,13 +1,13 @@
-# blr-boundaries
+# blr-city-officials
 
-An interactive tool to find, view and query administrative boundaries in BLR: https://boundaries.vonter.in
+An interactive tool to find local jurisdictions and officials in BLR: https://cityofficials.bengawalk.com
 
 Based on and heavily inspired by the [NYC Boundaries Map](https://github.com/BetaNYC/nyc-boundaries) built by [BetaNYC](https://github.com/BetaNYC)
 
 ## Contribute
 
-- Report an issue or request a feature on the [issues](https://github.com/Vonter/blr-boundaries/issues) page
-- Create a pull request for an issue or feature request on the [issues](https://github.com/Vonter/blr-boundaries/issues) page
+- Report an issue or request a feature on the [issues](https://github.com/Vonter/blr-city-officials/issues) page
+- Create a pull request for an issue or feature request on the [issues](https://github.com/Vonter/blr-city-officials/issues) page
 
 ## Develop
 
@@ -21,14 +21,14 @@ Documentation and scripts for processing the geospatial data are available in th
 
 ## Copyright
 
-Please see the [LICENSE](https://github.com/Vonter/blr-boundaries/blob/master/LICENSE) file for details.
+Please see the [LICENSE](https://github.com/Vonter/blr-city-officials/blob/master/LICENSE) file for details.
 
 - Non-code, Creative Commons Attribution 4.0
 - Code, GNU General Public License
 - Third-party datasets from [OpenCity](https://opencity.in/) (geospatial data)
 
-For the original source on which `blr-boundaries` is based, see the [NYC Boundaries Map](https://github.com/BetaNYC/nyc-boundaries) built by [BetaNYC](https://github.com/BetaNYC)
+For the original source on which `blr-city-officials` is based, see the [NYC Boundaries Map](https://github.com/BetaNYC/nyc-boundaries) built by [BetaNYC](https://github.com/BetaNYC)
 
 ## Questions
 
-File an [issue](https://github.com/Vonter/blr-boundaries) with the details
+File an [issue](https://github.com/Vonter/blr-city-officials) with the details

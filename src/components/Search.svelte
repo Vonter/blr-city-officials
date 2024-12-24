@@ -1,110 +1,125 @@
 <script lang="ts">
-  import AutoComplete from 'simple-svelte-autocomplete';
-  import maplibregl from 'maplibre-gl';
-  import { onMount } from 'svelte';
+  import GooglePlacesAutocomplete from '../components/GooglePlacesAutocomplete.svelte';
+  import { Loader } from '@googlemaps/js-api-loader';
+  import type { LngLat } from 'maplibre-gl';
+
   import {
-    mapStore,
-    addressMarker,
-    coordinatesMarker,
     selectedBoundaryMap,
     isMapReady,
     selectedDistrict,
-    selectedCoordinates,
-    isSelectingCoordinates,
-    boundaries
+    selectedCoordinates
   } from '../stores';
-  import { layers } from '../assets/boundaries';
 
-  let value: string = $state();
-
-  onMount(() => {
-    const unsubscribe = isMapReady.subscribe(ready => {
-      if (ready) {
-      }
-    });
-
-    return unsubscribe;
+  const loader = new Loader({
+    apiKey: import.meta.env.VITE_GMAPS_API_KEY,
+    version: 'weekly',
+    libraries: ['geocoding']
   });
+  const options = {
+    bounds: {
+      south: 12.5,
+      north: 13.5,
+      west: 77,
+      east: 78.25
+    },
+    fields: ['place_id'],
+    strictBounds: true
+  };
+  const placeholder = 'Search';
 
-  async function getResults(keyword: string) {
-    const searchResults = $boundaries.features.filter(feature => {
-      return feature.properties?.namecol
-        .toLowerCase()
-        .includes(keyword.toLowerCase());
-    });
+  let isGettingLocation = $state(false);
+  let inputField = $state<HTMLInputElement>();
 
-    return searchResults.map(result => ({
-      id: result.properties.id,
-      namecol: result.properties.namecol,
-      displayName: `${layers[result.properties.id].icon} ${result.properties.namecol}`
-    }));
-  }
-  function onChange(e) {
+  async function onPlaceChanged(e: CustomEvent) {
     if (e && $isMapReady) {
-      selectedCoordinates.set(null);
-      selectedBoundaryMap.set(e.id);
-      selectedDistrict.set(e.namecol);
-      value = ''; // Clear the search input
+      await loader.load();
+      const geocoder = new google.maps.Geocoder();
+      geocoder.geocode(
+        { placeId: e.detail.place.place_id },
+        (results, status) => {
+          if (status === 'OK' && results[0]) {
+            const { lat, lng } = results[0].geometry.location;
+            selectedCoordinates.set({
+              lat: lat().toFixed(5),
+              lng: lng().toFixed(5)
+            } as LngLat);
+            selectedBoundaryMap.set(null);
+            selectedDistrict.set(null);
+          } else {
+            console.error('Failed to geocode location: ', status);
+          }
+        }
+      );
     }
   }
 
-  function onCoordinateButtonClick() {
-    selectedCoordinates.set(null);
-    selectedDistrict.set(null);
-    selectedBoundaryMap.set(null);
-    isSelectingCoordinates.set(!$isSelectingCoordinates);
+  async function useCurrentLocation() {
+    isGettingLocation = true;
+    try {
+      const position = await new Promise<GeolocationPosition>(
+        (resolve, reject) => {
+          navigator.geolocation.getCurrentPosition(resolve, reject);
+        }
+      );
+
+      const lngLat = {
+        lng: position.coords.longitude,
+        lat: position.coords.latitude
+      };
+
+      selectedCoordinates.set(lngLat);
+    } catch (error) {
+      console.error('Error getting location:', error);
+      alert(
+        'Unable to get current location. Please try again or select a location on the map instead.'
+      );
+    } finally {
+      isGettingLocation = false;
+    }
   }
 </script>
 
 <div class="relative flex w-full justify-end gap-4">
   <button
-    onclick={onCoordinateButtonClick}
-    class={`group w-10 h-10 flex items-center justify-center ${
-      $isSelectingCoordinates
-        ? 'bg-blue-600 text-white hover:bg-blue-700'
-        : 'bg-white text-gray-600 hover:text-blue-600'
-    } shadow-md rounded hover:text-focus:outline-none focus:ring focus:ring-blue-500`}
-    aria-label="Pick coordinates"
+    onclick={useCurrentLocation}
+    class={`group w-10 h-10 flex items-center justify-center bg-white text-gray-600 hover:text-blue-600 shadow-md rounded hover:text-focus:outline-none focus:ring focus:ring-blue-500`}
+    aria-label="Use GPS location"
   >
     <div
       class="invisible group-hover:visible absolute top-full right-0 mt-2 bg-black text-gray-100 rounded shadow-md px-2 py-0.5 dark:bg-white dark:text-gray-900"
     >
-      Pick coordinates
+      Use GPS location
     </div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="h-5 w-5"
-      viewBox="0 0 20 20"
-      fill="currentColor"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#4b5563"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-navigation w-5 h-5"
+      ><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg
     >
-      <path
-        fill-rule="evenodd"
-        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-        clip-rule="evenodd"
-      />
-    </svg>
   </button>
   <div class="relative flex flex-1">
-    <AutoComplete
-      id="search-autocomplete"
-      delay="200"
-      searchFunction={getResults}
-      {onChange}
-      bind:selectedItem={value}
-      placeholder="Search"
-      className="relative flex-1"
-      noInputStyles
-      showLoadingIndicator
-      inputClassName="l-0 t-0 r-0 py-2 px-3 pl-10 flex-1 w-full bg-white shadow-md rounded focus:outline-none focus:ring focus:ring-blue-500"
-      dropdownClassName="border-none shadow-md rounded mt-1 py-2 bg-white t-100"
-      labelFieldName="displayName"
-      hideArrow
-    ></AutoComplete>
+    <GooglePlacesAutocomplete
+      bind:inputField
+      apiKey={import.meta.env.VITE_GMAPS_API_KEY}
+      class="search relative flex-1 l-0 t-0 r-0 py-2 px-3 pl-10 pr-10 flex-1 w-full bg-white shadow-md rounded focus:outline-none focus:ring focus:ring-blue-500"
+      on:place_changed={onPlaceChanged}
+      {placeholder}
+      {options}
+      required
+      pattern="[a-zA-Z ]+"
+    ></GooglePlacesAutocomplete>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       class="h-5 w-5 absolute left-2.5 top-2.5"
       viewBox="0 0 20 20"
-      fill="currentColor"
+      fill="#4b5563"
     >
       <path
         fill-rule="evenodd"
@@ -112,5 +127,29 @@
         clip-rule="evenodd"
       />
     </svg>
+    <svg
+      onclick={() => {
+        if (inputField) {
+          inputField.value = '';
+        }
+      }}
+      onkeydown={e => {
+        if (e.key === 'Enter' && inputField) {
+          inputField.value = '';
+        }
+      }}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#4b5563"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-x absolute right-2.5 top-2.5 cursor-pointer"
+      role="button"
+      tabindex="-1"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg
+    >
   </div>
 </div>

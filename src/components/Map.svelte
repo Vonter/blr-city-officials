@@ -16,11 +16,11 @@
   import { layers } from '../assets/boundaries';
   import turfBbox from '@turf/bbox';
   import { defaultZoom, findPolylabel, zoomToBound } from '../helpers/helpers';
+  import { colors } from '../helpers/colors';
 
   let map: maplibregl.Map;
   let isSourceLoaded = $state(false);
   let prevLayerId: string | null = null;
-  let prevDistrictId: string | null = null;
   let darkMode: boolean | null = isDarkMode();
 
   function isDarkMode() {
@@ -57,14 +57,21 @@
       true
     );
 
-    map.on('click', () => onDistrictChange(null));
-
     map.on('load', () => {
       $mapStore = map;
       map.resize();
       map.removeLayer('boundary_county');
 
       isMapReady.set(true);
+    });
+
+    map.on('click', e => {
+      if (!$selectedBoundaryMap) {
+        selectedCoordinates.set({
+          lat: e.lngLat.lat.toFixed(5),
+          lng: e.lngLat.lng.toFixed(5)
+        });
+      }
     });
 
     return {
@@ -132,12 +139,17 @@
           type: 'fill',
           source: 'boundaries',
           paint: {
-            'fill-color': darkMode ? '#b3bac5' : '#2463eb',
+            'fill-color': [
+              'case',
+              ['boolean', ['feature-state', 'selected'], false],
+              darkMode ? colors['dark-default'] : colors['default'],
+              darkMode ? colors['dark-selected'] : colors['selected']
+            ],
             'fill-opacity': [
               'case',
               ['boolean', ['feature-state', 'selected'], false],
-              darkMode ? 0.4 : 0.2,
-              darkMode ? 0.2 : 0.05
+              darkMode ? 0.2 : 0.4,
+              darkMode ? 0.01 : 0.05
             ]
           },
           filter: ['==', 'id', boundaryId]
@@ -147,7 +159,7 @@
           type: 'line',
           source: 'boundaries',
           paint: {
-            'line-color': darkMode ? '#b3bac5' : '#2463eb',
+            'line-color': darkMode ? colors['dark-default'] : colors['default'],
             'line-width': [
               'case',
               [
@@ -166,9 +178,9 @@
           type: 'symbol',
           source: `boundaries-centerpoints`,
           paint: {
-            'text-color': darkMode ? '#e2e8f0' : '#2463eb',
+            'text-color': darkMode ? colors['dark-default'] : colors['default'],
             'text-halo-color': darkMode
-              ? 'rgba(0,0,0,0.75)'
+              ? 'rgba(0,0,0,0.4)'
               : 'rgba(255,255,255,0.9)',
             'text-halo-width': 2
           },
@@ -253,12 +265,16 @@
     districtId: string | null,
     interactionFromClick: boolean = false
   ) {
-    // Remove existing clicked states
-    if (prevDistrictId && $selectedBoundaryMap) {
-      $mapStore?.setFeatureState(
-        { source: 'boundaries', id: prevDistrictId },
-        { selected: false }
-      );
+    // Reset all selected states first
+    if ($mapStore && $boundaries) {
+      $boundaries.features.forEach(feature => {
+        if (feature.properties?.namecol) {
+          $mapStore.setFeatureState(
+            { source: 'boundaries', id: feature.properties.namecol },
+            { selected: false }
+          );
+        }
+      });
     }
 
     $selectedDistrict = districtId;
@@ -267,24 +283,29 @@
     // If there interaction came from a click, it will fly in before the function.
     if ($mapStore && $selectedBoundaryMap && $selectedDistrict) {
       if (!interactionFromClick) {
-        const feature = $boundaries.features.filter(feature => {
+        const feature = $boundaries?.features.filter(feature => {
           return (
-            feature.properties?.namecol.toLowerCase() ==
-            $selectedDistrict.toLowerCase()
+            feature.properties?.namecol.toLowerCase() ===
+              $selectedDistrict?.toLowerCase() &&
+            feature.properties?.id.toLowerCase() ===
+              $selectedBoundaryMap?.toLowerCase()
           );
         });
-        if (feature) {
-          zoomToBound($mapStore, turfBbox(feature[0]));
+        if (feature && feature.length > 0) {
+          const combinedBbox = turfBbox({
+            type: 'FeatureCollection',
+            features: feature
+          });
+          zoomToBound($mapStore, combinedBbox);
         }
       }
 
+      // Set new selected state
       $mapStore.setFeatureState(
         { source: 'boundaries', id: $selectedDistrict },
         { selected: true }
       );
     }
-
-    prevDistrictId = $selectedDistrict;
   }
 
   run(() => {
