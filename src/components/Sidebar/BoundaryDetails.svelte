@@ -105,7 +105,7 @@
           </svg>
         </button>
         <div
-          class={`absolute top-full mt-2 right-0 w-72 bg-white rounded shadow-md p-2 py-4 mb-4 px-4 text-gray-800 text-sm dark:text-gray-200 dark:bg-neutral-900 ${
+          class={`absolute top-full mt-2 right-0 w-72 bg-white rounded shadow-md p-2 py-4 mb-4 text-gray-800 text-sm dark:text-gray-200 dark:bg-neutral-900 ${
             isDetailPaneOpen ? 'visible' : 'hidden'
           }`}
         >
@@ -137,21 +137,49 @@
       <Loader />
     </div>
   {:else}
-    {#each [...new Set(districts
-      .filter(district => district.properties?.namecol
-        .toLowerCase()
-        .includes(value.toLowerCase()))
-      .map(d => d.properties?.namecol))] as nameCol}
-      {@const district = districts.find(d => d.properties?.namecol === nameCol)}
-      <DistrictLink
-        onMouseOver={() => onDistrictMouseOver(nameCol)}
-        onMouseOut={() => onDistrictMouseOut(nameCol)} 
-        onClick={() => ($selectedDistrict = nameCol)}
-        icon={layers[district.properties?.id].icon}
-        nameCol={nameCol}
-        formatContent={layers[district.properties?.id].formatContent}
-        formatUrl={layers[district.properties?.id].formatUrl}
+    <div class="relative flex-1 px-4 pb-2">
+      <input
+        id="filter"
+        placeholder="Filter"
+        type="search"
+        name="filter"
+        bind:value
+        autocomplete="off"
+        class="block w-full py-1.5 px-3 pl-10 bg-gray-100 text-gray-800 dark:bg-neutral-700 dark:text-gray-200 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
       />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5 absolute left-6 top-2"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+    {#each [...new Set(districts
+          .filter(district => district.properties?.namecol
+              .toLowerCase()
+              .includes(value.toLowerCase()))
+          .map(d => d.properties?.namecol))] as nameCol, index}
+      {@const district = districts.find(d => d.properties?.namecol === nameCol)}
+      <div
+        class={index % 2 === 0
+          ? 'bg-white dark:bg-neutral-900'
+          : 'bg-gray-100 dark:bg-neutral-800'}
+      >
+        <DistrictLink
+          onMouseOver={() => onDistrictMouseOver(nameCol)}
+          onMouseOut={() => onDistrictMouseOut(nameCol)}
+          onClick={() => ($selectedDistrict = nameCol)}
+          icon={layers[district.properties?.id].icon}
+          {nameCol}
+          formatContent={layers[district.properties?.id].formatContent}
+        />
+      </div>
     {/each}
   {/if}
 </div>

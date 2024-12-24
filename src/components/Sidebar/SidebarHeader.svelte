@@ -9,7 +9,7 @@
 </script>
 
 <header
-  class="h-[72px] p-4 sticky top-0 bg-white/90 dark:bg-neutral-900 z-20 border-b border-gray-900/10 shadow-sm"
+  class="h-[60px] p-4 sticky top-0 bg-white/90 dark:bg-neutral-900 z-20 border-b border-gray-900/10 dark:border-gray-100/10 shadow-sm"
 >
   <div class="flex items-center h-full">
     {#if onBack}

@@ -47,15 +47,11 @@ export function sortedDistricts(features: Feature[]) {
 }
 
 export function zoomToBound(map: maplibregl.Map, bounds: turf.BBox) {
-  // Turf's bbox can return either Box2D (4-item array) or Box3D (6-item array)
-  // fitBounds() only accepts a 4-item array, so we need to save the output before using it
-  // See https://github.com/Turfjs/turf/issues/1807
-
   const [x1, y1, x2, y2] = bounds;
 
   map.fitBounds([x1, y1, x2, y2], {
     padding: { top: 72, bottom: 24, left: 16, right: 16 },
-    maxZoom: 13
+    maxZoom: 15
   });
 }
 

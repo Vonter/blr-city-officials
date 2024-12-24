@@ -74,7 +74,8 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '💡',
-    formatUrl: name => 'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en',
+    formatUrl: name =>
+      'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en',
     formatContent: name => name,
     group: 'BESCOM'
   },
@@ -84,7 +85,8 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '💡',
-    formatUrl: name => 'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en',
+    formatUrl: name =>
+      'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en',
     formatContent: name => name,
     group: 'BESCOM'
   },
@@ -94,7 +96,8 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '💧',
-    formatUrl: name => 'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en',
+    formatUrl: name =>
+      'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en',
     formatContent: name => name,
     group: 'BWSSB'
   },
@@ -104,7 +107,8 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '💧',
-    formatUrl: name => 'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en',
+    formatUrl: name =>
+      'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en',
     formatContent: name => name,
     group: 'BWSSB'
   },
@@ -193,7 +197,7 @@ export const layers: ILayers = {
   },
   pincode: {
     name: 'Pin Code',
-    name_long: 'Pin Codes',
+    name_long: 'Pin Code',
     description: '',
     description_url: '',
     icon: '📮',
