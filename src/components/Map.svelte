@@ -223,11 +223,9 @@
                 layers[boundaryId].icon
               }</div><div class="pr-1"><div class="text-xs text-gray-500">${
                 layers[boundaryId].name
-              }</div><div class="text-sm font-semibold">${layers[
-                boundaryId
-              ].formatContent(
-                e.features[0].properties?.namecol
-              )}</div></div></div>`
+              }</div><div class="text-sm font-semibold">${
+                layers[boundaryId].e.features[0].properties?.namecol
+              }</div></div></div>`
             )
             .setOffset(8)
             .addTo(map);

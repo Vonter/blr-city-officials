@@ -1,0 +1,19 @@
+{
+    "page_title": "ಬೆಂಗಳೂರು ನಗರ ಅಧಿಕಾರಿಗಳು",
+    "toggle_language": "English",
+    "search_placeholder": "ಹುಡುಕು",
+
+    "footer_data": "ಡೇಟಾ",
+    "footer_code": "ಕೋಡ್",
+    "footer_betanyc": "BetaNYC ಪ್ರೇರಿತ",
+
+    "introduction": "ನಕ್ಷೆಯಲ್ಲಿ ಸ್ಥಳವನ್ನು ಆಯ್ಕೆಮಾಡಿ, ವಿಳಾಸದ ಮೂಲಕ ಹುಡುಕಿ ಅಥವಾ ಗಡಿಯನ್ನು ಆರಿಸಿ",
+
+    "filter_placeholder": "ಫಿಲ್ಟರ್",
+    "download_geojson": "GeoJSON ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+    
+    "details_title": "ಅಧಿಕಾರಿಗಳು",
+    "details_source": "ಮೂಲ",
+    "details_error": "ದೋಷ ಕಂಡುಬಂದಿದೆಯೇ? ಈ ಮಾಹಿತಿಯ ನಿಖರತೆಯನ್ನು ಸುಧಾರಿಸಲು ನಮಗೆ ಸಹಾಯ ಮಾಡಿ",
+    "details_google_sheet": "Google Sheet"
+}

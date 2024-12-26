@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { _ } from 'svelte-i18n';
   import {
     selectedBoundaryMap,
     selectedCoordinates,
@@ -29,19 +30,23 @@
     <a
       class="mt-0.5 ml-2 text-xs text-gray-500 dark:text-gray-400 underline hover:text-gray-700 dark:hover:text-gray-200"
       href="https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/edit"
-      target="_blank">Data</a
+      target="_blank"
     >
+      {$_('footer_data')}
+    </a>
     <a
       class="mt-0.5 ml-2 text-xs text-gray-500 dark:text-gray-400 underline hover:text-gray-700 dark:hover:text-gray-200 mr-auto"
       href="https://github.com/Vonter/blr-city-officials"
-      target="_blank">Code</a
+      target="_blank"
     >
+      {$_('footer_code')}
+    </a>
     <a
       href="https://boundaries.beta.nyc"
       class="mt-0.5 text-xs text-gray-500 dark:text-gray-400 underline hover:text-gray-700 dark:hover:text-gray-200"
       target="_blank"
     >
-      Inspired by BetaNYC
+      {$_('footer_betanyc')}
     </a>
   </footer>
 </nav>

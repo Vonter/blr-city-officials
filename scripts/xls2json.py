@@ -2,7 +2,18 @@ import pandas as pd
 import json
 
 # Read the Excel file
-df = pd.read_excel('./officials/master-list.xlsx')
+df1 = pd.read_excel('./officials/master-list.xlsx', sheet_name=0)
+df2 = pd.read_excel('./officials/master-list.xlsx', sheet_name=1)
+
+# Merge the two dataframes by row number
+df = pd.concat([df1, df2], axis=1)
+
+# Rename columns
+df = df.rename(columns={
+    'Area (Kannada)': 'AreaKN',
+    'Designation (Kannada)': 'DesignationKN',
+    'Name (Kannada)': 'NameKN'
+})
 
 # Fill NaN values with empty string
 df = df.fillna('')

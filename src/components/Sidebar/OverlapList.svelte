@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { locale } from 'svelte-i18n';
   import {
     mapStore,
     selectedBoundaryMap,
@@ -9,6 +10,7 @@
   import DistrictLink from './DistrictLink.svelte';
   import type { Feature } from 'geojson';
   import { colors } from '../../helpers/colors';
+  import { getOfficialDetails } from '../../helpers/helpers';
 
   import Loader from '../Loader.svelte';
 
@@ -79,10 +81,18 @@
     {#if districts.filter(district => district.properties?.id === key).length}
       <div class="divide-y divide-gray-100 dark:divide-neutral-700">
         {#each districts.filter(district => district.properties?.id === key) as district}
+          {@const officialDetails = getOfficialDetails(
+            district.properties?.id,
+            district.properties?.namecol
+          )}
+          {@const nameColKn = officialDetails
+            ? officialDetails.AreaKN
+            : district.properties?.namecol}
           <div
-            class={index % 2 === 0
-              ? 'bg-white dark:bg-neutral-900'
-              : 'bg-gray-100 dark:bg-neutral-800'}
+            class:bg-white={index % 2 === 0}
+            class:dark:bg-neutral-900={index % 2 === 0}
+            class:bg-gray-100={index % 2 !== 0}
+            class:dark:bg-neutral-800={index % 2 !== 0}
           >
             <DistrictLink
               onMouseOver={() => showIntersectingDistrict(district)}
@@ -93,11 +103,12 @@
                 hideIntersectingDistrict();
               }}
               icon={layers[district.properties?.id].icon}
-              nameCol={district.properties?.namecol}
-              nameLong={value.name_long}
-              area={district.properties?.area}
-              searea={district.properties?.searea}
-              formatContent={layers[district.properties?.id].formatContent}
+              nameCol={$locale?.startsWith('kn')
+                ? nameColKn
+                : district.properties?.namecol}
+              nameLong={$locale?.startsWith('kn')
+                ? value.name_long_kn
+                : value.name_long}
             />
           </div>
         {/each}

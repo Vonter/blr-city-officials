@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { _, locale } from 'svelte-i18n';
   import { run } from 'svelte/legacy';
 
   import { layers } from '../../assets/boundaries';
@@ -7,19 +8,20 @@
     selectedBoundaryMap,
     selectedDistrict,
     selectedCoordinates,
-    mapStore,
-    getOfficialDetails
+    mapStore
   } from '../../stores';
-  import { resetZoom } from '../../helpers/helpers';
+  import { getOfficialDetails, resetZoom } from '../../helpers/helpers';
 
   function getDistrictTitle(
     boundaryId: string | null,
     districtId: string | null
   ) {
     if (boundaryId && districtId) {
-      return `${layers[boundaryId].icon} \u00A0 ${layers[boundaryId].name_long} ${layers[
-        boundaryId
-      ].formatContent(districtId)}`;
+      const districtName = $locale?.startsWith('kn')
+        ? getOfficialDetails(boundaryId, districtId).AreaKN
+        : districtId;
+
+      return `${layers[boundaryId].icon} \u00A0 ${$locale.startsWith('kn') ? layers[boundaryId].name_long_kn : layers[boundaryId].name_long} ${districtName}`;
     }
 
     return 'Unknown District';
@@ -45,7 +47,7 @@
         <div class="py-4 px-4 mt-4 pb-4">
           <div class="flex flex-wrap items-center justify-between mb-4">
             <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-              Officials
+              {$_('details_title')}
             </h3>
             <a
               href={Array.isArray(officials)
@@ -68,7 +70,7 @@
                   d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"
                 />
               </svg>
-              Source
+              {$_('details_source')}
             </a>
           </div>
 
@@ -81,7 +83,9 @@
                   <div
                     class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1"
                   >
-                    {official.Designation}
+                    {$locale.startsWith('kn')
+                      ? official.DesignationKN
+                      : official.Designation}
                   </div>
                 {/if}
 
@@ -89,7 +93,7 @@
                   <div
                     class="text-ml font-medium text-gray-900 dark:text-gray-100 mb-4"
                   >
-                    {official.Name}
+                    {$locale.startsWith('kn') ? official.NameKN : official.Name}
                   </div>
                 {/if}
 
@@ -199,13 +203,13 @@
 
 <div class="mt-4 pb-4 text-xs bg-white dark:bg-neutral-900 p-4">
   <p class="text-gray-600 dark:text-gray-400">
-    Found an error? Help us improve the accuracy of this information by leaving
-    a comment on the <a
+    {$_('details_error')}
+    <a
       href="https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/edit"
       target="_blank"
       rel="noopener noreferrer"
       class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline font-medium"
-      >Google Sheet</a
+      >{$_('details_google_sheet')}</a
     >
   </p>
 </div>

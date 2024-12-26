@@ -2,8 +2,8 @@ import polylabel from '@mapbox/polylabel';
 import type { Feature, Position } from 'geojson';
 import turfArea from '@turf/area';
 import * as turf from '@turf/bbox';
-import turfUnion from '@turf/union';
 import type maplibregl from 'maplibre-gl';
+import officials from '../officials.json';
 
 export const defaultZoom: Partial<maplibregl.MapOptions> = {
   zoom: 9.6,
@@ -68,4 +68,16 @@ export function getDownloadableUrl(content: Object, geojson: boolean) {
     const blob = new Blob([content]);
     return URL.createObjectURL(blob);
   }
+}
+
+export function getOfficialDetails(
+  boundaryId: string | null,
+  districtId: string | null
+) {
+  if (!boundaryId || !districtId) return null;
+  return officials.find(
+    official =>
+      official.Department.toLowerCase() === boundaryId.toLowerCase() &&
+      official.Area.toLowerCase() === districtId.toLowerCase()
+  );
 }

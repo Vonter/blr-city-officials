@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { _, locale } from 'svelte-i18n';
+
   import { run } from 'svelte/legacy';
   import type { Feature, FeatureCollection } from 'geojson';
   import { layers } from '../../assets/boundaries';
@@ -11,7 +13,11 @@
     boundaries
   } from '../../stores';
   import { clickOutside } from 'svelte-use-click-outside';
-  import { resetZoom, sortedDistricts } from '../../helpers/helpers';
+  import {
+    getOfficialDetails,
+    resetZoom,
+    sortedDistricts
+  } from '../../helpers/helpers';
   import DistrictLink from './DistrictLink.svelte';
   import Loader from '../Loader.svelte';
   import DownloadButtons from './DownloadButtons.svelte';
@@ -76,7 +82,7 @@
 
 <SidebarHeader
   title={$selectedBoundaryMap
-    ? `${layers[$selectedBoundaryMap].icon} \u00A0 ${layers[$selectedBoundaryMap].name_long}`
+    ? `${layers[$selectedBoundaryMap].icon} \u00A0 ${$locale.startsWith('kn') ? layers[$selectedBoundaryMap].name_long_kn : layers[$selectedBoundaryMap].name_long}`
     : 'Loading&hellip;'}
   onBack={handleBack}
 >
@@ -140,7 +146,7 @@
     <div class="relative flex-1 px-4 pb-2">
       <input
         id="filter"
-        placeholder="Filter"
+        placeholder={$_('filter_placeholder')}
         type="search"
         name="filter"
         bind:value
@@ -164,20 +170,27 @@
           .filter(district => district.properties?.namecol
               .toLowerCase()
               .includes(value.toLowerCase()))
-          .map(d => d.properties?.namecol))] as nameCol, index}
-      {@const district = districts.find(d => d.properties?.namecol === nameCol)}
+          .map(d => d.properties?.namecol))] as district, index}
+      {@const officialDetails = getOfficialDetails(
+        $selectedBoundaryMap,
+        district
+      )}
+      {@const nameColKn = officialDetails
+        ? officialDetails.AreaKN
+        : district.properties?.namecol}
       <div
-        class={index % 2 === 0
-          ? 'bg-white dark:bg-neutral-900'
-          : 'bg-gray-100 dark:bg-neutral-800'}
+        class:bg-white={index % 2 === 0}
+        class:dark:bg-neutral-900={index % 2 === 0}
+        class:bg-gray-100={index % 2 !== 0}
+        class:dark:bg-neutral-800={index % 2 !== 0}
       >
         <DistrictLink
-          onMouseOver={() => onDistrictMouseOver(nameCol)}
-          onMouseOut={() => onDistrictMouseOut(nameCol)}
-          onClick={() => ($selectedDistrict = nameCol)}
-          icon={layers[district.properties?.id].icon}
-          {nameCol}
-          formatContent={layers[district.properties?.id].formatContent}
+          onMouseOver={() => onDistrictMouseOver(district)}
+          onMouseOut={() => onDistrictMouseOut(district)}
+          onClick={() => ($selectedDistrict = district)}
+          icon={layers[$selectedBoundaryMap].icon}
+          nameCol={$locale?.startsWith('kn') ? nameColKn : district}
+          nameLong=""
         />
       </div>
     {/each}
