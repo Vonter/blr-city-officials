@@ -4,7 +4,6 @@ import { feature } from 'topojson-client';
 import { readable, writable } from 'svelte/store';
 
 import { layers } from './assets/boundaries';
-import officials from './officials.json';
 
 const params = new URLSearchParams(window.location.search);
 
@@ -45,17 +44,3 @@ export const boundaries = readable(null, set => {
 });
 
 export const isMapReady = writable<boolean>(false);
-
-export function getOfficialDetails(
-  boundaryId: string | null,
-  districtId: string | null
-) {
-  if (!boundaryId || !districtId) return null;
-
-  return officials.find(
-    official =>
-      official.Department.toLowerCase() === boundaryId.toLowerCase() &&
-      official.Area.toLowerCase() ===
-        layers[boundaryId].formatContent(districtId).toLowerCase()
-  );
-}

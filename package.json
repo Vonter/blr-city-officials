@@ -43,6 +43,7 @@
     "@types/geojson": "^7946.0.15",
     "maplibre-gl": "^4.7.1",
     "polygon-lookup": "^2.6.0",
+    "svelte-i18n": "^4.0.1",
     "svelte-use-click-outside": "^1.0.0"
   }
 }

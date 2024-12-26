@@ -10,6 +10,16 @@
   import Sidebar from './components/Sidebar/Sidebar.svelte';
   import Controls from './components/Controls.svelte';
 
+  import { addMessages, init, getLocaleFromNavigator } from 'svelte-i18n';
+  import en from './assets/locales/en.json';
+  import kn from './assets/locales/kn.json';
+  addMessages('en', en);
+  addMessages('kn', kn);
+  init({
+    fallbackLocale: 'en',
+    initialLocale: getLocaleFromNavigator()
+  });
+
   const params = new URLSearchParams(window.location.search);
 
   run(() => {

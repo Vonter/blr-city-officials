@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { _ } from 'svelte-i18n';
   import GooglePlacesAutocomplete from '../components/GooglePlacesAutocomplete.svelte';
   import { Loader } from '@googlemaps/js-api-loader';
   import type { LngLat } from 'maplibre-gl';
@@ -25,7 +26,6 @@
     fields: ['place_id'],
     strictBounds: true
   };
-  const placeholder = 'Search';
 
   let isGettingLocation = $state(false);
   let inputField = $state<HTMLInputElement>();
@@ -110,7 +110,7 @@
       apiKey={import.meta.env.VITE_GMAPS_API_KEY}
       class="search relative flex-1 l-0 t-0 r-0 py-2 px-3 pl-10 pr-10 flex-1 w-full bg-white shadow-md rounded focus:outline-none focus:ring focus:ring-blue-500"
       on:place_changed={onPlaceChanged}
-      {placeholder}
+      placeholder={$_('search_placeholder')}
       {options}
       required
       pattern="[a-zA-Z ]+"
