@@ -2,8 +2,8 @@ import pandas as pd
 import json
 
 # Read the Excel file
-df1 = pd.read_excel('./officials/master-list.xlsx', sheet_name=0)
-df2 = pd.read_excel('./officials/master-list.xlsx', sheet_name=1)
+df1 = pd.read_excel('./scripts/officials.xlsx', sheet_name=0)
+df2 = pd.read_excel('./scripts/officials.xlsx', sheet_name=1)
 
 # Merge the two dataframes by row number
 df = pd.concat([df1, df2], axis=1)
@@ -45,5 +45,5 @@ for col in df.columns:
 data = df.to_dict('records')
 
 # Write to JSON file
-with open('./officials.json', 'w', encoding='utf-8') as f:
+with open('./src/officials.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
