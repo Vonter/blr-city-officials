@@ -17,8 +17,12 @@
     districtId: string | null
   ) {
     if (boundaryId && districtId) {
+      const officialDetails = getOfficialDetails(boundaryId, districtId);
+      const districtNameKN = officialDetails
+        ? officialDetails.AreaKN
+        : districtId;
       const districtName = $locale?.startsWith('kn')
-        ? getOfficialDetails(boundaryId, districtId).AreaKN
+        ? districtNameKN
         : districtId;
 
       return `${layers[boundaryId].icon} \u00A0 ${$locale.startsWith('kn') ? layers[boundaryId].name_long_kn : layers[boundaryId].name_long} ${districtName}`;

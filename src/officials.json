@@ -157,15 +157,15 @@
     "Department": "admin_taluk",
     "Area": "Bangalore East",
     "Designation": "Tahsildar",
-    "Name": "Ajith Rai Saroke",
-    "Phone": "",
+    "Name": "Rajeev",
+    "Phone": "9632339738",
     "E-Mail": "",
     "Source": "https://bengaluruurban.nic.in/contact-details/",
     "Notes": "",
     "Unnamed: 3": "",
     "AreaKN": "ಬೆಂಗಳೂರು ಪೂರ್ವ",
     "DesignationKN": "ತಹಶೀಲ್ದಾರ್",
-    "NameKN": "ಅಜಿತ್ ರೈ ಸಾರೋಕೆ"
+    "NameKN": "ರಾಜೀವ್"
   },
   {
     "Department": "admin_taluk",
@@ -415,7 +415,7 @@
     "Source": "",
     "Notes": "",
     "Unnamed: 3": "",
-    "AreaKN": "ಕೋಲಾರ ಚಿನ್ನದ ಕ್ಷೇತ್ರ",
+    "AreaKN": "ಕೆ ಜಿ ಎಫ್",
     "DesignationKN": "",
     "NameKN": ""
   },
@@ -639,7 +639,7 @@
     "Source": "",
     "Notes": "",
     "Unnamed: 3": "",
-    "AreaKN": "ಶಿಡ್ಲಗಟ್ಟಾ",
+    "AreaKN": "ಶಿಡ್ಲಘಟ್ಟ",
     "DesignationKN": "",
     "NameKN": ""
   },
@@ -681,7 +681,7 @@
     "Source": "",
     "Notes": "",
     "Unnamed: 3": "",
-    "AreaKN": "ತಿ.ನರಸೀಪುರ",
+    "AreaKN": "ಟಿ.ನರಸೀಪುರ",
     "DesignationKN": "",
     "NameKN": ""
   },
@@ -725,7 +725,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಯಲಹಂಕ",
     "DesignationKN": "ತಹಶೀಲ್ದಾರ್",
-    "NameKN": "ನರಶಿಮಾಮೂರ್ತಿ"
+    "NameKN": "ನರಸಿಂಹ ಮೂರ್ತಿ"
   },
   {
     "Department": "bbmp_wards",
@@ -765,9 +765,9 @@
     "Source": "https://bbmp.gov.in/notifications/nodalofficer.html",
     "Notes": "",
     "Unnamed: 3": "",
-    "AreaKN": "ಎಇಸಿಎಸ್ ಲೇಔಟ್",
+    "AreaKN": "ಎ.ಇ.ಸಿ.ಎಸ್. ಲೇಔಟ್",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಜಿ ಶ್ರೀನಿವಾಸಮೂರ್ತಿ"
+    "NameKN": "ಜಿ. ಶ್ರೀನಿವಾಸ ಮೂರ್ತಿ"
   },
   {
     "Department": "bbmp_wards",
@@ -961,7 +961,7 @@
     "Source": "https://bbmp.gov.in/notifications/nodalofficer.html",
     "Notes": "",
     "Unnamed: 3": "",
-    "AreaKN": "ಬಂದೇ ಮಠ",
+    "AreaKN": "ಬಂಡೆ ಮಠ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
     "NameKN": "ಪೂರ್ಣಿಮಾ"
   },
@@ -977,7 +977,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಬಸವನಪುರ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ವಿಶ್ವೇಶ್ವರಯ್ಯ ಡಾ"
+    "NameKN": "ವಿಶ್ವೇಶ್ವರಯ್ಯ ಡಾ."
   },
   {
     "Department": "bbmp_wards",
@@ -1101,7 +1101,7 @@
     "Source": "https://bbmp.gov.in/notifications/nodalofficer.html",
     "Notes": "",
     "Unnamed: 3": "",
-    "AreaKN": "BTM ಲೇಔಟ್",
+    "AreaKN": "ಬಿ ಟಿ ಎಂ ಲೇಔಟ್",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
     "NameKN": "ಶಶಿಕಲಾ"
   },
@@ -1145,7 +1145,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಬೈರತಿ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಬಿಎನ್ ರಾಘವೇಂದ್ರ"
+    "NameKN": "ಬಿ.ಎನ್. ರಾಘವೇಂದ್ರ"
   },
   {
     "Department": "bbmp_wards",
@@ -1215,7 +1215,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಚಾಮುಂಡಿ ನಗರ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ನಯನತಾರಾ ಡಾ"
+    "NameKN": "ನಯನತಾರಾ ಡಾ."
   },
   {
     "Department": "bbmp_wards",
@@ -1313,7 +1313,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಚೌಡೇಶ್ವರಿ ವಾರ್ಡ್",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಕೆ ಜಿ ಸುಂದರೇಶ್"
+    "NameKN": "ಕೆ.ಜಿ. ಸುಂದರೇಶ್"
   },
   {
     "Department": "bbmp_wards",
@@ -1439,7 +1439,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ದೇವಸಂದ್ರ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ನಿತ್ಯ ಕೆಎ"
+    "NameKN": "ನಿತ್ಯ ಕೆ.ಎ."
   },
   {
     "Department": "bbmp_wards",
@@ -1467,7 +1467,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ದೊಡ್ಡ ಬಿದರಕಲ್ಲು",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಸಿದ್ದರಾಜು"
+    "NameKN": "ಸಿದ್ಧರಾಜ್"
   },
   {
     "Department": "bbmp_wards",
@@ -1535,7 +1535,7 @@
     "Source": "https://bbmp.gov.in/notifications/nodalofficer.html",
     "Notes": "",
     "Unnamed: 3": "",
-    "AreaKN": "ಡಾ.ಪುನೀತ್ ರಾಜ್ ಕುಮಾರ್",
+    "AreaKN": "ಡಾ. ಪುನೀತ್ ರಾಜ್ ಕುಮಾರ್",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
     "NameKN": "ರೇಣುಕಾಸ್ವಾಮಿ"
   },
@@ -1549,7 +1549,7 @@
     "Source": "https://bbmp.gov.in/notifications/nodalofficer.html",
     "Notes": "",
     "Unnamed: 3": "",
-    "AreaKN": "ಡಾ.ರಾಜ್ ಕುಮಾರ್ ಅಗ್ರಹಾರ ದಾಸರಹಳ್ಳಿ",
+    "AreaKN": "ಡಾ. ರಾಜ್ ಕುಮಾರ್ ಅಗ್ರಹಾರ ದಾಸರಹಳ್ಳಿ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
     "NameKN": "ಪ್ರಕಾಶ್"
   },
@@ -1565,7 +1565,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಈಜಿಪುರ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಡಾ.ಅನುಪಮಾ"
+    "NameKN": "ಡಾ. ಅನುಪಮಾ"
   },
   {
     "Department": "bbmp_wards",
@@ -1579,7 +1579,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಗಾಲಿ ಆಂಜನೇಯ ದೇವಸ್ಥಾನ ವಾರ್ಡ್",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಡಾ.ಶಿಲ್ಪಾ"
+    "NameKN": "ಡಾ. ಶಿಲ್ಪಾ"
   },
   {
     "Department": "bbmp_wards",
@@ -1635,7 +1635,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಗರುಡಾಚಾರ್ ಪಾಳ್ಯ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಭೂಪ್ರದ"
+    "NameKN": "ಭೂಪ್ರಧಾ"
   },
   {
     "Department": "bbmp_wards",
@@ -1761,7 +1761,7 @@
     "Unnamed: 3": "",
     "AreaKN": "HBR ಲೇಔಟ್",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಡಾ.ರವಿಕುಮಾರ್"
+    "NameKN": "ಡಾ. ರವಿಕುಮಾರ್"
   },
   {
     "Department": "bbmp_wards",
@@ -1859,7 +1859,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಹೊಂಬೇಗೌಡ ನಗರ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಎನ್ ಎಸ್ ನಾಗೇಂದ್ರ"
+    "NameKN": "ಎನ್. ಎಸ್. ನಾಗೇಂದ್ರ"
   },
   {
     "Department": "bbmp_wards",
@@ -2139,7 +2139,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಜ್ಞಾನ ಭಾರತಿ ವಾರ್ಡ್",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ವರನಾರಾಯಣ"
+    "NameKN": "ವರನಾರಾಯಣ್"
   },
   {
     "Department": "bbmp_wards",
@@ -2153,7 +2153,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಜೋಗುಪಾಳ್ಯ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಡಾ.ಧನ್ಯ ಕುಮಾರ್"
+    "NameKN": "ಡಾ. ಧನ್ಯ ಕುಮಾರ್"
   },
   {
     "Department": "bbmp_wards",
@@ -2321,7 +2321,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಕಮ್ಮಗೊಂಡನಹಳ್ಳಿ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಡಾ.ಸುನೀಲ್ ಕುಮಾರ್ ಹಾವನೂರ"
+    "NameKN": "ಡಾ. ಸುನೀಲ್ ಕುಮಾರ್ ಹಾವನೂರ್"
   },
   {
     "Department": "bbmp_wards",
@@ -2349,7 +2349,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಕತ್ರಿಗುಪ್ಪೆ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ದೇವಿಕಾ ರಾಣಿ ಡಾ"
+    "NameKN": "ಡಾ. ದೇವಿಕಾ ರಾಣಿ "
   },
   {
     "Department": "bbmp_wards",
@@ -2559,7 +2559,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಕುಶಾಲ್ ನಗರ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಡಾ.ಅನಂತ ಶ್ರೀಲಕ್ಷ್ಮಿ"
+    "NameKN": "ಡಾ. ಅನಂತ ಶ್ರೀಲಕ್ಷ್ಮಿ"
   },
   {
     "Department": "bbmp_wards",
@@ -2573,7 +2573,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಕುವೆಂಪು ನಗರ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಪ್ರಕಾಶ್ ಎಂ ಧಾರೇಶ್ವರ"
+    "NameKN": "ಪ್ರಕಾಶ್ ಎಂ. ಧಾರೇಶ್ವರ್"
   },
   {
     "Department": "bbmp_wards",
@@ -2657,7 +2657,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಮಡಿವಾಳ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಮಹಾಂತೇಶ"
+    "NameKN": "ಮಹಾಂತೇಶ್"
   },
   {
     "Department": "bbmp_wards",
@@ -2755,7 +2755,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಮಾರತ್ತಹಳ್ಳಿ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಡಾ.ರಾಕೇಶ್"
+    "NameKN": "ಡಾ. ರಾಕೇಶ್"
   },
   {
     "Department": "bbmp_wards",
@@ -2769,7 +2769,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಮಾರೇನಹಳ್ಳಿ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಡಾ.ಮನೋರಂಜನ್ ಹೆಗ್ಡೆ"
+    "NameKN": "ಡಾ. ಮನೋರಂಜನ್ ಹೆಗ್ಡೆ"
   },
   {
     "Department": "bbmp_wards",
@@ -3175,7 +3175,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ರಾಜಮಹಲ್ ಗುಟ್ಟಹಳ್ಳಿ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಮುಹಮ್ಮದ್ ಹಳ್ಳಿ ಪಿಂಚಾರ್"
+    "NameKN": "ಮುಹಮ್ಮದ್ ಹಾಲಿ ಪಿಂಚಾರ್"
   },
   {
     "Department": "bbmp_wards",
@@ -3399,7 +3399,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಶಿವಾಜಿ ನಗರ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಯಶೋವರ್ದನ್ ಡಾ"
+    "NameKN": "ಡಾ. ಯಶೋವರ್ದನ್"
   },
   {
     "Department": "bbmp_wards",
@@ -3581,7 +3581,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಸುಂಕೇನಹಳ್ಳಿ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಡಾ.ಕೋಮಲ್ ಕೆ.ಆರ್"
+    "NameKN": "ಡಾ. ಕೋಮಲ್ ಕೆ.ಆರ್"
   },
   {
     "Department": "bbmp_wards",
@@ -3777,7 +3777,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ವಿಜಿನಾಪುರ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಸುಶೀಲಾ ಎನ್"
+    "NameKN": "ಸುಶೀಲಾ ಎನ್."
   },
   {
     "Department": "bbmp_wards",
@@ -3805,7 +3805,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ವಿಶ್ವೇಶ್ವರ ಪುರಂ",
     "DesignationKN": "ನೋಡಲ್ ಅಧಿಕಾರಿ",
-    "NameKN": "ಡಾ.ಶ್ರೀನಾಥ್ ಡಿ.ಎನ್"
+    "NameKN": "ಡಾ. ಶ್ರೀನಾಥ್ ಡಿ.ಎನ್"
   },
   {
     "Department": "bbmp_wards",
@@ -3917,7 +3917,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಬೊಮ್ಮನಹಳ್ಳಿ",
     "DesignationKN": "ವಲಯ ಆಯುಕ್ತರು",
-    "NameKN": "ರಮ್ಯಾ ಎಸ್"
+    "NameKN": "ರಮ್ಯಾ ಎಸ್."
   },
   {
     "Department": "bbmp_zone",
@@ -3931,7 +3931,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ದಾಸರಹಳ್ಳಿ",
     "DesignationKN": "ವಲಯ ಆಯುಕ್ತರು",
-    "NameKN": "ಹೆಚ್ ಸಿ ಗಿರೀಶ್"
+    "NameKN": "ಹೆಚ್ .ಸಿ. ಗಿರೀಶ್"
   },
   {
     "Department": "bbmp_zone",
@@ -3945,7 +3945,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಪೂರ್ವ",
     "DesignationKN": "ವಲಯ ಆಯುಕ್ತರು",
-    "NameKN": "ಸ್ನೇಹಲ್ ಆರ್"
+    "NameKN": "ಸ್ನೇಹಲ್ ಆರ್."
   },
   {
     "Department": "bbmp_zone",
@@ -3959,7 +3959,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಮಹದೇವಪುರ",
     "DesignationKN": "ವಲಯ ಆಯುಕ್ತರು",
-    "NameKN": "ಕೆ ಎನ್ ರಮೇಶ್"
+    "NameKN": "ಕೆ.ಎನ್. ರಮೇಶ್"
   },
   {
     "Department": "bbmp_zone",
@@ -3973,7 +3973,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಆರ್ ಆರ್ ನಾಗರಾ",
     "DesignationKN": "ವಲಯ ಆಯುಕ್ತರು",
-    "NameKN": "ಸತೀಶ ಬಿ ಸಿ"
+    "NameKN": "ಸತೀಶ ಬಿ.ಸಿ"
   },
   {
     "Department": "bbmp_zone",
@@ -4001,7 +4001,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಪಶ್ಚಿಮ",
     "DesignationKN": "ವಲಯ ಆಯುಕ್ತರು",
-    "NameKN": "ಅರ್ಚನಾ ಎಂ ಎಸ್"
+    "NameKN": "ಅರ್ಚನಾ ಎಂ.ಎಸ್"
   },
   {
     "Department": "bbmp_zone",
@@ -5653,7 +5653,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ದಕ್ಷಿಣ",
     "DesignationKN": "ಕಾರ್ಯನಿರ್ವಾಹಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": "ಭರತ್ ಕುಮಾರ್ ಎಸ್"
+    "NameKN": "ಭರತ್ ಕುಮಾರ್ ಎಸ್."
   },
   {
     "Department": "bwssb_division",
@@ -5681,7 +5681,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಆಗ್ನೇಯ - 1",
     "DesignationKN": "ಕಾರ್ಯನಿರ್ವಾಹಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": "ನಾಗರಾಜ್ ಕೆ"
+    "NameKN": "ನಾಗರಾಜ್ ಕೆ."
   },
   {
     "Department": "bwssb_division",
@@ -5695,7 +5695,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಆಗ್ನೇಯ - 2",
     "DesignationKN": "ಕಾರ್ಯನಿರ್ವಾಹಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": "ಬಸವರಾಜ ಎನ್"
+    "NameKN": "ಬಸವರಾಜ ಎನ್."
   },
   {
     "Department": "bwssb_division",
@@ -5709,7 +5709,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ನೈಋತ್ಯ",
     "DesignationKN": "ಕಾರ್ಯನಿರ್ವಾಹಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": "ಸ್ನೇಹಾ ವಿ"
+    "NameKN": "ಸ್ನೇಹಾ ವಿ."
   },
   {
     "Department": "bwssb_division",
@@ -5723,7 +5723,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಪಶ್ಚಿಮ",
     "DesignationKN": "ಕಾರ್ಯನಿರ್ವಾಹಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": "ಟಿ ಚಂದ್ರಶೇಖರ ಪ್ರಸಾದ್"
+    "NameKN": "ಟಿ. ಚಂದ್ರಶೇಖರ್ ಪ್ರಸಾದ್"
   },
   {
     "Department": "bwssb_service_station",
@@ -5749,7 +5749,7 @@
     "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en",
     "Notes": "",
     "Unnamed: 3": "",
-    "AreaKN": "ಎಇಸಿಎಸ್ ಲೇಔಟ್-1",
+    "AreaKN": "ಎ.ಇ.ಸಿ.ಎಸ್ ಲೇಔಟ್-1",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
     "NameKN": " ಮಂಜುನಾಥ್ / ಸಹನಾಬ್ ಬೇಗಂ"
   },
@@ -5763,7 +5763,7 @@
     "Source": "https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en",
     "Notes": "",
     "Unnamed: 3": "",
-    "AreaKN": "ಎಇಸಿಎಸ್ ಲೇಔಟ್-2",
+    "AreaKN": "ಎ.ಇ.ಸಿ.ಎಸ್ ಲೇಔಟ್-2",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
     "NameKN": " ಲತೀಫ್ ಸಾಹೇಬ್"
   },
@@ -5989,7 +5989,7 @@
     "Unnamed: 3": "",
     "AreaKN": "BTM I & II",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": " ಹನುಮಂತರಾಜು ಸಿ ಪಿ"
+    "NameKN": " ಹನುಮಂತರಾಜು ಸಿ.ಪಿ."
   },
   {
     "Department": "bwssb_service_station",
@@ -6087,7 +6087,7 @@
     "Unnamed: 3": "",
     "AreaKN": "CLR",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": " ಡಿ ಎಸ್ ರಂಗಯ್ಯ"
+    "NameKN": " ಡಿ.ಎಸ್. ರಂಗಯ್ಯ"
   },
   {
     "Department": "bwssb_service_station",
@@ -6101,7 +6101,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಕೋಲ್ಸ್ ಪಾರ್ಕ್",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": " ರಾಜೇಶ್ ಎಸ್ ಡಿ"
+    "NameKN": " ರಾಜೇಶ್ ಎಸ್.ಡಿ"
   },
   {
     "Department": "bwssb_service_station",
@@ -6157,7 +6157,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ದೊಮ್ಮಲೂರು",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": " ಮಮತಾ ಎಂ ಎಚ್"
+    "NameKN": " ಮಮತಾ ಎಂ.ಎಚ್"
   },
   {
     "Department": "bwssb_service_station",
@@ -6213,7 +6213,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಗಿರಿನಗರ",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": " ಉಷಾ ಸಿ ಆರ್"
+    "NameKN": " ಉಷಾ ಸಿ.ಆರ್"
   },
   {
     "Department": "bwssb_service_station",
@@ -6339,7 +6339,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಹೊಸಕೆರೆಹಳ್ಳಿ",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": " ಶ್ರೀಧರ್.ಎಸ್"
+    "NameKN": " ಶ್ರೀಧರ್ ಎಸ್"
   },
   {
     "Department": "bwssb_service_station",
@@ -6675,7 +6675,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಕೋಡಿಚಿಕ್ಕನಹಳ್ಳಿ",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": " ವಿಕಾಸ್ ಡಿ ಎಸ್ / ನಾಗರಾಜ್ ಎಸ್ ಆರ್"
+    "NameKN": " ವಿಕಾಸ್ ಡಿ.ಎಸ್ / ನಾಗರಾಜ್ ಎಸ್.ಆರ್"
   },
   {
     "Department": "bwssb_service_station",
@@ -6913,7 +6913,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಮೌಂಟ್ ಜಾಯ್",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": " ಸುದರ್ಶನ್ ಡಿ ಎನ್"
+    "NameKN": " ಸುದರ್ಶನ್ ಡಿ.ಎನ್"
   },
   {
     "Department": "bwssb_service_station",
@@ -6955,7 +6955,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ನಾಗೇಂದ್ರ ಬ್ಲಾಕ್",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": " ಉಷಾ ಸಿ ಆರ್"
+    "NameKN": " ಉಷಾ ಸಿ.ಆರ್"
   },
   {
     "Department": "bwssb_service_station",
@@ -7179,7 +7179,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಹಲಸೂರು",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": " ರವಿ ಕಿರಣ್ (i/c)"
+    "NameKN": " ರವಿ ಕಿರಣ್ (ಐ/ಸಿ)"
   },
   {
     "Department": "bwssb_service_station",
@@ -7235,7 +7235,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ವಿಜಯಾ ಬ್ಯಾಂಕ್ ಲೇಔಟ್",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": " ನಾಗರಾಜ್ ಎಸ್ ಆರ್"
+    "NameKN": " ನಾಗರಾಜ್ ಎಸ್ಆ.ರ್"
   },
   {
     "Department": "bwssb_service_station",
@@ -7291,7 +7291,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ವಿವಿ ಪುರಂ",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": " ಪ್ರಹ್ಲಾದ"
+    "NameKN": "ಪ್ರಹ್ಲಾದ್"
   },
   {
     "Department": "bwssb_service_station",
@@ -7333,7 +7333,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಯಲಹಂಕ ಓಲ್ಡ್ ಟೌನ್",
     "DesignationKN": "ಸಹಾಯಕ ಇಂಜಿನಿಯರ್",
-    "NameKN": " ವಿನಯ್ ಕುಮಾರ್ ಪಿ ಬಿ"
+    "NameKN": " ವಿನಯ್ ಕುಮಾರ್ ಪಿ.ಬಿ"
   },
   {
     "Department": "bwssb_service_station",
@@ -10665,7 +10665,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಆನೇಕಲ್",
     "DesignationKN": "MLA",
-    "NameKN": "ಬಿ ಶಿವಣ್ಣ"
+    "NameKN": "ಬಿ. ಶಿವಣ್ಣ"
   },
   {
     "Department": "election_ac",
@@ -10707,7 +10707,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಬೆಂಗಳೂರು ದಕ್ಷಿಣ",
     "DesignationKN": "MLA",
-    "NameKN": "ಎಂ ಕೃಷ್ಣಪ್ಪ"
+    "NameKN": "ಎಂ. ಕೃಷ್ಣಪ್ಪ"
   },
   {
     "Department": "election_ac",
@@ -10735,7 +10735,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಬಸವನಗುಡಿ",
     "DesignationKN": "MLA",
-    "NameKN": "ರವಿ ಸುಬ್ರಹ್ಮಣ್ಯ LA"
+    "NameKN": "ರವಿ ಸುಬ್ರಹ್ಮಣ್ಯ ಎಲ್.ಎ"
   },
   {
     "Department": "election_ac",
@@ -10777,7 +10777,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಸಿ.ವಿ. ರಾಮಣ್ಣನಗರ",
     "DesignationKN": "MLA",
-    "NameKN": "ಎಸ್ ರಘು"
+    "NameKN": "ಎಸ್. ರಘು"
   },
   {
     "Department": "election_ac",
@@ -10791,7 +10791,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಚಾಮರಾಜಪೇಟೆ",
     "DesignationKN": "MLA",
-    "NameKN": "BZ ಜಮೀರ್ ಅಹ್ಮದ್ ಖಾನ್"
+    "NameKN": "ಬಿ.ಜೆಡ್ ಜಮೀರ್ ಅಹ್ಮದ್ ಖಾನ್"
   },
   {
     "Department": "election_ac",
@@ -10861,7 +10861,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ದಾಸರಹಳ್ಳಿ",
     "DesignationKN": "MLA",
-    "NameKN": "ಎಸ್ ಮುನಿರಾಜು"
+    "NameKN": "ಎಸ್. ಮುನಿರಾಜು"
   },
   {
     "Department": "election_ac",
@@ -10875,7 +10875,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ದೇವನಹಳ್ಳಿ",
     "DesignationKN": "MLA",
-    "NameKN": "ಕೆ ಎಚ್ ಮುನಿಯಪ್ಪ"
+    "NameKN": "ಕೆ. ಎಚ್. ಮುನಿಯಪ್ಪ"
   },
   {
     "Department": "election_ac",
@@ -10973,7 +10973,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಹೆಬ್ಬಾಳ",
     "DesignationKN": "MLA",
-    "NameKN": "ಬಿ.ಎಸ್.ಸುರೇಶ ಬೈರತಿ"
+    "NameKN": "ಬಿ.ಎಸ್. ಸುರೇಶ ಬೈರತಿ"
   },
   {
     "Department": "election_ac",
@@ -11001,7 +11001,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಜಯನಗರ",
     "DesignationKN": "MLA",
-    "NameKN": "ಸಿ ಕೆ ರಾಮ ಮೂರ್ತಿ"
+    "NameKN": "ಸಿ.ಕೆ. ರಾಮ ಮೂರ್ತಿ"
   },
   {
     "Department": "election_ac",
@@ -11015,7 +11015,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಕೆ.ಆರ್. ಪುರ",
     "DesignationKN": "MLA",
-    "NameKN": "ಬಿಎ ಬಸವರಾಜ"
+    "NameKN": "ಬಿ.ಎ. ಬಸವರಾಜ"
   },
   {
     "Department": "election_ac",
@@ -11029,7 +11029,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಕನಕಪುರ",
     "DesignationKN": "MLA",
-    "NameKN": "ಡಿಕೆ ಶಿವಕುಮಾರ್"
+    "NameKN": "ಡಿ.ಕೆ. ಶಿವಕುಮಾರ್"
   },
   {
     "Department": "election_ac",
@@ -11085,7 +11085,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಕೊರಟಗೆರೆ",
     "DesignationKN": "MLA",
-    "NameKN": "ಜಿ ಪರಮೇಶ್ವರ"
+    "NameKN": "ಜಿ. ಪರಮೇಶ್ವರ"
   },
   {
     "Department": "election_ac",
@@ -11141,7 +11141,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಮಾಗಡಿ",
     "DesignationKN": "MLA",
-    "NameKN": "ಎಚ್ ಸಿ ಬಾಲಕೃಷ್ಣ"
+    "NameKN": "ಎಚ್.ಸಿ ಬಾಲಕೃಷ್ಣ"
   },
   {
     "Department": "election_ac",
@@ -11197,7 +11197,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಮಲ್ಲೇಶ್ವರಂ",
     "DesignationKN": "MLA",
-    "NameKN": "ಅಶ್ವಥ್ ನಾರಾಯಣ ಸಿಎನ್"
+    "NameKN": "ಅಶ್ವಥ್ ನಾರಾಯಣ ಸಿ.ಎನ್"
   },
   {
     "Department": "election_ac",
@@ -11211,7 +11211,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಮಾಲೂರು",
     "DesignationKN": "MLA",
-    "NameKN": "ಕೆ.ಎನ್.ನಂಜೇಗೌಡ"
+    "NameKN": "ಕೆ.ಎನ್. ನಂಜೇಗೌಡ"
   },
   {
     "Department": "election_ac",
@@ -11281,7 +11281,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಪದ್ಮನಾಬನಗರ",
     "DesignationKN": "MLA",
-    "NameKN": "ಆರ್ ಅಶೋಕ"
+    "NameKN": "ಆರ್. ಅಶೋಕ"
   },
   {
     "Department": "election_ac",
@@ -11309,7 +11309,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಪುಲಕೇಶಿನಗರ",
     "DesignationKN": "MLA",
-    "NameKN": "ಎಸಿ ಶ್ರೀನಿವಾಸ"
+    "NameKN": "ಎ.ಸಿ. ಶ್ರೀನಿವಾಸ"
   },
   {
     "Department": "election_ac",
@@ -11323,7 +11323,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ರಾಜಾಜಿನಗರ",
     "DesignationKN": "MLA",
-    "NameKN": "ಎಸ್ ಸುರೇಶ್ ಕುಮಾರ್"
+    "NameKN": "ಎಸ್. ಸುರೇಶ್ ಕುಮಾರ್"
   },
   {
     "Department": "election_ac",
@@ -11351,7 +11351,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ರಾಮನಗರ",
     "DesignationKN": "MLA",
-    "NameKN": "HA ಇಕ್ಬಾಲ್ ಹುಸೇನ್"
+    "NameKN": "H.A. ಇಕ್ಬಾಲ್ ಹುಸೇನ್"
   },
   {
     "Department": "election_ac",
@@ -11365,7 +11365,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಸರ್ವಜ್ಞನಗರ",
     "DesignationKN": "MLA",
-    "NameKN": "ಕೆಜೆ ಜಾರ್ಜ್"
+    "NameKN": "ಕೆ.ಜೆ. ಜಾರ್ಜ್"
   },
   {
     "Department": "election_ac",
@@ -11379,7 +11379,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಶಾಂತಿನಗರ",
     "DesignationKN": "MLA",
-    "NameKN": "ಎನ್ಎ ಹರಿಸ್"
+    "NameKN": "ಎನ್.ಎ. ಹರಿಸ್"
   },
   {
     "Department": "election_ac",
@@ -11407,7 +11407,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಸಿಡ್ಲಘಟ್ಟ",
     "DesignationKN": "MLA",
-    "NameKN": "ಬಿಎನ್ ರವಿಕುಮಾರ್"
+    "NameKN": "ಬಿ.ಎನ್. ರವಿಕುಮಾರ್"
   },
   {
     "Department": "election_ac",
@@ -11477,7 +11477,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ತುಮಕೂರು ಗ್ರಾಮಾಂತರ",
     "DesignationKN": "MLA",
-    "NameKN": "ಬಿ ಸುರೇಶ್ ಗೌಡ"
+    "NameKN": "ಬಿ. ಸುರೇಶ್ ಗೌಡ"
   },
   {
     "Department": "election_ac",
@@ -11491,7 +11491,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ವಿಜಯನಗರ",
     "DesignationKN": "MLA",
-    "NameKN": "ಎಂ ಕೃಷ್ಣಪ್ಪ"
+    "NameKN": "ಎಂ. ಕೃಷ್ಣಪ್ಪ"
   },
   {
     "Department": "election_ac",
@@ -11505,7 +11505,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಯಲಹಂಕ",
     "DesignationKN": "MLA",
-    "NameKN": "ಎಸ್ ಆರ್ ವಿಶ್ವನಾಥ್"
+    "NameKN": "ಎಸ್.ಆರ್ ವಿಶ್ವನಾಥ್"
   },
   {
     "Department": "election_ac",
@@ -11519,7 +11519,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಯಶವಂತಪುರ",
     "DesignationKN": "MLA",
-    "NameKN": "ಎಸ್ ಟಿ ಸೋಮಶೇಖರ್"
+    "NameKN": "ಎಸ್.ಟಿ. ಸೋಮಶೇಖರ್"
   },
   {
     "Department": "election_pc",
@@ -11533,7 +11533,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಬೆಂಗಳೂರು ಕೇಂದ್ರ",
     "DesignationKN": "MP",
-    "NameKN": "ಪಿಸಿ ಮೋಹನ್"
+    "NameKN": "ಪಿ.ಸಿ. ಮೋಹನ್"
   },
   {
     "Department": "election_pc",
@@ -11561,7 +11561,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ",
     "DesignationKN": "MP",
-    "NameKN": "ಸಿ ಎನ್ ಮಂಜುನಾಥ್"
+    "NameKN": "ಸಿ. ಎನ್. ಮಂಜುನಾಥ್"
   },
   {
     "Department": "election_pc",
@@ -11603,7 +11603,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಚಿಕ್ಕಬಳ್ಳಾಪುರ",
     "DesignationKN": "MP",
-    "NameKN": "ಕೆ ಸುಧಾಕರ್"
+    "NameKN": "ಕೆ. ಸುಧಾಕರ್"
   },
   {
     "Department": "election_pc",
@@ -11631,7 +11631,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಕೋಲಾರ",
     "DesignationKN": "MP",
-    "NameKN": "ಮಲ್ಲೇಶ್ ಎಂ ಬಾಬು"
+    "NameKN": "ಮಲ್ಲೇಶ್ ಎಂ. ಬಾಬು"
   },
   {
     "Department": "election_pc",
@@ -11659,7 +11659,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ತುಮಕೂರು",
     "DesignationKN": "MP",
-    "NameKN": "ವಿ ಸೋಮಣ್ಣ"
+    "NameKN": "ವಿ. ಸೋಮಣ್ಣ"
   },
   {
     "Department": "Pin Code",
@@ -14627,7 +14627,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ",
     "DesignationKN": "District Registrar",
-    "NameKN": "ಸತೀಶ್ ಕುಮಾರ್ ಕೆ"
+    "NameKN": "ಸತೀಶ್ ಕುಮಾರ್ ಕೆ."
   },
   {
     "Department": "stamps_dro",
@@ -14641,7 +14641,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಬಸವನಗುಡಿ",
     "DesignationKN": "District Registrar",
-    "NameKN": "ಸವಿತಾಲಕ್ಷ್ಮಿ ಪಿ ಬೆಳಗಲಿ"
+    "NameKN": "ಸವಿತಾಲಕ್ಷ್ಮಿ ಪಿ. ಬೆಳಗಲಿ"
   },
   {
     "Department": "stamps_dro",
@@ -14809,7 +14809,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಗಾಂಧಿನಗರ",
     "DesignationKN": "District Registrar",
-    "NameKN": "ಎಎನ್ ಭಾರತಿ"
+    "NameKN": "ಎ.ಎನ್. ಭಾರತಿ"
   },
   {
     "Department": "stamps_dro",
@@ -14851,7 +14851,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಜಯನಗರ",
     "DesignationKN": "District Registrar",
-    "NameKN": "ಬಿ.ಎಚ್.ಶಂಕರೇಗೌಡ"
+    "NameKN": "ಬಿ.ಎಚ್. ಶಂಕರೇಗೌಡ"
   },
   {
     "Department": "stamps_dro",
@@ -14907,7 +14907,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಕೋಲಾರ",
     "DesignationKN": "District Registrar",
-    "NameKN": "ಎನ್ ಶ್ರೀನಿಧಿ"
+    "NameKN": "ಎನ್. ಶ್ರೀನಿಧಿ"
   },
   {
     "Department": "stamps_dro",
@@ -15005,7 +15005,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ರಾಮನಗರ",
     "DesignationKN": "District Registrar",
-    "NameKN": "ಎಂ ಶ್ರೀದೇವಿ"
+    "NameKN": "ಎಂ. ಶ್ರೀದೇವಿ"
   },
   {
     "Department": "stamps_dro",
@@ -15033,7 +15033,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಶಿವಾಜಿನಗರ",
     "DesignationKN": "District Registrar",
-    "NameKN": "ಎಸ್.ಬಿ.ದವಳೇಶ್ವರ"
+    "NameKN": "ಎಸ್.ಬಿ. ದವಳೇಶ್ವರ"
   },
   {
     "Department": "stamps_dro",
@@ -15047,7 +15047,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ತುಮಕೂರು",
     "DesignationKN": "District Registrar",
-    "NameKN": "ಬಿ ಶ್ರೀಕಾಂತ್"
+    "NameKN": "ಬಿ. ಶ್ರೀಕಾಂತ್"
   },
   {
     "Department": "stamps_dro",
@@ -15439,7 +15439,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಬಸವನಗುಡಿ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಎ ರಾಘವೇಂದ್ರ"
+    "NameKN": "ಎ. ರಾಘವೇಂದ್ರ"
   },
   {
     "Department": "stamps_sro",
@@ -15453,7 +15453,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಬೇಗೂರ್",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಸಂತೋಷ್ ಕುಮಾರ್ ಆರ್ ಕಟ್ಟಿಮನಿ"
+    "NameKN": "ಸಂತೋಷ್ ಕುಮಾರ್ ಆರ್. ಕಟ್ಟಿಮನಿ"
   },
   {
     "Department": "stamps_sro",
@@ -15677,7 +15677,7 @@
     "Unnamed: 3": "",
     "AreaKN": "BTM ಲೇಔಟ್",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಕಾವ್ಯ ಕೆ ಕೋರ"
+    "NameKN": "ಕಾವ್ಯ ಕೆ. ಕೋರ"
   },
   {
     "Department": "stamps_sro",
@@ -15705,7 +15705,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಬ್ಯಾಟರಾಯನಪುರ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಕೆ ವಿ ರವಿಕುಮಾರ್"
+    "NameKN": "ಕೆ.ವಿ. ರವಿಕುಮಾರ್"
   },
   {
     "Department": "stamps_sro",
@@ -15747,7 +15747,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಚಾಮರಾಜಪೇಟೆ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಉಮಾದೇವಿ ಎಎಸ್"
+    "NameKN": "ಉಮಾದೇವಿ ಎ.ಎಸ್"
   },
   {
     "Department": "stamps_sro",
@@ -15985,7 +15985,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ದೊಡ್ಡಬಳ್ಳಾಪುರ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಸತೀಶ್ ಎಚ್ ಎಸ್"
+    "NameKN": "ಸತೀಶ್ ಎಚ್.ಎಸ್"
   },
   {
     "Department": "stamps_sro",
@@ -16041,7 +16041,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಗಂಗಾನಗರ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಎಂ.ಕೆ.ಶಾಂತಮೂರ್ತಿ"
+    "NameKN": "ಎಂ.ಕೆ. ಶಾಂತಮೂರ್ತಿ"
   },
   {
     "Department": "stamps_sro",
@@ -16293,7 +16293,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಹೆಬ್ಬಾಳ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಚೈತ್ರಾ ಬಿಎ"
+    "NameKN": "ಚೈತ್ರಾ ಬಿ.ಎ"
   },
   {
     "Department": "stamps_sro",
@@ -16433,7 +16433,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಹೊಸಕೋಟೆ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ವಿ ಗೀತಾ"
+    "NameKN": "ವಿ. ಗೀತಾ"
   },
   {
     "Department": "stamps_sro",
@@ -16629,7 +16629,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಇಂದಿರಾನಗರ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಸಿಜೆ ಪ್ರಭಾಕರ್"
+    "NameKN": "ಸಿ.ಜೆ. ಪ್ರಭಾಕರ್"
   },
   {
     "Department": "stamps_sro",
@@ -16657,7 +16657,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಜಲ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಎಸ್ ಎಸ್ ಸ್ವರ್ಣಲತಾ"
+    "NameKN": "ಎಸ್. ಎಸ್. ಸ್ವರ್ಣಲತಾ"
   },
   {
     "Department": "stamps_sro",
@@ -16685,7 +16685,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಜಯನಗರ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಬಿ ಗುರು ರಾಘವೇಂದ್ರ"
+    "NameKN": "ಬಿ. ಗುರು ರಾಘವೇಂದ್ರ"
   },
   {
     "Department": "stamps_sro",
@@ -16727,7 +16727,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಜೆಪಿ ನಗರ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಕೆ ಆರ್ ದೇವರಾಜು"
+    "NameKN": "ಕೆ. ಆರ್. ದೇವರಾಜು"
   },
   {
     "Department": "stamps_sro",
@@ -16881,7 +16881,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಕೆಂಗೇರಿ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ವೈ.ಎಚ್.ವೆಂಕಟೇಶ್"
+    "NameKN": "ವೈ.ಎಚ್. ವೆಂಕಟೇಶ್"
   },
   {
     "Department": "stamps_sro",
@@ -17007,7 +17007,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಕೃಷ್ಣರಾಜಪುರಂ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಆರ್ ರಾಮಪ್ರಸಾದ್"
+    "NameKN": "ಆರ್. ರಾಮಪ್ರಸಾದ್"
   },
   {
     "Department": "stamps_sro",
@@ -17189,7 +17189,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಮಾದನಾಯಕನಹಳ್ಳಿ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಎಂವಿ ಸತೀಶ್"
+    "NameKN": "ಎಂ.ವಿ. ಸತೀಶ್"
   },
   {
     "Department": "stamps_sro",
@@ -17287,7 +17287,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಮಲ್ಲೇಶ್ವರಂ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ವಿಕ್ರಮ್ ಕೆ ಮಗರ್"
+    "NameKN": "ವಿಕ್ರಮ್ ಕೆ. ಮಗರ್"
   },
   {
     "Department": "stamps_sro",
@@ -17665,7 +17665,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ನೆಲಮಂಗಲ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಅಂಬಿಕಾ ಪಟೇಲ್ ಜೆಪಿ"
+    "NameKN": "ಅಂಬಿಕಾ ಪಟೇಲ್ ಜೆ.ಪಿ"
   },
   {
     "Department": "stamps_sro",
@@ -17819,7 +17819,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ರಾಜಾಜಿನಗರ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಮೋಹನ್ ಕುಮಾರ್ ಜಿ"
+    "NameKN": "ಮೋಹನ್ ಕುಮಾರ್ ಜಿ."
   },
   {
     "Department": "stamps_sro",
@@ -17889,7 +17889,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಆರ್ ಆರ್ ನಗರ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಎಂ ಗಿರೀಶ್"
+    "NameKN": "ಎಂ. ಗಿರೀಶ್"
   },
   {
     "Department": "stamps_sro",
@@ -18127,7 +18127,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಶಿವಾಜಿನಗರ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಅನಿತಾ ಜಿ ಬಡಿಗೇರ್"
+    "NameKN": "ಅನಿತಾ ಜಿ. ಬಡಿಗೇರ್"
   },
   {
     "Department": "stamps_sro",
@@ -18295,7 +18295,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ಶ್ರೀರಾಮಪುರ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಎಚ್ ಎಸ್ ಅರವಿಂದ್"
+    "NameKN": "ಎಚ್. ಎಸ್. ಅರವಿಂದ್"
   },
   {
     "Department": "stamps_sro",
@@ -18491,7 +18491,7 @@
     "Unnamed: 3": "",
     "AreaKN": "ವಿಜಯನಗರ",
     "DesignationKN": "ಸಬ್ ರಿಜಿಸ್ಟ್ರಾರ್",
-    "NameKN": "ಪ್ರಮೀಳಾ ಜಿಜೆ"
+    "NameKN": "ಪ್ರಮೀಳಾ ಜಿ.ಜೆ"
   },
   {
     "Department": "stamps_sro",
