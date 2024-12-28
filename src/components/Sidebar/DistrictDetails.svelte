@@ -220,8 +220,11 @@
 {/if}
 
 <div class="mt-4 pb-4 text-xs bg-white dark:bg-neutral-900 p-4">
-  <p class="text-gray-600 dark:text-gray-400">
-    {$_('details_error')}
+  <div class="flex flex-col gap-2 items-start justify-between">
+    <span class="text-gray-600 dark:text-gray-400">
+      {$_('details_error')}
+      {$_('details_google_sheet')}
+    </span>
     <a
       href={currentOfficials
         ? Array.isArray(currentOfficials)
@@ -230,8 +233,19 @@
         : 'https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/edit#gid=1265603145'}
       target="_blank"
       rel="noopener noreferrer"
-      class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline font-medium"
-      >{$_('details_google_sheet')}</a
+      class="inline-flex items-center px-1 py-1.5 text-xs rounded-md bg-blue-50 hover:bg-blue-100 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 transition-colors"
     >
-  </p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-4 w-4 mr-1.5"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+        />
+      </svg>
+      {$_('details_suggest_edit')}
+    </a>
+  </div>
 </div>
