@@ -8,6 +8,9 @@ df2 = pd.read_excel('./officials/master-list.xlsx', sheet_name=1)
 # Merge the two dataframes by row number
 df = pd.concat([df1, df2], axis=1)
 
+# Add cell references
+df['cellRef'] = df.index.map(lambda x: f'A{x+2}')  # +2 because Excel is 1-based and has header
+
 # Rename columns
 df = df.rename(columns={
     'Area (Kannada)': 'AreaKN',

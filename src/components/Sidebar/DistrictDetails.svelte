@@ -38,6 +38,20 @@
       selectedBoundaryMap.set(null);
     }
   }
+
+  let currentOfficials: any = null;
+
+  $: {
+    if ($selectedBoundaryMap && $selectedDistrict) {
+      const officials = getOfficialDetails(
+        $selectedBoundaryMap,
+        $selectedDistrict
+      );
+      currentOfficials = officials;
+    } else {
+      currentOfficials = null;
+    }
+  }
 </script>
 
 <SidebarHeader
@@ -209,7 +223,11 @@
   <p class="text-gray-600 dark:text-gray-400">
     {$_('details_error')}
     <a
-      href="https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/edit"
+      href={currentOfficials
+        ? Array.isArray(currentOfficials)
+          ? `https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/edit#gid=1265603145&range=${currentOfficials[0].cellRef}`
+          : `https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/edit#gid=1265603145&range=${currentOfficials.cellRef}`
+        : 'https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/edit#gid=1265603145'}
       target="_blank"
       rel="noopener noreferrer"
       class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline font-medium"
