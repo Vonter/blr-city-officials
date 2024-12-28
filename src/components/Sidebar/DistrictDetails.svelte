@@ -92,6 +92,41 @@
               {$_('details_source')}
             </a>
           </div>
+          {#if (Array.isArray(officials) && officials[0].Department === 'bbmp_wards') || (!Array.isArray(officials) && officials.Department === 'bbmp_wards')}
+            <div
+              class="bg-white dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-neutral-700 break-words mb-4"
+            >
+              {#if $locale?.startsWith('kn')}
+                <div
+                  class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1"
+                >
+                  ಕಾರ್ಪೊರೇಟರ್
+                </div>
+                <div
+                  class="text-ml font-medium text-gray-900 dark:text-gray-100 mb-4"
+                >
+                  ಯಾರೂ ಇಲ್ಲ
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  2020 ರಿಂದ ಬಿಬಿಎಂಪಿ ಚುನಾವಣೆ ಇಲ್ಲ.
+                </p>
+              {:else}
+                <div
+                  class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1"
+                >
+                  Corporator
+                </div>
+                <div
+                  class="text-ml font-medium text-gray-900 dark:text-gray-100 mb-4"
+                >
+                  N/A
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  No BBMP elections since 2020.
+                </p>
+              {/if}
+            </div>
+          {/if}
 
           <div class="grid gap-4 grid-cols-1">
             {#each Array.isArray(officials) ? officials : [officials] as official}

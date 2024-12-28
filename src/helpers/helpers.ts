@@ -36,13 +36,23 @@ export function findPolylabel(feature: Feature) {
 export function sortedDistricts(features: Feature[]) {
   return (
     features &&
-    features
-      .sort(
-        (a, b) => a.properties?.namecol.localeCompare(b.properties?.namecol) // Sort alphabetical districts
-      )
-      .sort(
-        (a, b) => a.properties?.namecol - b.properties?.namecol // Sort numerical districts
-      )
+    features.sort((a, b) => {
+      const aName = a.properties?.namecol;
+      const bName = b.properties?.namecol;
+
+      const aNumber = parseInt(aName.split(':')[0]);
+      const bNumber = parseInt(bName.split(':')[0]);
+
+      if (!isNaN(aNumber) && !isNaN(bNumber)) {
+        return aNumber - bNumber; // Sort numerical districts
+      } else if (!isNaN(aNumber)) {
+        return -1; // Put numerical districts first
+      } else if (!isNaN(bNumber)) {
+        return 1; // Put alphabetical districts after numerical
+      } else {
+        return aName.localeCompare(bName); // Sort alphabetical districts
+      }
+    })
   );
 }
 
