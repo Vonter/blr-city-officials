@@ -1,0 +1,73 @@
+# Workflow for deploying to Cloudflare Pages
+name: Deploy to Cloudflare Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  # Runs daily at 03:30AM UTC (09:00AM IST)
+  schedule:
+    - cron: "30 3 * * *"
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to Cloudflare Pages
+permissions:
+  contents: read
+  deployments: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: cf-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Install dependencies
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip pandas openpyxl
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install
+
+      # Fetch database and commit changes to repository
+      - name: Fetch Google Sheet
+        run: curl -L 'https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/export?exportFormat=xlsx' -o ./scripts/officials.xlsx
+      - name: Save as JSON
+        run: python ./scripts/xls2json.py
+      - uses: stefanzweifel/git-auto-commit-action@v5
+
+      # Build and deploy to Cloudflare Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'dist/'
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: 'boundaries-vonter'
+          directory: 'dist'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'master'
