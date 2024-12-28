@@ -13,9 +13,9 @@ on:
   schedule:
     - cron: "30 3 * * *"
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to Cloudflare Pages
+# Sets permissions of the GITHUB_TOKEN to allow commiting to repository and deployment to Cloudflare Pages
 permissions:
-  contents: read
+  contents: write
   deployments: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
