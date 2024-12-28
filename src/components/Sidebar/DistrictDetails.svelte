@@ -108,7 +108,7 @@
                   ಯಾರೂ ಇಲ್ಲ
                 </div>
                 <p class="text-sm text-gray-500 dark:text-gray-400">
-                  2020 ರಿಂದ ಬಿಬಿಎಂಪಿ ಚುನಾವಣೆ ಇಲ್ಲ.
+                  2020 ರಿಂದ ಯಾವುದೇ ಚುನಾಯಿತ ಕಾರ್ಪೊರೇಟರ್ ಇಲ್ಲ.
                 </p>
               {:else}
                 <div
@@ -122,7 +122,7 @@
                   N/A
                 </div>
                 <p class="text-sm text-gray-500 dark:text-gray-400">
-                  No BBMP elections since 2020.
+                  No elected corporator since 2020.
                 </p>
               {/if}
             </div>
