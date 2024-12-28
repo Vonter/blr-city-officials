@@ -27,6 +27,7 @@ df = df.replace({
     'BESCOM (Division)': 'bescom_division',
     'BESCOM (Subdivision)': 'bescom_subdivision',
     'BWSSB (Division)': 'bwssb_division',
+    'BWSSB (Service Station)': 'bwssb_service_station',
     'Elections (Assembly Constituency)': 'election_ac',
     'Elections (Parliamentary Constituency)': 'election_pc',
     'Pincode': 'pincode',
