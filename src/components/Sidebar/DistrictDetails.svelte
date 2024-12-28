@@ -11,6 +11,7 @@
     mapStore
   } from '../../stores';
   import { getOfficialDetails, resetZoom } from '../../helpers/helpers';
+  import pkg from '../../../package.json';
 
   function getDistrictTitle(
     boundaryId: string | null,
@@ -228,9 +229,9 @@
     <a
       href={currentOfficials
         ? Array.isArray(currentOfficials)
-          ? `https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/edit#gid=1265603145&range=${currentOfficials[0].cellRef}`
-          : `https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/edit#gid=1265603145&range=${currentOfficials.cellRef}`
-        : 'https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/edit#gid=1265603145'}
+          ? `https://docs.google.com/spreadsheets/d/${pkg.config.googleSheet.id}/edit#gid=${pkg.config.googleSheet.gid}&range=${currentOfficials[0].cellRef}`
+          : `https://docs.google.com/spreadsheets/d/${pkg.config.googleSheet.id}/edit#gid=${pkg.config.googleSheet.gid}&range=${currentOfficials.cellRef}`
+        : `https://docs.google.com/spreadsheets/d/${pkg.config.googleSheet.id}/edit#gid=${pkg.config.googleSheet.gid}`}
       target="_blank"
       rel="noopener noreferrer"
       class="inline-flex items-center px-1 py-1.5 text-xs rounded-md bg-blue-50 hover:bg-blue-100 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 transition-colors"
