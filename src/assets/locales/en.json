@@ -1,19 +1,20 @@
 {
-    "page_title": "BLR City Officials",
-    "toggle_language": "ಕನ್ನಡ",
-    "search_placeholder": "Search",
+  "page_title": "BLR City Officials",
+  "toggle_language": "ಕನ್ನಡ",
+  "search_placeholder": "Search",
 
-    "footer_data": "Data",
-    "footer_code": "Code",
-    "footer_betanyc": "Inspired by BetaNYC",
+  "footer_data": "Data",
+  "footer_code": "Code",
+  "footer_betanyc": "Inspired by BetaNYC",
 
-    "introduction": "Select location on map, search by address or pick a boundary",
+  "introduction": "Select location on map, search by address or pick a boundary",
 
-    "filter_placeholder": "Filter",
-    "download_geojson": "Download GeoJSON",
-    
-    "details_title": "Officials",
-    "details_source": "Source",
-    "details_error": "Found an error? Help us improve the accuracy of this information by leaving a comment on the",
-    "details_google_sheet": "Google Sheet"
+  "filter_placeholder": "Filter",
+  "download_geojson": "Download GeoJSON",
+
+  "details_title": "Officials",
+  "details_source": "Source",
+  "details_error": "Found an error? Help us improve the accuracy of this information by leaving a comment on the",
+  "details_google_sheet": "Google Sheet",
+  "details_add_comment": "Add a comment"
 }

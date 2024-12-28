@@ -46,5 +46,11 @@
     "svelte-i18n": "^4.0.1",
     "svelte-use-click-outside": "^1.0.0",
     "vite-plugin-radar": "^0.9.6"
+  },
+  "config": {
+    "googleSheet": {
+      "id": "1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY",
+      "gid": "1265603145"
+    }
   }
 }
