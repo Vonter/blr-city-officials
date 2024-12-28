@@ -56,12 +56,12 @@ jobs:
       - name: Save as JSON
         run: python ./scripts/xls2json.py
       - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Fetch updated database from Google Sheets
 
       # Build and deploy to Cloudflare Pages
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'dist/'
+      - name: Build site
+        run: pnpm run build
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
