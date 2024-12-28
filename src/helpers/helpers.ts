@@ -85,9 +85,14 @@ export function getOfficialDetails(
   districtId: string | null
 ) {
   if (!boundaryId || !districtId) return null;
-  return officials.find(
-    official =>
+  return officials.find((official, index) => {
+    if (
       official.Department.toLowerCase() === boundaryId.toLowerCase() &&
       official.Area.toLowerCase() === districtId.toLowerCase()
-  );
+    ) {
+      official.cellRef = `A${index + 2}`;
+      return true;
+    }
+    return false;
+  });
 }
