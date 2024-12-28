@@ -62,6 +62,9 @@ jobs:
       # Build and deploy to Cloudflare Pages
       - name: Build site
         run: pnpm run build
+        env:
+          VITE_GMAPS_API_KEY: ${{ secrets.VITE_GMAPS_API_KEY }}
+          VITE_GOOGLE_ANALYTICS_ID: ${{ secrets.VITE_GOOGLE_ANALYTICS_ID }}
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
