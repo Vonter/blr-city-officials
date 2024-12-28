@@ -46,7 +46,6 @@
     "svelte-i18n": "^4.0.1",
     "svelte-use-click-outside": "^1.0.0",
     "vite-plugin-radar": "^0.9.6"
-    "svelte-use-click-outside": "^1.0.0"
   },
   "config": {
     "googleSheet": {
