@@ -219,34 +219,35 @@
     {/await}
   {/if}
 {/if}
-
-<div class="mt-4 pb-4 text-xs bg-white dark:bg-neutral-900 p-4">
-  <div class="flex flex-col gap-2 items-start justify-between">
-    <span class="text-gray-600 dark:text-gray-400">
-      {$_('details_error')}
-      {$_('details_google_sheet')}
-    </span>
-    <a
-      href={currentOfficials
-        ? Array.isArray(currentOfficials)
-          ? `https://docs.google.com/spreadsheets/d/${pkg.config.googleSheet.id}/edit#gid=${pkg.config.googleSheet.gid}&range=${currentOfficials[0].cellRef}`
-          : `https://docs.google.com/spreadsheets/d/${pkg.config.googleSheet.id}/edit#gid=${pkg.config.googleSheet.gid}&range=${currentOfficials.cellRef}`
-        : `https://docs.google.com/spreadsheets/d/${pkg.config.googleSheet.id}/edit#gid=${pkg.config.googleSheet.gid}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center px-1 py-1.5 text-xs rounded-md bg-blue-50 hover:bg-blue-100 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 transition-colors"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-4 w-4 mr-1.5"
-        viewBox="0 0 20 20"
-        fill="currentColor"
+<div class="px-4 mt-4 pb-4">
+  <div class="bg-white dark:bg-neutral-900 p-4">
+    <div class="flex flex-col gap-4 items-center text-center">
+      <p class="text-sm text-gray-600 dark:text-gray-400">
+        {$_('details_error')}
+        {$_('details_google_sheet')}
+      </p>
+      <a
+        href={currentOfficials
+          ? Array.isArray(currentOfficials)
+            ? `https://docs.google.com/spreadsheets/d/${pkg.config.googleSheet.id}/edit#gid=${pkg.config.googleSheet.gid}&range=${currentOfficials[0].cellRef}`
+            : `https://docs.google.com/spreadsheets/d/${pkg.config.googleSheet.id}/edit#gid=${pkg.config.googleSheet.gid}&range=${currentOfficials.cellRef}`
+          : `https://docs.google.com/spreadsheets/d/${pkg.config.googleSheet.id}/edit#gid=${pkg.config.googleSheet.gid}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center px-3 py-1 text-sm rounded bg-gray-50 dark:bg-neutral-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-neutral-600 border border-gray-200 dark:border-neutral-600 transition-colors max-w-full"
       >
-        <path
-          d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
-        />
-      </svg>
-      {$_('details_suggest_edit')}
-    </a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 mr-2"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+          />
+        </svg>
+        {$_('details_add_comment')}
+      </a>
+    </div>
   </div>
 </div>
