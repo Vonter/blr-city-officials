@@ -15,7 +15,6 @@ export default ({ mode }) => {
           id: process.env.VITE_GOOGLE_ANALYTICS_ID
         }
       })
-    ],
-    base: process.env.VITE_BASE_URL ? `/${process.env.VITE_BASE_URL}/` : './'
+    ]
   });
 };

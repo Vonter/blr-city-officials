@@ -12,7 +12,6 @@
     "moduleResolution": "bundler",
     "target": "esnext",
     "module": "esnext",
-    "baseUrl": ".",
     "moduleDetection": "force",
     "allowSyntheticDefaultImports": true,
     "declaration": true,

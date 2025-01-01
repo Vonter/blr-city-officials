@@ -2,7 +2,6 @@
   /* Based on https://github.com/silinternational/svelte-google-places-autocomplete */
 
   import { createEventDispatcher, onMount } from 'svelte';
-  import { browser } from '$app/environment';
 
   export let apiKey;
   export let options = undefined;
@@ -17,8 +16,6 @@
   $: selectedLocationName = value || '';
 
   onMount(() => {
-    if (!browser) return;
-    
     loadGooglePlacesLibrary(apiKey, () => {
       const autocomplete = new google.maps.places.Autocomplete(
         inputField,
@@ -45,7 +42,6 @@
   });
 
   function emptyLocationField() {
-    if (!browser) return;
     inputField.value = '';
     onChange();
   }
@@ -53,65 +49,134 @@
   function hasLocationData(place) {
     const fieldsToLookFor = (options &&
       options.fields?.indexOf('ALL') === -1 &&
-      options.fields) || [
-      'address_components',
-      'formatted_address',
-      'geometry',
-      'icon',
-      'name',
-      'place_id',
-      'plus_code',
-      'types'
-    ];
-
-    return fieldsToLookFor.some(field => {
-      if (field === 'geometry') {
-        return place?.geometry?.location?.lat && place?.geometry?.location?.lng;
-      }
-      return place?.[field];
-    });
+      options.fields) || ['geometry'];
+    return place.hasOwnProperty(fieldsToLookFor[0]);
   }
 
   function onChange() {
-    dispatch('change', {
-      text: inputField?.value || ''
+    if (inputField.value === '') {
+      setSelectedLocation(null);
+    }
+  }
+
+  function onKeyDown(event) {
+    const suggestionsAreVisible =
+      document.getElementsByClassName('pac-item').length;
+
+    if (event.key === 'Enter' || event.key === 'Tab') {
+      if (suggestionsAreVisible) {
+        const isSuggestionSelected =
+          document.getElementsByClassName('pac-item-selected').length;
+        if (!isSuggestionSelected) {
+          selectFirstSuggestion();
+        }
+      } else if (doesNotMatchSelectedLocation(inputField.value)) {
+        setTimeout(emptyLocationField, 10);
+      }
+    } else if (event.key === 'Escape') {
+      setTimeout(emptyLocationField, 10);
+    }
+
+    if (suggestionsAreVisible) {
+      if (event.key === 'Enter') {
+        /* When suggestions are visible, don't let an 'Enter' submit a form (since
+         * the user is interacting with the list of suggestions at the time, not
+         * expecting their actions to affect the form as a whole). */
+        event.preventDefault();
+      }
+    }
+  }
+
+  function selectFirstSuggestion() {
+    // Simulate the 'down arrow' key in order to select the first suggestion:
+    // https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+    const simulatedEvent = new KeyboardEvent('keydown', {
+      key: 'ArrowDown',
+      code: 'ArrowDown',
+      keyCode: 40
     });
+    inputField.dispatchEvent(simulatedEvent);
   }
 
   function setSelectedLocation(data) {
-    selectedLocationName = data.text;
+    selectedLocationName = (data && data.text) || '';
     dispatch('place_changed', data);
   }
 
-  function hasLoadedLibrary() {
-    return browser && typeof google !== 'undefined' && typeof google.maps !== 'undefined';
+  function doesNotMatchSelectedLocation(value) {
+    return selectedLocationName !== value;
   }
 
-  function loadGooglePlacesLibrary(apiKey, callback) {
+  let isLoadingLibrary = false;
+
+  /**
+   * The list of callbacks, one from each GooglePlacesAutocomplete instance that requested the library before the library
+   * had finished loading.
+   */
+  const callbacks = [];
+
+  function hasLoadedLibrary() {
+    return window.google && window.google.maps && window.google.maps.places;
+  }
+
+  /**
+   * Load the Google Places library and notify the calling code (if given a callback) once the library is ready.
+   *
+   * This supports three scenarios:
+   * 1. The library hasn't been loaded yet and isn't in the process of loading yet.
+   * 2. The library hasn't been loaded yet but is already in the process of loading.
+   * 3. The library has already been loaded.
+   *
+   * In scenarios 1 and 2, any callbacks that have been provided (which could be multiple, if multiple
+   * GooglePlacesAutocomplete instances are in use) will be called when the library finishes loading.
+   *
+   * In scenario 3, the callback will be called immediately.
+   *
+   * @param apiKey Your Google Places API Key
+   * @param callback A callback (if you want to be notified when the library is available for use)
+   */
+  export function loadGooglePlacesLibrary(apiKey, callback) {
     if (hasLoadedLibrary()) {
       callback();
       return;
     }
 
-    if (!browser) return;
+    callback && callbacks.push(callback);
 
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`;
-    script.addEventListener('load', () => {
+    if (isLoadingLibrary) {
+      return;
+    }
+
+    isLoadingLibrary = true;
+
+    const element = document.createElement('script');
+    element.async = true;
+    element.defer = true;
+    element.onload = onLibraryLoaded;
+    element.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(
+      apiKey
+    )}&libraries=places&callback=Function.prototype`;
+    element.type = 'text/javascript';
+
+    document.head.appendChild(element);
+  }
+
+  function onLibraryLoaded() {
+    isLoadingLibrary = false;
+    let callback;
+    while ((callback = callbacks.pop())) {
       callback();
-    });
-    document.head.appendChild(script);
+    }
   }
 </script>
 
 <input
   bind:this={inputField}
   class={$$props.class}
+  on:change={onChange}
+  on:keydown={onKeyDown}
   {placeholder}
+  {value}
   {required}
   {pattern}
-  on:input={onChange}
-  on:change={onChange}
-  value={selectedLocationName}
 />
