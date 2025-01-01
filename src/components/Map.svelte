@@ -47,10 +47,7 @@
     // Add full screen control on top left for mobile, bottom left for desktop
     const fullscreenControl = new maplibregl.FullscreenControl();
     map.addControl(fullscreenControl, 'top-left');
-
-    // Add navigation control on top right for mobile, bottom right for desktop
-    const nav = new maplibregl.NavigationControl();
-    map.addControl(nav, 'top-right');
+    map.addControl(fullscreenControl, 'bottom-left');
 
     // Override default browser zoom hotkeys
     window.addEventListener(

@@ -83,7 +83,7 @@
         lat: position.coords.latitude
       };
 
-      selectedCoordinates.set(lngLat);
+      selectedCoordinates.set(lngLat as LngLat);
     } catch (error) {
       console.error('Error getting location:', error);
       alert(
@@ -118,9 +118,7 @@
       stroke-linejoin="round"
       class={isGettingLocation ? 'animate-spin' : ''}
     >
-      <circle cx="12" cy="12" r="10" />
-      <line x1="12" y1="8" x2="12" y2="12" />
-      <line x1="12" y1="16" x2="12.01" y2="16" />
+      <polygon points="3 11 22 2 13 21 11 13 3 11" />
     </svg>
   </button>
   <div class="relative flex flex-1">
