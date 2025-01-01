@@ -1,6 +1,7 @@
 build
 .env
 scripts/*.geojson
+scripts/*.xlsx
 
 # Logs
 logs
