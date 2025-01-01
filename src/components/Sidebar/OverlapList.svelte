@@ -6,7 +6,8 @@
     mapStore,
     selectedBoundaryMap,
     selectedDistrict,
-    selectedCoordinates
+    selectedCoordinates,
+    darkMode
   } from '../../stores';
   import { layers } from '../../assets/boundaries';
   import DistrictLink from './DistrictLink.svelte';
@@ -22,13 +23,6 @@
   }
 
   let { districts, isLoading }: Props = $props();
-  let darkMode: boolean | null = null;
-
-  onMount(() => {
-    if (browser) {
-      darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
-  });
 
   function showIntersectingDistrict(feature: Feature) {
     if (!browser || !$mapStore || !$mapStore.getSource) return;
@@ -44,7 +38,7 @@
         type: 'fill',
         source: 'intersecting-layer',
         paint: {
-          'fill-color': darkMode ? colors['dark-default'] : colors['default'],
+          'fill-color': $darkMode ? colors['dark-default'] : colors['default'],
           'fill-opacity': 0.2
         }
       });
@@ -54,7 +48,7 @@
         type: 'line',
         source: 'intersecting-layer',
         paint: {
-          'line-color': darkMode ? colors['dark-default'] : colors['default'],
+          'line-color': $darkMode ? colors['dark-default'] : colors['default'],
           'line-width': 2
         }
       });
