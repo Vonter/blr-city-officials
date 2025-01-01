@@ -1,18 +1,15 @@
 <script lang="ts">
-  import { run } from 'svelte/legacy';
-
-  import {
-    selectedBoundaryMap,
-    selectedCoordinates,
-    selectedDistrict
-  } from './stores';
-  import Map from './components/Map.svelte';
-  import Sidebar from './components/Sidebar/Sidebar.svelte';
-  import Controls from './components/Controls.svelte';
-
+  import { onMount } from 'svelte';
+  import { browser } from '$app/environment';
   import { addMessages, init, getLocaleFromNavigator } from 'svelte-i18n';
-  import en from './assets/locales/en.json';
-  import kn from './assets/locales/kn.json';
+  import { page } from '$app/stores';
+  import { selectedBoundaryMap, selectedCoordinates, selectedDistrict } from '../stores';
+  import Map from '../components/Map.svelte';
+  import Sidebar from '../components/Sidebar/Sidebar.svelte';
+  import Controls from '../components/Controls.svelte';
+  import en from '../assets/locales/en.json';
+  import kn from '../assets/locales/kn.json';
+
   addMessages('en', en);
   addMessages('kn', kn);
   init({
@@ -20,27 +17,36 @@
     initialLocale: getLocaleFromNavigator()
   });
 
-  const params = new URLSearchParams(window.location.search);
+  onMount(() => {
+    if (browser) {
+      const params = $page.url.searchParams;
+      
+      if (params.has('dist')) {
+        selectedDistrict.set(params.get('dist'));
+      }
+      if (params.has('map')) {
+        selectedBoundaryMap.set(params.get('map'));
+      }
+      if (params.has('lng') && params.has('lat')) {
+        selectedCoordinates.set({
+          lng: parseFloat(params.get('lng')),
+          lat: parseFloat(params.get('lat'))
+        });
+      }
+    }
+  });
 
-  run(() => {
-    $selectedDistrict
-      ? params.set('dist', $selectedDistrict)
-      : params.delete('dist');
-
-    $selectedBoundaryMap
-      ? params.set('map', $selectedBoundaryMap)
-      : params.delete('map');
-
+  $: if (browser) {
+    const params = new URLSearchParams();
+    if ($selectedDistrict) params.set('dist', $selectedDistrict);
+    if ($selectedBoundaryMap) params.set('map', $selectedBoundaryMap);
     if ($selectedCoordinates) {
       params.set('lng', $selectedCoordinates.lng.toString());
       params.set('lat', $selectedCoordinates.lat.toString());
-    } else {
-      params.delete('lng');
-      params.delete('lat');
     }
-
-    window.history.replaceState({}, '', `${location.pathname}?${params}`);
-  });
+    const newUrl = `${$page.url.pathname}${params.toString() ? '?' + params.toString() : ''}`;
+    window.history.replaceState({}, '', newUrl);
+  }
 </script>
 
 <main

@@ -1,6 +1,7 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { run } from 'svelte/legacy';
-
+  import { browser } from '$app/environment';
   import {
     selectedBoundaryMap,
     selectedDistrict,
@@ -21,15 +22,15 @@
   let map: maplibregl.Map;
   let isSourceLoaded = $state(false);
   let prevLayerId: string | null = null;
-  let darkMode: boolean | null = isDarkMode();
+  let darkMode: boolean | null = null;
 
-  function isDarkMode() {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? true
-      : false;
-  }
+  onMount(() => {
+    darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
 
   function initMap(container: any) {
+    if (!browser) return;
+
     map = new maplibregl.Map({
       container,
       style: darkMode
@@ -51,7 +52,10 @@
     // Add full screen control on top left for mobile, bottom left for desktop
     const fullscreenControl = new maplibregl.FullscreenControl();
     map.addControl(fullscreenControl, 'top-left');
-    map.addControl(fullscreenControl, 'bottom-left');
+
+    // Add navigation control on top right for mobile, bottom right for desktop
+    const nav = new maplibregl.NavigationControl();
+    map.addControl(nav, 'top-right');
 
     // Override default browser zoom hotkeys
     window.addEventListener(

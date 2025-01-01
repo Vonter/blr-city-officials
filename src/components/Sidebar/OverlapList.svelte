@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+  import { browser } from '$app/environment';
   import { locale } from 'svelte-i18n';
   import {
     mapStore,
@@ -20,15 +22,17 @@
   }
 
   let { districts, isLoading }: Props = $props();
-  let darkMode: boolean | null = isDarkMode();
+  let darkMode: boolean | null = null;
 
-  function isDarkMode() {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? true
-      : false;
-  }
+  onMount(() => {
+    if (browser) {
+      darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+  });
 
   function showIntersectingDistrict(feature: Feature) {
+    if (!browser || !$mapStore || !$mapStore.getSource) return;
+
     if (!$mapStore.getSource('intersecting-layer')) {
       $mapStore.addSource('intersecting-layer', {
         type: 'geojson',
@@ -54,20 +58,24 @@
           'line-width': 2
         }
       });
+    } else {
+      const source = $mapStore.getSource('intersecting-layer');
+      source.setData(feature);
     }
   }
 
   function hideIntersectingDistrict() {
+    if (!browser || !$mapStore || !$mapStore.getSource) return;
+
     if ($mapStore.getSource('intersecting-layer')) {
-      $mapStore
-        .removeLayer('intersecting-layer')
-        .removeLayer('intersecting-stroke-layer')
-        .removeSource('intersecting-layer');
+      $mapStore.removeLayer('intersecting-layer');
+      $mapStore.removeLayer('intersecting-stroke-layer');
+      $mapStore.removeSource('intersecting-layer');
     }
   }
 </script>
 
-{#if isLoading || !districts}
+{#if isLoading}
   <div class="px-4">
     <Loader />
   </div>
