@@ -49,3 +49,16 @@ export const boundaries = readable(null, set => {
 });
 
 export const isMapReady = writable<boolean>(false);
+
+// Dark mode store with system preference detection
+export const darkMode = writable<boolean>(false);
+
+if (browser) {
+  // Set initial value
+  darkMode.set(window.matchMedia('(prefers-color-scheme: dark)').matches);
+  
+  // Listen for changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    darkMode.set(e.matches);
+  });
+}
