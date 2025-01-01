@@ -44,6 +44,15 @@
       ...defaultZoom
     });
 
+    // Add attribution control on top right for mobile
+    const attributionControl = new maplibregl.AttributionControl();
+    map.addControl(attributionControl, 'top-right');
+
+    // Add full screen control on top left for mobile, bottom left for desktop
+    const fullscreenControl = new maplibregl.FullscreenControl();
+    map.addControl(fullscreenControl, 'top-left');
+    map.addControl(fullscreenControl, 'bottom-left');
+
     // Override default browser zoom hotkeys
     window.addEventListener(
       'keydown',
