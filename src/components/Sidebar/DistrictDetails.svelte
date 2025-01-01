@@ -11,7 +11,7 @@
     mapStore
   } from '../../stores';
   import { getOfficialDetails, resetZoom } from '../../helpers/helpers';
-  import pkg from '../../../package.json';
+  import { googleSheet } from '../../config';
 
   function getDistrictTitle(
     boundaryId: string | null,
@@ -262,9 +262,9 @@
       <a
         href={currentOfficials
           ? Array.isArray(currentOfficials)
-            ? `https://docs.google.com/spreadsheets/d/${pkg.config.googleSheet.id}/edit#gid=${pkg.config.googleSheet.gid}&range=${currentOfficials[0].cellRef}`
-            : `https://docs.google.com/spreadsheets/d/${pkg.config.googleSheet.id}/edit#gid=${pkg.config.googleSheet.gid}&range=${currentOfficials.cellRef}`
-          : `https://docs.google.com/spreadsheets/d/${pkg.config.googleSheet.id}/edit#gid=${pkg.config.googleSheet.gid}`}
+            ? `https://docs.google.com/spreadsheets/d/${googleSheet.id}/edit#gid=${googleSheet.gid}&range=${currentOfficials[0].cellRef}`
+            : `https://docs.google.com/spreadsheets/d/${googleSheet.id}/edit#gid=${googleSheet.gid}&range=${currentOfficials.cellRef}`
+          : `https://docs.google.com/spreadsheets/d/${googleSheet.id}/edit#gid=${googleSheet.gid}`}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center px-3 py-1 text-sm rounded bg-gray-50 dark:bg-neutral-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-neutral-600 border border-gray-200 dark:border-neutral-600 transition-colors max-w-full"
