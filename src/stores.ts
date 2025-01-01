@@ -3,8 +3,7 @@ import type maplibregl from 'maplibre-gl';
 import { feature } from 'topojson-client';
 import { readable, writable } from 'svelte/store';
 import { browser } from '$app/environment';
-
-import { layers } from './assets/boundaries';
+import { MediaQuery } from 'svelte/reactivity';
 
 const params = browser
   ? new URLSearchParams(window.location.search)
@@ -54,13 +53,6 @@ export const isMapReady = writable<boolean>(false);
 export const darkMode = writable<boolean>(false);
 
 if (browser) {
-  // Set initial value
-  darkMode.set(window.matchMedia('(prefers-color-scheme: dark)').matches);
-
-  // Listen for changes
-  window
-    .matchMedia('(prefers-color-scheme: dark)')
-    .addEventListener('change', e => {
-      darkMode.set(e.matches);
-    });
+  const darkModeQuery = new MediaQuery('(prefers-color-scheme: dark)');
+  darkMode.set(darkModeQuery.current);
 }
