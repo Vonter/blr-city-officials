@@ -1,22 +1,38 @@
-import { selectedBoundaryMap, selectedCoordinates, selectedDistrict } from '../stores';
-import type { LngLat } from 'maplibre-gl';
+import type { PageLoad } from './$types';
+import {
+  selectedBoundaryMap,
+  selectedCoordinates,
+  selectedDistrict
+} from '../stores';
+import { getLngLat } from '../helpers/helpers';
+import { browser } from '$app/environment';
+import { getLocaleFromNavigator } from 'svelte-i18n';
 
-// Helper to get LngLat from params
-function getLngLat(params: URLSearchParams): LngLat | null {
-  const lng = params.get('lng');
-  const lat = params.get('lat');
-  return lng && lat ? { lng: +lng, lat: +lat } as LngLat : null;
+interface PageData {
+  initialLocale: string;
+  searchParams: {
+    dist: string | null;
+    map: string | null;
+    coords: { lng: number; lat: number } | null;
+  };
 }
 
-export function load({ url }) {
+export const load: PageLoad<PageData> = ({ url }) => {
   const params = url.searchParams;
-  const dist = params.get('dist');
-  const map = params.get('map');
-  const coords = getLngLat(params);
 
-  if (dist) selectedDistrict.set(dist);
-  if (map) selectedBoundaryMap.set(map);
-  if (coords) selectedCoordinates.set(coords);
+  const searchParams = {
+    dist: params.get('dist'),
+    map: params.get('map'),
+    coords: getLngLat(params)
+  };
 
-  return {};
-}
+  // Set stores
+  if (searchParams.dist) selectedDistrict.set(searchParams.dist);
+  if (searchParams.map) selectedBoundaryMap.set(searchParams.map);
+  if (searchParams.coords) selectedCoordinates.set(searchParams.coords);
+
+  return {
+    initialLocale: browser ? (getLocaleFromNavigator() ?? 'en') : 'en',
+    searchParams // Pass to component
+  };
+};

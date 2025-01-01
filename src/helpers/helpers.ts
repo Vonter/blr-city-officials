@@ -4,7 +4,7 @@ import turfArea from '@turf/area';
 import * as turf from '@turf/bbox';
 import type maplibregl from 'maplibre-gl';
 import officials from '../officials.json';
-
+import type { LngLat } from 'maplibre-gl';
 export const defaultZoom: Partial<maplibregl.MapOptions> = {
   zoom: 9.6,
   center: [77.6, 12.974]
@@ -95,4 +95,10 @@ export function getOfficialDetails(
     }
     return false;
   });
+}
+
+export function getLngLat(params: URLSearchParams): LngLat | null {
+  const lng = params.get('lng');
+  const lat = params.get('lat');
+  return lng && lat ? ({ lng: +lng, lat: +lat } as LngLat) : null;
 }
