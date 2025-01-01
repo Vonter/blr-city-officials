@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
@@ -12,6 +12,8 @@
   },
   "devDependencies": {
     "@googlemaps/js-api-loader": "^1.16.8",
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^4.0.4",
     "@tsconfig/svelte": "^5.0.4",
     "@types/topojson-client": "^3.1.5",
@@ -24,7 +26,6 @@
     "postcss": "^8.4.49",
     "postcss-load-config": "^6.0.1",
     "prettier-plugin-svelte": "^3.3.2",
-    "simple-svelte-autocomplete": "^2.5.2",
     "svelte": "^5.15.0",
     "svelte-check": "^4.1.1",
     "svelte-eslint-parser": "^0.42.0",
@@ -39,18 +40,11 @@
     "@mapbox/polylabel": "^1.0.2",
     "@turf/area": "^7.1.0",
     "@turf/bbox": "^7.1.0",
-    "@turf/union": "^7.1.0",
     "@types/geojson": "^7946.0.15",
     "maplibre-gl": "^4.7.1",
     "polygon-lookup": "^2.6.0",
     "svelte-i18n": "^4.0.1",
     "svelte-use-click-outside": "^1.0.0",
     "vite-plugin-radar": "^0.9.6"
-  },
-  "config": {
-    "googleSheet": {
-      "id": "1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY",
-      "gid": "1265603145"
-    }
   }
 }

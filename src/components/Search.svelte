@@ -1,7 +1,10 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+  import { browser } from '$app/environment';
   import { _ } from 'svelte-i18n';
   import GooglePlacesAutocomplete from '../components/GooglePlacesAutocomplete.svelte';
-  import { Loader } from '@googlemaps/js-api-loader';
+  import * as gmapsLoader from '@googlemaps/js-api-loader';
+  const { Loader } = gmapsLoader;
   import type { LngLat } from 'maplibre-gl';
 
   import {
@@ -11,11 +14,18 @@
     selectedCoordinates
   } from '../stores';
 
-  const loader = new Loader({
-    apiKey: import.meta.env.VITE_GMAPS_API_KEY,
-    version: 'weekly',
-    libraries: ['geocoding']
+  let loader: any;
+
+  onMount(() => {
+    if (browser) {
+      loader = new Loader({
+        apiKey: import.meta.env.VITE_GMAPS_API_KEY,
+        version: 'weekly',
+        libraries: ['geocoding']
+      });
+    }
   });
+
   const options = {
     bounds: {
       south: 12.5,
@@ -31,7 +41,9 @@
   let inputField = $state<HTMLInputElement>();
 
   async function onPlaceChanged(e: CustomEvent) {
-    if (e && $isMapReady) {
+    if (!browser || !e || !$isMapReady || !loader) return;
+
+    try {
       await loader.load();
       const geocoder = new google.maps.Geocoder();
       geocoder.geocode(
@@ -50,10 +62,14 @@
           }
         }
       );
+    } catch (error) {
+      console.error('Error loading Google Maps:', error);
     }
   }
 
   async function useCurrentLocation() {
+    if (!browser) return;
+
     isGettingLocation = true;
     try {
       const position = await new Promise<GeolocationPosition>(
@@ -67,7 +83,7 @@
         lat: position.coords.latitude
       };
 
-      selectedCoordinates.set(lngLat);
+      selectedCoordinates.set(lngLat as LngLat);
     } catch (error) {
       console.error('Error getting location:', error);
       alert(
@@ -100,9 +116,10 @@
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="lucide lucide-navigation w-5 h-5"
-      ><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg
+      class={isGettingLocation ? 'animate-spin' : ''}
     >
+      <polygon points="3 11 22 2 13 21 11 13 3 11" />
+    </svg>
   </button>
   <div class="relative flex flex-1">
     <GooglePlacesAutocomplete

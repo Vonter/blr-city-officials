@@ -1,6 +1,6 @@
 <script lang="ts">
   import { run } from 'svelte/legacy';
-
+  import { browser } from '$app/environment';
   import {
     selectedBoundaryMap,
     selectedDistrict,
@@ -8,7 +8,8 @@
     mapStore,
     hoveredDistrictId,
     boundaries,
-    isMapReady
+    isMapReady,
+    darkMode
   } from '../stores';
   import type { Feature } from 'geojson';
   import maplibregl from 'maplibre-gl';
@@ -21,18 +22,13 @@
   let map: maplibregl.Map;
   let isSourceLoaded = $state(false);
   let prevLayerId: string | null = null;
-  let darkMode: boolean | null = isDarkMode();
-
-  function isDarkMode() {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? true
-      : false;
-  }
 
   function initMap(container: any) {
+    if (!browser) return;
+
     map = new maplibregl.Map({
       container,
-      style: darkMode
+      style: $darkMode
         ? 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json'
         : 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
       minZoom: 9,
@@ -151,14 +147,14 @@
             'fill-color': [
               'case',
               ['boolean', ['feature-state', 'selected'], false],
-              darkMode ? colors['dark-default'] : colors['default'],
-              darkMode ? colors['dark-selected'] : colors['selected']
+              $darkMode ? colors['dark-default'] : colors['default'],
+              $darkMode ? colors['dark-selected'] : colors['selected']
             ],
             'fill-opacity': [
               'case',
               ['boolean', ['feature-state', 'selected'], false],
-              darkMode ? 0.2 : 0.4,
-              darkMode ? 0.01 : 0.05
+              $darkMode ? 0.2 : 0.4,
+              $darkMode ? 0.01 : 0.05
             ]
           },
           filter: ['==', 'id', boundaryId]
@@ -168,7 +164,9 @@
           type: 'line',
           source: 'boundaries',
           paint: {
-            'line-color': darkMode ? colors['dark-default'] : colors['default'],
+            'line-color': $darkMode
+              ? colors['dark-default']
+              : colors['default'],
             'line-width': [
               'case',
               [
@@ -187,8 +185,10 @@
           type: 'symbol',
           source: `boundaries-centerpoints`,
           paint: {
-            'text-color': darkMode ? colors['dark-default'] : colors['default'],
-            'text-halo-color': darkMode
+            'text-color': $darkMode
+              ? colors['dark-default']
+              : colors['default'],
+            'text-halo-color': $darkMode
               ? 'rgba(0,0,0,0.4)'
               : 'rgba(255,255,255,0.9)',
             'text-halo-width': 2
