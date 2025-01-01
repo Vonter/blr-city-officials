@@ -20,7 +20,6 @@
   } from '../../helpers/helpers';
   import DistrictLink from './DistrictLink.svelte';
   import Loader from '../Loader.svelte';
-  import DownloadButtons from './DownloadButtons.svelte';
 
   let value = $state('');
   let districts: Feature[] = $state([]);

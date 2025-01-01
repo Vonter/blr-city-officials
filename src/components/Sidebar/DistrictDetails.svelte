@@ -1,6 +1,5 @@
 <script lang="ts">
   import { _, locale } from 'svelte-i18n';
-  import { run } from 'svelte/legacy';
 
   import { layers } from '../../assets/boundaries';
   import SidebarHeader from './SidebarHeader.svelte';

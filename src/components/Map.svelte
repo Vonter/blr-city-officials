@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { run } from 'svelte/legacy';
   import { browser } from '$app/environment';
   import {
