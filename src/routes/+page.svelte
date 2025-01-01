@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { browser } from '$app/environment';
   import { addMessages, init, getLocaleFromNavigator } from 'svelte-i18n';
   import { page } from '$app/stores';
@@ -8,7 +7,6 @@
     selectedCoordinates,
     selectedDistrict
   } from '../stores';
-  import type { LngLat } from 'maplibre-gl';
   import Map from '../components/Map.svelte';
   import Sidebar from '../components/Sidebar/Sidebar.svelte';
   import Controls from '../components/Controls.svelte';
@@ -21,25 +19,6 @@
     fallbackLocale: 'en',
     initialLocale: getLocaleFromNavigator()
   });
-
-  // Helper to get LngLat from params
-  function getLngLat(params: URLSearchParams): LngLat | null {
-    const lng = params.get('lng');
-    const lat = params.get('lat');
-    return lng && lat ? { lng: +lng, lat: +lat } as LngLat : null;
-  }
-
-  // Reactively sync URL params to stores
-  $: if (browser && $page) {
-    const params = $page.url.searchParams;
-    const dist = params.get('dist');
-    const map = params.get('map');
-    const coords = getLngLat(params);
-
-    if (dist) selectedDistrict.set(dist);
-    if (map) selectedBoundaryMap.set(map);
-    if (coords) selectedCoordinates.set(coords);
-  }
 
   // Reactively sync store values to URL params
   $: if (browser && $page) {
