@@ -8,6 +8,7 @@
     selectedCoordinates,
     selectedDistrict
   } from '../stores';
+  import type { LngLat } from 'maplibre-gl';
   import Map from '../components/Map.svelte';
   import Sidebar from '../components/Sidebar/Sidebar.svelte';
   import Controls from '../components/Controls.svelte';
@@ -21,35 +22,38 @@
     initialLocale: getLocaleFromNavigator()
   });
 
-  onMount(() => {
-    if (browser) {
-      const params = $page.url.searchParams;
+  // Helper to get LngLat from params
+  function getLngLat(params: URLSearchParams): LngLat | null {
+    const lng = params.get('lng');
+    const lat = params.get('lat');
+    return lng && lat ? { lng: +lng, lat: +lat } as LngLat : null;
+  }
 
-      if (params.has('dist')) {
-        selectedDistrict.set(params.get('dist'));
-      }
-      if (params.has('map')) {
-        selectedBoundaryMap.set(params.get('map'));
-      }
-      if (params.has('lng') && params.has('lat')) {
-        selectedCoordinates.set({
-          lng: parseFloat(params.get('lng')),
-          lat: parseFloat(params.get('lat'))
-        });
-      }
-    }
-  });
+  // Reactively sync URL params to stores
+  $: if (browser && $page) {
+    const params = $page.url.searchParams;
+    const dist = params.get('dist');
+    const map = params.get('map');
+    const coords = getLngLat(params);
 
-  $: if (browser) {
+    if (dist) selectedDistrict.set(dist);
+    if (map) selectedBoundaryMap.set(map);
+    if (coords) selectedCoordinates.set(coords);
+  }
+
+  // Reactively sync store values to URL params
+  $: if (browser && $page) {
     const params = new URLSearchParams();
+    
     if ($selectedDistrict) params.set('dist', $selectedDistrict);
     if ($selectedBoundaryMap) params.set('map', $selectedBoundaryMap);
     if ($selectedCoordinates) {
       params.set('lng', $selectedCoordinates.lng.toString());
       params.set('lat', $selectedCoordinates.lat.toString());
     }
-    const newUrl = `${$page.url.pathname}${params.toString() ? '?' + params.toString() : ''}`;
-    window.history.replaceState({}, '', newUrl);
+
+    const url = `${$page.url.pathname}${params.toString() ? '?' + params : ''}`;
+    window.history.replaceState({}, '', url);
   }
 </script>
 
