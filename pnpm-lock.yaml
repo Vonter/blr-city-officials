@@ -17,9 +17,6 @@ importers:
       '@turf/bbox':
         specifier: ^7.1.0
         version: 7.1.0
-      '@turf/union':
-        specifier: ^7.1.0
-        version: 7.1.0
       '@types/geojson':
         specifier: ^7946.0.15
         version: 7946.0.15
@@ -84,9 +81,6 @@ importers:
       prettier-plugin-svelte:
         specifier: ^3.3.2
         version: 3.3.2(prettier@3.3.3)(svelte@5.15.0)
-      simple-svelte-autocomplete:
-        specifier: ^2.5.2
-        version: 2.5.2
       svelte:
         specifier: ^5.15.0
         version: 5.15.0
@@ -683,9 +677,6 @@ packages:
 
   '@turf/meta@7.1.0':
     resolution: {integrity: sha512-ZgGpWWiKz797Fe8lfRj7HKCkGR+nSJ/5aKXMyofCvLSc2PuYJs/qyyifDPWjASQQCzseJ7AlF2Pc/XQ/3XkkuA==}
-
-  '@turf/union@7.1.0':
-    resolution: {integrity: sha512-7VI8jONdBg9qmbfNlLQycPr93l5aU9HGMgWI9M6pb4ERuU2+p8KgffCgs2NyMtP2HxPrKSybzj31g7bnbEKofQ==}
 
   '@types/cookie@0.6.0':
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
@@ -1434,9 +1425,6 @@ packages:
   point-in-polygon@1.0.1:
     resolution: {integrity: sha512-7xblajMJtE9xOfDXkZrq98kjnoazmNPfNXqu9XCKk0uhtjImNdTRjkckIWKirtlyUocWU9XyzTyE2y5/E45v5A==}
 
-  polygon-clipping@0.15.7:
-    resolution: {integrity: sha512-nhfdr83ECBg6xtqOAJab1tbksbBAOMUltN60bU+llHVOL0e5Onm1WpAXXWXVB39L8AJFssoIhEVuy/S90MmotA==}
-
   polygon-lookup@2.6.0:
     resolution: {integrity: sha512-Y76ioJomg19RGMYbeUmfgcX7An+0vHK/89nEUmt+1pgVY6WgtW12/jnSlw8D4907kWEi3rhQC11aXUc1qZDN4g==}
     engines: {elasticsearch: '>=1.1.1', node: '>=10.0.0', npm: '>=1.4.3'}
@@ -1591,9 +1579,6 @@ packages:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
 
-  robust-predicates@3.0.2:
-    resolution: {integrity: sha512-IXgzBWvWQwE6PrDI05OvmXUIruQTcoMDzRsOd5CDvHCVLcLHMTSYvOK5Cm46kWqlV3yAbuSpBZdJ5oP5OUoStg==}
-
   rollup@4.29.1:
     resolution: {integrity: sha512-RaJ45M/kmJUzSWDs1Nnd5DdV4eerC98idtUOVr6FfKcgxqvjwHmxc5upLF9qZU9EpsVzzhleFahrT3shLuJzIw==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
@@ -1629,9 +1614,6 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
-  simple-svelte-autocomplete@2.5.2:
-    resolution: {integrity: sha512-6+kZP3XQGb7zs0djTWoFv8tQorBZdv64YfCKrlsYIYBCFsEeikSiNsBSSYw1Om+LYmFeMEOAYSSKoEw+qpnBXQ==}
-
   sirv@3.0.0:
     resolution: {integrity: sha512-BPwJGUeDaDCHihkORDchNyyTvWFhcusy1XMmhEVTQTwGeybFbp8YEmB+njbPnth1FibULBSBVwCQni25XlCUDg==}
     engines: {node: '>=18'}
@@ -1639,9 +1621,6 @@ packages:
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
-
-  splaytree@3.1.2:
-    resolution: {integrity: sha512-4OM2BJgC5UzrhVnnJA4BkHKGtjXNzzUfpQjCO8I05xYPsfS/VuQDwjCGGMi8rYQilHEV4j8NBqTFbls/PZEE7A==}
 
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
@@ -2346,14 +2325,6 @@ snapshots:
     dependencies:
       '@turf/helpers': 7.1.0
       '@types/geojson': 7946.0.15
-
-  '@turf/union@7.1.0':
-    dependencies:
-      '@turf/helpers': 7.1.0
-      '@turf/meta': 7.1.0
-      '@types/geojson': 7946.0.15
-      polygon-clipping: 0.15.7
-      tslib: 2.8.1
 
   '@types/cookie@0.6.0': {}
 
@@ -3150,11 +3121,6 @@ snapshots:
 
   point-in-polygon@1.0.1: {}
 
-  polygon-clipping@0.15.7:
-    dependencies:
-      robust-predicates: 3.0.2
-      splaytree: 3.1.2
-
   polygon-lookup@2.6.0:
     dependencies:
       lodash: 4.17.21
@@ -3272,8 +3238,6 @@ snapshots:
 
   reusify@1.0.4: {}
 
-  robust-predicates@3.0.2: {}
-
   rollup@4.29.1:
     dependencies:
       '@types/estree': 1.0.6
@@ -3321,8 +3285,6 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
-  simple-svelte-autocomplete@2.5.2: {}
-
   sirv@3.0.0:
     dependencies:
       '@polka/url': 1.0.0-next.28
@@ -3330,8 +3292,6 @@ snapshots:
       totalist: 3.0.1
 
   source-map-js@1.2.1: {}
-
-  splaytree@3.1.2: {}
 
   string-width@4.2.3:
     dependencies:
