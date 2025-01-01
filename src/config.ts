@@ -6,5 +6,5 @@ export const googleSheet = {
 
 // Add any other configuration values you need
 export const config = {
-  googleSheet,
+  googleSheet
 };

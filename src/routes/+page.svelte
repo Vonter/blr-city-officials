@@ -3,7 +3,11 @@
   import { browser } from '$app/environment';
   import { addMessages, init, getLocaleFromNavigator } from 'svelte-i18n';
   import { page } from '$app/stores';
-  import { selectedBoundaryMap, selectedCoordinates, selectedDistrict } from '../stores';
+  import {
+    selectedBoundaryMap,
+    selectedCoordinates,
+    selectedDistrict
+  } from '../stores';
   import Map from '../components/Map.svelte';
   import Sidebar from '../components/Sidebar/Sidebar.svelte';
   import Controls from '../components/Controls.svelte';
@@ -20,7 +24,7 @@
   onMount(() => {
     if (browser) {
       const params = $page.url.searchParams;
-      
+
       if (params.has('dist')) {
         selectedDistrict.set(params.get('dist'));
       }

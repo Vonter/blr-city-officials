@@ -168,7 +168,9 @@
           type: 'line',
           source: 'boundaries',
           paint: {
-            'line-color': $darkMode ? colors['dark-default'] : colors['default'],
+            'line-color': $darkMode
+              ? colors['dark-default']
+              : colors['default'],
             'line-width': [
               'case',
               [
@@ -187,7 +189,9 @@
           type: 'symbol',
           source: `boundaries-centerpoints`,
           paint: {
-            'text-color': $darkMode ? colors['dark-default'] : colors['default'],
+            'text-color': $darkMode
+              ? colors['dark-default']
+              : colors['default'],
             'text-halo-color': $darkMode
               ? 'rgba(0,0,0,0.4)'
               : 'rgba(255,255,255,0.9)',

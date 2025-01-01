@@ -56,9 +56,11 @@ export const darkMode = writable<boolean>(false);
 if (browser) {
   // Set initial value
   darkMode.set(window.matchMedia('(prefers-color-scheme: dark)').matches);
-  
+
   // Listen for changes
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    darkMode.set(e.matches);
-  });
+  window
+    .matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', e => {
+      darkMode.set(e.matches);
+    });
 }
