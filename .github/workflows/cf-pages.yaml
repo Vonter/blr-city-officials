@@ -25,8 +25,31 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  fetch:
+    runs-on: ubuntu-latest
+    outputs:
+      database-changed: ${{ steps.auto-commit-action.outputs.changes_detected }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Install dependencies
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip pandas openpyxl
+
+      # Fetch database and commit JSON changes to repository
+      - name: Fetch Google Sheet
+        run: curl -L 'https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/export?exportFormat=xlsx' -o ./scripts/officials.xlsx
+      - name: Save as JSON
+        run: python ./scripts/xls2json.py
+      - id: auto-commit-action
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Fetch database from Google Sheets
+
   deploy:
+    needs: fetch
+    if: github.event_name != 'schedule' || needs.fetch.outputs.database-changed == 'true'
     environment:
       name: cf-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -36,8 +59,6 @@ jobs:
         uses: actions/checkout@v4
 
       # Install dependencies
-      - name: Install Python dependencies
-        run: python -m pip install --upgrade pip pandas openpyxl
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
@@ -49,15 +70,6 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
-
-      # Fetch database and commit changes to repository
-      - name: Fetch Google Sheet
-        run: curl -L 'https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/export?exportFormat=xlsx' -o ./scripts/officials.xlsx
-      - name: Save as JSON
-        run: python ./scripts/xls2json.py
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Fetch updated database from Google Sheets
 
       # Build and deploy to Cloudflare Pages
       - name: Build site

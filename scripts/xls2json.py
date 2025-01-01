@@ -8,6 +8,9 @@ df2 = pd.read_excel('./scripts/officials.xlsx', sheet_name=1)
 # Merge the two dataframes by row number
 df = pd.concat([df1, df2], axis=1)
 
+# Drop unnamed columns
+df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
+
 # Rename columns
 df = df.rename(columns={
     'Area (Kannada)': 'AreaKN',
