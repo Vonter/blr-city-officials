@@ -83,6 +83,6 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: 'boundaries-vonter'
-          directory: 'dist'
+          directory: '.svelte-kit/cloudflare'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: 'master'
