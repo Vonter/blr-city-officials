@@ -10,11 +10,14 @@
   "introduction": "Select location on map, search by address or pick a boundary",
 
   "filter_placeholder": "Filter",
-  "download_geojson": "Download GeoJSON",
 
   "details_title": "Officials",
   "details_source": "Source",
   "details_error": "Found an error? Help us improve the accuracy of this information by leaving a comment on the",
   "details_google_sheet": "Google Sheet",
-  "details_add_comment": "Add a comment"
+  "details_add_comment": "Add a comment",
+  
+  "information_source_url": "Map Source",
+  "information_last_updated": "Last Updated",
+  "fetching_location_details": "Fetching details for selected location"
 }

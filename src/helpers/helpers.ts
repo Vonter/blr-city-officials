@@ -69,17 +69,6 @@ export function resetZoom(map: maplibregl.Map) {
   map.flyTo(defaultZoom);
 }
 
-export function getDownloadableUrl(content: Object, geojson: boolean) {
-  if (geojson) {
-    const jsonContent = JSON.stringify(content, null, 2);
-    const blob = new Blob([jsonContent], { type: 'application/json' });
-    return URL.createObjectURL(blob);
-  } else {
-    const blob = new Blob([content]);
-    return URL.createObjectURL(blob);
-  }
-}
-
 export function getOfficialDetails(
   boundaryId: string | null,
   districtId: string | null

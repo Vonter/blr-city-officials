@@ -5,6 +5,7 @@
   import type { Feature, FeatureCollection } from 'geojson';
   import { layers } from '../../assets/boundaries';
   import SidebarHeader from './SidebarHeader.svelte';
+  import BoundaryInformation from './BoundaryInformation.svelte';
   import {
     selectedBoundaryMap,
     selectedDistrict,
@@ -23,7 +24,7 @@
 
   let value = $state('');
   let districts: Feature[] = $state([]);
-  let isLoading: boolean;
+  let isLoading: boolean = $state(false);
   let isDetailPaneOpen: boolean = $state(false);
   let boundaryData: FeatureCollection | null = $state(null);
 
@@ -61,15 +62,20 @@
   }
 
   function getDistricts(boundaryId: string) {
-    if (!$boundaries) return;
+    if (!$boundaries || !$boundaries.features) return;
+    isLoading = true;
 
-    boundaryData = {
-      type: 'FeatureCollection',
-      features: $boundaries.features.filter(
-        (boundary: Feature) => boundary.properties?.id === boundaryId
-      )
-    };
-    districts = sortedDistricts(boundaryData.features);
+    try {
+      boundaryData = {
+        type: 'FeatureCollection',
+        features: $boundaries.features.filter(
+          (boundary: Feature) => boundary.properties?.['id'] === boundaryId
+        )
+      };
+      districts = sortedDistricts(boundaryData.features);
+    } finally {
+      isLoading = false;
+    }
   }
 
   run(() => {
@@ -80,13 +86,13 @@
 </script>
 
 <SidebarHeader
-  title={$selectedBoundaryMap
+  title={$selectedBoundaryMap && layers[$selectedBoundaryMap] && $locale
     ? `${layers[$selectedBoundaryMap].icon} \u00A0 ${$locale.startsWith('kn') ? layers[$selectedBoundaryMap].name_long_kn : layers[$selectedBoundaryMap].name_long}`
-    : 'Loading&hellip;'}
+    : 'Loading...'}
   onBack={handleBack}
 >
   <div>
-    {#if $selectedBoundaryMap}
+    {#if $selectedBoundaryMap && layers[$selectedBoundaryMap]}
       <div class="relative" use:clickOutside={() => (isDetailPaneOpen = false)}>
         <button
           onclick={() => (isDetailPaneOpen = !isDetailPaneOpen)}
@@ -114,8 +120,8 @@
             isDetailPaneOpen ? 'visible' : 'hidden'
           }`}
         >
-          {layers[$selectedBoundaryMap].description}
-          {#if layers[$selectedBoundaryMap].description_url}
+          {layers[$selectedBoundaryMap]?.description}
+          {#if layers[$selectedBoundaryMap]?.description_url}
             <a
               href={layers[$selectedBoundaryMap].description_url}
               class="underline"
@@ -124,12 +130,10 @@
             >
           {/if}
           {#if boundaryData}
-            {#await import('./DownloadButtons.svelte') then DownloadButtonsModule}
-              <DownloadButtonsModule.default
-                data={boundaryData}
-                filename={$selectedBoundaryMap}
-              />
-            {/await}
+            <BoundaryInformation
+              data={boundaryData}
+              filename={$selectedBoundaryMap}
+            />
           {/if}
         </div>
       </div>
@@ -166,17 +170,17 @@
       </svg>
     </div>
     {#each [...new Set(districts
-          .filter(district => district.properties?.namecol
-              .toLowerCase()
-              .includes(value.toLowerCase()))
-          .map(d => d.properties?.namecol))] as district, index}
+          .filter(district => district.properties?.['namecol']
+              ?.toLowerCase()
+              ?.includes(value.toLowerCase()))
+          .map(d => d.properties?.['namecol']))] as district, index}
       {@const officialDetails = getOfficialDetails(
         $selectedBoundaryMap,
         district
       )}
       {@const nameColKn = officialDetails
         ? officialDetails.AreaKN
-        : district.properties?.namecol}
+        : district.properties?.['namecol']}
       <div
         class:bg-white={index % 2 === 0}
         class:dark:bg-neutral-900={index % 2 === 0}
@@ -187,7 +191,9 @@
           onMouseOver={() => onDistrictMouseOver(district)}
           onMouseOut={() => onDistrictMouseOut(district)}
           onClick={() => ($selectedDistrict = district)}
-          icon={layers[$selectedBoundaryMap].icon}
+          icon={$selectedBoundaryMap && layers[$selectedBoundaryMap]?.icon
+            ? layers[$selectedBoundaryMap].icon
+            : ''}
           nameCol={$locale?.startsWith('kn') ? nameColKn : district}
           nameLong=""
         />

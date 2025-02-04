@@ -1,12 +1,10 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { browser } from '$app/environment';
-  import { locale } from 'svelte-i18n';
+  import { _, locale } from 'svelte-i18n';
   import {
     mapStore,
     selectedBoundaryMap,
     selectedDistrict,
-    selectedCoordinates,
     darkMode
   } from '../../stores';
   import { layers } from '../../assets/boundaries';
@@ -69,14 +67,12 @@
   }
 </script>
 
-{#if isLoading}
-  <div class="px-4">
-    <Loader />
-  </div>
-{:else if districts.length === 0}
-  <div class="px-4">
-    Couldn't load any districts. {$selectedCoordinates &&
-      'Make sure you select coordinates within BLR.'}
+{#if isLoading || districts.length === 0}
+  <div class="py-2 dark:bg-neutral-900">
+    <div class="px-4 text-gray-800 dark:text-gray-200">
+      {$_('fetching_location_details')}
+      <Loader />
+    </div>
   </div>
 {:else}
   {#each Object.entries(layers).filter(([key, _]) => key !== 'boundaries') as [key, value], index}

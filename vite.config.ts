@@ -7,8 +7,6 @@ export default ({ mode }) => {
 
   return defineConfig({
     css: { postcss },
-    plugins: [
-      sveltekit()
-    ]
+    plugins: [sveltekit()]
   });
 };

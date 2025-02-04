@@ -10,11 +10,14 @@
   "introduction": "ನಕ್ಷೆಯಲ್ಲಿ ಸ್ಥಳವನ್ನು ಆಯ್ಕೆಮಾಡಿ, ವಿಳಾಸದ ಮೂಲಕ ಹುಡುಕಿ ಅಥವಾ ಗಡಿಯನ್ನು ಆರಿಸಿ",
 
   "filter_placeholder": "ಫಿಲ್ಟರ್",
-  "download_geojson": "GeoJSON ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
 
   "details_title": "ಅಧಿಕಾರಿಗಳು",
   "details_source": "ಮೂಲ",
   "details_error": "ದೋಷ ಕಂಡುಬಂದಿದೆಯೇ? ಈ ಮಾಹಿತಿಯ ನಿಖರತೆಯನ್ನು ಸುಧಾರಿಸಲು ನಮಗೆ ಸಹಾಯ ಮಾಡಿ",
   "details_google_sheet": "Google Sheet",
-  "details_add_comment": "ಅಭಿಪ್ರಾಯ ಸೇರಿಸಿ"
+  "details_add_comment": "ಅಭಿಪ್ರಾಯ ಸೇರಿಸಿ",
+
+  "information_source_url": "ನಕ್ಷೆ ಮೂಲ",
+  "information_last_updated": "ಕಾಲಾವಧಿ",
+  "fetching_location_details": "ಆಯ್ಕೆ ಮಾಡಿದ ಸ್ಥಳದ ವಿವರಗಳನ್ನು ಪಡೆಯಲಾಗುತ್ತಿದೆ"
 }

@@ -41,6 +41,9 @@ export interface ILayer {
 
   /** Url to link to for more info */
   formatUrl?: (name: string) => string;
+
+  /** Url source of the GIS data */
+  geodata_url: string;
 }
 
 type ILayers = {
@@ -56,7 +59,9 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '🏤',
-    formatUrl: name => 'https://site.bbmp.gov.in/zonewiseofficers.html'
+    formatUrl: name => 'https://site.bbmp.gov.in/zonewiseofficers.html',
+    geodata_url:
+      'https://data.opencity.in/dataset/bbmp-wards-delimitation-2023/resource/bbmp-final-wards-map---2023'
   },
   bbmp_wards: {
     name: 'Ward',
@@ -66,7 +71,9 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '🏤',
-    formatUrl: name => 'https://bbmp.gov.in/'
+    formatUrl: name => 'https://bbmp.gov.in/',
+    geodata_url:
+      'https://data.opencity.in/dataset/bbmp-ward-information/resource/bbmp-zone-boundaries---2022'
   },
   bescom_division: {
     name: 'Division',
@@ -77,7 +84,9 @@ export const layers: ILayers = {
     description_url: '',
     icon: '💡',
     formatUrl: name =>
-      'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en'
+      'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en',
+    geodata_url:
+      'https://data.opencity.in/dataset/bescom-boundary-maps/resource/bescom-division-boundary-map'
   },
   bescom_subdivision: {
     name: 'Subdivision',
@@ -88,7 +97,9 @@ export const layers: ILayers = {
     description_url: '',
     icon: '💡',
     formatUrl: name =>
-      'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en'
+      'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en',
+    geodata_url:
+      'https://data.opencity.in/dataset/bescom-boundary-maps/resource/map-of-subdivision-boundaries-of-bescom'
   },
   bwssb_division: {
     name: 'Division',
@@ -99,7 +110,9 @@ export const layers: ILayers = {
     description_url: '',
     icon: '💧',
     formatUrl: name =>
-      'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en'
+      'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en',
+    geodata_url:
+      'https://data.opencity.in/dataset/bwssb-boundary-maps/resource/bwssb-division-boundary-maps'
   },
   bwssb_service_station: {
     name: 'Service Station',
@@ -110,7 +123,9 @@ export const layers: ILayers = {
     description_url: '',
     icon: '💧',
     formatUrl: name =>
-      'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en'
+      'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en',
+    geodata_url:
+      'https://data.opencity.in/dataset/bwssb-boundary-maps/resource/bwssb-service-station-division-boundaries-map'
   },
   police_city: {
     name: 'City Police',
@@ -120,7 +135,9 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '👮',
-    formatUrl: name => 'https://bcp.karnataka.gov.in/24/law-&-order-/en'
+    formatUrl: name => 'https://bcp.karnataka.gov.in/24/law-&-order-/en',
+    geodata_url:
+      'https://data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india/resource/bengaluru-police-jurisdictions-map'
   },
   police_traffic: {
     name: 'Traffic Police',
@@ -130,9 +147,10 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '🚔',
-    formatUrl: name => 'https://btp.gov.in/Contactus.aspx'
+    formatUrl: name => 'https://btp.gov.in/Contactus.aspx',
+    geodata_url:
+      'https://data.opencity.in/dataset/bengaluru-traffic-police-jurisdictions'
   },
-
   admin_district: {
     name: 'District',
     name_kn: 'ಜಿಲ್ಲೆ',
@@ -141,7 +159,8 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '🏦',
-    formatUrl: name => 'https://karnataka.gov.in/'
+    formatUrl: name => 'https://karnataka.gov.in/',
+    geodata_url: 'https://kgis.ksrsac.in/kgis/downloads.aspx'
   },
   admin_taluk: {
     name: 'Taluk',
@@ -151,7 +170,8 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '🏦',
-    formatUrl: name => 'https://karnataka.gov.in/'
+    formatUrl: name => 'https://karnataka.gov.in/',
+    geodata_url: 'https://kgis.ksrsac.in/kgis/downloads.aspx'
   },
   election_pc: {
     name: 'Lok Sabha',
@@ -161,7 +181,8 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '🗳',
-    formatUrl: name => 'https://sansad.in/ls/'
+    formatUrl: name => 'https://sansad.in/ls/',
+    geodata_url: 'https://kgis.ksrsac.in/kgis/downloads.aspx'
   },
   election_ac: {
     name: 'State Assembly',
@@ -171,7 +192,8 @@ export const layers: ILayers = {
     description: '',
     description_url: '',
     icon: '🗳',
-    formatUrl: name => 'https://kla.kar.nic.in/'
+    formatUrl: name => 'https://kla.kar.nic.in/',
+    geodata_url: 'https://kgis.ksrsac.in/kgis/downloads.aspx'
   },
   stamps_dro: {
     name: 'DRO',
@@ -182,7 +204,9 @@ export const layers: ILayers = {
     description_url: '',
     icon: '📝',
     formatUrl: name =>
-      'https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en'
+      'https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en',
+    geodata_url:
+      'https://data.opencity.in/dataset/karnataka-and-bengaluru-stamps-and-duties-registrar-offices-maps/resource/karnataka-dro-jurisdictions-map'
   },
   stamps_sro: {
     name: 'SRO',
@@ -193,7 +217,9 @@ export const layers: ILayers = {
     description_url: '',
     icon: '📝',
     formatUrl: name =>
-      'https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en'
+      'https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en',
+    geodata_url:
+      'https://data.opencity.in/dataset/karnataka-and-bengaluru-stamps-and-duties-registrar-offices-maps/resource/karnataka-sub-registrar-office-jurisdictions-map'
   },
   pincode: {
     name: 'Pin Code',
@@ -204,6 +230,7 @@ export const layers: ILayers = {
     description_url: '',
     icon: '📮',
     formatUrl: name =>
-      'https://www.indiapost.gov.in/sites/PostalCircles/Karnataka/Pages/cpio.aspx'
+      'https://www.indiapost.gov.in/sites/PostalCircles/Karnataka/Pages/cpio.aspx',
+    geodata_url: 'https://github.com/justinelliotmeyers/INDIA_PINCODES'
   }
 };
