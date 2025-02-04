@@ -1,9 +1,7 @@
 <script lang="ts">
   import { _ } from 'svelte-i18n';
-  import type { FeatureCollection } from 'geojson';
   import { layers } from '../../assets/boundaries';
 
-  export let data: FeatureCollection;
   export let filename: string;
 
   // Add type guard to ensure layers[filename] exists
