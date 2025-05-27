@@ -3,6 +3,7 @@
 
   import { layers } from '../../assets/boundaries';
   import SidebarHeader from './SidebarHeader.svelte';
+  import DepartmentDetails from './DepartmentDetails.svelte';
   import {
     selectedBoundaryMap,
     selectedDistrict,
@@ -16,7 +17,7 @@
     boundaryId: string | null,
     districtId: string | null
   ) {
-    if (boundaryId && districtId) {
+    if (boundaryId && districtId && layers[boundaryId]) {
       const officialDetails = getOfficialDetails(boundaryId, districtId);
       const districtNameKN = officialDetails
         ? officialDetails.AreaKN
@@ -25,7 +26,7 @@
         ? districtNameKN
         : districtId;
 
-      return `${layers[boundaryId].icon} \u00A0 ${$locale.startsWith('kn') ? layers[boundaryId].name_long_kn : layers[boundaryId].name_long} ${districtName}`;
+      return `${layers[boundaryId].icon} \u00A0 ${$locale?.startsWith('kn') ? layers[boundaryId].name_long_kn : layers[boundaryId].name_long} ${districtName}`;
     }
 
     return 'Unknown District';
@@ -90,40 +91,17 @@
             {$_('details_source')}
           </a>
         </div>
-        {#if (Array.isArray(currentOfficials) && currentOfficials[0].Department === 'bbmp_wards') || (!Array.isArray(currentOfficials) && currentOfficials.Department === 'bbmp_wards')}
-          <div
-            class="bg-white dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-neutral-700 break-words mb-4"
-          >
-            {#if $locale?.startsWith('kn')}
-              <div
-                class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1"
-              >
-                ಕಾರ್ಪೊರೇಟರ್
-              </div>
-              <div
-                class="text-ml font-medium text-gray-900 dark:text-gray-100 mb-4"
-              >
-                ಯಾರೂ ಇಲ್ಲ
-              </div>
-              <p class="text-sm text-gray-500 dark:text-gray-400">
-                2020 ರಿಂದ ಯಾವುದೇ ಚುನಾಯಿತ ಕಾರ್ಪೊರೇಟರ್ ಇಲ್ಲ.
-              </p>
-            {:else}
-              <div
-                class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1"
-              >
-                Corporator
-              </div>
-              <div
-                class="text-ml font-medium text-gray-900 dark:text-gray-100 mb-4"
-              >
-                N/A
-              </div>
-              <p class="text-sm text-gray-500 dark:text-gray-400">
-                No elected corporator since 2020.
-              </p>
-            {/if}
-          </div>
+
+        {#if Array.isArray(currentOfficials) && currentOfficials[0].Department}
+          <DepartmentDetails
+            department={currentOfficials[0].Department}
+            locale={$locale}
+          />
+        {:else if !Array.isArray(currentOfficials) && currentOfficials.Department}
+          <DepartmentDetails
+            department={currentOfficials.Department}
+            locale={$locale}
+          />
         {/if}
 
         <div class="grid gap-4 grid-cols-1">
@@ -211,8 +189,9 @@
                   </a>
                 {/if}
                 {#if !official.Phone && !official['E-Mail']}
-                  <span class="text-gray-500 dark:text-gray-400 italic"
-                    >No contact information available</span
+                  <span
+                    class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1"
+                    >{$_('no_officials')}</span
                   >
                 {/if}
               </div>

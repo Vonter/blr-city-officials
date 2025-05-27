@@ -1,5 +1,3 @@
-import { format_default } from './format';
-
 export type BoundaryId =
   | 'bbmp_zone'
   | 'bbmp_wards'
@@ -44,6 +42,24 @@ export interface ILayer {
 
   /** Url source of the GIS data */
   geodata_url: string;
+
+  /** Default officials for the boundary */
+  defaultOfficials?: Array<{
+    titleEn: string;
+    titleKn: string;
+    nameEn: string;
+    nameKn: string;
+    messageEn: string;
+    messageKn: string;
+  }>;
+
+  /** Default contacts for the boundary */
+  defaultContacts?: Array<{
+    type: 'phone' | 'email' | 'whatsapp';
+    label: string;
+    labelKn: string;
+    value: string;
+  }>;
 }
 
 type ILayers = {
@@ -61,7 +77,28 @@ export const layers: ILayers = {
     icon: '🏤',
     formatUrl: name => 'https://site.bbmp.gov.in/zonewiseofficers.html',
     geodata_url:
-      'https://data.opencity.in/dataset/bbmp-wards-delimitation-2023/resource/bbmp-final-wards-map---2023'
+      'https://data.opencity.in/dataset/bbmp-wards-delimitation-2023/resource/bbmp-final-wards-map---2023',
+    defaultOfficials: [],
+    defaultContacts: [
+      {
+        type: 'phone',
+        label: 'Helpline',
+        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
+        value: '1533'
+      },
+      {
+        type: 'whatsapp',
+        label: 'WhatsApp',
+        labelKn: 'ವಾಟ್ಸ್ಅಪ್',
+        value: '919480685700'
+      },
+      {
+        type: 'email',
+        label: 'Email',
+        labelKn: 'ಇಮೇಲ್',
+        value: 'comm@bbmp.gov.in'
+      }
+    ]
   },
   bbmp_wards: {
     name: 'Ward',
@@ -73,7 +110,37 @@ export const layers: ILayers = {
     icon: '🏤',
     formatUrl: name => 'https://bbmp.gov.in/',
     geodata_url:
-      'https://data.opencity.in/dataset/bbmp-ward-information/resource/bbmp-zone-boundaries---2022'
+      'https://data.opencity.in/dataset/bbmp-ward-information/resource/bbmp-zone-boundaries---2022',
+    defaultOfficials: [
+      {
+        titleEn: 'Corporator',
+        titleKn: 'ಕಾರ್ಪೊರೇಟರ್',
+        nameEn: 'N/A',
+        nameKn: 'ಯಾರೂ ಇಲ್ಲ',
+        messageEn: 'No elected corporator since 2020.',
+        messageKn: '2020 ರಿಂದ ಯಾವುದೇ ಚುನಾಯಿತ ಕಾರ್ಪೊರೇಟರ್ ಇಲ್ಲ.'
+      }
+    ],
+    defaultContacts: [
+      {
+        type: 'phone',
+        label: 'Helpline',
+        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
+        value: '1533'
+      },
+      {
+        type: 'whatsapp',
+        label: 'WhatsApp',
+        labelKn: 'ವಾಟ್ಸ್ಅಪ್',
+        value: '919480685700'
+      },
+      {
+        type: 'email',
+        label: 'Email',
+        labelKn: 'ಇಮೇಲ್',
+        value: 'comm@bbmp.gov.in'
+      }
+    ]
   },
   bescom_division: {
     name: 'Division',
@@ -86,7 +153,28 @@ export const layers: ILayers = {
     formatUrl: name =>
       'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en',
     geodata_url:
-      'https://data.opencity.in/dataset/bescom-boundary-maps/resource/bescom-division-boundary-map'
+      'https://data.opencity.in/dataset/bescom-boundary-maps/resource/bescom-division-boundary-map',
+    defaultOfficials: [],
+    defaultContacts: [
+      {
+        type: 'phone',
+        label: 'Helpline',
+        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
+        value: '1912'
+      },
+      {
+        type: 'whatsapp',
+        label: 'WhatsApp',
+        labelKn: 'ವಾಟ್ಸ್ಅಪ್',
+        value: '919449844640'
+      },
+      {
+        type: 'email',
+        label: 'Email',
+        labelKn: 'ಇಮೇಲ್',
+        value: 'helpline@bescom.co.in'
+      }
+    ]
   },
   bescom_subdivision: {
     name: 'Subdivision',
@@ -99,7 +187,28 @@ export const layers: ILayers = {
     formatUrl: name =>
       'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en',
     geodata_url:
-      'https://data.opencity.in/dataset/bescom-boundary-maps/resource/map-of-subdivision-boundaries-of-bescom'
+      'https://data.opencity.in/dataset/bescom-boundary-maps/resource/map-of-subdivision-boundaries-of-bescom',
+    defaultOfficials: [],
+    defaultContacts: [
+      {
+        type: 'phone',
+        label: 'Helpline',
+        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
+        value: '1912'
+      },
+      {
+        type: 'whatsapp',
+        label: 'WhatsApp',
+        labelKn: 'ವಾಟ್ಸ್ಅಪ್',
+        value: '919449844640'
+      },
+      {
+        type: 'email',
+        label: 'Email',
+        labelKn: 'ಇಮೇಲ್',
+        value: 'helpline@bescom.co.in'
+      }
+    ]
   },
   bwssb_division: {
     name: 'Division',
@@ -112,7 +221,46 @@ export const layers: ILayers = {
     formatUrl: name =>
       'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en',
     geodata_url:
-      'https://data.opencity.in/dataset/bwssb-boundary-maps/resource/bwssb-division-boundary-maps'
+      'https://data.opencity.in/dataset/bwssb-boundary-maps/resource/bwssb-division-boundary-maps',
+    defaultOfficials: [],
+    defaultContacts: [
+      {
+        type: 'phone',
+        label: 'Helpline',
+        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
+        value: '1916'
+      },
+      {
+        type: 'phone',
+        label: 'Septic Tanks/Sewers',
+        labelKn: 'ಸೀಪ್ಟಿಕ್ ಟಾಂಕ್ಸ್/ಸೀವರ್ಸ್',
+        value: '14420'
+      },
+      {
+        type: 'phone',
+        label: 'Water Supply',
+        labelKn: 'ಜಲವಾಣಿ',
+        value: '08022238888'
+      },
+      {
+        type: 'whatsapp',
+        label: 'WhatsApp',
+        labelKn: 'ವಾಟ್ಸ್ಅಪ್',
+        value: '918762228888'
+      },
+      {
+        type: 'email',
+        label: 'Complaints',
+        labelKn: 'ಸಮಸ್ಯೆಗಳು',
+        value: 'callcenter@bwssb.gov.in'
+      },
+      {
+        type: 'email',
+        label: 'Public Relations Officer',
+        labelKn: 'ಪ್ರಜಾತಿಕ ಸಂಬಂಧ ಅಧಿಕಾರಿ',
+        value: 'pro@bwssb.gov.in'
+      }
+    ]
   },
   bwssb_service_station: {
     name: 'Service Station',
@@ -125,7 +273,46 @@ export const layers: ILayers = {
     formatUrl: name =>
       'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en',
     geodata_url:
-      'https://data.opencity.in/dataset/bwssb-boundary-maps/resource/bwssb-service-station-division-boundaries-map'
+      'https://data.opencity.in/dataset/bwssb-boundary-maps/resource/bwssb-service-station-division-boundaries-map',
+    defaultOfficials: [],
+    defaultContacts: [
+      {
+        type: 'phone',
+        label: 'Helpline',
+        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
+        value: '1916'
+      },
+      {
+        type: 'phone',
+        label: 'Septic Tanks/Sewers',
+        labelKn: 'ಸೀಪ್ಟಿಕ್ ಟಾಂಕ್ಸ್/ಸೀವರ್ಸ್',
+        value: '14420'
+      },
+      {
+        type: 'phone',
+        label: 'Water Supply',
+        labelKn: 'ಜಲವಾಣಿ',
+        value: '08022238888'
+      },
+      {
+        type: 'whatsapp',
+        label: 'WhatsApp',
+        labelKn: 'ವಾಟ್ಸ್ಅಪ್',
+        value: '918762228888'
+      },
+      {
+        type: 'email',
+        label: 'Complaints',
+        labelKn: 'ಸಮಸ್ಯೆಗಳು',
+        value: 'callcenter@bwssb.gov.in'
+      },
+      {
+        type: 'email',
+        label: 'Public Relations Officer',
+        labelKn: 'ಪ್ರಜಾತಿಕ ಸಂಬಂಧ ಅಧಿಕಾರಿ',
+        value: 'pro@bwssb.gov.in'
+      }
+    ]
   },
   police_city: {
     name: 'City Police',
@@ -137,7 +324,16 @@ export const layers: ILayers = {
     icon: '👮',
     formatUrl: name => 'https://bcp.karnataka.gov.in/24/law-&-order-/en',
     geodata_url:
-      'https://data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india/resource/bengaluru-police-jurisdictions-map'
+      'https://data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india/resource/bengaluru-police-jurisdictions-map',
+    defaultOfficials: [],
+    defaultContacts: [
+      {
+        type: 'phone',
+        label: 'Helpline',
+        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
+        value: '112'
+      }
+    ]
   },
   police_traffic: {
     name: 'Traffic Police',
@@ -149,7 +345,16 @@ export const layers: ILayers = {
     icon: '🚔',
     formatUrl: name => 'https://btp.gov.in/Contactus.aspx',
     geodata_url:
-      'https://data.opencity.in/dataset/bengaluru-traffic-police-jurisdictions'
+      'https://data.opencity.in/dataset/bengaluru-traffic-police-jurisdictions',
+    defaultOfficials: [],
+    defaultContacts: [
+      {
+        type: 'phone',
+        label: 'Helpline',
+        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
+        value: '112'
+      }
+    ]
   },
   admin_district: {
     name: 'District',
@@ -160,7 +365,9 @@ export const layers: ILayers = {
     description_url: '',
     icon: '🏦',
     formatUrl: name => 'https://karnataka.gov.in/',
-    geodata_url: 'https://kgis.ksrsac.in/kgis/downloads.aspx'
+    geodata_url: 'https://kgis.ksrsac.in/kgis/downloads.aspx',
+    defaultOfficials: [],
+    defaultContacts: []
   },
   admin_taluk: {
     name: 'Taluk',
@@ -171,7 +378,9 @@ export const layers: ILayers = {
     description_url: '',
     icon: '🏦',
     formatUrl: name => 'https://karnataka.gov.in/',
-    geodata_url: 'https://kgis.ksrsac.in/kgis/downloads.aspx'
+    geodata_url: 'https://kgis.ksrsac.in/kgis/downloads.aspx',
+    defaultOfficials: [],
+    defaultContacts: []
   },
   election_pc: {
     name: 'Lok Sabha',
@@ -182,7 +391,9 @@ export const layers: ILayers = {
     description_url: '',
     icon: '🗳',
     formatUrl: name => 'https://sansad.in/ls/',
-    geodata_url: 'https://kgis.ksrsac.in/kgis/downloads.aspx'
+    geodata_url: 'https://kgis.ksrsac.in/kgis/downloads.aspx',
+    defaultOfficials: [],
+    defaultContacts: []
   },
   election_ac: {
     name: 'State Assembly',
@@ -193,7 +404,9 @@ export const layers: ILayers = {
     description_url: '',
     icon: '🗳',
     formatUrl: name => 'https://kla.kar.nic.in/',
-    geodata_url: 'https://kgis.ksrsac.in/kgis/downloads.aspx'
+    geodata_url: 'https://kgis.ksrsac.in/kgis/downloads.aspx',
+    defaultOfficials: [],
+    defaultContacts: []
   },
   stamps_dro: {
     name: 'DRO',
@@ -206,7 +419,9 @@ export const layers: ILayers = {
     formatUrl: name =>
       'https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en',
     geodata_url:
-      'https://data.opencity.in/dataset/karnataka-and-bengaluru-stamps-and-duties-registrar-offices-maps/resource/karnataka-dro-jurisdictions-map'
+      'https://data.opencity.in/dataset/karnataka-and-bengaluru-stamps-and-duties-registrar-offices-maps/resource/karnataka-dro-jurisdictions-map',
+    defaultOfficials: [],
+    defaultContacts: []
   },
   stamps_sro: {
     name: 'SRO',
@@ -219,7 +434,9 @@ export const layers: ILayers = {
     formatUrl: name =>
       'https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en',
     geodata_url:
-      'https://data.opencity.in/dataset/karnataka-and-bengaluru-stamps-and-duties-registrar-offices-maps/resource/karnataka-sub-registrar-office-jurisdictions-map'
+      'https://data.opencity.in/dataset/karnataka-and-bengaluru-stamps-and-duties-registrar-offices-maps/resource/karnataka-sub-registrar-office-jurisdictions-map',
+    defaultOfficials: [],
+    defaultContacts: []
   },
   pincode: {
     name: 'Pin Code',
@@ -231,6 +448,8 @@ export const layers: ILayers = {
     icon: '📮',
     formatUrl: name =>
       'https://www.indiapost.gov.in/sites/PostalCircles/Karnataka/Pages/cpio.aspx',
-    geodata_url: 'https://github.com/justinelliotmeyers/INDIA_PINCODES'
+    geodata_url: 'https://github.com/justinelliotmeyers/INDIA_PINCODES',
+    defaultOfficials: [],
+    defaultContacts: []
   }
 };

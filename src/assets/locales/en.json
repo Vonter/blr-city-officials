@@ -19,5 +19,6 @@
   
   "information_source_url": "Map Source",
   "information_last_updated": "Last Updated",
-  "fetching_location_details": "Fetching details for selected location"
+  "fetching_location_details": "Fetching details for selected location",
+  "no_officials": "No information on officials available"
 }
