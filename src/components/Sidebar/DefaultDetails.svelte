@@ -36,7 +36,7 @@
         <span class="mr-1">
           {value.icon}
         </span>
-        {$locale?.startsWith('kn') ? value.name_long_kn : value.name_long}
+        {$locale?.startsWith('kn') ? value.name_kn : value.name}
       </button>
     </div>
   {/each}

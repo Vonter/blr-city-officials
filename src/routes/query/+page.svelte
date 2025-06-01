@@ -104,8 +104,8 @@
 
       // Initialize all boundary columns with empty official details
       Object.values(layers).forEach(def => {
-        row[def.name_long] = '';
-        row[`${def.name_long}_official`] = {
+        row[def.name] = '';
+        row[`${def.name}_official`] = {
           name: '',
           designation: '',
           email: '',
@@ -119,14 +119,14 @@
         const boundaryDef = layers[id as keyof typeof layers];
         if (boundaryDef) {
           const boundaryName = boundary.properties?.['namecol'] || '-';
-          row[boundaryDef.name_long] = boundaryName;
+          row[boundaryDef.name] = boundaryName;
 
           // Find and add official details
           const official = officials.find(
             o => o.Area === boundaryName && o.Department === id
           );
           if (official) {
-            row[`${boundaryDef.name_long}_official`] = {
+            row[`${boundaryDef.name}_official`] = {
               name: official.Name,
               designation: official.Designation,
               email: official['E-Mail'],
@@ -145,7 +145,7 @@
 
     // Define headers - one for each boundary type
     const headers = [
-      ...Object.values(layers).map(layer => layer.name_long),
+      ...Object.values(layers).map(layer => layer.name),
       'Map Link'
     ];
 
@@ -357,7 +357,7 @@
                       <th
                         class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sticky top-0"
                       >
-                        {boundary.name_long}
+                        {boundary.name}
                       </th>
                     {/each}
                     <th
@@ -377,23 +377,23 @@
                         <td class="px-4 py-3 text-sm text-gray-700">
                           <div class="space-y-2">
                             <div class="font-medium">
-                              {row[boundary.name_long] || '—'}
+                              {row[boundary.name] || '—'}
                             </div>
-                            {#if typeof row[`${boundary.name_long}_official`] === 'object' && row[`${boundary.name_long}_official`]?.name}
+                            {#if typeof row[`${boundary.name}_official`] === 'object' && row[`${boundary.name}_official`]?.name}
                               <div
                                 class="pl-2 border-l-2 border-gray-200 space-y-1"
                               >
                                 <div class="font-medium text-gray-900">
                                   {(
                                     row[
-                                      `${boundary.name_long}_official`
+                                      `${boundary.name}_official`
                                     ] as OfficialDetails
                                   ).name}
                                 </div>
                                 <div class="text-gray-500">
                                   {(
                                     row[
-                                      `${boundary.name_long}_official`
+                                      `${boundary.name}_official`
                                     ] as OfficialDetails
                                   ).designation}
                                 </div>
@@ -401,14 +401,14 @@
                                   <a
                                     href="mailto:{(
                                       row[
-                                        `${boundary.name_long}_official`
+                                        `${boundary.name}_official`
                                       ] as OfficialDetails
                                     ).email}"
                                     class="text-blue-600 hover:underline"
                                   >
                                     {(
                                       row[
-                                        `${boundary.name_long}_official`
+                                        `${boundary.name}_official`
                                       ] as OfficialDetails
                                     ).email}
                                   </a>
@@ -416,7 +416,7 @@
                                 <div class="text-gray-600">
                                   {(
                                     row[
-                                      `${boundary.name_long}_official`
+                                      `${boundary.name}_official`
                                     ] as OfficialDetails
                                   ).phone}
                                 </div>

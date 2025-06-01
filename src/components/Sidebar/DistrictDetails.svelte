@@ -26,7 +26,7 @@
         ? districtNameKN
         : districtId;
 
-      return `${layers[boundaryId].icon} \u00A0 ${$locale?.startsWith('kn') ? layers[boundaryId].name_long_kn : layers[boundaryId].name_long} ${districtName}`;
+      return `${layers[boundaryId].icon} \u00A0 ${$locale?.startsWith('kn') ? layers[boundaryId].name_kn : layers[boundaryId].name} ${districtName}`;
     }
 
     return 'Unknown District';

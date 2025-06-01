@@ -87,7 +87,7 @@
 
 <SidebarHeader
   title={$selectedBoundaryMap && layers[$selectedBoundaryMap] && $locale
-    ? `${layers[$selectedBoundaryMap].icon} \u00A0 ${$locale.startsWith('kn') ? layers[$selectedBoundaryMap].name_long_kn : layers[$selectedBoundaryMap].name_long}`
+    ? `${layers[$selectedBoundaryMap].icon} \u00A0 ${$locale.startsWith('kn') ? layers[$selectedBoundaryMap].name_kn : layers[$selectedBoundaryMap].name}`
     : 'Loading...'}
   onBack={handleBack}
 >

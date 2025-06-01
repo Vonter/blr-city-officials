@@ -26,6 +26,7 @@ df = df.replace({
     'Administrative (District)': 'admin_district',
     'Administrative (Taluk)': 'admin_taluk',
     'BBMP (Ward)': 'bbmp_wards',
+    'BBMP (Ward) [Old]': 'bbmp_wards_old',
     'BBMP (Zone)': 'bbmp_zone',
     'BESCOM (Division)': 'bescom_division',
     'BESCOM (Subdivision)': 'bescom_subdivision',
