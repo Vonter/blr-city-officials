@@ -86,6 +86,12 @@ export const layers: ILayers = {
         value: '919480685700'
       },
       {
+        type: 'whatsapp',
+        label: 'Garbage/Solid Waste',
+        labelKn: 'ಕಸ/ಘನತ್ಯಾಜ್ಯ',
+        value: '919448197197'
+      },
+      {
         type: 'email',
         label: 'Email',
         labelKn: 'ಇಮೇಲ್',
@@ -124,6 +130,12 @@ export const layers: ILayers = {
         label: 'WhatsApp',
         labelKn: 'ವಾಟ್ಸ್ಅಪ್',
         value: '919480685700'
+      },
+      {
+        type: 'whatsapp',
+        label: 'Garbage/Solid Waste',
+        labelKn: 'ಕಸ/ಘನತ್ಯಾಜ್ಯ',
+        value: '919448197197'
       },
       {
         type: 'email',
