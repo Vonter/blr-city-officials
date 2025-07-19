@@ -1,4 +1,5 @@
 export type BoundaryId =
+  | 'gba_corporation'
   | 'bbmp_zone'
   | 'bbmp_wards'
   | 'bbmp_wards_old'
@@ -62,6 +63,25 @@ type ILayers = {
 };
 
 export const layers: ILayers = {
+  gba_corporation: {
+    name: 'GBA Corporation',
+    name_kn: 'ಜಿಬಿಎ ಕಾರ್ಪೊರೇಷನ್',
+    description: '',
+    description_url: '',
+    icon: '🏤',
+    formatUrl: name => 'https://brandblr.github.io/brandblr/',
+    geodata_url:
+      'https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025/resource/greater-bengaluru-authority-five-corporations-map---july-2025',
+    defaultOfficials: [],
+    defaultContacts: [
+      {
+        type: 'phone',
+        label: 'Helpline',
+        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
+        value: '1533'
+      }
+    ]
+  },
   bbmp_zone: {
     name: 'BBMP Zone',
     name_kn: 'ಬಿಬಿಎಂಪಿ ವಲಯ',
