@@ -104,9 +104,7 @@
               nameCol={$locale?.startsWith('kn')
                 ? nameColKn
                 : district.properties?.namecol}
-              nameLong={$locale?.startsWith('kn')
-                ? value.name_kn
-                : value.name}
+              nameLong={$locale?.startsWith('kn') ? value.name_kn : value.name}
             />
           </div>
         {/each}
