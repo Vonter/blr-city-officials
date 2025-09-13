@@ -2,9 +2,9 @@
 <script lang="ts">
   export let title = 'BLR City Officials';
   export let description =
-    'Find your local jurisdiction and officials from BBMP, BESCOM, BWSSB, Police and more.';
+    'Find your local jurisdiction and officials from GBA, BBMP, BESCOM, BWSSB, Police and more.';
   export let keywords =
-    'blr,bangalore,bengaluru,boundaries,bbmp,bescom,bwssb,bda,bmrda,btp,official,officers';
+    'blr,bangalore,bengaluru,boundaries,gba,bbmp,bescom,bwssb,bda,bmrda,btp,official,officers';
   export let author = 'Vivek Matthew';
   export let image = 'https://cityofficials.bengawalk.com/sharecard.jpg';
   export let url = 'https://cityofficials.bengawalk.com';
