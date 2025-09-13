@@ -7,10 +7,21 @@ jq '{"type": "FeatureCollection", "features": [.[] | .features[]]}' --slurp geoj
 ogr2ogr -explodecollections -makevalid -spat 77.2 12.6 77.9 13.4 Clipped.geojson Combined.geojson
 
 # Snap geometries
-qgis_process run native:snapgeometries --distance_units=meters --area_units=m2 --ellipsoid=EPSG:7030 --INPUT='./Clipped.geojson' --REFERENCE_LAYER='./Clipped.geojson' --TOLERANCE=0.001 --BEHAVIOR=0 --OUTPUT='./Snapped.geojson'
+
+# On MacOS use `/Applications/QGIS.app/Contents/MacOS/bin/qgis_process` instead of `qgis_process`
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  qgis_process="/Applications/QGIS.app/Contents/MacOS/bin/qgis_process"
+else
+  qgis_process="qgis_process"
+fi
+$qgis_process run native:snapgeometries --distance_units=meters --area_units=m2 --ellipsoid=EPSG:7030 --INPUT='./Clipped.geojson' --REFERENCE_LAYER='./Clipped.geojson' --TOLERANCE=0.001 --BEHAVIOR=0 --OUTPUT='./Snapped.geojson'
 
 # Save as TopoJSON
 geo2topo --out boundaries.json Snapped.geojson
 
 # Rename object to boundaries
-sed -i 's/"Snapped"/"boundaries"/' boundaries.json
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  sed -i '' 's/"Snapped"/"boundaries"/' boundaries.json
+else
+  sed -i 's/"Snapped"/"boundaries"/' boundaries.json
+fi

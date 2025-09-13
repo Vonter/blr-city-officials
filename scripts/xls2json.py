@@ -35,6 +35,7 @@ df = df.replace({
     'Elections (Assembly Constituency)': 'election_ac',
     'Elections (Parliamentary Constituency)': 'election_pc',
     "GBA (Corporation)": "gba_corporation",
+    "GBA (Zone)": "gba_zone",
     'Pincode': 'pincode',
     'City Police': 'police_city',
     'Traffic Police': 'police_traffic',  
