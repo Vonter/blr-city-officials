@@ -83,9 +83,10 @@
             district.properties?.id,
             district.properties?.namecol
           )}
-          {@const nameColKn = officialDetails
-            ? officialDetails.AreaKN
-            : district.properties?.namecol}
+          {@const nameColKn =
+            officialDetails && officialDetails.length > 0 && officialDetails[0]
+              ? officialDetails[0].AreaKN
+              : district.properties?.['namecol']}
           <div
             class:bg-white={index % 2 === 0}
             class:dark:bg-neutral-900={index % 2 === 0}

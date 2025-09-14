@@ -21,10 +21,12 @@ export function findPolylabel(feature: Feature) {
       maxPolygon: Position[][] = [];
     for (let i = 0, l = feature.geometry.coordinates.length; i < l; i++) {
       const p = feature.geometry.coordinates[i];
-      const area = turfArea({ type: 'Polygon', coordinates: p });
-      if (area > maxArea) {
-        maxPolygon = p;
-        maxArea = area;
+      if (p) {
+        const area = turfArea({ type: 'Polygon', coordinates: p });
+        if (area > maxArea) {
+          maxPolygon = p;
+          maxArea = area;
+        }
       }
     }
     output = polylabel(maxPolygon);
@@ -37,8 +39,8 @@ export function sortedDistricts(features: Feature[]) {
   return (
     features &&
     features.sort((a, b) => {
-      const aName = a.properties?.namecol;
-      const bName = b.properties?.namecol;
+      const aName = a.properties?.['namecol'];
+      const bName = b.properties?.['namecol'];
 
       const aNumber = parseInt(aName.split(':')[0]);
       const bNumber = parseInt(bName.split(':')[0]);
@@ -74,16 +76,18 @@ export function getOfficialDetails(
   districtId: string | null
 ) {
   if (!boundaryId || !districtId) return null;
-  return officials.find((official, index) => {
+  const matchingOfficials = officials.filter((official, index) => {
     if (
       official.Department.toLowerCase() === boundaryId.toLowerCase() &&
       official.Area.toLowerCase() === districtId.toLowerCase()
     ) {
-      official.cellRef = `A${index + 2}`;
+      (official as any).cellRef = `A${index + 2}`;
       return true;
     }
     return false;
   });
+
+  return matchingOfficials.length > 0 ? matchingOfficials : null;
 }
 
 export function getLngLat(params: URLSearchParams): LngLat | null {

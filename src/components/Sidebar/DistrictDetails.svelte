@@ -19,9 +19,10 @@
   ) {
     if (boundaryId && districtId && layers[boundaryId]) {
       const officialDetails = getOfficialDetails(boundaryId, districtId);
-      const districtNameKN = officialDetails
-        ? officialDetails.AreaKN
-        : districtId;
+      const districtNameKN =
+        officialDetails && officialDetails.length > 0 && officialDetails[0]
+          ? officialDetails[0].AreaKN
+          : districtId;
       const districtName = $locale?.startsWith('kn')
         ? districtNameKN
         : districtId;
@@ -40,7 +41,7 @@
     }
   }
 
-  let currentOfficials: any = null;
+  let currentOfficials: any[] = [];
 
   $: {
     if ($selectedBoundaryMap && $selectedDistrict) {
@@ -48,9 +49,9 @@
         $selectedBoundaryMap,
         $selectedDistrict
       );
-      currentOfficials = officials;
+      currentOfficials = officials || [];
     } else {
-      currentOfficials = null;
+      currentOfficials = [];
     }
   }
 </script>
@@ -61,16 +62,14 @@
 />
 {#if $selectedBoundaryMap}
   {#if $selectedDistrict}
-    {#if currentOfficials}
+    {#if currentOfficials.length > 0}
       <div class="py-4 px-4 mt-4 pb-4">
         <div class="flex flex-wrap items-center justify-between mb-4">
           <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">
             {$_('details_title')}
           </h3>
           <a
-            href={Array.isArray(currentOfficials)
-              ? currentOfficials[0].Source
-              : currentOfficials.Source}
+            href={currentOfficials[0].Source}
             target="_blank"
             rel="noopener noreferrer"
             class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 inline-flex items-center"
@@ -92,20 +91,15 @@
           </a>
         </div>
 
-        {#if Array.isArray(currentOfficials) && currentOfficials[0].Department}
+        {#if currentOfficials[0].Department}
           <DepartmentDetails
             department={currentOfficials[0].Department}
-            locale={$locale}
-          />
-        {:else if !Array.isArray(currentOfficials) && currentOfficials.Department}
-          <DepartmentDetails
-            department={currentOfficials.Department}
             locale={$locale}
           />
         {/if}
 
         <div class="grid gap-4 grid-cols-1">
-          {#each Array.isArray(currentOfficials) ? currentOfficials : [currentOfficials] as official}
+          {#each currentOfficials as official}
             <div
               class="bg-white dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-neutral-700 break-words"
             >
@@ -238,10 +232,8 @@
         {$_('details_google_sheet')}
       </p>
       <a
-        href={currentOfficials
-          ? Array.isArray(currentOfficials)
-            ? `https://docs.google.com/spreadsheets/d/${googleSheet.id}/edit#gid=${googleSheet.gid}&range=${currentOfficials[0].cellRef}`
-            : `https://docs.google.com/spreadsheets/d/${googleSheet.id}/edit#gid=${googleSheet.gid}&range=${currentOfficials.cellRef}`
+        href={currentOfficials.length > 0
+          ? `https://docs.google.com/spreadsheets/d/${googleSheet.id}/edit#gid=${googleSheet.gid}&range=${currentOfficials[0].cellRef}`
           : `https://docs.google.com/spreadsheets/d/${googleSheet.id}/edit#gid=${googleSheet.gid}`}
         target="_blank"
         rel="noopener noreferrer"

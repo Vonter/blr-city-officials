@@ -80,7 +80,7 @@
   type TableRow = {
     coordinates: string;
     link: string;
-    [key: string]: string | OfficialDetails; // Allow for official details
+    [key: string]: string | Officials; // Details of officials
   };
 
   interface OfficialDetails {
@@ -88,6 +88,10 @@
     designation: string;
     email: string;
     phone: string;
+  }
+
+  interface Officials {
+    officials: OfficialDetails[];
   }
 
   function formatResults(
@@ -106,10 +110,7 @@
       Object.values(layers).forEach(def => {
         row[def.name] = '';
         row[`${def.name}_official`] = {
-          name: '',
-          designation: '',
-          email: '',
-          phone: ''
+          officials: []
         };
       });
 
@@ -121,16 +122,18 @@
           const boundaryName = boundary.properties?.['namecol'] || '-';
           row[boundaryDef.name] = boundaryName;
 
-          // Find and add official details
-          const official = officials.find(
+          // Find and add officials
+          const officialsDetails = officials.filter(
             o => o.Area === boundaryName && o.Department === id
           );
-          if (official) {
+          if (officialsDetails.length > 0) {
             row[`${boundaryDef.name}_official`] = {
-              name: official.Name,
-              designation: official.Designation,
-              email: official['E-Mail'],
-              phone: official.Phone
+              officials: officialsDetails.map(official => ({
+                name: official.Name,
+                designation: official.Designation,
+                email: official['E-Mail'],
+                phone: official.Phone
+              }))
             };
           }
         }
@@ -162,18 +165,32 @@
 
           // Handle boundary and official information
           const boundaryName = row[header]?.toString() || '';
-          const official = row[`${header}_official`] as OfficialDetails;
+          const officials = row[`${header}_official`] as Officials;
 
           if (!boundaryName) return '';
 
-          // Combine boundary and official details in one cell, using | as separator
+          // Combine boundary and official details in one cell
           let cellContent = boundaryName;
-          if (official?.name) {
-            if (official.name) cellContent += `: ${official.name}`;
-            if (official.designation)
-              cellContent += ` (${official.designation}) - `;
-            if (official.email) cellContent += `${official.email}/`;
-            if (official.phone) cellContent += `${official.phone}`;
+          if (officials?.officials && officials.officials.length > 0) {
+            const officialStrings = officials.officials
+              .map(official => {
+                let officialInfo = '';
+                if (official.name) officialInfo += official.name;
+                if (official.designation)
+                  officialInfo += ` (${official.designation})`;
+                if (official.email || official.phone) {
+                  officialInfo += ' - ';
+                  if (official.email) officialInfo += official.email;
+                  if (official.email && official.phone) officialInfo += '/';
+                  if (official.phone) officialInfo += official.phone;
+                }
+                return officialInfo;
+              })
+              .filter(info => info.length > 0);
+
+            if (officialStrings.length > 0) {
+              cellContent += `: ${officialStrings.join(' | ')}`;
+            }
           }
 
           // Replace commas with semicolons
@@ -379,47 +396,49 @@
                             <div class="font-medium">
                               {row[boundary.name] || '—'}
                             </div>
-                            {#if typeof row[`${boundary.name}_official`] === 'object' && row[`${boundary.name}_official`]?.name}
+                            {#if typeof row[`${boundary.name}_official`] === 'object' && (row[`${boundary.name}_official`] as Officials).officials?.length > 0}
                               <div
-                                class="pl-2 border-l-2 border-gray-200 space-y-1"
+                                class="pl-2 border-l-2 border-gray-200 space-y-3"
                               >
-                                <div class="font-medium text-gray-900">
-                                  {(
-                                    row[
-                                      `${boundary.name}_official`
-                                    ] as OfficialDetails
-                                  ).name}
-                                </div>
-                                <div class="text-gray-500">
-                                  {(
-                                    row[
-                                      `${boundary.name}_official`
-                                    ] as OfficialDetails
-                                  ).designation}
-                                </div>
-                                <div>
-                                  <a
-                                    href="mailto:{(
-                                      row[
-                                        `${boundary.name}_official`
-                                      ] as OfficialDetails
-                                    ).email}"
-                                    class="text-blue-600 hover:underline"
-                                  >
-                                    {(
-                                      row[
-                                        `${boundary.name}_official`
-                                      ] as OfficialDetails
-                                    ).email}
-                                  </a>
-                                </div>
-                                <div class="text-gray-600">
-                                  {(
-                                    row[
-                                      `${boundary.name}_official`
-                                    ] as OfficialDetails
-                                  ).phone}
-                                </div>
+                                {#each (row[`${boundary.name}_official`] as Officials).officials as official, idx}
+                                  <div class="space-y-1">
+                                    {#if official.name}
+                                      <div class="font-medium text-gray-900">
+                                        {official.name}
+                                        {#if (row[`${boundary.name}_official`] as Officials).officials.length > 1}
+                                          <span
+                                            class="text-xs text-gray-400 ml-1"
+                                          >
+                                            ({idx + 1})
+                                          </span>
+                                        {/if}
+                                      </div>
+                                    {/if}
+                                    {#if official.designation}
+                                      <div class="text-gray-500">
+                                        {official.designation}
+                                      </div>
+                                    {/if}
+                                    {#if official.email}
+                                      <div>
+                                        <a
+                                          href="mailto:{official.email}"
+                                          class="text-blue-600 hover:underline"
+                                        >
+                                          {official.email}
+                                        </a>
+                                      </div>
+                                    {/if}
+                                    {#if official.phone}
+                                      <div class="text-gray-600">
+                                        {official.phone}
+                                      </div>
+                                    {/if}
+                                  </div>
+                                  {#if idx < (row[`${boundary.name}_official`] as Officials).officials.length - 1}
+                                    <div class="border-t border-gray-100"></div>
+                                  {/if}
+                                {/each}
                               </div>
                             {/if}
                           </div>
