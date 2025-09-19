@@ -13379,6 +13379,32 @@
   {
     "Department": "gba_corporation",
     "Area": "Bengaluru Central City Corporation",
+    "Designation": "Control Room",
+    "Name": "",
+    "Phone": "8022975803",
+    "E-Mail": "",
+    "Source": "",
+    "Notes": "",
+    "AreaKN": "ಬೆಂಗಳೂರು ಕೇಂದ್ರ ಮಹಾನಗರ ಪಾಲಿಕೆ",
+    "DesignationKN": "ನಿಯಂತ್ರಣ ಕೊಠಡಿ",
+    "NameKN": ""
+  },
+  {
+    "Department": "gba_corporation",
+    "Area": "Bengaluru Central City Corporation",
+    "Designation": "Control Room",
+    "Name": "",
+    "Phone": "9480685702",
+    "E-Mail": "",
+    "Source": "",
+    "Notes": "",
+    "AreaKN": "ಬೆಂಗಳೂರು ಕೇಂದ್ರ ಮಹಾನಗರ ಪಾಲಿಕೆ",
+    "DesignationKN": "ನಿಯಂತ್ರಣ ಕೊಠಡಿ",
+    "NameKN": ""
+  },
+  {
+    "Department": "gba_corporation",
+    "Area": "Bengaluru Central City Corporation",
     "Designation": "Commissioner",
     "Name": "P. Rajendra Cholan",
     "Phone": "9535671470",
