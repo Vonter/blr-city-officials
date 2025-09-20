@@ -13,7 +13,7 @@
   import type { Feature } from 'geojson';
   import type { LngLat } from 'maplibre-gl';
   import maplibregl from 'maplibre-gl';
-  import { resetZoom } from '../../helpers/helpers';
+  import { resetZoom, getOfficialDetails } from '../../helpers/helpers';
   import PolygonLookup from 'polygon-lookup';
   import { layers } from '../../assets/boundaries';
   import { locale } from 'svelte-i18n';
@@ -50,8 +50,9 @@
   function exportToCSV() {
     if (!$selectedCoordinates || !districtsIntersectingAddress) return;
 
-    // Start with lat long
-    let csv = `Lat Long,${$selectedCoordinates.lat} ${$selectedCoordinates.lng}\n`;
+    // Start with lat long - use appropriate language
+    const latLongLabel = $locale?.startsWith('kn') ? 'ಅಕ್ಷಾಂಶ ರೇಖಾಂಶ' : 'Lat Long';
+    let csv = `${latLongLabel},${$selectedCoordinates.lat} ${$selectedCoordinates.lng}\n`;
     
     // Iterate through layers in the same order as defined in the layers object
     // This matches the display order in OverlapList.svelte
@@ -66,9 +67,21 @@
       
       // Add each matching district
       matchingDistricts.forEach(district => {
-        const areaName = district.properties?.namecol;
-        if (areaName) {
+        const areaNameEn = district.properties?.namecol;
+        if (areaNameEn) {
+          // Get the department name in the appropriate language
           const deptName = $locale?.startsWith('kn') ? value.name_kn : value.name;
+          
+          // Get the area name in the appropriate language
+          let areaName = areaNameEn;
+          if ($locale?.startsWith('kn')) {
+            // Try to get Kannada name from officials data
+            const officialDetails = getOfficialDetails(key, areaNameEn);
+            if (officialDetails && officialDetails.length > 0 && officialDetails[0].AreaKN) {
+              areaName = officialDetails[0].AreaKN;
+            }
+          }
+          
           // Escape field if it contains comma
           const escapedArea = areaName.includes(',') ? `"${areaName}"` : areaName;
           csv += `${deptName},${escapedArea}\n`;
