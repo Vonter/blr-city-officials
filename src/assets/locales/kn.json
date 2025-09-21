@@ -20,5 +20,7 @@
   "information_source_url": "ನಕ್ಷೆ ಮೂಲ",
   "information_last_updated": "ಕಾಲಾವಧಿ",
   "fetching_location_details": "ಆಯ್ಕೆ ಮಾಡಿದ ಸ್ಥಳದ ವಿವರಗಳನ್ನು ಪಡೆಯಲಾಗುತ್ತಿದೆ",
-  "no_officials": "ಅಧಿಕಾರಿಗಳ ಬಗ್ಗೆ ಯಾವುದೇ ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ"
+  "no_officials": "ಅಧಿಕಾರಿಗಳ ಬಗ್ಗೆ ಯಾವುದೇ ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ",
+
+  "latitude_longitude": "ಅಕ್ಷಾಂಶ/ರೇಖಾಂಶ"
 }

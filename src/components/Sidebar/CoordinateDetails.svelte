@@ -15,13 +15,13 @@
   import maplibregl from 'maplibre-gl';
   import { resetZoom, getOfficialDetails } from '../../helpers/helpers';
   import PolygonLookup from 'polygon-lookup';
+  import { _, locale } from 'svelte-i18n';
   import { layers } from '../../assets/boundaries';
-  import { locale } from 'svelte-i18n';
 
   let districtsIntersectingAddress: Feature[] = $state([]);
   let isLoading = $state(false);
+  let isCopied = $state(false);
   let lookup: Object | null = null;
-  let copyButtonText = $state('Copy');
 
   function queryAllDistrictsForCoordinates(lngLat: LngLat) {
     districtsIntersectingAddress = [];
@@ -50,51 +50,20 @@
   function exportToCSV() {
     if (!$selectedCoordinates || !districtsIntersectingAddress) return;
 
-    // Start with lat long - use appropriate language
-    const latLongLabel = $locale?.startsWith('kn') ? 'ಅಕ್ಷಾಂಶ ರೇಖಾಂಶ' : 'Lat Long';
-    let csv = `${latLongLabel},${$selectedCoordinates.lat} ${$selectedCoordinates.lng}\n`;
-    
-    // Iterate through layers in the same order as defined in the layers object
-    // This matches the display order in OverlapList.svelte
-    Object.entries(layers).forEach(([key, value]) => {
-      // Skip the 'boundaries' key if it exists
-      if (key === 'boundaries') return;
+    let csv = `${$_('latitude_longitude')};${$selectedCoordinates.lat},${$selectedCoordinates.lng}\n`;
       
-      // Find districts matching this layer type
-      const matchingDistricts = districtsIntersectingAddress.filter(
-        district => district.properties?.id === key
-      );
-      
-      // Add each matching district
-      matchingDistricts.forEach(district => {
-        const areaNameEn = district.properties?.namecol;
-        if (areaNameEn) {
-          // Get the department name in the appropriate language
-          const deptName = $locale?.startsWith('kn') ? value.name_kn : value.name;
-          
-          // Get the area name in the appropriate language
-          let areaName = areaNameEn;
-          if ($locale?.startsWith('kn')) {
-            // Try to get Kannada name from officials data
-            const officialDetails = getOfficialDetails(key, areaNameEn);
-            if (officialDetails && officialDetails.length > 0 && officialDetails[0].AreaKN) {
-              areaName = officialDetails[0].AreaKN;
-            }
-          }
-          
-          // Escape field if it contains comma
-          const escapedArea = areaName.includes(',') ? `"${areaName}"` : areaName;
-          csv += `${deptName},${escapedArea}\n`;
-        }
-      });
+    districtsIntersectingAddress.forEach(district => {
+      const officialDetails = getOfficialDetails(district.properties?.id, district.properties?.namecol);
+      const deptName = $locale?.startsWith('kn') ? layers[district.properties?.id].name_kn : layers[district.properties?.id].name;
+      const areaName = $locale?.startsWith('kn') ? officialDetails[0].AreaKN : officialDetails[0].Area;
+      csv += `${deptName};${areaName}\n`;
     });
 
-    // Copy to clipboard
     navigator.clipboard.writeText(csv).then(() => {
-      copyButtonText = 'Copied!';
+      isCopied = true;
       setTimeout(() => {
-        copyButtonText = 'Copy';
-      }, 2000);
+        isCopied = false;
+      }, 5000);
     }).catch(err => {
       console.error('Failed to copy to clipboard:', err);
     });
@@ -121,21 +90,15 @@
   {#snippet children()}
     <button
       onclick={exportToCSV}
+      aria-label="Copy to CSV"
+      class="w-8 h-8 ml-2 text-lg flex justify-center items-center rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-white/20 hover:text-gray-800 dark:hover:text-gray-200 focus:outline-none focus:ring focus:ring-blue-500"
       disabled={!districtsIntersectingAddress || districtsIntersectingAddress.length === 0}
-      class="ml-auto px-2 py-0.5 text-xs rounded bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-1"
-      title="Copy jurisdictions as CSV"
     >
-      {#if copyButtonText === 'Copied!'}
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-        </svg>
+      {#if isCopied}
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-copy-icon lucide-clipboard-copy"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/><path d="M16 4h2a2 2 0 0 1 2 2v4"/><path d="M21 14H11"/><path d="m15 10-4 4 4 4"/></svg>
       {:else}
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
-          <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
-          <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-copy-icon lucide-clipboard-copy"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/><path d="M16 4h2a2 2 0 0 1 2 2v4"/><path d="M21 14H11"/><path d="m15 10-4 4 4 4"/></svg>
       {/if}
-      {copyButtonText}
     </button>
   {/snippet}
 </SidebarHeader>
