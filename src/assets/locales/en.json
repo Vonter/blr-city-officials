@@ -22,5 +22,6 @@
   "fetching_location_details": "Fetching details for selected location",
   "no_officials": "No information on officials available",
 
-  "latitude_longitude": "Latitude/Longitude"
+  "latitude_longitude": "Latitude/Longitude",
+  "copied_to_clipboard": "Copied!"
 }
