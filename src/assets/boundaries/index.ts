@@ -102,89 +102,6 @@ export const layers: ILayers = {
       }
     ]
   },
-  bbmp_zone: {
-    name: 'BBMP Zone',
-    name_kn: 'ಬಿಬಿಎಂಪಿ ವಲಯ',
-    description: '',
-    description_url: '',
-    icon: '🏤',
-    formatUrl: name => 'https://site.bbmp.gov.in/zonewiseofficers.html',
-    geodata_url:
-      'https://data.opencity.in/dataset/bbmp-wards-delimitation-2023/resource/bbmp-final-wards-map---2023',
-    defaultOfficials: [],
-    defaultContacts: [
-      {
-        type: 'phone',
-        label: 'Helpline',
-        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
-        value: '1533'
-      },
-      {
-        type: 'whatsapp',
-        label: 'WhatsApp',
-        labelKn: 'ವಾಟ್ಸ್ಅಪ್',
-        value: '919480685700'
-      },
-      {
-        type: 'whatsapp',
-        label: 'Garbage/Solid Waste',
-        labelKn: 'ಕಸ/ಘನತ್ಯಾಜ್ಯ',
-        value: '919448197197'
-      },
-      {
-        type: 'email',
-        label: 'Email',
-        labelKn: 'ಇಮೇಲ್',
-        value: 'comm@bbmp.gov.in'
-      }
-    ]
-  },
-  bbmp_wards: {
-    name: 'BBMP Ward',
-    name_kn: 'ಬಿಬಿಎಂಪಿ ವಾರ್ಡ್',
-    description: '',
-    description_url: '',
-    icon: '🏤',
-    formatUrl: name => 'https://bbmp.gov.in/',
-    geodata_url:
-      'https://data.opencity.in/dataset/bbmp-ward-information/resource/bbmp-zone-boundaries---2022',
-    defaultOfficials: [
-      {
-        titleEn: 'Corporator',
-        titleKn: 'ಕಾರ್ಪೊರೇಟರ್',
-        nameEn: 'N/A',
-        nameKn: 'ಯಾರೂ ಇಲ್ಲ',
-        messageEn: 'No elected corporator since 2020.',
-        messageKn: '2020 ರಿಂದ ಯಾವುದೇ ಚುನಾಯಿತ ಕಾರ್ಪೊರೇಟರ್ ಇಲ್ಲ.'
-      }
-    ],
-    defaultContacts: [
-      {
-        type: 'phone',
-        label: 'Helpline',
-        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
-        value: '1533'
-      },
-      {
-        type: 'whatsapp',
-        label: 'WhatsApp',
-        labelKn: 'ವಾಟ್ಸ್ಅಪ್',
-        value: '919480685700'
-      },
-      {
-        type: 'whatsapp',
-        label: 'Garbage/Solid Waste',
-        labelKn: 'ಕಸ/ಘನತ್ಯಾಜ್ಯ',
-        value: '919448197197'
-      },
-      {
-        type: 'email',
-        label: 'Email',
-        labelKn: 'ಇಮೇಲ್',
-        value: 'comm@bbmp.gov.in'
-      }
-    ]
-  },
   bbmp_wards_old: {
     name: 'BBMP Ward (Old)',
     name_kn: 'ಬಿಬಿಎಂಪಿ ವಾರ್ಡ್ (ಹಳೆ)',
@@ -499,5 +416,88 @@ export const layers: ILayers = {
     geodata_url: 'https://github.com/justinelliotmeyers/INDIA_PINCODES',
     defaultOfficials: [],
     defaultContacts: []
+  },
+  bbmp_zone: {
+    name: 'BBMP Zone',
+    name_kn: 'ಬಿಬಿಎಂಪಿ ವಲಯ',
+    description: '',
+    description_url: '',
+    icon: '🏤',
+    formatUrl: name => 'https://site.bbmp.gov.in/zonewiseofficers.html',
+    geodata_url:
+      'https://data.opencity.in/dataset/bbmp-wards-delimitation-2023/resource/bbmp-final-wards-map---2023',
+    defaultOfficials: [],
+    defaultContacts: [
+      {
+        type: 'phone',
+        label: 'Helpline',
+        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
+        value: '1533'
+      },
+      {
+        type: 'whatsapp',
+        label: 'WhatsApp',
+        labelKn: 'ವಾಟ್ಸ್ಅಪ್',
+        value: '919480685700'
+      },
+      {
+        type: 'whatsapp',
+        label: 'Garbage/Solid Waste',
+        labelKn: 'ಕಸ/ಘನತ್ಯಾಜ್ಯ',
+        value: '919448197197'
+      },
+      {
+        type: 'email',
+        label: 'Email',
+        labelKn: 'ಇಮೇಲ್',
+        value: 'comm@bbmp.gov.in'
+      }
+    ]
+  },
+  bbmp_wards: {
+    name: 'BBMP Ward',
+    name_kn: 'ಬಿಬಿಎಂಪಿ ವಾರ್ಡ್',
+    description: '',
+    description_url: '',
+    icon: '🏤',
+    formatUrl: name => 'https://bbmp.gov.in/',
+    geodata_url:
+      'https://data.opencity.in/dataset/bbmp-ward-information/resource/bbmp-zone-boundaries---2022',
+    defaultOfficials: [
+      {
+        titleEn: 'Corporator',
+        titleKn: 'ಕಾರ್ಪೊರೇಟರ್',
+        nameEn: 'N/A',
+        nameKn: 'ಯಾರೂ ಇಲ್ಲ',
+        messageEn: 'No elected corporator since 2020.',
+        messageKn: '2020 ರಿಂದ ಯಾವುದೇ ಚುನಾಯಿತ ಕಾರ್ಪೊರೇಟರ್ ಇಲ್ಲ.'
+      }
+    ],
+    defaultContacts: [
+      {
+        type: 'phone',
+        label: 'Helpline',
+        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
+        value: '1533'
+      },
+      {
+        type: 'whatsapp',
+        label: 'WhatsApp',
+        labelKn: 'ವಾಟ್ಸ್ಅಪ್',
+        value: '919480685700'
+      },
+      {
+        type: 'whatsapp',
+        label: 'Garbage/Solid Waste',
+        labelKn: 'ಕಸ/ಘನತ್ಯಾಜ್ಯ',
+        value: '919448197197'
+      },
+      {
+        type: 'email',
+        label: 'Email',
+        labelKn: 'ಇಮೇಲ್',
+        value: 'comm@bbmp.gov.in'
+      }
+    ]
   }
 };
