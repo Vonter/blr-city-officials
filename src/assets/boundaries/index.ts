@@ -80,6 +80,36 @@ export const layers: ILayers = {
         label: 'Helpline',
         labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
         value: '1533'
+      },
+      {
+        type: 'whatsapp',
+        label: 'WhatsApp',
+        labelKn: 'ವಾಟ್ಸ್ಅಪ್',
+        value: '919480685700'
+      },
+      {
+        type: 'whatsapp',
+        label: 'Garbage/Solid Waste',
+        labelKn: 'ಕಸ/ಘನತ್ಯಾಜ್ಯ',
+        value: '919448197197'
+      },
+      {
+        type: 'phone',
+        label: 'Other',
+        labelKn: 'ಇತರೆ',
+        value: '+9108022660000'
+      },
+      {
+        type: 'phone',
+        label: 'Other',
+        labelKn: 'ಇತರೆ',
+        value: '+9108022975595'
+      },
+      {
+        type: 'phone',
+        label: 'Other',
+        labelKn: 'ಇತರೆ',
+        value: '+9108022221188'
       }
     ]
   },
