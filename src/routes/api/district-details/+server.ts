@@ -15,7 +15,10 @@ export const GET: RequestHandler = async ({ url, request }) => {
 
   try {
     const host = request.headers.get('host') || url.host;
-    const baseUrl = `https://${host}`;
+    let baseUrl = `https://${host}`;
+    if (process.env['NODE_ENV'] === 'development') {
+      baseUrl = `http://${host}`;
+    }
     const officials = await loadOfficials(baseUrl);
     const officialDetails = getOfficialDetails(
       boundaryId,

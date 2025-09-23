@@ -85,7 +85,8 @@
       
     sortedDistricts.forEach(district => {
       const officialDetails = getOfficialDetails(district.properties?.id, district.properties?.namecol);
-      const deptName = $locale?.startsWith('kn') ? layers[district.properties?.id].name_kn : layers[district.properties?.id].name;
+      const deptKey = `dept_${officialDetails[0].Department.toLowerCase()}`;
+      const deptName = $_(deptKey);
       const areaName = $locale?.startsWith('kn') ? officialDetails[0].AreaKN : officialDetails[0].Area;
       csv += `${deptName};${areaName}\n`;
     });
