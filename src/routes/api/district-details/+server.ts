@@ -2,7 +2,7 @@ import type { RequestHandler } from './$types';
 import { loadOfficials, getOfficialDetails } from '$lib/boundary-utils';
 import { json } from '@sveltejs/kit';
 
-export const GET: RequestHandler = async ({ url }) => {
+export const GET: RequestHandler = async ({ url, request }) => {
   const boundaryId = url.searchParams.get('boundaryId');
   const districtId = url.searchParams.get('districtId');
 
@@ -14,7 +14,9 @@ export const GET: RequestHandler = async ({ url }) => {
   }
 
   try {
-    const officials = await loadOfficials();
+    const host = request.headers.get('host') || url.host;
+    const baseUrl = `https://${host}`;
+    const officials = await loadOfficials(baseUrl);
     const officialDetails = getOfficialDetails(
       boundaryId,
       districtId,

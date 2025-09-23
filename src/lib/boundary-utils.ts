@@ -1,19 +1,20 @@
 import { feature } from 'topojson-client';
 import type { Feature, FeatureCollection } from 'geojson';
-import { readFileSync } from 'fs';
-import { join } from 'path';
 import { cityConfig } from '../configs/config';
 
-// Load boundaries from file system
-export async function loadBoundaries(): Promise<FeatureCollection> {
+// Load boundaries from static files
+export async function loadBoundaries(baseUrl?: string): Promise<FeatureCollection> {
   try {
-    const boundariesPath = join(
-      process.cwd(),
-      'static',
-      cityConfig.cityId,
-      'boundaries.json'
-    );
-    const topojsonData = JSON.parse(readFileSync(boundariesPath, 'utf-8'));
+    const boundariesUrl = `${baseUrl}/${cityConfig.cityId}/boundaries.json`;
+    const response = await fetch(boundariesUrl);
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch boundaries: ${response.status} ${response.statusText}`
+      );
+    }
+
+    const topojsonData = await response.json();
     const geojson = feature(
       topojsonData,
       topojsonData.objects.boundaries
@@ -21,24 +22,27 @@ export async function loadBoundaries(): Promise<FeatureCollection> {
 
     return geojson;
   } catch (error) {
-    console.error('Error loading boundaries from file:', error);
+    console.error('Error loading boundaries:', error);
     throw error;
   }
 }
 
-// Load officials from file system
-export async function loadOfficials(): Promise<any[]> {
+// Load officials from static files
+export async function loadOfficials(baseUrl?: string): Promise<any[]> {
   try {
-    const officialsPath = join(
-      process.cwd(),
-      'static',
-      cityConfig.cityId,
-      'officials.json'
-    );
-    const officials = JSON.parse(readFileSync(officialsPath, 'utf-8'));
+    const officialsUrl = `${baseUrl}/${cityConfig.cityId}/officials.json`;
+    const response = await fetch(officialsUrl);
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch officials: ${response.status} ${response.statusText}`
+      );
+    }
+
+    const officials = await response.json();
     return officials;
   } catch (error) {
-    console.error('Error loading officials from file:', error);
+    console.error('Error loading officials:', error);
     return [];
   }
 }

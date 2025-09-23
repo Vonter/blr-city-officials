@@ -5,7 +5,7 @@ import { json } from '@sveltejs/kit';
 // @ts-ignore - PolygonLookup doesn't have proper TypeScript definitions
 import PolygonLookup from 'polygon-lookup';
 
-export const GET: RequestHandler = async ({ url }) => {
+export const GET: RequestHandler = async ({ url, request }) => {
   const lng = parseFloat(url.searchParams.get('lng') || '0');
   const lat = parseFloat(url.searchParams.get('lat') || '0');
 
@@ -17,7 +17,9 @@ export const GET: RequestHandler = async ({ url }) => {
   }
 
   try {
-    const boundaries = await loadBoundaries();
+    const host = request.headers.get('host') || url.host;
+    const baseUrl = `https://${host}`;
+    const boundaries = await loadBoundaries(baseUrl);
 
     // Create lookup instance for this request
     const lookup = new PolygonLookup(boundaries);

@@ -3,7 +3,7 @@ import type { FeatureCollection } from 'geojson';
 import { loadBoundaries, sortedDistricts } from '$lib/boundary-utils';
 import { json } from '@sveltejs/kit';
 
-export const GET: RequestHandler = async ({ url }) => {
+export const GET: RequestHandler = async ({ url, request }) => {
   const boundaryId = url.searchParams.get('boundaryId');
 
   if (!boundaryId) {
@@ -11,7 +11,9 @@ export const GET: RequestHandler = async ({ url }) => {
   }
 
   try {
-    const boundaries = await loadBoundaries();
+    const host = request.headers.get('host') || url.host;
+    const baseUrl = `https://${host}`;
+    const boundaries = await loadBoundaries(baseUrl);
 
     const boundaryData: FeatureCollection = {
       type: 'FeatureCollection',
