@@ -46,8 +46,8 @@
               ({
                 type: 'Feature',
                 properties: d.properties,
-                geometry: d.geometry
-              }) as Feature
+                geometry: null
+              }) as unknown as Feature
           );
         } else {
           console.error('Failed to get coordinate details');

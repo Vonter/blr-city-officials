@@ -88,7 +88,10 @@
         const boundaryDetails = await api.getBoundaryDetails(boundaryId);
 
         if (boundaryDetails) {
-          boundaryData = boundaryDetails.boundaryData;
+          boundaryData = {
+            type: 'FeatureCollection',
+            features: []
+          };
           districts = boundaryDetails.districts.map(
             (d: any) =>
               ({

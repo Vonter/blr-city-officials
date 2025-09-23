@@ -1,8 +1,6 @@
-import type { Feature, FeatureCollection } from 'geojson';
 import type { LngLat } from 'maplibre-gl';
 
 interface BoundaryDetailsResponse {
-  boundaryData: FeatureCollection;
   districts: Array<{
     id: string;
     name: string;
@@ -17,7 +15,6 @@ interface CoordinateDetailsResponse {
     name: string;
     boundaryId: string;
     properties: any;
-    geometry: any;
   }>;
 }
 

@@ -33,8 +33,7 @@ export const GET: RequestHandler = async ({ url, request }) => {
           id: feature.properties?.['namecol'],
           name: feature.properties?.['namecol'],
           boundaryId: feature.properties?.['id'],
-          properties: feature.properties,
-          geometry: feature.geometry
+          properties: feature.properties
         }))
       },
       {

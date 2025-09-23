@@ -1,5 +1,4 @@
 import type { RequestHandler } from './$types';
-import type { FeatureCollection } from 'geojson';
 import { loadBoundaries, sortedDistricts } from '$lib/boundary-utils';
 import { json } from '@sveltejs/kit';
 
@@ -15,18 +14,14 @@ export const GET: RequestHandler = async ({ url, request }) => {
     const baseUrl = `https://${host}`;
     const boundaries = await loadBoundaries(baseUrl);
 
-    const boundaryData: FeatureCollection = {
-      type: 'FeatureCollection',
-      features: boundaries.features.filter(
-        (boundary: any) => boundary.properties?.['id'] === boundaryId
-      )
-    };
+    const filteredFeatures = boundaries.features.filter(
+      (boundary: any) => boundary.properties?.['id'] === boundaryId
+    );
 
-    const districts = sortedDistricts(boundaryData.features);
+    const districts = sortedDistricts(filteredFeatures);
 
     return json(
       {
-        boundaryData,
         districts: districts.map((d: any) => ({
           id: d.properties?.['namecol'],
           name: d.properties?.['namecol'],
