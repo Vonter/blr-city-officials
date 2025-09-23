@@ -8,16 +8,15 @@
   import Map from '../components/Map.svelte';
   import Sidebar from '../components/Sidebar/Sidebar.svelte';
   import Controls from '../components/Controls.svelte';
-  import en from '../assets/locales/en.json';
-  import kn from '../assets/locales/kn.json';
+  import { locales } from '../configs/config';
   import type { PageData } from './$types';
   import { page } from '$app/state';
   import { browser } from '$app/environment';
 
   export let data: PageData;
 
-  addMessages('en', en);
-  addMessages('kn', kn);
+  addMessages('en', locales.en);
+  addMessages('kn', locales.kn);
   init({
     fallbackLocale: 'en',
     initialLocale: data.initialLocale

@@ -4,6 +4,7 @@
   import { feature } from 'topojson-client';
   import PolygonLookup from 'polygon-lookup';
   import { layers } from '../../assets/boundaries';
+  import { cityConfig } from '../../configs/config';
   import officials from '../../officials.json'; // Import officials directly
 
   let districtsIntersectingAddress: Feature[] = $state([]);
@@ -103,7 +104,7 @@
     return results.map(result => {
       const row: TableRow = {
         coordinates: `${result.coordinates.lat}, ${result.coordinates.lon}`,
-        link: `https://cityofficials.bengawalk.com/?lng=${result.coordinates.lon}&lat=${result.coordinates.lat}`
+        link: `${cityConfig.seo.baseUrl}/?lng=${result.coordinates.lon}&lat=${result.coordinates.lat}`
       };
 
       // Initialize all boundary columns with empty official details
@@ -242,7 +243,7 @@
   <div class="container mx-auto px-4">
     <header class="mb-8">
       <h1 class="text-4xl font-bold text-gray-900 text-center">
-        BLR City Officials Query Tool
+        {cityConfig.seo.title} Query Tool
       </h1>
       <p class="mt-2 text-center text-gray-600 max-w-2xl mx-auto">
         Enter multiple coordinates and find their corresponding city officials

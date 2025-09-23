@@ -2,19 +2,33 @@
   import { _, locale } from 'svelte-i18n';
   import { selectedBoundaryMap } from '../../stores';
   import { layers } from '../../assets/boundaries';
+  import { cityConfig } from '../../configs/config';
   import SidebarHeader from './SidebarHeader.svelte';
 
   function toggleLanguage() {
-    $locale = $locale?.startsWith('kn') ? 'en' : 'kn';
+    const currentIndex = cityConfig.supportedLanguages.findIndex(
+      lang => lang.code === $locale?.split('-')[0]
+    );
+    const nextIndex = (currentIndex + 1) % cityConfig.supportedLanguages.length;
+    $locale = cityConfig.supportedLanguages[nextIndex]?.code;
+  }
+
+  function getNextLanguageName() {
+    const currentIndex = cityConfig.supportedLanguages.findIndex(
+      lang => lang.code === $locale?.split('-')[0]
+    );
+    const nextIndex = (currentIndex + 1) % cityConfig.supportedLanguages.length;
+    const nextLanguage = cityConfig.supportedLanguages[nextIndex];
+    return $_(nextLanguage?.nameKey || '');
   }
 </script>
 
-<SidebarHeader title={$_('page_title')}>
+<SidebarHeader title={$_(cityConfig.pageTitleKey)}>
   <button
     class="px-2 py-1 rounded text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-neutral-800 focus:outline-none"
     on:click={toggleLanguage}
   >
-    {$_('toggle_language')}
+    {getNextLanguageName()}
   </button>
 </SidebarHeader>
 
@@ -36,7 +50,7 @@
         <span class="mr-1">
           {value.icon}
         </span>
-        {$locale?.startsWith('kn') ? value.name_kn : value.name}
+        {$_(value.nameKey || '')}
       </button>
     </div>
   {/each}

@@ -39,7 +39,7 @@
                 />
               </svg>
               <span class="text-xs text-gray-500 dark:text-gray-400 mr-2">
-                {isKannada ? contact.labelKn : contact.label}:
+                {$_(contact.labelKey)}:
               </span>
               <span class="truncate">{contact.value}</span>
             </a>
@@ -62,7 +62,7 @@
                 />
               </svg>
               <span class="text-xs text-gray-500 dark:text-gray-400 mr-2">
-                {isKannada ? contact.labelKn : contact.label}:
+                {$_(contact.labelKey)}:
               </span>
               <span class="truncate">{contact.value}</span>
             </a>
@@ -82,7 +82,7 @@
                 />
               </svg>
               <span class="text-xs text-gray-500 dark:text-gray-400 mr-2">
-                {isKannada ? contact.labelKn : contact.label}:
+                {$_(contact.labelKey)}:
               </span>
               <span class="truncate">{contact.value}</span>
             </a>

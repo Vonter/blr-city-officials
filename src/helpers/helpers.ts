@@ -5,9 +5,11 @@ import * as turf from '@turf/bbox';
 import type maplibregl from 'maplibre-gl';
 import officials from '../officials.json';
 import type { LngLat } from 'maplibre-gl';
+import { cityConfig } from '../configs/config';
+
 export const defaultZoom: Partial<maplibregl.MapOptions> = {
-  zoom: 9.6,
-  center: [77.6, 12.974]
+  zoom: cityConfig.map.defaultZoom,
+  center: cityConfig.map.defaultCenter
 };
 
 export function findPolylabel(feature: Feature) {

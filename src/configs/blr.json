@@ -1,0 +1,278 @@
+{
+  "pageTitleKey": "blr_page_title",
+  "supportedLanguages": [
+    {
+      "code": "en",
+      "nameKey": "lang_english"
+    },
+    {
+      "code": "kn", 
+      "nameKey": "lang_kannada"
+    }
+  ],
+  "map": {
+    "defaultZoom": 9.6,
+    "defaultCenter": [77.6, 12.974]
+  },
+  "seo": {
+    "title": "BLR City Officials",
+    "description": "Find your local jurisdiction and officials from GBA, BBMP, BESCOM, BWSSB, Police and more.",
+    "keywords": "blr,bangalore,bengaluru,boundaries,gba,bbmp,bescom,bwssb,bda,bmrda,btp,official,officers",
+    "author": "Vivek Matthew",
+    "baseUrl": "https://cityofficials.bengawalk.com",
+    "image": "https://cityofficials.bengawalk.com/sharecard.jpg"
+  },
+  "googleSheet": {
+    "id": "1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY",
+    "gid": "1265603145"
+  },
+  "departments": {
+    "gba_corporation": {
+      "nameKey": "dept_gba_corporation",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/home",
+      "geodataUrl": "https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025/resource/greater-bengaluru-authority-five-corporations-map---september-2025",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "919480685700"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_garbage_solid_waste",
+          "value": "919448197197"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "+9108022660000"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "+9108022975595"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "+9108022221188"
+        }
+      ]
+    },
+    "gba_zone": {
+      "nameKey": "dept_gba_zone",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/home",
+      "geodataUrl": "https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025/resource/gba-zones-2025",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        }
+      ]
+    },
+    "bbmp_zone": {
+      "nameKey": "dept_bbmp_zone",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/home",
+      "geodataUrl": "https://data.opencity.in/dataset/bbmp-ward-boundaries/resource/bbmp-zone-boundaries",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        }
+      ]
+    },
+    "bbmp_wards": {
+      "nameKey": "dept_bbmp_wards",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/home",
+      "geodataUrl": "https://data.opencity.in/dataset/bbmp-ward-boundaries",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        }
+      ]
+    },
+    "bbmp_wards_old": {
+      "nameKey": "dept_bbmp_wards_old",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/home",
+      "geodataUrl": "https://data.opencity.in/dataset/bbmp-ward-boundaries/resource/bbmp-ward-boundaries-2015",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        }
+      ]
+    },
+    "bescom_division": {
+      "nameKey": "dept_bescom_division",
+      "icon": "⚡",
+      "websiteUrl": "https://bescom.karnataka.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/bescom-divisions-bengaluru",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1912"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "ceo@bescom.co.in"
+        }
+      ]
+    },
+    "bescom_subdivision": {
+      "nameKey": "dept_bescom_subdivision",
+      "icon": "⚡",
+      "websiteUrl": "https://bescom.karnataka.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/bescom-subdivisions-bengaluru",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1912"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "ceo@bescom.co.in"
+        }
+      ]
+    },
+    "bwssb_division": {
+      "nameKey": "dept_bwssb_division",
+      "icon": "🚰",
+      "websiteUrl": "https://bwssb.karnataka.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/bwssb-divisions-bengaluru",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1916"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_call_center",
+          "value": "callcenter@bwssb.gov.in"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_public_relations_officer",
+          "value": "pro@bwssb.gov.in"
+        }
+      ]
+    },
+    "bwssb_service_station": {
+      "nameKey": "dept_bwssb_service_station",
+      "icon": "🚰",
+      "websiteUrl": "https://bwssb.karnataka.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/bwssb-service-stations-bengaluru",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1916"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_call_center",
+          "value": "callcenter@bwssb.gov.in"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_public_relations_officer",
+          "value": "pro@bwssb.gov.in"
+        }
+      ]
+    },
+    "police_city": {
+      "nameKey": "dept_police_city",
+      "icon": "👮",
+      "websiteUrl": "https://bcp.karnataka.gov.in/24/law-&-order-/en",
+      "geodataUrl": "https://data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india/resource/bengaluru-police-jurisdictions-map",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "112"
+        }
+      ]
+    },
+    "police_traffic": {
+      "nameKey": "dept_police_traffic",
+      "icon": "🚔",
+      "websiteUrl": "https://btp.gov.in/Contactus.aspx",
+      "geodataUrl": "https://data.opencity.in/dataset/bengaluru-traffic-police-jurisdictions",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "112"
+        }
+      ]
+    },
+    "admin_district": {
+      "nameKey": "dept_admin_district",
+      "icon": "🏦",
+      "websiteUrl": "https://karnataka.gov.in/",
+      "geodataUrl": "https://kgis.ksrsac.in/kgis/downloads.aspx",
+      "contacts": []
+    },
+    "admin_taluk": {
+      "nameKey": "dept_admin_taluk",
+      "icon": "🏦",
+      "websiteUrl": "https://karnataka.gov.in/",
+      "geodataUrl": "https://kgis.ksrsac.in/kgis/downloads.aspx",
+      "contacts": []
+    },
+    "election_pc": {
+      "nameKey": "dept_election_pc",
+      "icon": "🗳️",
+      "websiteUrl": "https://eci.gov.in/",
+      "geodataUrl": "https://datameet.org/2019/05/24/datameet-parliament-constituencies-2019/",
+      "contacts": []
+    },
+    "election_ac": {
+      "nameKey": "dept_election_ac",
+      "icon": "🗳️",
+      "websiteUrl": "https://eci.gov.in/",
+      "geodataUrl": "https://datameet.org/2019/07/01/assembly-constituencies-2018/",
+      "contacts": []
+    },
+    "pincode": {
+      "nameKey": "dept_pincode",
+      "icon": "📮",
+      "websiteUrl": "https://www.indiapost.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/pincode-boundaries-for-major-cities-of-india/resource/bengaluru-pincode-boundaries",
+      "contacts": []
+    },
+    "stamps_dro": {
+      "nameKey": "dept_stamps_dro",
+      "icon": "🏛️",
+      "websiteUrl": "https://igr.karnataka.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/stamps-and-registration-offices-bengaluru",
+      "contacts": []
+    },
+    "stamps_sro": {
+      "nameKey": "dept_stamps_sro",
+      "icon": "🏛️",
+      "websiteUrl": "https://igr.karnataka.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/stamps-and-registration-offices-bengaluru",
+      "contacts": []
+    }
+  }
+}

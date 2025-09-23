@@ -1,27 +1,50 @@
 {
-  "page_title": "BLR City Officials",
-  "toggle_language": "ಕನ್ನಡ",
-  "search_placeholder": "Search",
+  "blr_page_title": "BLR City Officials",
+  "lang_english": "English",
+  "lang_kannada": "ಕನ್ನಡ",
 
+  "search_placeholder": "Search",
   "footer_data": "Data",
   "footer_code": "Code",
   "footer_betanyc": "Inspired by BetaNYC",
-
   "introduction": "Select location on map, search by address or pick a boundary",
-
   "filter_placeholder": "Filter",
-
   "details_title": "Officials",
   "details_source": "Source",
   "details_error": "Found an error? Help us improve the accuracy of this information by leaving a comment on the",
   "details_google_sheet": "Google Sheet",
   "details_add_comment": "Add a comment",
-  
   "information_source_url": "Map Source",
   "information_last_updated": "Last Updated",
   "fetching_location_details": "Fetching details for selected location",
   "no_officials": "No information on officials available",
-
   "latitude_longitude": "Latitude/Longitude",
-  "copied_to_clipboard": "Copied!"
+  "copied_to_clipboard": "Copied!",
+
+  "dept_gba_corporation": "GBA Corporation",
+  "dept_gba_zone": "GBA Zone",
+  "dept_bbmp_zone": "BBMP Zone",
+  "dept_bbmp_wards": "BBMP Ward",
+  "dept_bbmp_wards_old": "BBMP Ward (Old)",
+  "dept_bescom_division": "BESCOM Division",
+  "dept_bescom_subdivision": "BESCOM Subdivision",
+  "dept_bwssb_division": "BWSSB Division",
+  "dept_bwssb_service_station": "BWSSB Service Station",
+  "dept_police_city": "City Police",
+  "dept_police_traffic": "Traffic Police",
+  "dept_admin_district": "District",
+  "dept_admin_taluk": "Taluk",
+  "dept_election_pc": "Lok Sabha",
+  "dept_election_ac": "Assembly",
+  "dept_pincode": "Pincode",
+  "dept_stamps_dro": "DRO",
+  "dept_stamps_sro": "SRO",
+
+  "contact_helpline": "Helpline",
+  "contact_email": "Email",
+  "contact_call_center": "Call Center",
+  "contact_public_relations_officer": "Public Relations Officer",
+  "contact_whatsapp": "WhatsApp",
+  "contact_garbage_solid_waste": "Garbage/Solid Waste",
+  "contact_other": "Other"
 }

@@ -1,13 +1,13 @@
 <!-- SEO.svelte -->
 <script lang="ts">
-  export let title = 'BLR City Officials';
-  export let description =
-    'Find your local jurisdiction and officials from GBA, BBMP, BESCOM, BWSSB, Police and more.';
-  export let keywords =
-    'blr,bangalore,bengaluru,boundaries,gba,bbmp,bescom,bwssb,bda,bmrda,btp,official,officers';
-  export let author = 'Vivek Matthew';
-  export let image = 'https://cityofficials.bengawalk.com/sharecard.jpg';
-  export let url = 'https://cityofficials.bengawalk.com';
+  import { cityConfig } from '../configs/config';
+
+  export let title = cityConfig.seo.title;
+  export let description = cityConfig.seo.description;
+  export let keywords = cityConfig.seo.keywords;
+  export let author = cityConfig.seo.author;
+  export let image = cityConfig.seo.image;
+  export let url = cityConfig.seo.baseUrl;
   export let type = 'website';
 </script>
 

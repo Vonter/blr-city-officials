@@ -1,27 +1,50 @@
 {
-  "page_title": "ಬೆಂಗಳೂರು ನಗರ ಅಧಿಕಾರಿಗಳು",
-  "toggle_language": "English",
-  "search_placeholder": "ಹುಡುಕು",
+  "blr_page_title": "ಬೆಂಗಳೂರು ನಗರ ಅಧಿಕಾರಿಗಳು",
+  "lang_english": "English",
+  "lang_kannada": "ಕನ್ನಡ",
 
+  "search_placeholder": "ಹುಡುಕು",
   "footer_data": "ಡೇಟಾ",
   "footer_code": "ಕೋಡ್",
   "footer_betanyc": "BetaNYC ಪ್ರೇರಿತ",
-
   "introduction": "ನಕ್ಷೆಯಲ್ಲಿ ಸ್ಥಳವನ್ನು ಆಯ್ಕೆಮಾಡಿ, ವಿಳಾಸದ ಮೂಲಕ ಹುಡುಕಿ ಅಥವಾ ಗಡಿಯನ್ನು ಆರಿಸಿ",
-
   "filter_placeholder": "ಫಿಲ್ಟರ್",
-
   "details_title": "ಅಧಿಕಾರಿಗಳು",
   "details_source": "ಮೂಲ",
   "details_error": "ದೋಷ ಕಂಡುಬಂದಿದೆಯೇ? ಈ ಮಾಹಿತಿಯ ನಿಖರತೆಯನ್ನು ಸುಧಾರಿಸಲು ನಮಗೆ ಸಹಾಯ ಮಾಡಿ",
   "details_google_sheet": "Google Sheet",
   "details_add_comment": "ಅಭಿಪ್ರಾಯ ಸೇರಿಸಿ",
-
   "information_source_url": "ನಕ್ಷೆ ಮೂಲ",
   "information_last_updated": "ಕಾಲಾವಧಿ",
   "fetching_location_details": "ಆಯ್ಕೆ ಮಾಡಿದ ಸ್ಥಳದ ವಿವರಗಳನ್ನು ಪಡೆಯಲಾಗುತ್ತಿದೆ",
   "no_officials": "ಅಧಿಕಾರಿಗಳ ಬಗ್ಗೆ ಯಾವುದೇ ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ",
-
   "latitude_longitude": "ಅಕ್ಷಾಂಶ/ರೇಖಾಂಶ",
-  "copied_to_clipboard": "ನಕಲಿಸಲಾಗಿದೆ!"
+  "copied_to_clipboard": "ನಕಲಿಸಲಾಗಿದೆ!",
+
+  "dept_gba_corporation": "ಜಿಬಿಎ ಕಾರ್ಪೊರೇಷನ್",
+  "dept_gba_zone": "ಜಿಬಿಎ ವಲಯ",
+  "dept_bbmp_zone": "ಬಿಬಿಎಂಪಿ ವಲಯ",
+  "dept_bbmp_wards": "ಬಿಬಿಎಂಪಿ ವಾರ್ಡ್",
+  "dept_bbmp_wards_old": "ಬಿಬಿಎಂಪಿ ವಾರ್ಡ್ (ಹಳೆಯದು)",
+  "dept_bescom_division": "ಬೆಸ್ಕಾಂ ವಿಭಾಗ",
+  "dept_bescom_subdivision": "ಬೆಸ್ಕಾಂ ಉಪವಿಭಾಗ",
+  "dept_bwssb_division": "ಬಿಡಬ್ಲ್ಯೂಎಸ್ಎಸ್ಬಿ ವಿಭಾಗ",
+  "dept_bwssb_service_station": "ಬಿಡಬ್ಲ್ಯೂಎಸ್ಎಸ್ಬಿ ಸೇವಾ ಕೇಂದ್ರ",
+  "dept_police_city": "ನಗರ ಪೊಲೀಸ್",
+  "dept_police_traffic": "ಟ್ರಾಫಿಕ್ ಪೊಲೀಸ್",
+  "dept_admin_district": "ಜಿಲ್ಲೆ",
+  "dept_admin_taluk": "ತಾಲ್ಲೂಕು",
+  "dept_election_pc": "ಲೋಕಸಭಾ",
+  "dept_election_ac": "ವಿಧಾನಸಭೆ",
+  "dept_pincode": "ಪಿನ್ಕೋಡ್",
+  "dept_stamps_dro": "ಡಿಆರ್ಒ",
+  "dept_stamps_sro": "ಎಸ್ಆರ್ಒ",
+
+  "contact_helpline": "ಸಹಾಯ ಸಂಪರ್ಕ",
+  "contact_email": "ಇಮೇಲ್",
+  "contact_call_center": "ಕಾಲ್ ಸೆಂಟರ್",
+  "contact_public_relations_officer": "ಸಾರ್ವಜನಿಕ ಸಂಪರ್ಕ ಅಧಿಕಾರಿ",
+  "contact_whatsapp": "ವಾಟ್ಸ್ಅಪ್",
+  "contact_garbage_solid_waste": "ಕಸ/ಘನತ್ಯಾಜ್ಯ",
+  "contact_other": "ಇತರೆ"
 }

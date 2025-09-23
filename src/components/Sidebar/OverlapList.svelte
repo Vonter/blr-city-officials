@@ -76,12 +76,12 @@
   </div>
 {:else}
   {#each Object.entries(layers).filter(([key, _]) => key !== 'boundaries') as [key, value], index}
-    {#if districts.filter(district => district.properties?.id === key).length}
+    {#if districts.filter(district => district.properties?.['id'] === key).length}
       <div class="divide-y divide-gray-100 dark:divide-neutral-700">
-        {#each districts.filter(district => district.properties?.id === key) as district}
+        {#each districts.filter(district => district.properties?.['id'] === key) as district}
           {@const officialDetails = getOfficialDetails(
-            district.properties?.id,
-            district.properties?.namecol
+            district.properties?.['id'],
+            district.properties?.['namecol']
           )}
           {@const nameColKn =
             officialDetails && officialDetails.length > 0 && officialDetails[0]
@@ -97,15 +97,20 @@
               onMouseOver={() => showIntersectingDistrict(district)}
               onMouseOut={() => hideIntersectingDistrict()}
               onClick={() => {
-                $selectedBoundaryMap = district.properties?.id;
-                $selectedDistrict = district.properties?.namecol;
+                $selectedBoundaryMap = district.properties?.['id'];
+                $selectedDistrict = district.properties?.['namecol'];
                 hideIntersectingDistrict();
               }}
-              icon={layers[district.properties?.id].icon}
+              icon={(() => {
+                const id = district.properties?.['id'];
+                return id && typeof id === 'string' && id in layers
+                  ? layers[id]?.icon || ''
+                  : '';
+              })()}
               nameCol={$locale?.startsWith('kn')
                 ? nameColKn
-                : district.properties?.namecol}
-              nameLong={$locale?.startsWith('kn') ? value.name_kn : value.name}
+                : district.properties?.['namecol']}
+              nameLong={$_(value.nameKey)}
             />
           </div>
         {/each}
