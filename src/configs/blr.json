@@ -80,32 +80,6 @@
         }
       ]
     },
-    "bbmp_zone": {
-      "nameKey": "dept_bbmp_zone",
-      "icon": "🏤",
-      "websiteUrl": "https://bbmp.gov.in/home",
-      "geodataUrl": "https://data.opencity.in/dataset/bbmp-ward-boundaries/resource/bbmp-zone-boundaries",
-      "contacts": [
-        {
-          "type": "phone",
-          "labelKey": "contact_helpline",
-          "value": "1533"
-        }
-      ]
-    },
-    "bbmp_wards": {
-      "nameKey": "dept_bbmp_wards",
-      "icon": "🏤",
-      "websiteUrl": "https://bbmp.gov.in/home",
-      "geodataUrl": "https://data.opencity.in/dataset/bbmp-ward-boundaries",
-      "contacts": [
-        {
-          "type": "phone",
-          "labelKey": "contact_helpline",
-          "value": "1533"
-        }
-      ]
-    },
     "bbmp_wards_old": {
       "nameKey": "dept_bbmp_wards_old",
       "icon": "🏤",
@@ -275,6 +249,32 @@
       "websiteUrl": "https://igr.karnataka.gov.in/",
       "geodataUrl": "https://data.opencity.in/dataset/stamps-and-registration-offices-bengaluru",
       "contacts": []
+    },
+    "bbmp_zone": {
+      "nameKey": "dept_bbmp_zone",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/home",
+      "geodataUrl": "https://data.opencity.in/dataset/bbmp-ward-boundaries/resource/bbmp-zone-boundaries",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        }
+      ]
+    },
+    "bbmp_wards": {
+      "nameKey": "dept_bbmp_wards",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/home",
+      "geodataUrl": "https://data.opencity.in/dataset/bbmp-ward-boundaries",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        }
+      ]
     }
   }
 }
