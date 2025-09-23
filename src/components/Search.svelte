@@ -13,6 +13,7 @@
     selectedDistrict,
     selectedCoordinates
   } from '../stores';
+  import { cityConfig } from '../configs/config';
 
   let loader: any;
 
@@ -27,14 +28,16 @@
   });
 
   const options = {
-    bounds: {
-      south: 12.5,
-      north: 13.5,
-      west: 77,
-      east: 78.25
-    },
+    bounds: cityConfig.map.maxBounds
+      ? {
+          south: cityConfig.map.maxBounds[0][1], // southwestern lat
+          north: cityConfig.map.maxBounds[1][1], // northeastern lat
+          west: cityConfig.map.maxBounds[0][0], // southwestern lng
+          east: cityConfig.map.maxBounds[1][0] // northeastern lng
+        }
+      : undefined,
     fields: ['place_id'],
-    strictBounds: true
+    strictBounds: !!cityConfig.map.maxBounds
   };
 
   let isGettingLocation = $state(false);

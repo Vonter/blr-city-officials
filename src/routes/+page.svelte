@@ -15,8 +15,10 @@
 
   export let data: PageData;
 
-  addMessages('en', locales.en);
-  addMessages('kn', locales.kn);
+  // Add messages for all supported locales
+  Object.entries(locales).forEach(([code, messages]) => {
+    addMessages(code, messages);
+  });
   init({
     fallbackLocale: 'en',
     initialLocale: data.initialLocale

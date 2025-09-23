@@ -13,7 +13,8 @@
   ],
   "map": {
     "defaultZoom": 9.6,
-    "defaultCenter": [77.6, 12.974]
+    "defaultCenter": [77.6, 12.974],
+    "maxBounds": [[77, 12.5], [78.25, 13.5]]
   },
   "seo": {
     "title": "BLR City Officials",

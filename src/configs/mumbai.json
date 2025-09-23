@@ -1,0 +1,81 @@
+{
+  "cityId": "mumbai",
+  "pageTitleKey": "mumbai_page_title",
+  "supportedLanguages": [
+    {
+      "code": "en",
+      "nameKey": "lang_english"
+    },
+    {
+      "code": "hi",
+      "nameKey": "lang_hindi"
+    },
+    {
+      "code": "mr",
+      "nameKey": "lang_marathi"
+    }
+  ],
+  "map": {
+    "defaultZoom": 9,
+    "defaultCenter": [72.8777, 19.0760],
+    "maxBounds": [[72.6, 18.6], [73.2, 19.6]]
+  },
+  "seo": {
+    "title": "Mumbai City Officials",
+    "description": "Find your local jurisdiction and officials from BMC, MSEB, Police and more in Mumbai.",
+    "keywords": "mumbai,boundaries,bmc,mseb,police,official,officers,maharashtra",
+    "author": "Vivek Matthew",
+    "baseUrl": "https://mumbai.cityofficials.bengawalk.com",
+    "image": "https://mumbai.cityofficials.bengawalk.com/sharecard.jpg"
+  },
+  "googleSheet": {
+    "id": "1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY",
+    "gid": "1265603145"
+  },
+  "departments": {
+    "bmc_wards": {
+      "nameKey": "dept_bmc_wards",
+      "icon": "🏤",
+      "websiteUrl": "https://portal.mcgm.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/mumbai-ward-boundaries",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1916"
+        }
+      ]
+    },
+    "bmc_zones": {
+      "nameKey": "dept_bmc_zones",
+      "icon": "🏤",
+      "websiteUrl": "https://portal.mcgm.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/mumbai-administrative-zones",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1916"
+        }
+      ]
+    },
+    "mseb_division": {
+      "nameKey": "dept_mseb_division",
+      "icon": "⚡",
+      "websiteUrl": "https://www.mahadiscom.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/mseb-divisions-mumbai",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "19122"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "care@mahadiscom.in"
+        }
+      ]
+    }
+  }
+}

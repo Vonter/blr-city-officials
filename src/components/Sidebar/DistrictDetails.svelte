@@ -10,11 +10,15 @@
     selectedCoordinates,
     mapStore
   } from '../../stores';
-  import { getOfficialDetails, resetZoom } from '../../helpers/helpers';
+  import {
+    getOfficialDetails,
+    resetZoom,
+    isRegionalLocale
+  } from '../../helpers/helpers';
   import { cityConfig } from '../../configs/config';
   import { api } from '../../helpers/api';
 
-  import { Loader } from '../Loader.svelte';
+  import Loader from '../Loader.svelte';
 
   function getDistrictTitle(
     boundaryId: string | null,
@@ -26,7 +30,7 @@
         officialDetails && officialDetails.length > 0 && officialDetails[0]
           ? officialDetails[0].AreaKN
           : districtId;
-      const districtName = $locale?.startsWith('kn')
+      const districtName = isRegionalLocale($locale)
         ? districtNameKN
         : districtId;
 
@@ -144,7 +148,7 @@
                 <div
                   class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1"
                 >
-                  {$locale?.startsWith('kn')
+                  {isRegionalLocale($locale)
                     ? official.DesignationKN
                     : official.Designation}
                 </div>
@@ -154,7 +158,7 @@
                 <div
                   class="text-ml font-medium text-gray-900 dark:text-gray-100 mb-4"
                 >
-                  {$locale?.startsWith('kn') ? official.NameKN : official.Name}
+                  {isRegionalLocale($locale) ? official.NameKN : official.Name}
                 </div>
               {/if}
 

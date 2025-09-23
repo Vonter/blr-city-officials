@@ -1,7 +1,10 @@
 {
   "blr_page_title": "BLR City Officials",
+  "mumbai_page_title": "Mumbai City Officials",
   "lang_english": "English",
   "lang_kannada": "ಕನ್ನಡ",
+  "lang_hindi": "हिंदी",
+  "lang_marathi": "मराठी",
 
   "search_placeholder": "Search",
   "footer_data": "Data",
@@ -40,6 +43,11 @@
   "dept_stamps_dro": "DRO",
   "dept_stamps_sro": "SRO",
 
+  "dept_bmc_wards": "BMC Ward",
+  "dept_bmc_zones": "BMC Zone",
+  "dept_mseb_division": "MSEB Division",
+
+  "contact_information": "Contact Information",
   "contact_helpline": "Helpline",
   "contact_email": "Email",
   "contact_call_center": "Call Center",

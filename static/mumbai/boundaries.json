@@ -1,0 +1,14 @@
+{
+  "type": "Topology",
+  "objects": {
+    "boundaries": {
+      "type": "GeometryCollection",
+      "geometries": []
+    }
+  },
+  "arcs": [],
+  "transform": {
+    "scale": [0.001, 0.001],
+    "translate": [72.8, 18.9]
+  }
+}

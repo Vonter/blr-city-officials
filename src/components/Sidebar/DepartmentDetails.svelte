@@ -1,6 +1,7 @@
 <script lang="ts">
   import { _ } from 'svelte-i18n';
   import { layers } from '../../assets/boundaries';
+  import { isRegionalLocale } from '../../helpers/helpers';
 
   export let department: string;
   export let locale: string | null | undefined;
@@ -10,7 +11,7 @@
     defaultContacts: []
   };
 
-  $: isKannada = locale?.startsWith('kn');
+  $: isRegional = isRegionalLocale(locale);
 </script>
 
 {#if config.defaultContacts && config.defaultContacts.length > 0}
@@ -19,7 +20,7 @@
   >
     <div class="border-gray-200 dark:border-neutral-600">
       <div class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
-        {isKannada ? 'ಸಂಪರ್ಕ ಮಾಹಿತಿ' : 'Contact Information'}
+        {isRegional ? $_('contact_information') : 'Contact Information'}
       </div>
       <div class="flex flex-wrap gap-2">
         {#each config.defaultContacts as contact}
@@ -99,13 +100,13 @@
   >
     {#each config.defaultOfficials as official}
       <div class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">
-        {isKannada ? official.titleKn : official.titleEn}
+        {isRegional ? official.titleKn : official.titleEn}
       </div>
       <div class="text-ml font-medium text-gray-900 dark:text-gray-100 mb-4">
-        {isKannada ? official.nameKn : official.nameEn}
+        {isRegional ? official.nameKn : official.nameEn}
       </div>
       <p class="text-sm text-gray-500 dark:text-gray-400">
-        {isKannada ? official.messageKn : official.messageEn}
+        {isRegional ? official.messageKn : official.messageEn}
       </p>
     {/each}
   </div>

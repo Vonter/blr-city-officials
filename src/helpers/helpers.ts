@@ -97,3 +97,38 @@ export function getLngLat(params: URLSearchParams): LngLat | null {
   const lat = params.get('lat');
   return lng && lat ? ({ lng: +lng, lat: +lat } as LngLat) : null;
 }
+
+/**
+ * Check if the current locale is a regional language (non-English) supported by the current city
+ */
+export function isRegionalLocale(locale: string | null | undefined): boolean {
+  if (!locale) return false;
+
+  // Get supported regional languages from city config (excluding English)
+  const regionalLanguages = cityConfig.supportedLanguages
+    .filter(lang => lang.code !== 'en')
+    .map(lang => lang.code);
+
+  // Check if the current locale starts with any of the regional language codes
+  return regionalLanguages.some(langCode => locale.startsWith(langCode));
+}
+
+/**
+ * Get the regional language code from the current locale if it's supported by the city
+ * Returns null if the locale is English or not supported
+ */
+export function getRegionalLanguageCode(
+  locale: string | null | undefined
+): string | null {
+  if (!locale) return null;
+
+  // Get supported regional languages from city config (excluding English)
+  const regionalLanguages = cityConfig.supportedLanguages
+    .filter(lang => lang.code !== 'en')
+    .map(lang => lang.code);
+
+  // Find the regional language code that matches the current locale
+  return (
+    regionalLanguages.find(langCode => locale.startsWith(langCode)) || null
+  );
+}

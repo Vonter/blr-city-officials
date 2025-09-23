@@ -18,6 +18,7 @@
   import turfBbox from '@turf/bbox';
   import { defaultZoom, findPolylabel, zoomToBound } from '../helpers/helpers';
   import { colors } from '../helpers/colors';
+  import { cityConfig } from '../configs/config';
 
   let map: maplibregl.Map;
   let isSourceLoaded = $state(false);
@@ -33,10 +34,7 @@
         : 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
       minZoom: 9,
       maxZoom: 16,
-      maxBounds: [
-        [77, 12.5], // Southwestern bounds + buffer
-        [78.25, 13.5] // Northeastern bounds + buffer
-      ],
+      ...(cityConfig.map.maxBounds && { maxBounds: cityConfig.map.maxBounds }),
       ...defaultZoom
     });
 

@@ -8,6 +8,7 @@ export interface CityConfig {
   map: {
     defaultZoom: number;
     defaultCenter: [number, number];
+    maxBounds?: [[number, number], [number, number]];
   };
   seo: {
     title: string;

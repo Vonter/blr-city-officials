@@ -4,8 +4,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
+    "dev:blr": "VITE_CITY=blr vite dev",
+    "dev:mumbai": "VITE_CITY=mumbai vite dev",
     "build": "vite build",
+    "build:blr": "VITE_CITY=blr vite build",
+    "build:mumbai": "VITE_CITY=mumbai vite build",
     "preview": "vite preview",
+    "preview:blr": "VITE_CITY=blr vite preview",
+    "preview:mumbai": "VITE_CITY=mumbai vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "lint": "eslint './src/**/*.{js,ts,svelte}'",
     "lint:fix": "eslint --fix './src/**/*.{js,ts,svelte}'"

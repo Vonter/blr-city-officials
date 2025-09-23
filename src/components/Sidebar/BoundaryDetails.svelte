@@ -17,7 +17,8 @@
   import {
     getOfficialDetails,
     resetZoom,
-    sortedDistricts
+    sortedDistricts,
+    isRegionalLocale
   } from '../../helpers/helpers';
   import DistrictLink from './DistrictLink.svelte';
   import Loader from '../Loader.svelte';
@@ -225,7 +226,7 @@
           icon={$selectedBoundaryMap && layers[$selectedBoundaryMap]?.icon
             ? layers[$selectedBoundaryMap].icon
             : ''}
-          nameCol={$locale?.startsWith('kn') ? nameColKn : district}
+          nameCol={isRegionalLocale($locale) ? nameColKn : district}
           nameLong=""
         />
       </div>

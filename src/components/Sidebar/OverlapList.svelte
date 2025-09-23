@@ -11,7 +11,7 @@
   import DistrictLink from './DistrictLink.svelte';
   import type { Feature } from 'geojson';
   import { colors } from '../../helpers/colors';
-  import { getOfficialDetails } from '../../helpers/helpers';
+  import { getOfficialDetails, isRegionalLocale } from '../../helpers/helpers';
 
   import Loader from '../Loader.svelte';
 
@@ -116,7 +116,7 @@
                   ? layers[id]?.icon || ''
                   : '';
               })()}
-              nameCol={$locale?.startsWith('kn')
+              nameCol={isRegionalLocale($locale)
                 ? nameColKn
                 : district.properties?.['namecol']}
               nameLong={$_(value.nameKey)}

@@ -7,7 +7,12 @@ import { cityConfig } from '../configs/config';
 // Load boundaries from file system
 export async function loadBoundaries(): Promise<FeatureCollection> {
   try {
-    const boundariesPath = join(process.cwd(), 'static', cityConfig.cityId, 'boundaries.json');
+    const boundariesPath = join(
+      process.cwd(),
+      'static',
+      cityConfig.cityId,
+      'boundaries.json'
+    );
     const topojsonData = JSON.parse(readFileSync(boundariesPath, 'utf-8'));
     const geojson = feature(
       topojsonData,
@@ -24,7 +29,12 @@ export async function loadBoundaries(): Promise<FeatureCollection> {
 // Load officials from file system
 export async function loadOfficials(): Promise<any[]> {
   try {
-    const officialsPath = join(process.cwd(), 'static', cityConfig.cityId, 'officials.json');
+    const officialsPath = join(
+      process.cwd(),
+      'static',
+      cityConfig.cityId,
+      'officials.json'
+    );
     const officials = JSON.parse(readFileSync(officialsPath, 'utf-8'));
     return officials;
   } catch (error) {
