@@ -4,6 +4,7 @@ import { feature } from 'topojson-client';
 import { readable, writable } from 'svelte/store';
 import { browser } from '$app/environment';
 import { MediaQuery } from 'svelte/reactivity';
+import { cityConfig } from './configs/config';
 
 const params = browser
   ? new URLSearchParams(window.location.search)
@@ -34,7 +35,7 @@ export const mapStore = writable<maplibregl.Map>();
 
 export const boundaries = readable(null, set => {
   if (browser) {
-    fetch(`./boundaries.json`)
+    fetch(`./${cityConfig.cityId}/boundaries.json`)
       .then(response => response.json())
       .then(topojson => feature(topojson, topojson.objects.boundaries))
       .then(geojson => set(geojson))

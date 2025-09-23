@@ -1,4 +1,5 @@
 export interface CityConfig {
+  cityId: string;
   pageTitleKey: string;
   supportedLanguages: Array<{
     code: string;

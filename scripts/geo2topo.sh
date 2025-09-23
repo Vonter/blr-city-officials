@@ -17,11 +17,11 @@ fi
 $qgis_process run native:snapgeometries --distance_units=meters --area_units=m2 --ellipsoid=EPSG:7030 --INPUT='./Clipped.geojson' --REFERENCE_LAYER='./Clipped.geojson' --TOLERANCE=0.001 --BEHAVIOR=0 --OUTPUT='./Snapped.geojson'
 
 # Save as TopoJSON
-geo2topo --out boundaries.json Snapped.geojson
+geo2topo --out ../static/blr/boundaries.json Snapped.geojson
 
 # Rename object to boundaries
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  sed -i '' 's/"Snapped"/"boundaries"/' boundaries.json
+  sed -i '' 's/"Snapped"/"boundaries"/' ../static/blr/boundaries.json
 else
-  sed -i 's/"Snapped"/"boundaries"/' boundaries.json
+  sed -i 's/"Snapped"/"boundaries"/' ../static/blr/boundaries.json
 fi

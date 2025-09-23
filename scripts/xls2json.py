@@ -1,5 +1,6 @@
 import pandas as pd
 import json
+import shutil
 
 # Read the Excel file
 df1 = pd.read_excel('./scripts/officials.xlsx', sheet_name=0)
@@ -53,3 +54,6 @@ data = df.to_dict('records')
 # Write to JSON file
 with open('./src/officials.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
+
+# Copy to static/blr/officials.json
+shutil.copy('./src/officials.json', './static/blr/officials.json')

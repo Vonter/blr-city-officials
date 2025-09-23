@@ -32,7 +32,7 @@
 
   onMount(async () => {
     try {
-      const response = await fetch('./boundaries.json');
+      const response = await fetch(`./${cityConfig.cityId}/boundaries.json`);
       const topojson = await response.json();
       const geojson = feature(topojson, topojson.objects.boundaries);
       boundaries = geojson as unknown as FeatureCollection;
