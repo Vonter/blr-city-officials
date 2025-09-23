@@ -21,6 +21,7 @@
   } from '../../helpers/helpers';
   import DistrictLink from './DistrictLink.svelte';
   import Loader from '../Loader.svelte';
+  import { api } from '../../helpers/api';
 
   let value = $state('');
   let districts: Feature[] = $state([]);
@@ -61,25 +62,57 @@
     resetZoom($mapStore);
   }
 
-  function getDistricts(boundaryId: string) {
-    if (!$boundaries || !$boundaries.features) return;
+  async function getDistricts(boundaryId: string) {
     isLoading = true;
 
     try {
-      boundaryData = {
-        type: 'FeatureCollection',
-        features: $boundaries.features.filter(
-          (boundary: Feature) => boundary.properties?.['id'] === boundaryId
-        )
-      };
-      districts = sortedDistricts(boundaryData.features);
+      // Use the TopoJSON if loaded
+      if ($boundaries) {
+        const boundariesFeatures = $boundaries as FeatureCollection;
+        if (
+          boundariesFeatures.features &&
+          Array.isArray(boundariesFeatures.features)
+        ) {
+          const filteredFeatures = boundariesFeatures.features.filter(
+            (boundary: Feature) => boundary.properties?.['id'] === boundaryId
+          );
+          boundaryData = {
+            type: 'FeatureCollection',
+            features: filteredFeatures
+          };
+          districts = sortedDistricts(filteredFeatures);
+        }
+      } else {
+        // Fallback to API if TopoJSON not loaded
+        const boundaryDetails = await api.getBoundaryDetails(boundaryId);
+
+        if (boundaryDetails) {
+          boundaryData = boundaryDetails.boundaryData;
+          districts = boundaryDetails.districts.map(
+            (d: any) =>
+              ({
+                type: 'Feature',
+                properties: d.properties,
+                geometry: null
+              }) as unknown as Feature
+          );
+        } else {
+          console.error('Failed to get boundary details');
+          boundaryData = null;
+          districts = [];
+        }
+      }
+    } catch (error) {
+      console.error('Error getting boundary details:', error);
+      boundaryData = null;
+      districts = [];
     } finally {
       isLoading = false;
     }
   }
 
   run(() => {
-    if ($boundaries && $selectedBoundaryMap) {
+    if ($selectedBoundaryMap) {
       getDistricts($selectedBoundaryMap);
     }
   });
@@ -130,10 +163,7 @@
             >
           {/if}
           {#if boundaryData}
-            <BoundaryInformation
-              data={boundaryData}
-              filename={$selectedBoundaryMap}
-            />
+            <BoundaryInformation filename={$selectedBoundaryMap} />
           {/if}
         </div>
       </div>

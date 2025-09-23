@@ -52,7 +52,9 @@
       });
     } else {
       const source = $mapStore.getSource('intersecting-layer');
-      source.setData(feature);
+      if (source && 'setData' in source) {
+        (source as any).setData(feature);
+      }
     }
   }
 
@@ -67,7 +69,14 @@
   }
 </script>
 
-{#if isLoading || districts.length === 0}
+{#if isLoading}
+  <div class="py-2 dark:bg-neutral-900">
+    <div class="px-4 text-gray-800 dark:text-gray-200">
+      {$_('fetching_location_details')}
+      <Loader />
+    </div>
+  </div>
+{:else if districts.length === 0}
   <div class="py-2 dark:bg-neutral-900">
     <div class="px-4 text-gray-800 dark:text-gray-200">
       {$_('fetching_location_details')}

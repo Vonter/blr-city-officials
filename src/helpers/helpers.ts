@@ -1,7 +1,7 @@
 import polylabel from '@mapbox/polylabel';
 import type { Feature, Position } from 'geojson';
 import turfArea from '@turf/area';
-import * as turf from '@turf/bbox';
+import type { BBox } from '@turf/helpers';
 import type maplibregl from 'maplibre-gl';
 import officials from '../officials.json';
 import type { LngLat } from 'maplibre-gl';
@@ -60,7 +60,7 @@ export function sortedDistricts(features: Feature[]) {
   );
 }
 
-export function zoomToBound(map: maplibregl.Map, bounds: turf.BBox) {
+export function zoomToBound(map: maplibregl.Map, bounds: BBox) {
   const [x1, y1, x2, y2] = bounds;
 
   map.fitBounds([x1, y1, x2, y2], {

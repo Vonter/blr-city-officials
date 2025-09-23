@@ -1,0 +1,46 @@
+import type { RequestHandler } from './$types';
+import type { FeatureCollection } from 'geojson';
+import { loadBoundaries, sortedDistricts } from '$lib/boundary-utils';
+import { json } from '@sveltejs/kit';
+
+export const GET: RequestHandler = async ({ url }) => {
+  const boundaryId = url.searchParams.get('boundaryId');
+
+  if (!boundaryId) {
+    return json({ error: 'boundaryId parameter is required' }, { status: 400 });
+  }
+
+  try {
+    const boundaries = await loadBoundaries();
+
+    const boundaryData: FeatureCollection = {
+      type: 'FeatureCollection',
+      features: boundaries.features.filter(
+        (boundary: any) => boundary.properties?.['id'] === boundaryId
+      )
+    };
+
+    const districts = sortedDistricts(boundaryData.features);
+
+    return json(
+      {
+        boundaryData,
+        districts: districts.map((d: any) => ({
+          id: d.properties?.['namecol'],
+          name: d.properties?.['namecol'],
+          properties: d.properties
+        }))
+      },
+      {
+        headers: {
+          'Cache-Control': 'public, max-age=86400, s-maxage=86400', // 24 hours
+          'CDN-Cache-Control': 'max-age=86400', // Cloudflare-specific
+          Vary: 'Accept-Encoding'
+        }
+      }
+    );
+  } catch (error) {
+    console.error('Error in boundary-details API:', error);
+    return json({ error: 'Failed to fetch boundary details' }, { status: 500 });
+  }
+};

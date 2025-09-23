@@ -15,6 +15,7 @@
   import maplibregl from 'maplibre-gl';
   import { resetZoom, getOfficialDetails } from '../../helpers/helpers';
   import PolygonLookup from 'polygon-lookup';
+  import { api } from '../../helpers/api'; 
   import { _, locale } from 'svelte-i18n';
   import { layers } from '../../assets/boundaries';
 
@@ -23,18 +24,42 @@
   let isCopied = $state(false);
   let lookup: Object | null = null;
 
-  function queryAllDistrictsForCoordinates(lngLat: LngLat) {
+  async function queryAllDistrictsForCoordinates(lngLat: LngLat) {
     districtsIntersectingAddress = [];
     isLoading = true;
-    if (!lookup) {
-      lookup = new PolygonLookup($boundaries);
+
+    try {
+      // Use TopoJSON if loaded
+      if ($boundaries) {
+        if (!lookup) {
+          lookup = new PolygonLookup($boundaries);
+        }
+        const searchResults = lookup.search(lngLat.lng, lngLat.lat, -1);
+        districtsIntersectingAddress = searchResults.features;
+      } else {
+        // Fallback to API if TopoJSON not loaded
+        const coordinateDetails = await api.getCoordinateDetails(lngLat);
+
+        if (coordinateDetails) {
+          districtsIntersectingAddress = coordinateDetails.districts.map(
+            (d: any) =>
+              ({
+                type: 'Feature',
+                properties: d.properties,
+                geometry: d.geometry
+              }) as Feature
+          );
+        } else {
+          console.error('Failed to get coordinate details');
+          districtsIntersectingAddress = [];
+        }
+      }
+    } catch (error) {
+      console.error('Error getting coordinate details:', error);
+      districtsIntersectingAddress = [];
+    } finally {
+      isLoading = false;
     }
-    districtsIntersectingAddress = lookup.search(
-      lngLat.lng,
-      lngLat.lat,
-      -1
-    ).features;
-    isLoading = false;
   }
 
   function getCoordinateTitle(lngLat: LngLat | null) {
@@ -102,7 +127,7 @@
   }
 
   run(() => {
-    if ($mapStore && $selectedCoordinates && $boundaries) {
+    if ($mapStore && $selectedCoordinates) {
       queryAllDistrictsForCoordinates($selectedCoordinates);
       $mapStore.flyTo({ center: $selectedCoordinates, zoom: 13 });
 

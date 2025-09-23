@@ -7,8 +7,6 @@
   import { cityConfig } from '../../configs/config';
   import officials from '../../officials.json'; // Import officials directly
 
-  let districtsIntersectingAddress: Feature[] = $state([]);
-  let isLoading = $state(false);
   let lookup: PolygonLookup | null = null;
   let boundaries: FeatureCollection;
 
@@ -16,15 +14,12 @@
     lat: number;
     lon: number;
   }) {
-    districtsIntersectingAddress = [];
-    isLoading = true;
     if (!lookup && boundaries) {
       lookup = new PolygonLookup(boundaries);
     }
     if (!lookup) return [];
 
     const results = lookup.search(coord.lon, coord.lat, -1);
-    isLoading = false;
     return results.features || [];
   }
 

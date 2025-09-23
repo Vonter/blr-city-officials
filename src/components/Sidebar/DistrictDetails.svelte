@@ -12,6 +12,9 @@
   } from '../../stores';
   import { getOfficialDetails, resetZoom } from '../../helpers/helpers';
   import { cityConfig } from '../../configs/config';
+  import { api } from '../../helpers/api';
+
+  import { Loader } from '../Loader.svelte';
 
   function getDistrictTitle(
     boundaryId: string | null,
@@ -41,19 +44,46 @@
     }
   }
 
-  let currentOfficials: any[] = [];
+  let currentOfficials: any[] = $state([]);
+  let isLoadingOfficials = $state(false);
 
-  $: {
+  async function loadOfficialDetails(boundaryId: string, districtId: string) {
+    isLoadingOfficials = true;
+
+    try {
+      // Use officials data if loaded
+      const officials = getOfficialDetails(boundaryId, districtId);
+
+      if (officials) {
+        currentOfficials = officials;
+      } else {
+        // Fallback to API if officials data not loaded
+        const districtDetails = await api.getDistrictDetails(
+          boundaryId,
+          districtId
+        );
+
+        if (districtDetails && districtDetails.hasOfficials) {
+          currentOfficials = districtDetails.officials;
+        } else {
+          currentOfficials = [];
+        }
+      }
+    } catch (error) {
+      console.error('Error getting official details:', error);
+      currentOfficials = [];
+    } finally {
+      isLoadingOfficials = false;
+    }
+  }
+
+  $effect(() => {
     if ($selectedBoundaryMap && $selectedDistrict) {
-      const officials = getOfficialDetails(
-        $selectedBoundaryMap,
-        $selectedDistrict
-      );
-      currentOfficials = officials || [];
+      loadOfficialDetails($selectedBoundaryMap, $selectedDistrict);
     } else {
       currentOfficials = [];
     }
-  }
+  });
 </script>
 
 <SidebarHeader
@@ -62,7 +92,14 @@
 />
 {#if $selectedBoundaryMap}
   {#if $selectedDistrict}
-    {#if currentOfficials.length > 0}
+    {#if isLoadingOfficials}
+      <div class="py-2 dark:bg-neutral-900">
+        <div class="px-4 text-gray-800 dark:text-gray-200">
+          {$_('fetching_location_details')}
+          <Loader />
+        </div>
+      </div>
+    {:else if currentOfficials.length > 0}
       <div class="py-4 px-4 mt-4 pb-4">
         <div class="flex flex-wrap items-center justify-between mb-4">
           <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">
