@@ -22,6 +22,16 @@
 
   let { districts, isLoading }: Props = $props();
 
+  const allDistricts = $derived(
+    Object.entries(layers)
+      .filter(([key, _]) => key !== 'boundaries')
+      .flatMap(([key, value]) => 
+        districts
+          .filter(district => district.properties?.['id'] === key)
+          .map(district => ({ district, layerValue: value }))
+      )
+  );
+
   function showIntersectingDistrict(feature: Feature) {
     if (!browser || !$mapStore || !$mapStore.getSource) return;
 
@@ -52,7 +62,9 @@
       });
     } else {
       const source = $mapStore.getSource('intersecting-layer');
-      source.setData(feature);
+      if (source && 'setData' in source) {
+        (source as any).setData(feature);
+      }
     }
   }
 
@@ -65,7 +77,6 @@
       $mapStore.removeSource('intersecting-layer');
     }
   }
-  var rowIndex = 0;
 </script>
 
 {#if isLoading || districts.length === 0}
@@ -76,42 +87,37 @@
     </div>
   </div>
 {:else}
-  {#each Object.entries(layers).filter(([key, _]) => key !== 'boundaries') as [key, value]}
-    {#if districts.filter(district => district.properties?.id === key).length}
-      <div class="divide-y divide-gray-100 dark:divide-neutral-700">
-        {#each districts.filter(district => district.properties?.id === key) as district}
-          {@const officialDetails = getOfficialDetails(
-            district.properties?.id,
-            district.properties?.namecol
-          )}
-          {@const nameColKn =
-            officialDetails && officialDetails.length > 0 && officialDetails[0]
-              ? officialDetails[0].AreaKN
-              : district.properties?.['namecol']}
-          <div
-            class:bg-white={rowIndex % 2 === 0}
-            class:dark:bg-neutral-900={rowIndex % 2 === 0}
-            class:bg-gray-100={rowIndex % 2 !== 0}
-            class:dark:bg-neutral-800={rowIndex % 2 !== 0}
-          >
-            <DistrictLink
-              onMouseOver={() => showIntersectingDistrict(district)}
-              onMouseOut={() => hideIntersectingDistrict()}
-              onClick={() => {
-                $selectedBoundaryMap = district.properties?.id;
-                $selectedDistrict = district.properties?.namecol;
-                hideIntersectingDistrict();
-              }}
-              icon={layers[district.properties?.id].icon}
-              nameCol={$locale?.startsWith('kn')
-                ? nameColKn
-                : district.properties?.namecol}
-              nameLong={$locale?.startsWith('kn') ? value.name_kn : value.name}
-            />
-          </div>
-        {/each}
+  <div class="divide-y divide-gray-100 dark:divide-neutral-700">
+    {#each allDistricts as { district, layerValue }, index}
+      {@const officialDetails = getOfficialDetails(
+        district.properties?.['id'],
+        district.properties?.['namecol']
+      )}
+      {@const nameColKn =
+        officialDetails && officialDetails.length > 0 && officialDetails[0]
+          ? officialDetails[0].AreaKN
+          : district.properties?.['namecol']}
+      <div
+        class:bg-white={index % 2 === 0}
+        class:dark:bg-neutral-900={index % 2 === 0}
+        class:bg-gray-100={index % 2 !== 0}
+        class:dark:bg-neutral-800={index % 2 !== 0}
+      >
+        <DistrictLink
+          onMouseOver={() => showIntersectingDistrict(district)}
+          onMouseOut={() => hideIntersectingDistrict()}
+          onClick={() => {
+            $selectedBoundaryMap = district.properties?.['id'];
+            $selectedDistrict = district.properties?.['namecol'];
+            hideIntersectingDistrict();
+          }}
+          icon={layerValue.icon}
+          nameCol={$locale?.startsWith('kn')
+            ? nameColKn
+            : district.properties?.['namecol']}
+          nameLong={$locale?.startsWith('kn') ? layerValue.name_kn : layerValue.name}
+        />
       </div>
-      {@html (() => { rowIndex += 1; return '' })()}
-    {/if}
-  {/each}
+    {/each}
+  </div>
 {/if}
