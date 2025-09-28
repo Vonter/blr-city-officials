@@ -65,6 +65,7 @@
       $mapStore.removeSource('intersecting-layer');
     }
   }
+  var rowIndex = 0;
 </script>
 
 {#if isLoading || districts.length === 0}
@@ -75,7 +76,7 @@
     </div>
   </div>
 {:else}
-  {#each Object.entries(layers).filter(([key, _]) => key !== 'boundaries') as [key, value], index}
+  {#each Object.entries(layers).filter(([key, _]) => key !== 'boundaries') as [key, value]}
     {#if districts.filter(district => district.properties?.id === key).length}
       <div class="divide-y divide-gray-100 dark:divide-neutral-700">
         {#each districts.filter(district => district.properties?.id === key) as district}
@@ -88,10 +89,10 @@
               ? officialDetails[0].AreaKN
               : district.properties?.['namecol']}
           <div
-            class:bg-white={index % 2 === 0}
-            class:dark:bg-neutral-900={index % 2 === 0}
-            class:bg-gray-100={index % 2 !== 0}
-            class:dark:bg-neutral-800={index % 2 !== 0}
+            class:bg-white={rowIndex % 2 === 0}
+            class:dark:bg-neutral-900={rowIndex % 2 === 0}
+            class:bg-gray-100={rowIndex % 2 !== 0}
+            class:dark:bg-neutral-800={rowIndex % 2 !== 0}
           >
             <DistrictLink
               onMouseOver={() => showIntersectingDistrict(district)}
@@ -110,6 +111,7 @@
           </div>
         {/each}
       </div>
+      {@html (() => { rowIndex += 1; return '' })()}
     {/if}
   {/each}
 {/if}
