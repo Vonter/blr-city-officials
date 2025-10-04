@@ -1,6 +1,7 @@
 export type BoundaryId =
   | 'gba_corporation'
   | 'gba_zone'
+  | 'gba_ward'
   | 'bbmp_zone'
   | 'bbmp_wards'
   | 'bbmp_wards_old'
@@ -122,6 +123,25 @@ export const layers: ILayers = {
     formatUrl: name => 'https://bbmp.gov.in/home',
     geodata_url:
       'https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025/resource/gba-zones-2025',
+    defaultOfficials: [],
+    defaultContacts: [
+      {
+        type: 'phone',
+        label: 'Helpline',
+        labelKn: 'ಸಹಾಯ ಸಂಪರ್ಕ',
+        value: '1533'
+      }
+    ]
+  },
+  gba_ward: {
+    name: 'GBA Ward',
+    name_kn: 'ಜಿಬಿಎ ವಾರ್ಡ್',
+    description: '',
+    description_url: '',
+    icon: '🏤',
+    formatUrl: name => 'https://bbmp.gov.in/home',
+    geodata_url:
+      'https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025/resource/gba-wards-2025',
     defaultOfficials: [],
     defaultContacts: [
       {
