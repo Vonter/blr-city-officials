@@ -1,7 +1,7 @@
 import polylabel from '@mapbox/polylabel';
 import type { Feature, Position } from 'geojson';
 import turfArea from '@turf/area';
-import * as turf from '@turf/bbox';
+import turfBbox from '@turf/bbox';
 import type maplibregl from 'maplibre-gl';
 import officials from '../officials.json';
 import type { LngLat } from 'maplibre-gl';
@@ -12,24 +12,47 @@ export const defaultZoom: Partial<maplibregl.MapOptions> = {
 
 export function findPolylabel(feature: Feature) {
   let output: number[] = [];
-  if (feature.geometry.type === 'Polygon') {
-    output = polylabel(feature.geometry.coordinates);
-  }
 
-  if (feature.geometry.type === 'MultiPolygon') {
-    let maxArea = 0,
-      maxPolygon: Position[][] = [];
-    for (let i = 0, l = feature.geometry.coordinates.length; i < l; i++) {
-      const p = feature.geometry.coordinates[i];
-      if (p) {
-        const area = turfArea({ type: 'Polygon', coordinates: p });
-        if (area > maxArea) {
-          maxPolygon = p;
-          maxArea = area;
+  try {
+    if (feature.geometry.type === 'Polygon') {
+      // Check if coordinates exist and are valid
+      if (
+        feature.geometry.coordinates &&
+        feature.geometry.coordinates.length > 0
+      ) {
+        output = polylabel(feature.geometry.coordinates);
+      }
+    }
+
+    if (feature.geometry.type === 'MultiPolygon') {
+      // Check if coordinates exist and are valid
+      if (
+        feature.geometry.coordinates &&
+        feature.geometry.coordinates.length > 0
+      ) {
+        let maxArea = 0,
+          maxPolygon: Position[][] = [];
+        for (let i = 0, l = feature.geometry.coordinates.length; i < l; i++) {
+          const p = feature.geometry.coordinates[i];
+          if (p && p.length > 0) {
+            const area = turfArea({ type: 'Polygon', coordinates: p });
+            if (area > maxArea) {
+              maxPolygon = p;
+              maxArea = area;
+            }
+          }
+        }
+        if (maxPolygon.length > 0) {
+          output = polylabel(maxPolygon);
         }
       }
     }
-    output = polylabel(maxPolygon);
+  } catch (error) {
+    console.warn(
+      'Error calculating polylabel for feature:',
+      feature.properties?.['namecol'],
+      error
+    );
   }
 
   return output;
@@ -58,7 +81,10 @@ export function sortedDistricts(features: Feature[]) {
   );
 }
 
-export function zoomToBound(map: maplibregl.Map, bounds: turf.BBox) {
+export function zoomToBound(
+  map: maplibregl.Map,
+  bounds: [number, number, number, number]
+) {
   const [x1, y1, x2, y2] = bounds;
 
   map.fitBounds([x1, y1, x2, y2], {
@@ -68,7 +94,10 @@ export function zoomToBound(map: maplibregl.Map, bounds: turf.BBox) {
 }
 
 export function resetZoom(map: maplibregl.Map) {
-  map.flyTo(defaultZoom);
+  map.flyTo({
+    center: defaultZoom.center,
+    zoom: defaultZoom.zoom
+  });
 }
 
 export function getOfficialDetails(
