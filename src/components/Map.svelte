@@ -49,6 +49,11 @@
     map.addControl(fullscreenControl, 'top-left');
     map.addControl(fullscreenControl, 'bottom-left');
 
+    // Disable map rotation
+    map.dragRotate.disable();
+    map.keyboard.disable();
+    map.touchZoomRotate.disableRotation();
+
     // Override default browser zoom hotkeys
     window.addEventListener(
       'keydown',
