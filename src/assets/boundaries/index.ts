@@ -463,7 +463,7 @@ export const layers: ILayers = {
     icon: '📮',
     formatUrl: name =>
       'https://www.indiapost.gov.in/sites/PostalCircles/Karnataka/Pages/cpio.aspx',
-    geodata_url: 'https://github.com/justinelliotmeyers/INDIA_PINCODES',
+    geodata_url: 'https://www.data.gov.in/catalog/all-india-pincode-boundary-geo-json',
     defaultOfficials: [],
     defaultContacts: []
   },

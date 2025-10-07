@@ -4,7 +4,7 @@
 jq '{"type": "FeatureCollection", "features": [.[] | .features[]]}' --slurp geojson/*.geojson > Combined.geojson
 
 # Clip to bbox
-ogr2ogr -explodecollections -makevalid -spat 77.22 12.67 77.9 13.4 Clipped.geojson Combined.geojson
+ogr2ogr -explodecollections -makevalid -spat 77.22 12.67 77.84 13.33 Clipped.geojson Combined.geojson
 
 # Snap geometries
 
@@ -14,7 +14,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 else
   qgis_process="qgis_process"
 fi
-$qgis_process run native:snapgeometries --distance_units=meters --area_units=m2 --ellipsoid=EPSG:7030 --INPUT='./Clipped.geojson' --REFERENCE_LAYER='./Clipped.geojson' --TOLERANCE=0.0005 --BEHAVIOR=0 --OUTPUT='./Snapped.geojson'
+$qgis_process run native:snapgeometries --distance_units=meters --area_units=m2 --ellipsoid=EPSG:7030 --INPUT='./Clipped.geojson' --REFERENCE_LAYER='./Clipped.geojson' --TOLERANCE=0.0003 --BEHAVIOR=0 --OUTPUT='./Snapped.geojson'
 
 # Save as TopoJSON
 geo2topo --out boundaries.json Snapped.geojson
