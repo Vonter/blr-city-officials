@@ -36,7 +36,12 @@
     "topojson-client": "^3.1.0",
     "tslib": "^2.8.1",
     "typescript": "^5.9.2",
-    "vite": "^5.4.20"
+    "vite": "^5.4.20",
+    "workbox-cacheable-response": "^7.3.0",
+    "workbox-expiration": "^7.3.0",
+    "workbox-range-requests": "^7.3.0",
+    "workbox-routing": "^7.3.0",
+    "workbox-strategies": "^7.3.0"
   },
   "dependencies": {
     "@mapbox/polylabel": "^1.0.2",
