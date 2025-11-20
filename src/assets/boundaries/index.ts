@@ -141,7 +141,7 @@ export const layers: ILayers = {
     icon: '🏤',
     formatUrl: name => 'https://bbmp.gov.in/home',
     geodata_url:
-      'https://data.opencity.in/dataset/gba-wards-delimitation-2025/resource/draft---wards-map-with-368-wards',
+      'https://data.opencity.in/dataset/gba-wards-delimitation-2025/resource/final-wards-map---369-wards',
     defaultOfficials: [],
     defaultContacts: [
       {
