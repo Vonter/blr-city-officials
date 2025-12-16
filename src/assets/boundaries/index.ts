@@ -73,7 +73,7 @@ export const layers: ILayers = {
     icon: '🏤',
     formatUrl: name => 'https://bbmp.gov.in/home',
     geodata_url:
-      'https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025/resource/greater-bengaluru-authority-five-corporations-map---september-2025',
+      'https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025/resource/06a9389c-8a3d-4a91-bf61-1df0dc7ffa28',
     defaultOfficials: [],
     defaultContacts: [
       {
@@ -122,7 +122,7 @@ export const layers: ILayers = {
     icon: '🏤',
     formatUrl: name => 'https://bbmp.gov.in/home',
     geodata_url:
-      'https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025/resource/gba-zones-2025',
+      'https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025/resource/5e7856ef-7a27-4255-80ad-9b62e62aadbf',
     defaultOfficials: [],
     defaultContacts: [
       {
@@ -141,7 +141,7 @@ export const layers: ILayers = {
     icon: '🏤',
     formatUrl: name => 'https://bbmp.gov.in/home',
     geodata_url:
-      'https://data.opencity.in/dataset/gba-wards-delimitation-2025/resource/final-wards-map---369-wards',
+      'https://data.opencity.in/dataset/gba-wards-delimitation-2025/resource/9013d656-8051-4e2d-9648-46efd0d86d3d',
     defaultOfficials: [],
     defaultContacts: [
       {
@@ -160,7 +160,7 @@ export const layers: ILayers = {
     icon: '🏤',
     formatUrl: name => 'https://bbmp.gov.in/',
     geodata_url:
-      'https://data.opencity.in/dataset/bbmp-ward-information/resource/bbmp-ward-map---2015',
+      'https://data.opencity.in/dataset/bbmp-ward-information/resource/a0329df6-2924-43f4-8fe4-7a6ffcc1d53d',
     defaultOfficials: [],
     defaultContacts: [
       {
@@ -192,7 +192,7 @@ export const layers: ILayers = {
     formatUrl: name =>
       'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en',
     geodata_url:
-      'https://data.opencity.in/dataset/bescom-boundary-maps/resource/bescom-division-boundary-map',
+      'https://data.opencity.in/dataset/bescom-boundary-maps/resource/38c3fe90-49ee-4cad-832f-b4b2d9982f7a',
     defaultOfficials: [],
     defaultContacts: [
       {
@@ -224,7 +224,7 @@ export const layers: ILayers = {
     formatUrl: name =>
       'https://bescom.karnataka.gov.in/new-page/Contact%20Us/en',
     geodata_url:
-      'https://data.opencity.in/dataset/bescom-boundary-maps/resource/map-of-subdivision-boundaries-of-bescom',
+      'https://data.opencity.in/dataset/bescom-boundary-maps/resource/40e3e394-c231-4a13-a165-abb0ef6492fb',
     defaultOfficials: [],
     defaultContacts: [
       {
@@ -256,7 +256,7 @@ export const layers: ILayers = {
     formatUrl: name =>
       'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en',
     geodata_url:
-      'https://data.opencity.in/dataset/bwssb-boundary-maps/resource/bwssb-division-boundary-maps',
+      'https://data.opencity.in/dataset/bwssb-boundary-maps/resource/2abb7d3d-7168-447b-9c46-f933548b4f5d',
     defaultOfficials: [],
     defaultContacts: [
       {
@@ -306,7 +306,7 @@ export const layers: ILayers = {
     formatUrl: name =>
       'https://bwssb.karnataka.gov.in/page/Contact+Us/Service+Station/en',
     geodata_url:
-      'https://data.opencity.in/dataset/bwssb-boundary-maps/resource/bwssb-service-station-division-boundaries-map',
+      'https://data.opencity.in/dataset/bwssb-boundary-maps/resource/7bdecf91-fa6e-4269-acab-ac91e7b4648c',
     defaultOfficials: [],
     defaultContacts: [
       {
@@ -355,7 +355,7 @@ export const layers: ILayers = {
     icon: '👮',
     formatUrl: name => 'https://bcp.karnataka.gov.in/24/law-&-order-/en',
     geodata_url:
-      'https://data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india/resource/bengaluru-police-jurisdictions-map',
+      'https://data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india/resource/4056bac3-3870-49a1-a03f-d3c26288181f',
     defaultOfficials: [],
     defaultContacts: [
       {
@@ -374,7 +374,7 @@ export const layers: ILayers = {
     icon: '🚔',
     formatUrl: name => 'https://btp.gov.in/Contactus.aspx',
     geodata_url:
-      'https://data.opencity.in/dataset/bengaluru-traffic-police-jurisdictions',
+      'https://data.opencity.in/dataset/bengaluru-traffic-police-jurisdictions/resource/3e7e6a4d-4dce-44ec-aef3-64278c30c06f',
     defaultOfficials: [],
     defaultContacts: [
       {
@@ -438,7 +438,7 @@ export const layers: ILayers = {
     formatUrl: name =>
       'https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en',
     geodata_url:
-      'https://data.opencity.in/dataset/karnataka-and-bengaluru-stamps-and-duties-registrar-offices-maps/resource/karnataka-dro-jurisdictions-map',
+      'https://data.opencity.in/dataset/karnataka-and-bengaluru-stamps-and-duties-registrar-offices-maps/resource/d4a499a3-cee0-4f2f-b29b-9f259eaa4eda',
     defaultOfficials: [],
     defaultContacts: []
   },
@@ -451,7 +451,7 @@ export const layers: ILayers = {
     formatUrl: name =>
       'https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en',
     geodata_url:
-      'https://data.opencity.in/dataset/karnataka-and-bengaluru-stamps-and-duties-registrar-offices-maps/resource/karnataka-sub-registrar-office-jurisdictions-map',
+      'https://data.opencity.in/dataset/karnataka-and-bengaluru-stamps-and-duties-registrar-offices-maps/resource/a799823a-9768-438a-82a7-e3f11cb0da2b',
     defaultOfficials: [],
     defaultContacts: []
   },
@@ -475,7 +475,7 @@ export const layers: ILayers = {
     icon: '🏤',
     formatUrl: name => 'https://site.bbmp.gov.in/zonewiseofficers.html',
     geodata_url:
-      'https://data.opencity.in/dataset/bbmp-wards-delimitation-2023/resource/bbmp-final-wards-map---2023',
+      'https://data.opencity.in/dataset/bbmp-ward-information/resource/4723f667-b02b-45e5-a8fc-2bc6ee7bd8b9',
     defaultOfficials: [],
     defaultContacts: [
       {
@@ -512,7 +512,7 @@ export const layers: ILayers = {
     icon: '🏤',
     formatUrl: name => 'https://bbmp.gov.in/',
     geodata_url:
-      'https://data.opencity.in/dataset/bbmp-ward-information/resource/bbmp-zone-boundaries---2022',
+      'https://data.opencity.in/dataset/bbmp-wards-delimitation-2023/resource/7857d752-dda4-4e5e-b9e6-53146372f86b',
     defaultOfficials: [
       {
         titleEn: 'Corporator',
