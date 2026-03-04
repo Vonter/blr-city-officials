@@ -5942,6 +5942,32 @@
   },
   {
     "Department": "bbmp_wards_old",
+    "Area": "180: Banashankari Temple ward",
+    "Designation": "BBMP Supervisor",
+    "Name": "",
+    "Phone": "9448197218",
+    "E-Mail": "",
+    "Source": "",
+    "Notes": "",
+    "AreaKN": "180: ಬನಶಂಕರಿ ದೇವಸ್ಥಾನ ವಾರ್ಡ್",
+    "DesignationKN": "ಬಿಬಿಎಂಪಿ ಮೇಲ್ವಿಚಾರಕರು",
+    "NameKN": ""
+  },
+  {
+    "Department": "bbmp_wards_old",
+    "Area": "180: Banashankari Temple ward",
+    "Designation": "Assistant General Manager",
+    "Name": "Manju",
+    "Phone": "9900620257",
+    "E-Mail": "",
+    "Source": "",
+    "Notes": "",
+    "AreaKN": "180: ಬನಶಂಕರಿ ದೇವಸ್ಥಾನ ವಾರ್ಡ್",
+    "DesignationKN": "ಸಹಾಯಕ ಪ್ರಧಾನ ವ್ಯವಸ್ಥಾಪಕರು",
+    "NameKN": "ಮಂಜು"
+  },
+  {
+    "Department": "bbmp_wards_old",
     "Area": "181: Kumaraswamy Layout",
     "Designation": "Former Corporator",
     "Name": "L Srinivas",
