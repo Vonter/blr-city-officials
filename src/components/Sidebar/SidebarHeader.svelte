@@ -1,11 +1,19 @@
 <script lang="ts">
   interface Props {
     title: string;
+    logoUrl?: string | undefined;
     onBack?: (() => void) | undefined;
+    onTitleClick?: (() => void) | undefined;
     children?: import('svelte').Snippet;
   }
 
-  let { title, onBack = undefined, children }: Props = $props();
+  let {
+    title,
+    logoUrl = undefined,
+    onBack = undefined,
+    onTitleClick = undefined,
+    children
+  }: Props = $props();
 </script>
 
 <header
@@ -34,9 +42,38 @@
         </svg>
       </button>
     {/if}
-    <h1 class="text-lg tracking-tight flex-1">
-      {title}
-    </h1>
+    {#if onTitleClick}
+      <button
+        onclick={onTitleClick}
+        class="text-lg tracking-tight flex-1 text-left hover:underline hover:decoration-gray-300 dark:hover:decoration-gray-600 underline-offset-4 transition-all flex items-center gap-2 cursor-pointer"
+      >
+        {#if logoUrl}
+          <img src={logoUrl} alt="" class="h-7 w-7 object-contain" />
+        {/if}
+        {title}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-3.5 w-3.5 text-gray-400 dark:text-gray-500 shrink-0"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2.5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+    {:else}
+      <h1 class="text-lg tracking-tight flex-1 flex items-center gap-2">
+        {#if logoUrl}
+          <img src={logoUrl} alt="" class="h-7 w-7 object-contain" />
+        {/if}
+        {title}
+      </h1>
+    {/if}
     {@render children?.()}
   </div>
 </header>

@@ -2,16 +2,8 @@
 name: Deploy to Cloudflare Pages
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-  # Runs daily at 03:30AM UTC (09:00AM IST)
-  schedule:
-    - cron: "30 3 * * *"
 
 # Sets permissions of the GITHUB_TOKEN to allow commiting to repository and deployment to Cloudflare Pages
 permissions:
@@ -25,31 +17,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  fetch:
-    runs-on: ubuntu-latest
-    outputs:
-      database-changed: ${{ steps.auto-commit-action.outputs.changes_detected }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      # Install dependencies
-      - name: Install Python dependencies
-        run: python -m pip install --upgrade pip pandas openpyxl
-
-      # Fetch database and commit JSON changes to repository
-      - name: Fetch Google Sheet
-        run: curl -L 'https://docs.google.com/spreadsheets/d/1lsXt4nXsz9k52bW79KxSLRK3Lg30z8U9AcuPNUHUVNY/export?exportFormat=xlsx' -o ./scripts/officials.xlsx
-      - name: Save as JSON
-        run: python ./scripts/xls2json.py
-      - id: auto-commit-action
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Fetch database from Google Sheets
-
   deploy:
-    needs: fetch
-    if: github.event_name != 'schedule' || needs.fetch.outputs.database-changed == 'true'
     environment:
       name: cf-pages
       url: ${{ steps.deployment.outputs.page_url }}

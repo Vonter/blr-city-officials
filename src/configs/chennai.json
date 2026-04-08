@@ -1,0 +1,285 @@
+{
+  "cityId": "chennai",
+  "pageTitleKey": "chennai_page_title",
+  "logo": "/icons/chennai.png",
+  "supportedLanguages": [
+    {
+      "code": "en",
+      "nameKey": "lang_english"
+    },
+    {
+      "code": "ta",
+      "nameKey": "lang_tamil"
+    }
+  ],
+  "map": {
+    "defaultZoom": 10.5,
+    "defaultCenter": [80.22, 13.07],
+    "maxBounds": [[79.95, 12.7], [80.4, 13.35]]
+  },
+  "seo": {
+    "title": "Chennai City Officials",
+    "description": "Find your local jurisdiction and officials from GCC, CMWSSB and more in Chennai.",
+    "keywords": "chennai,boundaries,gcc,cmwssb,official,officers,tamil-nadu",
+    "author": "Vivek Matthew",
+    "baseUrl": "https://cityofficials.bengawalk.com/chennai",
+    "image": "https://cityofficials.bengawalk.com/sharecard.jpg"
+  },
+  "departments": {
+    "gcc_region": {
+      "nameKey": "dept_gcc_region",
+      "icon": "🏤",
+      "websiteUrl": "https://chennaicorporation.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/gcc-ward-information/resource/42c438b8-8201-4510-aa8f-4466eb64b0da",
+      "descriptionKey": "dept_gcc_region_desc",
+      "color": "#7c3aed",
+      "darkColor": "#c4b5fd",
+      "childDepartments": [
+        "gcc_zone"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1913"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "044-25384520"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "919445061913"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "commissioner@chennaicorporation.gov.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "chennaicorp"
+        }
+      ],
+      "commonOfficials": [
+        {
+          "designation": "Commissioner",
+          "designationRegional": "ஆணையர்",
+          "name": "J. Kumaragurubaran",
+          "nameRegional": "ஜே. குமாரகுருபரன்",
+          "phone": "044-25619200",
+          "email": "commissioner@chennaicorporation.gov.in"
+        }
+      ]
+    },
+    "gcc_zone": {
+      "nameKey": "dept_gcc_zone",
+      "icon": "🏤",
+      "websiteUrl": "https://chennaicorporation.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/gcc-ward-information/resource/00b3ea2e-e3a4-4b28-aec2-769a01404e5b",
+      "descriptionKey": "dept_gcc_zone_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "parentDepartment": "gcc_region",
+      "childDepartments": [
+        "gcc_ward"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1913"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "919445061913"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "commissioner@chennaicorporation.gov.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "chennaicorp"
+        }
+      ]
+    },
+    "gcc_ward": {
+      "nameKey": "dept_gcc_ward",
+      "icon": "🏤",
+      "websiteUrl": "https://chennaicorporation.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/gcc-ward-information/resource/e90176d4-319a-45bd-918e-ecce4f048c4d",
+      "descriptionKey": "dept_gcc_ward_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "parentDepartment": "gcc_zone",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1913"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "919445061913"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "chennaicorp"
+        }
+      ]
+    },
+    "cmwssb_dae": {
+      "nameKey": "dept_cmwssb_dae",
+      "icon": "💧",
+      "websiteUrl": "https://cmwssb.tn.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/cmwssb-administrative-boundaries/resource/34fc9e94-a407-46bd-9f77-8c93d2398214",
+      "descriptionKey": "dept_cmwssb_dae_desc",
+      "color": "#0891b2",
+      "darkColor": "#a5f3fc",
+      "childDepartments": [
+        "cmwssb_depot"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1916"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "044-45674567"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "918144930308"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "cmwssb@tn.gov.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "CHN_Metro_Water"
+        }
+      ],
+      "commonOfficials": [
+        {
+          "designation": "Managing Director",
+          "designationRegional": "நிர்வாக இயக்குநர்",
+          "name": "Dr. T.G. Vinay",
+          "nameRegional": "டாக்டர் டி.ஜி. வினய்",
+          "phone": "044-28459000",
+          "email": "md@cmwssb.in"
+        }
+      ]
+    },
+    "cmwssb_depot": {
+      "nameKey": "dept_cmwssb_depot",
+      "icon": "💧",
+      "websiteUrl": "https://cmwssb.tn.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/cmwssb-administrative-boundaries/resource/4743455b-bbe0-4fa3-8457-35a4179fbda1",
+      "descriptionKey": "dept_cmwssb_depot_desc",
+      "color": "#0891b2",
+      "darkColor": "#a5f3fc",
+      "parentDepartment": "cmwssb_dae",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1916"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "044-45674567"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "918144930308"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "cmwssb@tn.gov.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "CHN_Metro_Water"
+        }
+      ]
+    },
+    "election_ac": {
+      "nameKey": "dept_election_ac",
+      "icon": "🗳️",
+      "group": "election_ac",
+      "websiteUrl": "https://www.assembly.tn.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/chennai-election-boundaries/resource/e5316e21-7edd-4252-99f0-459f5c65520f",
+      "descriptionKey": "dept_election_ac_desc",
+      "color": "#f97316",
+      "darkColor": "#fed7aa",
+      "contacts": []
+    },
+    "election_pc": {
+      "nameKey": "dept_election_pc",
+      "icon": "🗳️",
+      "group": "election_pc",
+      "websiteUrl": "https://sansad.in/ls/",
+      "geodataUrl": "https://data.opencity.in/dataset/chennai-election-boundaries/resource/a8bc32f5-952b-4bb5-8ebf-86d71d325a76",
+      "descriptionKey": "dept_election_pc_desc",
+      "color": "#ea580c",
+      "darkColor": "#fdba74",
+      "contacts": []
+    },
+    "admin_district": {
+      "nameKey": "dept_admin_district",
+      "icon": "🏦",
+      "websiteUrl": "https://chennai.nic.in/",
+      "geodataUrl": "https://github.com/ramSeraph/indian_admin_boundaries",
+      "descriptionKey": "dept_admin_district_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "childDepartments": [
+        "admin_taluk"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "044-25360500"
+        }
+      ]
+    },
+    "admin_taluk": {
+      "nameKey": "dept_admin_taluk",
+      "icon": "🏦",
+      "websiteUrl": "https://chennai.nic.in/",
+      "geodataUrl": "https://github.com/ramSeraph/indian_admin_boundaries",
+      "descriptionKey": "dept_admin_taluk_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "parentDepartment": "admin_district",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "044-25360500"
+        }
+      ]
+    }
+  }
+}

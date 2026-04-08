@@ -4,6 +4,10 @@
   import Analytics from '../components/Analytics.svelte';
   import SEO from '../components/SEO.svelte';
 
+  import type { Snippet } from 'svelte';
+
+  let { children }: { children: Snippet } = $props();
+
   const hasAnalytics = Boolean(import.meta.env['VITE_GOOGLE_ANALYTICS_ID']);
 </script>
 
@@ -11,4 +15,4 @@
   <Analytics />
 {/if}
 <SEO />
-<slot />
+{@render children()}

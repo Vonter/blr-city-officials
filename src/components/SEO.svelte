@@ -1,19 +1,36 @@
 <!-- SEO.svelte -->
 <script lang="ts">
-  export let title = 'BLR City Officials';
-  export let description =
-    'Find your local jurisdiction and officials from GBA, BBMP, BESCOM, BWSSB, Police and more.';
-  export let keywords =
-    'blr,bangalore,bengaluru,boundaries,gba,bbmp,bescom,bwssb,bda,bmrda,btp,official,officers';
-  export let author = 'Vivek Matthew';
-  export let image = 'https://cityofficials.bengawalk.com/sharecard.jpg';
-  export let url = 'https://cityofficials.bengawalk.com';
-  export let type = 'website';
+  import { cityConfig } from '../configs/config';
+
+  interface Props {
+    title?: string;
+    description?: string;
+    keywords?: string;
+    author?: string;
+    image?: string;
+    imageWidth?: number;
+    imageHeight?: number;
+    url?: string;
+    type?: string;
+  }
+
+  let {
+    title = cityConfig.seo.title,
+    description = cityConfig.seo.description,
+    keywords = cityConfig.seo.keywords,
+    author = cityConfig.seo.author,
+    image = cityConfig.seo.image,
+    imageWidth = 1200,
+    imageHeight = 630,
+    url = cityConfig.seo.baseUrl,
+    type = 'website'
+  }: Props = $props();
 </script>
 
 <svelte:head>
   <!-- Favicon -->
-  <link rel="icon" href="/favicon.png" />
+  <link rel="icon" href="/favicon.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
   <!-- Basic Meta Tags -->
   <title>{title}</title>
@@ -31,14 +48,20 @@
   <meta property="og:site_name" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={image} />
+  <meta property="og:image:width" content={String(imageWidth)} />
+  <meta property="og:image:height" content={String(imageHeight)} />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:alt" content={description} />
   <meta property="og:url" content={url} />
   <meta property="og:type" content={type} />
+  <meta property="og:locale" content="en_IN" />
 
   <!-- Twitter Card Tags -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={image} />
+  <meta name="twitter:image:alt" content={description} />
 
   <!-- Additional Meta Tags -->
   <meta name="language" content="English" />

@@ -1,0 +1,36 @@
+{
+  "kolkata_page_title": "Kolkata City Officials",
+
+  "group_kmc": "KMC",
+  "group_police": "Police",
+  "group_police_division": "Police Division",
+  "group_police_station": "Police Station",
+  "group_cesc": "CESC",
+  "group_admin": "Administration",
+  "group_election": "Election",
+  "group_election_pc": "Lok Sabha",
+  "group_election_ac": "State Assembly",
+  "group_pincode": "Pincode",
+
+  "dept_kmc_borough": "KMC Borough",
+  "dept_kmc_ward": "KMC Ward",
+  "dept_police_division": "Police Division",
+  "dept_police_station": "Police Station",
+  "dept_cesc_region": "CESC Region",
+  "dept_election_pc": "Lok Sabha (MP)",
+  "dept_election_ac": "State Assembly (MLA)",
+  "dept_admin_district": "District",
+  "dept_admin_taluk": "Sub-division",
+  "dept_pincode": "Pincode",
+
+  "dept_kmc_borough_desc": "Kolkata Municipal Corporation is divided into 16 boroughs (I through XVI), each headed by a Borough Chairperson and managing civic services locally.",
+  "dept_kmc_ward_desc": "The 144 wards of KMC are the basic unit of local administration, each represented by an elected councillor.",
+  "dept_police_division_desc": "Kolkata Police Commissionerate is organized into 10 territorial divisions, each headed by a Deputy Commissioner of Police.",
+  "dept_police_station_desc": "Local police stations under each division handling law and order in their jurisdiction.",
+  "dept_cesc_region_desc": "CESC (Calcutta Electric Supply Corporation) operates through 6 regional offices serving Kolkata and surrounding areas.",
+  "dept_election_pc_desc": "Parliamentary constituencies electing Members of Parliament to the Lok Sabha.",
+  "dept_election_ac_desc": "Assembly constituencies electing Members of Legislative Assembly to the West Bengal Vidhan Sabha.",
+  "dept_admin_district_desc": "Kolkata District administration headed by the District Magistrate.",
+  "dept_admin_taluk_desc": "Sub-divisions headed by Sub-Divisional Officers for revenue and administrative matters.",
+  "dept_pincode_desc": "Postal PIN code areas served by India Post offices."
+}

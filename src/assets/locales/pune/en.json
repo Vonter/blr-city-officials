@@ -1,0 +1,30 @@
+{
+  "pune_page_title": "Pune City Officials",
+
+  "group_pmc": "PMC",
+  "group_election": "Election",
+  "group_election_pc": "Lok Sabha",
+  "group_election_ac": "State Assembly",
+  "group_admin": "Administration",
+  "group_pincode": "Pincode",
+
+  "dept_pmc_zone": "PMC Zone",
+  "dept_pmc_admin_ward": "PMC Administrative Ward",
+  "dept_pmc_electoral_ward": "PMC Electoral Ward",
+  "dept_pmc_prabhag": "PMC Prabhag",
+  "dept_election_ac": "State Assembly (MLA)",
+  "dept_election_pc": "Lok Sabha (MP)",
+  "dept_admin_district": "District",
+  "dept_admin_taluk": "Taluk",
+  "dept_pincode": "Pincode",
+
+  "dept_pmc_zone_desc": "Pune Municipal Corporation is divided into 4 zones for administrative management of civic services across the city.",
+  "dept_pmc_admin_ward_desc": "Administrative wards within PMC zones, each headed by an Assistant Commissioner overseeing local civic services.",
+  "dept_pmc_electoral_ward_desc": "Electoral wards within PMC for local body elections, each represented by an elected corporator.",
+  "dept_pmc_prabhag_desc": "Prabhag (multi-member ward) boundaries used for PMC elections, grouping multiple wards into a single constituency.",
+  "dept_election_ac_desc": "Assembly constituencies electing Members of Legislative Assembly to the Maharashtra Vidhan Sabha.",
+  "dept_election_pc_desc": "Parliamentary constituencies electing Members of Parliament to the Lok Sabha.",
+  "dept_admin_district_desc": "Revenue district headed by the District Collector for general administration.",
+  "dept_admin_taluk_desc": "Taluks headed by Tahsildars for revenue collection and land administration.",
+  "dept_pincode_desc": "Postal PIN code areas served by India Post offices."
+}

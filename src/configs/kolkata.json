@@ -1,0 +1,203 @@
+{
+  "cityId": "kolkata",
+  "pageTitleKey": "kolkata_page_title",
+  "logo": "/icons/kolkata.png",
+  "supportedLanguages": [
+    {
+      "code": "en",
+      "nameKey": "lang_english"
+    },
+    {
+      "code": "bn",
+      "nameKey": "lang_bengali"
+    }
+  ],
+  "map": {
+    "defaultZoom": 11,
+    "defaultCenter": [88.3639, 22.5726],
+    "maxBounds": [[88.1, 22.3], [88.65, 22.85]]
+  },
+  "seo": {
+    "title": "Kolkata City Officials",
+    "description": "Find your local jurisdiction and officials from KMC, Kolkata Police and more in Kolkata.",
+    "keywords": "kolkata,calcutta,boundaries,kmc,kolkata municipal corporation,police,police station,official,officers,west bengal",
+    "author": "Vivek Matthew",
+    "baseUrl": "https://cityofficials.bengawalk.com/kolkata",
+    "image": "https://cityofficials.bengawalk.com/sharecard.jpg"
+  },
+  "departments": {
+    "kmc_borough": {
+      "nameKey": "dept_kmc_borough",
+      "icon": "🏤",
+      "websiteUrl": "https://www.kmcgov.in/KMCPortal/jsp/KMCPortalHome.jsp",
+      "geodataUrl": "https://data.opencity.in/dataset/kolkata-wards-information",
+      "descriptionKey": "dept_kmc_borough_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "childDepartments": [
+        "kmc_ward"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1800-345-3375"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "+913322861000"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "kmccommissioner@gmail.com"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "kaboroofkmc"
+        }
+      ],
+      "commonOfficials": [
+        {
+          "designation": "Mayor",
+          "designationBn": "মেয়র",
+          "name": "Firhad Hakim",
+          "nameBn": "ফিরহাদ হাকিম",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Deputy Mayor",
+          "designationBn": "উপ-মেয়র",
+          "name": "Iqbal Ahmed",
+          "nameBn": "ইকবাল আহমেদ",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Municipal Commissioner",
+          "designationBn": "পৌর কমিশনার",
+          "name": "Anshul Gupta",
+          "nameBn": "অংশুল গুপ্ত",
+          "phone": "",
+          "email": "kmccommissioner@gmail.com"
+        },
+        {
+          "designation": "Chairperson",
+          "designationBn": "সভাপতি",
+          "name": "Mala Roy",
+          "nameBn": "মালা রায়",
+          "phone": "",
+          "email": ""
+        }
+      ]
+    },
+    "kmc_ward": {
+      "nameKey": "dept_kmc_ward",
+      "icon": "🏤",
+      "websiteUrl": "https://www.kmcgov.in/KMCPortal/jsp/KMCPortalHome.jsp",
+      "geodataUrl": "https://data.opencity.in/dataset/kolkata-wards-information",
+      "descriptionKey": "dept_kmc_ward_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "parentDepartment": "kmc_borough",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1800-345-3375"
+        }
+      ]
+    },
+    "admin_district": {
+      "nameKey": "dept_admin_district",
+      "icon": "🏦",
+      "websiteUrl": "https://kolkata.gov.in/",
+      "geodataUrl": "https://github.com/ramSeraph/indian_admin_boundaries",
+      "descriptionKey": "dept_admin_district_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "childDepartments": [
+        "admin_taluk"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "033-22143526"
+        }
+      ]
+    },
+    "admin_taluk": {
+      "nameKey": "dept_admin_taluk",
+      "icon": "🏦",
+      "websiteUrl": "https://kolkata.gov.in/",
+      "geodataUrl": "https://github.com/ramSeraph/indian_admin_boundaries",
+      "descriptionKey": "dept_admin_taluk_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "parentDepartment": "admin_district",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "033-22143526"
+        }
+      ]
+    },
+    "police_station": {
+      "nameKey": "dept_police_station",
+      "icon": "👮",
+      "websiteUrl": "https://kolkatapolice.gov.in/",
+      "geodataUrl": "https://github.com/datameet/Municipal_Spatial_Data/issues/46",
+      "descriptionKey": "dept_police_station_desc",
+      "color": "#dc2626",
+      "darkColor": "#fca5a5",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "100"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "112"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "KolsPolice"
+        }
+      ],
+      "commonOfficials": [
+        {
+          "designation": "Commissioner of Police",
+          "designationBn": "পুলিশ কমিশনার",
+          "name": "Ajay Nand",
+          "nameBn": "অজয় নন্দ",
+          "phone": "03322145060",
+          "email": "cp@kolkatapolice.gov.in"
+        },
+        {
+          "designation": "Addl. Commissioner of Police (I)",
+          "designationBn": "অতিরিক্ত পুলিশ কমিশনার (১)",
+          "name": "Devendra Prakash Singh",
+          "nameBn": "দেবেন্দ্র প্রকাশ সিং",
+          "phone": "03322141696",
+          "email": "addlcp1@kolkatapolice.gov.in"
+        },
+        {
+          "designation": "Jt. Commissioner of Police (Crime)",
+          "designationBn": "যুগ্ম পুলিশ কমিশনার (অপরাধ)",
+          "name": "Rupesh Kumar",
+          "nameBn": "রূপেশ কুমার",
+          "phone": "03322145737",
+          "email": "jtcpcrime@kolkatapolice.gov.in"
+        }
+      ]
+    }
+  }
+}

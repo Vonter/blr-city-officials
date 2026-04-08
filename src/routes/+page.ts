@@ -7,6 +7,7 @@ import {
 import { getLngLat } from '../helpers/helpers';
 import { browser } from '$app/environment';
 import { getLocaleFromNavigator } from 'svelte-i18n';
+import { isAllCitiesMode, setCity } from '../configs/config';
 
 interface PageData {
   initialLocale: string;
@@ -15,9 +16,12 @@ interface PageData {
     map: string | null;
     coords: { lng: number; lat: number } | null;
   };
+  prefetchedDepartment: string | null;
+  prefetchedDepartmentData: any;
 }
 
-export const load: PageLoad<PageData> = ({ url }) => {
+export const load: PageLoad<PageData> = ({ url, data }) => {
+  if (isAllCitiesMode) setCity('blr');
   const params = url.searchParams;
 
   const searchParams = {
@@ -33,6 +37,8 @@ export const load: PageLoad<PageData> = ({ url }) => {
 
   return {
     initialLocale: browser ? (getLocaleFromNavigator() ?? 'en') : 'en',
-    searchParams // Pass to component
+    searchParams,
+    prefetchedDepartment: data?.prefetchedDepartment ?? null,
+    prefetchedDepartmentData: data?.prefetchedDepartmentData ?? null
   };
 };

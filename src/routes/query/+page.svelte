@@ -4,26 +4,22 @@
   import { feature } from 'topojson-client';
   import PolygonLookup from 'polygon-lookup';
   import { layers } from '../../assets/boundaries';
-  import officials from '../../officials.json'; // Import officials directly
+  import { cityConfig } from '../../configs/config';
 
-  let districtsIntersectingAddress: Feature[] = $state([]);
-  let isLoading = $state(false);
   let lookup: PolygonLookup | null = null;
   let boundaries: FeatureCollection;
+  let officials: any[] = [];
 
   function queryAllDistrictsForCoordinates(coord: {
     lat: number;
     lon: number;
   }) {
-    districtsIntersectingAddress = [];
-    isLoading = true;
     if (!lookup && boundaries) {
       lookup = new PolygonLookup(boundaries);
     }
     if (!lookup) return [];
 
     const results = lookup.search(coord.lon, coord.lat, -1);
-    isLoading = false;
     return results.features || [];
   }
 
@@ -36,12 +32,18 @@
 
   onMount(async () => {
     try {
-      const response = await fetch('./boundaries.json');
-      const topojson = await response.json();
+      const [boundariesRes, officialsRes] = await Promise.all([
+        fetch(`/${cityConfig.cityId}/boundaries.json`),
+        fetch(`/${cityConfig.cityId}/officials.json`)
+      ]);
+      const topojson = await boundariesRes.json();
       const geojson = feature(topojson, topojson.objects.boundaries);
       boundaries = geojson as unknown as FeatureCollection;
+      if (officialsRes.ok) {
+        officials = await officialsRes.json();
+      }
     } catch (error) {
-      console.error('Error fetching boundaries:', error);
+      console.error('Error fetching data:', error);
       boundaries = {} as FeatureCollection;
     }
   });
@@ -68,10 +70,11 @@
       );
 
     // Query boundaries for each coordinate pair
-    for (const coord of pairs) {
-      const containingBoundaries = queryAllDistrictsForCoordinates(coord);
-      results = [...results, { coordinates: coord, containingBoundaries }];
-    }
+    const batch = pairs.map(coord => ({
+      coordinates: coord,
+      containingBoundaries: queryAllDistrictsForCoordinates(coord)
+    }));
+    results = batch;
 
     loading = false;
   }
@@ -103,7 +106,7 @@
     return results.map(result => {
       const row: TableRow = {
         coordinates: `${result.coordinates.lat}, ${result.coordinates.lon}`,
-        link: `https://cityofficials.bengawalk.com/?lng=${result.coordinates.lon}&lat=${result.coordinates.lat}`
+        link: `${cityConfig.seo.baseUrl}/?lng=${result.coordinates.lon}&lat=${result.coordinates.lat}`
       };
 
       // Initialize all boundary columns with empty official details
@@ -119,12 +122,14 @@
         const id = boundary.properties?.['id'];
         const boundaryDef = layers[id as keyof typeof layers];
         if (boundaryDef) {
-          const boundaryName = boundary.properties?.['namecol'] || '-';
-          row[boundaryDef.name] = boundaryName;
+          const boundaryNamecol = boundary.properties?.['namecol'] || '-';
+          const boundaryDisplayName =
+            boundary.properties?.['wardName'] || boundaryNamecol;
+          row[boundaryDef.name] = boundaryDisplayName;
 
           // Find and add officials
           const officialsDetails = officials.filter(
-            o => o.Area === boundaryName && o.Department === id
+            o => o.Area === boundaryNamecol && o.Department === id
           );
           if (officialsDetails.length > 0) {
             row[`${boundaryDef.name}_official`] = {
@@ -142,6 +147,8 @@
       return row;
     });
   }
+
+  const formattedResults = $derived(formatResults(results));
 
   async function copyCSV(results: TableRow[]) {
     if (results.length === 0) return;
@@ -242,7 +249,7 @@
   <div class="container mx-auto px-4">
     <header class="mb-8">
       <h1 class="text-4xl font-bold text-gray-900 text-center">
-        BLR City Officials Query Tool
+        {cityConfig.seo.title} Query Tool
       </h1>
       <p class="mt-2 text-center text-gray-600 max-w-2xl mx-auto">
         Enter multiple coordinates and find their corresponding city officials
@@ -336,7 +343,7 @@
             <h2 class="text-lg font-semibold text-gray-900">Results</h2>
             {#if results.length > 0}
               <button
-                onclick={() => copyCSV(formatResults(results))}
+                onclick={() => copyCSV(formattedResults)}
                 class="inline-flex items-center px-3 py-2 border border-gray-300
                        shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700
                        bg-white hover:bg-gray-50 focus:outline-none focus:ring-2
@@ -385,7 +392,7 @@
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-                  {#each formatResults(results) as row}
+                  {#each formattedResults as row}
                     <tr class="hover:bg-gray-50 transition-colors duration-150">
                       <td class="px-4 py-3 text-sm font-mono text-gray-900">
                         {row.coordinates}

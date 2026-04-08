@@ -1,7 +1,7 @@
 <script lang="ts">
   import { _, locale } from 'svelte-i18n';
+  import { fromStore } from 'svelte/store';
 
-  import { run } from 'svelte/legacy';
   import type { Feature, FeatureCollection } from 'geojson';
   import { layers } from '../../assets/boundaries';
   import SidebarHeader from './SidebarHeader.svelte';
@@ -9,18 +9,39 @@
   import {
     selectedBoundaryMap,
     selectedDistrict,
+    selectedDepartmentGroup,
     hoveredDistrictId,
     mapStore,
-    boundaries
+    departmentBoundaries,
+    loadDepartmentBoundary,
+    officialsData
   } from '../../stores';
   import { clickOutside } from 'svelte-use-click-outside';
   import {
     getOfficialDetails,
+    getWardName,
+    getWardNumber,
     resetZoom,
-    sortedDistricts
+    sortedDistricts,
+    isRegionalLocale
   } from '../../helpers/helpers';
+  import { alternatingRowClass } from '../../helpers/styleUtils';
+  import { setHoverState } from '../../helpers/mapFeatureState';
   import DistrictLink from './DistrictLink.svelte';
+  import Icon from '../Icon.svelte';
+  import HierarchyBreadcrumb from './HierarchyBreadcrumb.svelte';
   import Loader from '../Loader.svelte';
+  import ShareButton from '../ShareButton.svelte';
+  import { api } from '../../helpers/api';
+
+  const t = fromStore(_);
+  const loc = fromStore(locale);
+  const boundaryMap = fromStore(selectedBoundaryMap);
+  const deptGroup = fromStore(selectedDepartmentGroup);
+  const hoveredId = fromStore(hoveredDistrictId);
+  const map = fromStore(mapStore);
+  const deptBoundaries = fromStore(departmentBoundaries);
+  const officials = fromStore(officialsData);
 
   let value = $state('');
   let districts: Feature[] = $state([]);
@@ -28,71 +49,146 @@
   let isDetailPaneOpen: boolean = $state(false);
   let boundaryData: FeatureCollection | null = $state(null);
 
+  function getSourceId() {
+    return boundaryMap.current ? `boundaries-${boundaryMap.current}` : null;
+  }
+
   function onDistrictMouseOver(districtId: string) {
-    if ($hoveredDistrictId && $selectedBoundaryMap) {
-      $mapStore?.setFeatureState(
-        { source: 'boundaries', id: $hoveredDistrictId },
-        { hover: false }
-      );
-    }
-
-    $hoveredDistrictId = districtId;
-
-    if ($selectedBoundaryMap) {
-      $mapStore?.setFeatureState(
-        { source: 'boundaries', id: $hoveredDistrictId },
-        { hover: true }
-      );
-    }
+    const sourceId = getSourceId();
+    if (!sourceId) return;
+    setHoverState(map.current, sourceId, hoveredId.current, false);
+    hoveredId.current = districtId;
+    setHoverState(map.current, sourceId, districtId, true);
   }
 
   function onDistrictMouseOut(districtId: string) {
-    if ($selectedBoundaryMap) {
-      $mapStore?.setFeatureState(
-        { source: 'boundaries', id: districtId },
-        { hover: false }
-      );
-    }
-    $hoveredDistrictId = undefined;
+    const sourceId = getSourceId();
+    if (!sourceId) return;
+    setHoverState(map.current, sourceId, districtId, false);
+    hoveredId.current = undefined;
   }
 
   function handleBack() {
     selectedBoundaryMap.set(null);
-    resetZoom($mapStore);
+    if (!deptGroup.current && map.current) {
+      resetZoom(map.current);
+    }
   }
 
-  function getDistricts(boundaryId: string) {
-    if (!$boundaries || !$boundaries.features) return;
+  async function getDistricts(boundaryId: string) {
     isLoading = true;
 
     try {
-      boundaryData = {
-        type: 'FeatureCollection',
-        features: $boundaries.features.filter(
-          (boundary: Feature) => boundary.properties?.['id'] === boundaryId
-        )
-      };
-      districts = sortedDistricts(boundaryData.features);
+      let deptData = deptBoundaries.current.get(boundaryId) ?? null;
+      if (!deptData) {
+        deptData = await loadDepartmentBoundary(boundaryId);
+      }
+
+      if (deptData) {
+        boundaryData = deptData;
+        districts = sortedDistricts(
+          [...deptData.features],
+          layers[boundaryId]?.sortBy
+        );
+      } else {
+        const boundaryDetails = await api.getBoundaryDetails(boundaryId);
+
+        if (boundaryDetails) {
+          boundaryData = {
+            type: 'FeatureCollection',
+            features: []
+          };
+          districts = boundaryDetails.districts.map(
+            (d: any) =>
+              ({
+                type: 'Feature',
+                properties: {
+                  id: boundaryId,
+                  namecol: d.namecol,
+                  wardName: d.wardName,
+                  wardNumber: d.wardNumber
+                },
+                geometry: null
+              }) as unknown as Feature
+          );
+        } else {
+          console.error('Failed to get boundary details');
+          boundaryData = null;
+          districts = [];
+        }
+      }
+    } catch (error) {
+      console.error('Error getting boundary details:', error);
+      boundaryData = null;
+      districts = [];
     } finally {
       isLoading = false;
     }
   }
 
-  run(() => {
-    if ($boundaries && $selectedBoundaryMap) {
-      getDistricts($selectedBoundaryMap);
+  $effect(() => {
+    if (boundaryMap.current) {
+      getDistricts(boundaryMap.current);
     }
   });
+
+  function getRootDepartment(deptKey: string | null): string | null {
+    if (!deptKey) return null;
+    let current = deptKey;
+    while (layers[current]?.parentDepartment) {
+      current = layers[current]!.parentDepartment!;
+    }
+    return current;
+  }
+
+  function displayNameWithNumber(
+    namecol: string,
+    wardName: string,
+    boundaryId: string | null
+  ): string {
+    if (boundaryId && layers[boundaryId]?.showWardNumber) {
+      const num = getWardNumber(namecol);
+      if (num) return `${num}: ${wardName}`;
+    }
+    return wardName;
+  }
+
+  interface DistrictEntry {
+    namecol: string;
+    wardName: string;
+  }
+
+  function uniqueDistricts(
+    features: Feature[],
+    filter: string
+  ): DistrictEntry[] {
+    const seen = new Set<string>();
+    const result: DistrictEntry[] = [];
+    const lowerFilter = filter.toLowerCase();
+    for (const f of features) {
+      const namecol = f.properties?.['namecol'] || '';
+      if (!namecol.toLowerCase().includes(lowerFilter)) continue;
+      if (seen.has(namecol)) continue;
+      seen.add(namecol);
+      result.push({
+        namecol,
+        wardName: f.properties?.['wardName'] || namecol
+      });
+    }
+    return result;
+  }
 </script>
 
 <SidebarHeader
-  title={$selectedBoundaryMap && layers[$selectedBoundaryMap] && $locale
-    ? `${layers[$selectedBoundaryMap].icon} \u00A0 ${$locale.startsWith('kn') ? layers[$selectedBoundaryMap].name_kn : layers[$selectedBoundaryMap].name}`
+  title={boundaryMap.current && layers[boundaryMap.current] && loc.current
+    ? `${layers[boundaryMap.current].icon} \u00A0 ${t.current(layers[boundaryMap.current].nameKey)}`
     : 'Loading...'}
   onBack={handleBack}
 >
-  <div>
-    {#if $selectedBoundaryMap && layers[$selectedBoundaryMap]}
+  <div class="flex items-center">
+    <ShareButton />
+    {#if boundaryMap.current && layers[boundaryMap.current]}
+      {@const rootDeptKey = getRootDepartment(boundaryMap.current)}
       <div class="relative" use:clickOutside={() => (isDetailPaneOpen = false)}>
         <button
           onclick={() => (isDetailPaneOpen = !isDetailPaneOpen)}
@@ -102,44 +198,37 @@
             'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'
           }`}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-              clip-rule="evenodd"
-            />
-          </svg>
+          <Icon name="info" class="h-5 w-5" />
         </button>
         <div
           class={`absolute top-full mt-2 right-0 w-72 bg-white rounded shadow-md p-2 py-4 mb-4 text-gray-800 text-sm dark:text-gray-200 dark:bg-neutral-900 ${
             isDetailPaneOpen ? 'visible' : 'hidden'
           }`}
         >
-          {layers[$selectedBoundaryMap]?.description}
-          {#if layers[$selectedBoundaryMap]?.description_url}
-            <a
-              href={layers[$selectedBoundaryMap].description_url}
-              class="underline"
-              target="_blank"
-              rel="noreferrer">Learn more</a
-            >
-          {/if}
+          <div class="space-y-2">
+            {#if rootDeptKey && rootDeptKey !== boundaryMap.current && layers[rootDeptKey]?.descriptionKey}
+              {@const rootDesc = t.current(layers[rootDeptKey].descriptionKey)}
+              {#if rootDesc !== layers[rootDeptKey].descriptionKey}
+                <p>{rootDesc}</p>
+              {/if}
+            {/if}
+            {#if layers[boundaryMap.current]?.descriptionKey && t.current(layers[boundaryMap.current].descriptionKey) !== layers[boundaryMap.current].descriptionKey}
+              <p>{t.current(layers[boundaryMap.current].descriptionKey)}</p>
+            {:else if layers[boundaryMap.current]?.description}
+              <p>{layers[boundaryMap.current].description}</p>
+            {/if}
+          </div>
           {#if boundaryData}
-            <BoundaryInformation
-              data={boundaryData}
-              filename={$selectedBoundaryMap}
-            />
+            <BoundaryInformation filename={boundaryMap.current} />
           {/if}
         </div>
       </div>
     {/if}
   </div>
 </SidebarHeader>
+{#if boundaryMap.current}
+  <HierarchyBreadcrumb departmentKey={boundaryMap.current} />
+{/if}
 <div class="py-2 dark:bg-neutral-900">
   {#if isLoading}
     <div class="px-4">
@@ -149,53 +238,38 @@
     <div class="relative flex-1 px-4 pb-2">
       <input
         id="filter"
-        placeholder={$_('filter_placeholder')}
+        placeholder={t.current('filter_placeholder')}
         type="search"
         name="filter"
         bind:value
         autocomplete="off"
         class="block w-full py-1.5 px-3 pl-10 bg-gray-100 text-gray-800 dark:bg-neutral-700 dark:text-gray-200 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
       />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5 absolute left-6 top-2"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-          clip-rule="evenodd"
-        />
-      </svg>
+      <Icon name="search" class="h-5 w-5 absolute left-6 top-2" />
     </div>
-    {#each [...new Set(districts
-          .filter(district => district.properties?.['namecol']
-              ?.toLowerCase()
-              ?.includes(value.toLowerCase()))
-          .map(d => d.properties?.['namecol']))] as district, index}
+    {#each uniqueDistricts(districts, value) as entry, index}
       {@const officialDetails = getOfficialDetails(
-        $selectedBoundaryMap,
-        district
+        boundaryMap.current,
+        entry.namecol,
+        officials.current
       )}
-      {@const nameColKn =
+      {@const nameColRegional =
         officialDetails && officialDetails.length > 0 && officialDetails[0]
-          ? officialDetails[0].AreaKN
-          : district.properties?.['namecol']}
-      <div
-        class:bg-white={index % 2 === 0}
-        class:dark:bg-neutral-900={index % 2 === 0}
-        class:bg-gray-100={index % 2 !== 0}
-        class:dark:bg-neutral-800={index % 2 !== 0}
-      >
+          ? getWardName(officialDetails[0].AreaRegional)
+          : entry.wardName}
+      <div class={alternatingRowClass(index)}>
         <DistrictLink
-          onMouseOver={() => onDistrictMouseOver(district)}
-          onMouseOut={() => onDistrictMouseOut(district)}
-          onClick={() => ($selectedDistrict = district)}
-          icon={$selectedBoundaryMap && layers[$selectedBoundaryMap]?.icon
-            ? layers[$selectedBoundaryMap].icon
+          onMouseOver={() => onDistrictMouseOver(entry.namecol)}
+          onMouseOut={() => onDistrictMouseOut(entry.namecol)}
+          onClick={() => selectedDistrict.set(entry.namecol)}
+          icon={boundaryMap.current && layers[boundaryMap.current]?.icon
+            ? layers[boundaryMap.current].icon
             : ''}
-          nameCol={$locale?.startsWith('kn') ? nameColKn : district}
+          nameCol={displayNameWithNumber(
+            entry.namecol,
+            isRegionalLocale(loc.current) ? nameColRegional : entry.wardName,
+            boundaryMap.current
+          )}
           nameLong=""
         />
       </div>

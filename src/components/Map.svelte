@@ -1,177 +1,421 @@
 <script lang="ts">
-  import { run } from 'svelte/legacy';
+  import { untrack } from 'svelte';
+  import { fromStore } from 'svelte/store';
   import { browser } from '$app/environment';
+  import { get } from 'svelte/store';
   import {
     selectedBoundaryMap,
     selectedDistrict,
     selectedCoordinates,
     mapStore,
     hoveredDistrictId,
-    boundaries,
+    departmentBoundaries,
+    departmentCenterpoints,
+    loadDepartmentBoundary,
     isMapReady,
     darkMode
   } from '../stores';
-  import type { Feature } from 'geojson';
-  import maplibregl from 'maplibre-gl';
+  import type { FeatureCollection } from 'geojson';
   import 'maplibre-gl/dist/maplibre-gl.css';
-  import { layers } from '../assets/boundaries';
-  import turfBbox from '@turf/bbox';
-  import { defaultZoom, findPolylabel, zoomToBound } from '../helpers/helpers';
-  import { colors } from '../helpers/colors';
+  import { defaultZoom, zoomToBound } from '../helpers/helpers';
+  import { colors, getBoundaryColor } from '../helpers/colors';
+  import { cityConfig } from '../configs/config';
+  import {
+    createBackgroundControl,
+    changeMapBackground,
+    getDefaultBackgroundStyle,
+    type BackgroundType
+  } from '../helpers/mapBackground';
+  import { wardLabelExpression } from '../helpers/mapLayers';
+  import { scheduleIdle as scheduleIdleFn } from '../helpers/scheduling';
+  import {
+    updateHoverFeature,
+    setHoverState
+  } from '../helpers/mapFeatureState';
 
-  let map: maplibregl.Map;
-  let isSourceLoaded = $state(false);
+  let maplibregl: any;
+  let turfBbox: typeof import('@turf/bbox').default;
+
+  const _selectedBoundaryMap = fromStore(selectedBoundaryMap);
+  const _selectedDistrict = fromStore(selectedDistrict);
+  const _mapStore = fromStore(mapStore);
+  const _hoveredDistrictId = fromStore(hoveredDistrictId);
+  const _departmentBoundaries = fromStore(departmentBoundaries);
+  const _departmentCenterpoints = fromStore(departmentCenterpoints);
+  const _isMapReady = fromStore(isMapReady);
+  const _darkMode = fromStore(darkMode);
+
+  let map: import('maplibre-gl').Map;
+  let currentSourceDeptId: string | null = null;
   let prevLayerId: string | null = null;
+  let currentBackground: BackgroundType = 'default';
+  let prevDarkMode: boolean | undefined;
+  let prevSelectedDistrictId: string | null = null;
+
+  // Store event handler references for cleanup (item 9)
+  let activeHandlers: {
+    boundaryId: string;
+    mousemove: (e: any) => void;
+    mouseleave: () => void;
+    click: (e: any) => void;
+  } | null = null;
+
+  async function loadTurfBbox() {
+    if (!turfBbox) {
+      const mod = await import('@turf/bbox');
+      turfBbox = mod.default;
+    }
+    return turfBbox;
+  }
+
+  function getDeptBoundaries(deptId: string): FeatureCollection | null {
+    const deptMap = _departmentBoundaries.current;
+    return deptMap.get(deptId) ?? null;
+  }
+
+  function getDeptCenterpoints(deptId: string): FeatureCollection | null {
+    const cpMap = _departmentCenterpoints.current;
+    return cpMap.get(deptId) ?? null;
+  }
+
+  function styleBasemapLabels(m: import('maplibre-gl').Map, dark: boolean) {
+    if (m.getLayer('place_villages')) {
+      m.setLayoutProperty('place_villages', 'text-font', [
+        'Montserrat Regular',
+        'Open Sans Regular',
+        'Noto Sans Regular',
+        'HanWangHeiLight Regular',
+        'NanumBarunGothic Regular'
+      ]);
+      m.setLayoutProperty('place_villages', 'text-size', {
+        stops: [
+          [12, 9],
+          [13, 10],
+          [14, 11],
+          [15, 12],
+          [16, 13]
+        ]
+      });
+      m.setLayoutProperty('place_villages', 'text-transform', {
+        stops: [
+          [8, 'none'],
+          [12, 'uppercase']
+        ]
+      });
+      m.setPaintProperty(
+        'place_villages',
+        'text-color',
+        dark ? '#666' : '#697b89'
+      );
+      m.setLayerZoomRange('place_villages', 12, 16);
+    }
+    if (m.getLayer('place_hamlet')) {
+      m.setFilter('place_hamlet', ['==', 'class', 'neighbourhood']);
+    }
+  }
+
+  function applyMapStyle(background: BackgroundType, dark: boolean) {
+    if (!map) return;
+    currentSourceDeptId = null;
+    prevLayerId = null;
+    changeMapBackground(map, background, dark, () => {
+      styleBasemapLabels(map, dark);
+      if (_selectedBoundaryMap.current) {
+        addSourceAndShow(_selectedBoundaryMap.current);
+      }
+    });
+  }
+
+  async function addSourceAndShow(boundaryId: string) {
+    if (!map) return;
+
+    let deptData = getDeptBoundaries(boundaryId);
+    if (!deptData) {
+      deptData = await loadDepartmentBoundary(boundaryId);
+    }
+    if (!deptData) return;
+
+    addSourceForDepartment(boundaryId, deptData);
+    showMap(boundaryId);
+    if (_selectedDistrict.current) {
+      updateDistrictVisuals(_selectedDistrict.current);
+    }
+  }
+
+  function addCenterpointSource(deptId: string) {
+    if (!map) return;
+    const sourceId = `boundaries-${deptId}-centerpoints`;
+    if (map.getSource(sourceId)) return;
+    const centerpoints = getDeptCenterpoints(deptId);
+    if (!centerpoints) return;
+    map.addSource(sourceId, { type: 'geojson', data: centerpoints });
+  }
+
+  function addLabelLayer(boundaryId: string) {
+    if (!map) return;
+    const sourceId = `boundaries-${boundaryId}-centerpoints`;
+    const layerId = `${boundaryId}-label-layer`;
+    if (!map.getSource(sourceId) || map.getLayer(layerId)) return;
+
+    map.addLayer({
+      id: layerId,
+      type: 'symbol',
+      source: sourceId,
+      paint: {
+        'text-color': getBoundaryColor(boundaryId, _darkMode.current),
+        'text-halo-color': _darkMode.current
+          ? 'rgba(0,0,0,0.4)'
+          : 'rgba(255,255,255,0.95)',
+        'text-halo-width': _darkMode.current ? 2 : 2.5
+      },
+      layout: {
+        'text-field': wardLabelExpression,
+        'text-size': ['interpolate', ['linear'], ['zoom'], 11, 12.5, 32, 60]
+      }
+    });
+  }
+
+  function addSourceForDepartment(deptId: string, deptData: FeatureCollection) {
+    if (!map) return;
+
+    const sourceId = `boundaries-${deptId}`;
+    if (map.getSource(sourceId)) {
+      currentSourceDeptId = deptId;
+      return;
+    }
+
+    map.addSource(sourceId, {
+      type: 'geojson',
+      promoteId: 'namecol',
+      data: deptData
+    });
+
+    addCenterpointSource(deptId);
+
+    currentSourceDeptId = deptId;
+  }
+
+  function removeSourceForDepartment(deptId: string) {
+    if (!_mapStore.current) return;
+    const sourceId = `boundaries-${deptId}`;
+    if (_mapStore.current.getSource(`${sourceId}-centerpoints`)) {
+      _mapStore.current.removeSource(`${sourceId}-centerpoints`);
+    }
+    if (_mapStore.current.getSource(sourceId)) {
+      _mapStore.current.removeSource(sourceId);
+    }
+  }
+
+  function handleBackgroundChange(background: BackgroundType) {
+    if (!map) return;
+    currentBackground = background;
+    applyMapStyle(background, _darkMode.current);
+  }
+
+  function computeInitialView(): Partial<import('maplibre-gl').MapOptions> {
+    const boundaryId = get(selectedBoundaryMap);
+    const districtId = get(selectedDistrict);
+    const coords = get(selectedCoordinates);
+
+    if (boundaryId && districtId) {
+      const deptData = getDeptBoundaries(boundaryId);
+      if (deptData) {
+        const features = deptData.features.filter(
+          f =>
+            f.properties?.['namecol']?.toLowerCase() ===
+              districtId.toLowerCase() &&
+            f.properties?.['id']?.toLowerCase() === boundaryId.toLowerCase()
+        );
+        if (features.length > 0) {
+          let minLng = Infinity,
+            minLat = Infinity,
+            maxLng = -Infinity,
+            maxLat = -Infinity;
+          for (const f of features) {
+            const coords =
+              f.geometry.type === 'Polygon'
+                ? [f.geometry.coordinates]
+                : f.geometry.type === 'MultiPolygon'
+                  ? f.geometry.coordinates
+                  : [];
+            for (const poly of coords) {
+              for (const ring of poly) {
+                for (const [lng, lat] of ring) {
+                  if (lng < minLng) minLng = lng;
+                  if (lat < minLat) minLat = lat;
+                  if (lng > maxLng) maxLng = lng;
+                  if (lat > maxLat) maxLat = lat;
+                }
+              }
+            }
+          }
+          if (minLng !== Infinity) {
+            const lngSpan = maxLng - minLng;
+            const latSpan = maxLat - minLat;
+            const maxSpan = Math.max(lngSpan, latSpan);
+            const zoom = Math.min(15, Math.floor(Math.log2(360 / maxSpan)) - 1);
+            return {
+              center: [(minLng + maxLng) / 2, (minLat + maxLat) / 2] as [
+                number,
+                number
+              ],
+              zoom: Math.max(9, zoom)
+            };
+          }
+        }
+      }
+    }
+
+    if (coords) {
+      return { center: [coords.lng, coords.lat] as [number, number], zoom: 13 };
+    }
+
+    return defaultZoom;
+  }
 
   function initMap(container: any) {
     if (!browser) return;
 
-    map = new maplibregl.Map({
-      container,
-      style: $darkMode
-        ? 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json'
-        : 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
-      minZoom: 9,
-      maxZoom: 16,
-      maxBounds: [
-        [77, 12.5], // Southwestern bounds + buffer
-        [78.25, 13.5] // Northeastern bounds + buffer
-      ],
-      ...defaultZoom
-    });
+    const init = async () => {
+      if (get(selectedDistrict)) loadTurfBbox();
 
-    // Add attribution control on top right for mobile
-    const attributionControl = new maplibregl.AttributionControl();
-    map.addControl(attributionControl, 'top-right');
+      const mod = await import('maplibre-gl');
+      maplibregl = mod.default;
 
-    // Add full screen control on top left for mobile, bottom left for desktop
-    const fullscreenControl = new maplibregl.FullscreenControl();
-    map.addControl(fullscreenControl, 'top-left');
-    map.addControl(fullscreenControl, 'bottom-left');
+      const initialView = computeInitialView();
 
-    // Disable map rotation
-    map.dragRotate.disable();
-    map.keyboard.disable();
-    map.touchZoomRotate.disableRotation();
+      map = new maplibregl.Map({
+        container,
+        style: getDefaultBackgroundStyle(_darkMode.current),
+        minZoom: 9,
+        maxZoom: 18,
+        ...(cityConfig.map.maxBounds && {
+          maxBounds: cityConfig.map.maxBounds
+        }),
+        ...initialView
+      });
 
-    // Override default browser zoom hotkeys
-    window.addEventListener(
-      'keydown',
-      e => {
-        if (e.metaKey && (e.key === '=' || e.key === '-')) {
-          e.preventDefault();
-          e.key === '=' && map.zoomIn();
-          e.key === '-' && map.zoomOut();
+      const attributionControl = new maplibregl.AttributionControl();
+      map.addControl(attributionControl, 'top-right');
+
+      map.dragRotate.disable();
+      map.keyboard.disable();
+      map.touchZoomRotate.disableRotation();
+
+      window.addEventListener(
+        'keydown',
+        e => {
+          if (e.metaKey && (e.key === '=' || e.key === '-')) {
+            e.preventDefault();
+            e.key === '=' && map.zoomIn();
+            e.key === '-' && map.zoomOut();
+          }
+        },
+        true
+      );
+
+      map.on('load', () => {
+        _mapStore.current = map;
+        map.resize();
+
+        if (map.getLayer('boundary_county')) {
+          map.removeLayer('boundary_county');
         }
-      },
-      true
-    );
 
-    map.on('load', () => {
-      $mapStore = map;
-      map.resize();
-      map.removeLayer('boundary_county');
+        scheduleIdleFn(() => styleBasemapLabels(map, _darkMode.current));
 
-      isMapReady.set(true);
-    });
+        const backgroundControlTop = createBackgroundControl(
+          handleBackgroundChange
+        );
+        const backgroundControlBottom = createBackgroundControl(
+          handleBackgroundChange
+        );
+        map.addControl(backgroundControlTop, 'top-left');
+        map.addControl(backgroundControlBottom, 'bottom-left');
 
-    map.on('click', e => {
-      if (!$selectedBoundaryMap) {
-        selectedCoordinates.set({
-          lat: e.lngLat.lat.toFixed(5),
-          lng: e.lngLat.lng.toFixed(5)
-        });
-      }
-    });
+        isMapReady.set(true);
+      });
+
+      map.on('click', e => {
+        if (!_selectedBoundaryMap.current) {
+          selectedCoordinates.set({
+            lat: e.lngLat.lat.toFixed(5),
+            lng: e.lngLat.lng.toFixed(5)
+          });
+        }
+      });
+    };
+
+    init();
 
     return {
       destroy: () => {
-        map.remove();
-        $mapStore = map;
+        map?.remove();
+        _mapStore.current = map;
       }
     };
   }
 
+  function removeLayerHandlers() {
+    if (activeHandlers && _mapStore.current) {
+      const layerId = `${activeHandlers.boundaryId}-layer`;
+      _mapStore.current.off('mousemove', layerId, activeHandlers.mousemove);
+      _mapStore.current.off('mouseleave', layerId, activeHandlers.mouseleave);
+      _mapStore.current.off('click', layerId, activeHandlers.click);
+      activeHandlers = null;
+    }
+  }
+
   function clearMap() {
-    if ($mapStore && prevLayerId) {
-      // Remove previous layers
-      $mapStore.getLayer(`${prevLayerId}-layer`) &&
-        $mapStore.removeLayer(`${prevLayerId}-layer`);
+    removeLayerHandlers();
+    if (_mapStore.current && prevLayerId) {
+      _mapStore.current.getLayer(`${prevLayerId}-layer`) &&
+        _mapStore.current.removeLayer(`${prevLayerId}-layer`);
 
-      $mapStore.getLayer(`${prevLayerId}-stroke-layer`) &&
-        $mapStore.removeLayer(`${prevLayerId}-stroke-layer`);
+      _mapStore.current.getLayer(`${prevLayerId}-stroke-layer`) &&
+        _mapStore.current.removeLayer(`${prevLayerId}-stroke-layer`);
 
-      $mapStore.getLayer(`${prevLayerId}-label-layer`) &&
-        $mapStore.removeLayer(`${prevLayerId}-label-layer`);
+      _mapStore.current.getLayer(`${prevLayerId}-label-layer`) &&
+        _mapStore.current.removeLayer(`${prevLayerId}-label-layer`);
     }
   }
 
-  async function loadMap() {
-    // Load source if not already loaded
-    if ($mapStore && !$mapStore.getSource('boundaries')) {
-      $mapStore
-        .addSource('boundaries', {
-          type: 'geojson',
-          promoteId: 'namecol',
-          data: $boundaries
-        })
-        .addSource('boundaries-centerpoints', {
-          type: 'geojson',
-          data: {
-            type: 'FeatureCollection',
-            features: $boundaries.features.map((feature: Feature) => {
-              return {
-                ...feature,
-                geometry: {
-                  type: 'Point',
-                  coordinates: findPolylabel(feature)
-                }
-              };
-            })
-          }
-        });
-
-      $mapStore.on('sourcedata', source => {
-        if (source.sourceId === 'boundaries' && source.isSourceLoaded) {
-          isSourceLoaded = true;
-        }
-      });
-    }
-  }
-
-  async function showMap(boundaryId: string) {
+  function showMap(boundaryId: string) {
     clearMap();
 
-    if ($mapStore) {
-      $mapStore
+    const sourceId = `boundaries-${boundaryId}`;
+
+    if (_mapStore.current && _mapStore.current.getSource(sourceId)) {
+      _mapStore.current
         .addLayer({
           id: `${boundaryId}-layer`,
           type: 'fill',
-          source: 'boundaries',
+          source: sourceId,
           paint: {
             'fill-color': [
               'case',
               ['boolean', ['feature-state', 'selected'], false],
-              $darkMode ? colors['dark-default'] : colors['default'],
-              $darkMode ? colors['dark-selected'] : colors['selected']
+              getBoundaryColor(boundaryId, _darkMode.current),
+              ['boolean', ['feature-state', 'hover'], false],
+              getBoundaryColor(boundaryId, _darkMode.current),
+              _darkMode.current ? colors['dark-selected'] : colors['selected']
             ],
             'fill-opacity': [
               'case',
               ['boolean', ['feature-state', 'selected'], false],
-              $darkMode ? 0.2 : 0.4,
-              $darkMode ? 0.01 : 0.05
+              _darkMode.current ? 0.2 : 0.4,
+              ['boolean', ['feature-state', 'hover'], false],
+              _darkMode.current ? 0.15 : 0.25,
+              _darkMode.current ? 0.01 : 0.1
             ]
-          },
-          filter: ['==', 'id', boundaryId]
+          }
         })
         .addLayer({
           id: `${boundaryId}-stroke-layer`,
           type: 'line',
-          source: 'boundaries',
+          source: sourceId,
           paint: {
-            'line-color': $darkMode
-              ? colors['dark-default']
-              : colors['default'],
+            'line-color': getBoundaryColor(boundaryId, _darkMode.current),
             'line-width': [
               'case',
               [
@@ -179,147 +423,173 @@
                 ['boolean', ['feature-state', 'hover'], false],
                 ['boolean', ['feature-state', 'selected'], false]
               ],
-              2,
-              1
+              _darkMode.current ? 2 : 2.5,
+              _darkMode.current ? 1 : 1.5
             ]
-          },
-          filter: ['==', 'id', boundaryId]
-        })
-        .addLayer({
-          id: `${boundaryId}-label-layer`,
-          type: 'symbol',
-          source: `boundaries-centerpoints`,
-          paint: {
-            'text-color': $darkMode
-              ? colors['dark-default']
-              : colors['default'],
-            'text-halo-color': $darkMode
-              ? 'rgba(0,0,0,0.4)'
-              : 'rgba(255,255,255,0.9)',
-            'text-halo-width': 2
-          },
-          layout: {
-            'text-field': ['get', 'namecol'],
-            'text-size': ['interpolate', ['linear'], ['zoom'], 11, 12.5, 32, 60]
-          },
-          filter: ['==', 'id', boundaryId]
+          }
         });
 
-      const popup = new maplibregl.Popup({
-        closeButton: false,
-        closeOnClick: false
-      });
+      addLabelLayer(boundaryId);
 
-      $mapStore.on('mousemove', `${boundaryId}-layer`, e => {
-        $mapStore.getCanvas().style.cursor = 'pointer';
+      const mousemoveHandler = (e: any) => {
+        _mapStore.current.getCanvas().style.cursor = 'pointer';
 
-        if (e.features) {
-          if (e.features.length > 0) {
-            if ($hoveredDistrictId !== null) {
-              $mapStore?.setFeatureState(
-                { source: 'boundaries', id: $hoveredDistrictId },
-                { hover: false }
-              );
-            }
-            $hoveredDistrictId = e.features[0].properties?.namecol;
-            if ($hoveredDistrictId !== null) {
-              $mapStore.setFeatureState(
-                { source: 'boundaries', id: $hoveredDistrictId },
-                { hover: true }
-              );
-            }
+        if (e.features && e.features.length > 0) {
+          const newId = e.features[0].properties?.namecol;
+          updateHoverFeature(
+            _mapStore.current,
+            sourceId,
+            _hoveredDistrictId.current,
+            newId
+          );
+          _hoveredDistrictId.current = newId;
+        }
+      };
+
+      const mouseleaveHandler = () => {
+        _mapStore.current.getCanvas().style.cursor = '';
+        setHoverState(
+          _mapStore.current,
+          sourceId,
+          _hoveredDistrictId.current,
+          false
+        );
+        hoveredDistrictId.set(undefined);
+      };
+
+      const clickHandler = async (e: any) => {
+        if (e.features && e.features.length > 0) {
+          const namecol = e.features[0].properties?.namecol;
+          if (namecol) {
+            _selectedDistrict.current = namecol;
+            const bbox = await loadTurfBbox();
+            zoomToBound(_mapStore.current, bbox(e.features[0]));
           }
         }
-      });
+      };
 
-      $mapStore.on('mouseleave', `${boundaryId}-layer`, () => {
-        $mapStore.getCanvas().style.cursor = '';
+      _mapStore.current.on(
+        'mousemove',
+        `${boundaryId}-layer`,
+        mousemoveHandler
+      );
+      _mapStore.current.on(
+        'mouseleave',
+        `${boundaryId}-layer`,
+        mouseleaveHandler
+      );
+      _mapStore.current.on('click', `${boundaryId}-layer`, clickHandler);
 
-        if ($hoveredDistrictId !== null) {
-          $mapStore.setFeatureState(
-            { source: 'boundaries', id: $hoveredDistrictId },
-            { hover: false }
-          );
-        }
-
-        hoveredDistrictId.set(undefined);
-
-        popup.remove();
-      });
-
-      $mapStore.on('click', `${boundaryId}-layer`, e => {
-        if (e.features) {
-          zoomToBound($mapStore, turfBbox(e.features[0]));
-          onDistrictChange(e.features[0].properties?.namecol, true);
-        }
-      });
+      activeHandlers = {
+        boundaryId,
+        mousemove: mousemoveHandler,
+        mouseleave: mouseleaveHandler,
+        click: clickHandler
+      };
     }
 
-    // Prepare for future boundary change
     prevLayerId = boundaryId;
   }
 
-  function onDistrictChange(
+  async function updateDistrictVisuals(
     districtId: string | null,
-    interactionFromClick: boolean = false
+    skipZoom: boolean = false
   ) {
-    // Reset all selected states first
-    if ($mapStore && $boundaries) {
-      $boundaries.features.forEach(feature => {
-        if (feature.properties?.namecol) {
-          $mapStore.setFeatureState(
-            { source: 'boundaries', id: feature.properties.namecol },
-            { selected: false }
-          );
-        }
-      });
+    if (!_mapStore.current || !currentSourceDeptId) return;
+
+    const sourceId = `boundaries-${currentSourceDeptId}`;
+    const deptData = getDeptBoundaries(currentSourceDeptId);
+
+    if (_mapStore.current.getSource(sourceId) && prevSelectedDistrictId) {
+      _mapStore.current.setFeatureState(
+        { source: sourceId, id: prevSelectedDistrictId },
+        { selected: false }
+      );
     }
 
-    $selectedDistrict = districtId;
-
-    // Fetch bbox from districtId, fly to bbox.
-    // If there interaction came from a click, it will fly in before the function.
-    if ($mapStore && $selectedBoundaryMap && $selectedDistrict) {
-      if (!interactionFromClick) {
-        const feature = $boundaries?.features.filter(feature => {
+    if (
+      _selectedBoundaryMap.current &&
+      districtId &&
+      _mapStore.current.getSource(sourceId)
+    ) {
+      if (!skipZoom && deptData) {
+        const matchingFeatures = deptData.features.filter(f => {
           return (
-            feature.properties?.namecol.toLowerCase() ===
-              $selectedDistrict?.toLowerCase() &&
-            feature.properties?.id.toLowerCase() ===
-              $selectedBoundaryMap?.toLowerCase()
+            f.properties?.namecol.toLowerCase() === districtId?.toLowerCase() &&
+            f.properties?.id.toLowerCase() ===
+              _selectedBoundaryMap.current?.toLowerCase()
           );
         });
-        if (feature && feature.length > 0) {
-          const combinedBbox = turfBbox({
+        if (matchingFeatures.length > 0) {
+          const bbox = await loadTurfBbox();
+          const combinedBbox = bbox({
             type: 'FeatureCollection',
-            features: feature
+            features: matchingFeatures
           });
-          zoomToBound($mapStore, combinedBbox);
+          zoomToBound(_mapStore.current, combinedBbox);
         }
       }
 
-      // Set new selected state
-      $mapStore.setFeatureState(
-        { source: 'boundaries', id: $selectedDistrict },
+      _mapStore.current.setFeatureState(
+        { source: sourceId, id: districtId },
         { selected: true }
       );
     }
+
+    prevSelectedDistrictId = districtId;
   }
 
-  run(() => {
-    if ($isMapReady && $boundaries) {
-      loadMap();
+  $effect(() => {
+    if (_isMapReady.current && _selectedBoundaryMap.current) {
+      const boundaryId = _selectedBoundaryMap.current;
+      untrack(() => addSourceAndShow(boundaryId));
     }
   });
 
-  run(() => {
-    isSourceLoaded && $selectedBoundaryMap
-      ? showMap($selectedBoundaryMap)
-      : clearMap();
+  $effect(() => {
+    const boundaryMap = _selectedBoundaryMap.current;
+    untrack(() => {
+      if (!boundaryMap) {
+        clearMap();
+        if (currentSourceDeptId) {
+          removeSourceForDepartment(currentSourceDeptId);
+          currentSourceDeptId = null;
+        }
+      }
+    });
   });
 
-  run(() => {
-    isSourceLoaded && onDistrictChange($selectedDistrict);
+  $effect(() => {
+    const district = _selectedDistrict.current;
+    untrack(() => {
+      if (currentSourceDeptId) {
+        updateDistrictVisuals(district);
+      }
+    });
+  });
+
+  $effect(() => {
+    const cpMap = _departmentCenterpoints.current;
+    untrack(() => {
+      if (!map || !currentSourceDeptId) return;
+      if (!cpMap.has(currentSourceDeptId)) return;
+      addCenterpointSource(currentSourceDeptId);
+      addLabelLayer(currentSourceDeptId);
+    });
+  });
+
+  $effect(() => {
+    const dm = _darkMode.current;
+    untrack(() => {
+      if (!map || dm === prevDarkMode) {
+        prevDarkMode = dm;
+        return;
+      }
+      prevDarkMode = dm;
+      if (currentBackground === 'default') {
+        applyMapStyle('default', dm);
+      }
+    });
   });
 </script>
 

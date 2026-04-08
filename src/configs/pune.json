@@ -1,0 +1,212 @@
+{
+  "cityId": "pune",
+  "pageTitleKey": "pune_page_title",
+  "logo": "/icons/pune.png",
+  "supportedLanguages": [
+    {
+      "code": "en",
+      "nameKey": "lang_english"
+    },
+    {
+      "code": "mr",
+      "nameKey": "lang_marathi"
+    }
+  ],
+  "map": {
+    "defaultZoom": 11,
+    "defaultCenter": [73.8567, 18.5204],
+    "maxBounds": [[73.3, 18.0], [74.6, 19.0]]
+  },
+  "seo": {
+    "title": "Pune City Officials",
+    "description": "Find your local jurisdiction and officials from PMC, Police and more in Pune.",
+    "keywords": "pune,boundaries,pmc,pune municipal corporation,police,official,officers,maharashtra,prabhag,ward",
+    "author": "Vivek Matthew",
+    "baseUrl": "https://cityofficials.bengawalk.com/pune",
+    "image": "https://cityofficials.bengawalk.com/sharecard.jpg"
+  },
+  "departments": {
+    "pmc_zone": {
+      "nameKey": "dept_pmc_zone",
+      "icon": "🏤",
+      "websiteUrl": "https://pmc.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/pune-wards-info/resource/d02848cd-47ff-419d-bf21-3f20a98af766",
+      "descriptionKey": "dept_pmc_zone_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "childDepartments": ["pmc_admin_ward"],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "020-25501000"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "1800-233-6777"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "commissioner@punecorporation.org"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "PMaborkar"
+        }
+      ],
+      "commonOfficials": [
+        {
+          "designation": "Mayor",
+          "designationRegional": "महापौर",
+          "name": "Manjusha Nagpure",
+          "nameRegional": "मंजूषा नागपुरे",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Deputy Mayor",
+          "designationRegional": "उपमहापौर",
+          "name": "Parshuram Wadekar",
+          "nameRegional": "परशुराम वाडेकर",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Municipal Commissioner",
+          "designationRegional": "महानगरपालिका आयुक्त",
+          "name": "Naval Kishor Ram",
+          "nameRegional": "नवल किशोर राम",
+          "phone": "020-25501000",
+          "email": "commissioner@punecorporation.org"
+        },
+        {
+          "designation": "Additional Commissioner",
+          "designationRegional": "अतिरिक्त आयुक्त",
+          "name": "",
+          "nameRegional": "",
+          "phone": "",
+          "email": ""
+        }
+      ]
+    },
+    "pmc_admin_ward": {
+      "nameKey": "dept_pmc_admin_ward",
+      "icon": "🏤",
+      "websiteUrl": "https://pmc.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/pune-wards-info/resource/686cd9cd-012f-4f97-913f-8c7003b3eb02",
+      "descriptionKey": "dept_pmc_admin_ward_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "parentDepartment": "pmc_zone",
+      "childDepartments": ["pmc_electoral_ward"],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "020-25501000"
+        }
+      ]
+    },
+    "pmc_electoral_ward": {
+      "nameKey": "dept_pmc_electoral_ward",
+      "icon": "🏤",
+      "websiteUrl": "https://pmc.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/pune-wards-info/resource/2badcc86-489c-4b7e-b7dd-a273ef01b798",
+      "descriptionKey": "dept_pmc_electoral_ward_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "parentDepartment": "pmc_admin_ward",
+      "childDepartments": ["pmc_prabhag"],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "020-25501000"
+        }
+      ]
+    },
+    "pmc_prabhag": {
+      "nameKey": "dept_pmc_prabhag",
+      "icon": "🏤",
+      "websiteUrl": "https://pmc.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/pune-wards-info/resource/6e44317a-2838-4f5a-85dc-43ed80a490a6",
+      "descriptionKey": "dept_pmc_prabhag_desc",
+      "color": "#7c3aed",
+      "darkColor": "#c4b5fd",
+      "parentDepartment": "pmc_electoral_ward",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "020-25501000"
+        }
+      ]
+    },
+    "election_ac": {
+      "nameKey": "dept_election_ac",
+      "icon": "🗳️",
+      "group": "election_ac",
+      "websiteUrl": "https://mls.org.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/maharashtra-and-mumbai-assembly-constituency-maps/resource/0b3e2100-b576-464c-a837-7d2f2f2b60f0",
+      "descriptionKey": "dept_election_ac_desc",
+      "color": "#f97316",
+      "darkColor": "#fed7aa",
+      "contacts": []
+    },
+    "election_pc": {
+      "nameKey": "dept_election_pc",
+      "icon": "🗳️",
+      "group": "election_pc",
+      "websiteUrl": "https://sansad.in/ls/",
+      "geodataUrl": "https://data.opencity.in/dataset/maharashtra-and-mumbai-assembly-constituency-maps/resource/3e271f8e-b605-4f21-a576-83508214f8f4",
+      "descriptionKey": "dept_election_pc_desc",
+      "color": "#ea580c",
+      "darkColor": "#fdba74",
+      "contacts": []
+    },
+    "admin_district": {
+      "nameKey": "dept_admin_district",
+      "icon": "🏦",
+      "websiteUrl": "https://pune.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/district-maps-for-states-of-india/resource/10a9e732-4e2e-4740-bb57-0533b6abf101",
+      "descriptionKey": "dept_admin_district_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "childDepartments": [
+        "admin_taluk"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "020-26129948"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "collector.pune@maharashtra.gov.in"
+        }
+      ]
+    },
+    "admin_taluk": {
+      "nameKey": "dept_admin_taluk",
+      "icon": "🏦",
+      "websiteUrl": "https://pune.gov.in/",
+      "geodataUrl": "https://github.com/ramSeraph/indian_admin_boundaries",
+      "descriptionKey": "dept_admin_taluk_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "parentDepartment": "admin_district",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "020-26129948"
+        }
+      ]
+    }
+  }
+}

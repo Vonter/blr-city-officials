@@ -1,0 +1,226 @@
+{
+  "cityId": "mumbai",
+  "pageTitleKey": "mumbai_page_title",
+  "logo": "/icons/mumbai.png",
+  "supportedLanguages": [
+    {
+      "code": "en",
+      "nameKey": "lang_english"
+    },
+    {
+      "code": "mr",
+      "nameKey": "lang_marathi"
+    }
+  ],
+  "map": {
+    "defaultZoom": 10.5,
+    "defaultCenter": [72.8777, 19.0760],
+    "maxBounds": [[72.35, 18.65], [73.45, 19.55]]
+  },
+  "seo": {
+    "title": "Mumbai City Officials",
+    "description": "Find your local jurisdiction and officials from BMC, Police and more in Mumbai.",
+    "keywords": "mumbai,boundaries,bmc,mcgm,police,official,officers,maharashtra,ward,prabhag",
+    "author": "Vivek Matthew",
+    "baseUrl": "https://cityofficials.bengawalk.com/mumbai",
+    "image": "https://cityofficials.bengawalk.com/sharecard.jpg"
+  },
+  "departments": {
+    "bmc_ward": {
+      "nameKey": "dept_bmc_ward",
+      "icon": "🏤",
+      "websiteUrl": "https://portal.mcgm.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/mumbai-wards-map",
+      "descriptionKey": "dept_bmc_ward_desc",
+      "color": "#3b82f6",
+      "darkColor": "#93c5fd",
+      "childDepartments": [
+        "bmc_prabhag"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1916"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "+912222620251"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "commissioner@mcgm.gov.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "mybaborivali"
+        }
+      ],
+      "commonOfficials": [
+        {
+          "designation": "Mayor",
+          "designationRegional": "महापौर",
+          "name": "Ritu Tawde",
+          "nameRegional": "रितू तावडे",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Deputy Mayor",
+          "designationRegional": "उपमहापौर",
+          "name": "Sanjay Ghadi",
+          "nameRegional": "संजय घाडी",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Municipal Commissioner",
+          "designationRegional": "महानगरपालिका आयुक्त",
+          "name": "Bhushan Gagrani",
+          "nameRegional": "भूषण गगराणी",
+          "phone": "022-22620251",
+          "email": "commissioner@mcgm.gov.in"
+        },
+        {
+          "designation": "Additional Municipal Commissioner (Projects)",
+          "designationRegional": "अतिरिक्त महानगरपालिका आयुक्त (प्रकल्प)",
+          "name": "Abhijit Bangar",
+          "nameRegional": "अभिजीत बांगर",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Additional Municipal Commissioner (Eastern Suburbs)",
+          "designationRegional": "अतिरिक्त महानगरपालिका आयुक्त (पूर्व उपनगर)",
+          "name": "Dr. Amit Saini",
+          "nameRegional": "डॉ. अमित सैनी",
+          "phone": "",
+          "email": ""
+        }
+      ]
+    },
+    "bmc_prabhag": {
+      "nameKey": "dept_bmc_prabhag",
+      "icon": "🏤",
+      "websiteUrl": "https://portal.mcgm.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/mumbai-wards-map",
+      "descriptionKey": "dept_bmc_prabhag_desc",
+      "color": "#3b82f6",
+      "darkColor": "#93c5fd",
+      "parentDepartment": "bmc_ward",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1916"
+        }
+      ]
+    },
+    "police_city": {
+      "nameKey": "dept_police_city",
+      "icon": "👮",
+      "group": "police_city",
+      "websiteUrl": "https://mumbaipolice.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india/resource/b3ca3e32-c840-4eaa-8ab1-7b7082a5ed4f",
+      "descriptionKey": "dept_police_city_desc",
+      "color": "#dc2626",
+      "darkColor": "#fca5a5",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "112"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "100"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "MumbaiPolice"
+        }
+      ]
+    },
+    "election_pc": {
+      "nameKey": "dept_election_pc",
+      "icon": "🗳️",
+      "group": "election_pc",
+      "websiteUrl": "https://sansad.in/ls/",
+      "geodataUrl": "https://data.opencity.in/dataset/maharashtra-and-mumbai-assembly-constituency-maps",
+      "descriptionKey": "dept_election_pc_desc",
+      "color": "#ea580c",
+      "darkColor": "#fdba74",
+      "contacts": []
+    },
+    "election_ac": {
+      "nameKey": "dept_election_ac",
+      "icon": "🗳️",
+      "group": "election_ac",
+      "websiteUrl": "https://mls.org.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/maharashtra-and-mumbai-assembly-constituency-maps",
+      "descriptionKey": "dept_election_ac_desc",
+      "color": "#f97316",
+      "darkColor": "#fed7aa",
+      "contacts": []
+    },
+    "pincode": {
+      "nameKey": "dept_pincode",
+      "icon": "📮",
+      "websiteUrl": "https://www.indiapost.gov.in/sites/PostalCircles/Maharashtra/Pages/cpio.aspx",
+      "geodataUrl": "https://data.opencity.in/dataset/pincode-maps-of-cities/resource/001f4a52-fe99-4514-86a6-4abbd2790825",
+      "descriptionKey": "dept_pincode_desc",
+      "showWardNumber": true,
+      "sortBy": "wardNumber",
+      "color": "#7c3aed",
+      "darkColor": "#c4b5fd",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1800-266-6868"
+        }
+      ]
+    },
+    "admin_district": {
+      "nameKey": "dept_admin_district",
+      "icon": "🏦",
+      "websiteUrl": "https://mumbai.gov.in/",
+      "geodataUrl": "https://github.com/ramSeraph/indian_admin_boundaries",
+      "descriptionKey": "dept_admin_district_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "childDepartments": [
+        "admin_taluk"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "022-22694725"
+        }
+      ]
+    },
+    "admin_taluk": {
+      "nameKey": "dept_admin_taluk",
+      "icon": "🏦",
+      "websiteUrl": "https://mumbai.gov.in/",
+      "geodataUrl": "https://github.com/ramSeraph/indian_admin_boundaries",
+      "descriptionKey": "dept_admin_taluk_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "parentDepartment": "admin_district",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "022-22694725"
+        }
+      ]
+    }
+  }
+}

@@ -1,29 +1,34 @@
 <script>
   /* Based on https://github.com/silinternational/svelte-google-places-autocomplete */
 
-  import { createEventDispatcher, onMount } from 'svelte';
+  import { onMount } from 'svelte';
+  import { getLoader } from '../lib/gmaps';
 
-  export let apiKey;
-  export let options = undefined;
-  export let placeholder = undefined;
-  export let value = '';
-  export let required = false;
-  export let pattern = undefined;
-  export let inputField = null;
+  let {
+    apiKey,
+    options = undefined,
+    placeholder = undefined,
+    value = '',
+    required = false,
+    pattern = undefined,
+    inputField = $bindable(),
+    class: className = '',
+    onready = () => {},
+    onplace_changed = _data => {}
+  } = $props();
 
-  const dispatch = createEventDispatcher();
-
-  $: selectedLocationName = value || '';
+  let selectedLocationName = $state(value || '');
+  let autocompleteInstance = null;
 
   onMount(() => {
     loadGooglePlacesLibrary(apiKey, () => {
-      const autocomplete = new google.maps.places.Autocomplete(
+      autocompleteInstance = new google.maps.places.Autocomplete(
         inputField,
         options
       );
 
-      autocomplete.addListener('place_changed', () => {
-        const place = autocomplete.getPlace();
+      autocompleteInstance.addListener('place_changed', () => {
+        const place = autocompleteInstance.getPlace();
 
         // There are circumstances where the place_changed event fires, but we
         // were NOT given location data. I only want to propagate the event if we
@@ -37,8 +42,14 @@
         }
       });
 
-      dispatch('ready');
+      onready();
     });
+  });
+
+  $effect(() => {
+    if (autocompleteInstance && options?.bounds) {
+      autocompleteInstance.setBounds(options.bounds);
+    }
   });
 
   function emptyLocationField() {
@@ -100,81 +111,26 @@
 
   function setSelectedLocation(data) {
     selectedLocationName = (data && data.text) || '';
-    dispatch('place_changed', data);
+    onplace_changed(data);
   }
 
   function doesNotMatchSelectedLocation(value) {
     return selectedLocationName !== value;
   }
 
-  let isLoadingLibrary = false;
-
-  /**
-   * The list of callbacks, one from each GooglePlacesAutocomplete instance that requested the library before the library
-   * had finished loading.
-   */
-  const callbacks = [];
-
-  function hasLoadedLibrary() {
-    return window.google && window.google.maps && window.google.maps.places;
-  }
-
-  /**
-   * Load the Google Places library and notify the calling code (if given a callback) once the library is ready.
-   *
-   * This supports three scenarios:
-   * 1. The library hasn't been loaded yet and isn't in the process of loading yet.
-   * 2. The library hasn't been loaded yet but is already in the process of loading.
-   * 3. The library has already been loaded.
-   *
-   * In scenarios 1 and 2, any callbacks that have been provided (which could be multiple, if multiple
-   * GooglePlacesAutocomplete instances are in use) will be called when the library finishes loading.
-   *
-   * In scenario 3, the callback will be called immediately.
-   *
-   * @param apiKey Your Google Places API Key
-   * @param callback A callback (if you want to be notified when the library is available for use)
-   */
   export function loadGooglePlacesLibrary(apiKey, callback) {
-    if (hasLoadedLibrary()) {
-      callback();
-      return;
-    }
-
-    callback && callbacks.push(callback);
-
-    if (isLoadingLibrary) {
-      return;
-    }
-
-    isLoadingLibrary = true;
-
-    const element = document.createElement('script');
-    element.async = true;
-    element.defer = true;
-    element.onload = onLibraryLoaded;
-    element.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(
-      apiKey
-    )}&libraries=places&callback=Function.prototype`;
-    element.type = 'text/javascript';
-
-    document.head.appendChild(element);
-  }
-
-  function onLibraryLoaded() {
-    isLoadingLibrary = false;
-    let callback;
-    while ((callback = callbacks.pop())) {
-      callback();
-    }
+    getLoader(apiKey)
+      .importLibrary('places')
+      .then(callback)
+      .catch(console.error);
   }
 </script>
 
 <input
   bind:this={inputField}
-  class={$$props.class}
-  on:change={onChange}
-  on:keydown={onKeyDown}
+  class={className}
+  onchange={onChange}
+  onkeydown={onKeyDown}
   {placeholder}
   {value}
   {required}

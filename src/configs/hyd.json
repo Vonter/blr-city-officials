@@ -1,0 +1,207 @@
+{
+  "cityId": "hyd",
+  "pageTitleKey": "hyd_page_title",
+  "logo": "/icons/hyd.png",
+  "supportedLanguages": [
+    {
+      "code": "en",
+      "nameKey": "lang_english"
+    },
+    {
+      "code": "te",
+      "nameKey": "lang_telugu"
+    }
+  ],
+  "map": {
+    "defaultZoom": 10,
+    "defaultCenter": [78.4867, 17.385],
+    "maxBounds": [
+      [78.0, 17.0],
+      [79.0, 17.8]
+    ]
+  },
+  "seo": {
+    "title": "Hyderabad City Officials",
+    "description": "Find your local jurisdiction and officials from GHMC, Police and more in Hyderabad.",
+    "keywords": "hyderabad,boundaries,ghmc,police,official,officers,telangana",
+    "author": "Vivek Matthew",
+    "baseUrl": "https://cityofficials.bengawalk.com/hyd",
+    "image": "https://cityofficials.bengawalk.com/sharecard.jpg"
+  },
+  "departments": {
+    "ghmc_corporation": {
+      "nameKey": "dept_ghmc_corporation",
+      "icon": "🏤",
+      "websiteUrl": "https://www.ghmc.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/hyderabad-wards-info/resource/bc818c3d-9c7c-4047-a451-ba463d9710b2",
+      "descriptionKey": "dept_ghmc_corporation_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "childDepartments": [
+        "ghmc_zone"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "040-21111111"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "1800-120-2020"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "commissioner@ghmc.gov.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "GHMCOnline"
+        }
+      ]
+    },
+    "ghmc_zone": {
+      "nameKey": "dept_ghmc_zone",
+      "icon": "🏤",
+      "websiteUrl": "https://www.ghmc.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/hyderabad-wards-info/resource/ecaab873-4dd3-42db-9813-b9c28b45ca68",
+      "descriptionKey": "dept_ghmc_zone_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "parentDepartment": "ghmc_corporation",
+      "childDepartments": [
+        "ghmc_ward"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "040-21111111"
+        }
+      ]
+    },
+    "ghmc_ward": {
+      "nameKey": "dept_ghmc_ward",
+      "icon": "🏤",
+      "websiteUrl": "https://www.ghmc.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/hyderabad-wards-info/resource/14b033e3-3721-4149-8326-cc29420e062e",
+      "descriptionKey": "dept_ghmc_ward_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "parentDepartment": "ghmc_zone",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "040-21111111"
+        }
+      ]
+    },
+    "police_city": {
+      "nameKey": "dept_police_city",
+      "icon": "👮",
+      "group": "police_city",
+      "websiteUrl": "https://hyderabadpolice.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india/resource/df7b7a4e-5c00-4769-894e-1da24e612f11",
+      "descriptionKey": "dept_police_city_desc",
+      "color": "#dc2626",
+      "darkColor": "#fca5a5",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "112"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "100"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "hydcitypolice"
+        }
+      ]
+    },
+    "election_ac": {
+      "nameKey": "dept_election_ac",
+      "icon": "🗳️",
+      "group": "election_ac",
+      "websiteUrl": "https://tsec.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/telangana-and-hyderabad-assembly-constituencies-maps/resource/76aa80ff-1791-4c19-a773-8f96658825f7",
+      "descriptionKey": "dept_election_ac_desc",
+      "color": "#f97316",
+      "darkColor": "#fed7aa",
+      "contacts": []
+    },
+    "election_pc": {
+      "nameKey": "dept_election_pc",
+      "icon": "🗳️",
+      "group": "election_pc",
+      "websiteUrl": "https://tsec.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/telangana-and-hyderabad-assembly-constituencies-maps/resource/030ea574-826a-468d-935f-3092f4658f1d",
+      "descriptionKey": "dept_election_pc_desc",
+      "color": "#ea580c",
+      "darkColor": "#fdba74",
+      "contacts": []
+    },
+    "admin_district": {
+      "nameKey": "dept_admin_district",
+      "icon": "🏦",
+      "websiteUrl": "https://hyderabad.telangana.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/district-maps-for-states-of-india/resource/6427c711-1618-4672-bb98-79a76bce47b9",
+      "descriptionKey": "dept_admin_district_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "childDepartments": [
+        "admin_mandal"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "040-23202813"
+        }
+      ]
+    },
+    "admin_mandal": {
+      "nameKey": "dept_admin_mandal",
+      "icon": "🏦",
+      "websiteUrl": "https://hyderabad.telangana.gov.in/",
+      "geodataUrl": "https://github.com/ramSeraph/indian_admin_boundaries",
+      "descriptionKey": "dept_admin_mandal_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "parentDepartment": "admin_district",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "040-23202813"
+        }
+      ]
+    },
+    "pincode": {
+      "nameKey": "dept_pincode",
+      "icon": "📮",
+      "websiteUrl": "https://www.indiapost.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/pincode-maps-of-cities/resource/66915e76-fe5e-4322-a1b8-951d7f4bd455",
+      "descriptionKey": "dept_pincode_desc",
+      "showWardNumber": true,
+      "sortBy": "wardNumber",
+      "color": "#7c3aed",
+      "darkColor": "#c4b5fd",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1800-266-6868"
+        }
+      ]
+    }
+  }
+}

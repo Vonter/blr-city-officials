@@ -1,0 +1,30 @@
+{
+  "lang_english": "English",
+  "lang_hindi": "हिंदी",
+  "lang_marathi": "मराठी",
+
+  "sidebar_title": "शहर अधिकारी",
+  "search_placeholder": "खोजें",
+  "footer_data": "डेटा",
+  "footer_feedback": "प्रतिक्रिया",
+  "footer_code": "कोड",
+  "footer_betanyc": "BetaNYC से प्रेरित",
+  "introduction": "पता खोजें, मानचित्र पर टैप करें, या नीचे सरकारी विभाग चुनें।",
+  "filter_placeholder": "फिल्टर",
+  "details_title": "अधिकारी",
+  "details_source": "स्रोत",
+  "details_error": "कोई जानकारी गलत लगी? या कोई सुझाव देना है? नीचे दिए गए फॉर्म को भरकर हमें बताएं।",
+  "details_add_comment": "फॉर्म भरें",
+  "information_source_url": "मानचित्र स्रोत",
+  "information_last_updated": "अंतिम अपडेट",
+  "fetching_location_details": "चयनित स्थान के लिए विवरण प्राप्त कर रहे हैं",
+  "no_officials": "अधिकारियों की कोई जानकारी उपलब्ध नहीं है",
+  "latitude_longitude": "अक्षांश/देशांतर",
+  "copied_to_clipboard": "कॉपी झालेले!",
+
+  "contact_information": "संपर्क जानकारी",
+  "contact_helpline": "हेल्पलाइन",
+  "contact_email": "ईमेल",
+  "contact_call_center": "कॉल सेंटर",
+  "contact_public_relations_officer": "जनसंपर्क अधिकारी"
+}

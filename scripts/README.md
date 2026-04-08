@@ -1,21 +1,37 @@
 # scripts
 
-The following scripts are used for the data on the site:
-- [geo2topo.sh](geo2topo.sh)
+City-specific data processing scripts.
+
+```
+scripts/
+  geo2topo.sh        # Unified GeoJSON → TopoJSON conversion
+  <city>/
+    geojson/         # Source boundary GeoJSON files
+    ...              # City-specific scripts
+```
 
 ## geo2topo.sh
 
-The `geo2topo.sh` script takes the input boundary GeoJSONs under [geojson/](geojson), combines, clips, snaps, and saves them into a `boundaries.json` TopoJSON.
+`geo2topo.sh` takes input boundary GeoJSONs from `<city>/geojson/`, clips (when a bounding box is configured), snaps, simplifies, and saves them as TopoJSON files in `static/<city>/`.
+
+Run from anywhere:
+```bash
+./scripts/geo2topo.sh blr
+./scripts/geo2topo.sh mumbai
+```
+
+Per-city configuration (bounding box) is defined inside the script. All cities use the same snap interval and simplification settings.
+
+### Adding a new city
+
+1. Create `scripts/<city>/geojson/` and add boundary GeoJSON files
+2. Add a `case` entry in `geo2topo.sh` with the city's bounding box (or `""` if no clipping is needed)
+3. Run `./scripts/geo2topo.sh <city>`
 
 ### Adding new boundaries
 
-In order to add a new boundary, the features in the boundary GeoJSON need to contain 2 fields to be compatible with the site:
-- `namecol`: Name of the feature
+Features in the boundary GeoJSON need two fields:
+- `namecol`: Name of the feature (title case)
 - `id`: Category of the boundary
 
-If additional fields are there in the GeoJSON, it is recommended to remove them for reducing the file size. The `namecol` field should contain the feature names in title case for better readability.
-
-After adding a compatible boundary GeoJSON:
-- Run the `geo2topo.sh` script to generate the `boundaries.json` TopoJSON file
-- Update `public/boundaries.json` with the new `boundaries.json`
-- Update `src/assets/boundaries/index.ts` with details about the new boundary, in case the `id` is not already listed in the file
+Remove any extra fields to reduce file size. After adding a compatible GeoJSON, run `./scripts/geo2topo.sh <city>` and update `src/assets/boundaries/index.ts` if the `id` is new.

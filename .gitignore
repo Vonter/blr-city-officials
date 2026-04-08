@@ -1,7 +1,7 @@
 build
 .env
-scripts/*.geojson
-scripts/*.xlsx
+scripts/**/__pycache__/
+scripts/**/*.geojson
 
 # Logs
 logs

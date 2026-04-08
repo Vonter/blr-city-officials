@@ -1,0 +1,987 @@
+{
+  "cityId": "blr",
+  "pageTitleKey": "blr_page_title",
+  "logo": "/icons/blr.png",
+  "supportedLanguages": [
+    {
+      "code": "en",
+      "nameKey": "lang_english"
+    },
+    {
+      "code": "kn",
+      "nameKey": "lang_kannada"
+    }
+  ],
+  "map": {
+    "defaultZoom": 9.6,
+    "defaultCenter": [
+      77.6,
+      12.974
+    ],
+    "maxBounds": [
+      [
+        77,
+        12.5
+      ],
+      [
+        78.25,
+        13.5
+      ]
+    ]
+  },
+  "seo": {
+    "title": "BLR City Officials",
+    "description": "Find your local jurisdiction and officials from GBA, BESCOM, BWSSB, Police and more in Bengaluru.",
+    "keywords": "blr,bangalore,bengaluru,boundaries,gba,bbmp,bescom,bwssb,bda,bmrda,btp,official,officers",
+    "author": "Vivek Matthew",
+    "baseUrl": "https://cityofficials.bengawalk.com",
+    "image": "https://cityofficials.bengawalk.com/sharecard.jpg"
+  },
+  "overlapRenderDepartment": "gba_ward",
+  "departments": {
+    "gba_corporation": {
+      "nameKey": "dept_gba_corporation",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/home",
+      "geodataUrl": "https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025/resource/06a9389c-8a3d-4a91-bf61-1df0dc7ffa28",
+      "descriptionKey": "dept_gba_corporation_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "childDepartments": [
+        "gba_zone"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "919480685700"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_garbage_solid_waste",
+          "value": "919448197197"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "+9108022660000"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "+9108022975595"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "+9108022221188"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "GBA_office"
+        }
+      ],
+      "commonOfficials": [
+        {
+          "designation": "Chief Commissioner",
+          "designationRegional": "ಮುಖ್ಯ ಆಯುಕ್ತರು",
+          "name": "Maheshwar Rao M",
+          "nameRegional": "ಮಹೇಶ್ವರ ರಾವ್ ಎಂ",
+          "phone": "9448067345",
+          "email": "comm@bbmp.gov.in"
+        },
+        {
+          "designation": "Special Commissioner (Revenue & IT)",
+          "designationRegional": "ವಿಶೇಷ ಆಯುಕ್ತರು (ಕಂದಾಯ ಮತ್ತು ಐಟಿ)",
+          "name": "Munish Moudgil",
+          "nameRegional": "ಮುನೀಶ್ ಮೌದ್ಗಿಲ್",
+          "phone": "9448194915",
+          "email": "spcomm-rev@bbmp.gov.in"
+        },
+        {
+          "designation": "Special Commissioner (Health and Education, Elections)",
+          "designationRegional": "ವಿಶೇಷ ಆಯುಕ್ತರು (ಆರೋಗ್ಯ ಮತ್ತು ಶಿಕ್ಷಣ, ಚುನಾವಣೆ)",
+          "name": "Suralkar Vikas Kishor",
+          "nameRegional": "ಸುರಲ್ಕರ್ ವಿಕಾಸ್ ಕಿಶೋರ್",
+          "phone": "9480502491",
+          "email": "Bbmpsplcomhealth@gmail.com"
+        },
+        {
+          "designation": "Special Commissioner (Admin, Finance) & Chief Financial Officer",
+          "designationRegional": "ವಿಶೇಷ ಆಯುಕ್ತರು (ಆಡಳಿತ, ಹಣಕಾಸು) ಮತ್ತು ಮುಖ್ಯ ಹಣಕಾಸು ಅಧಿಕಾರಿ",
+          "name": "Harish Kumar K",
+          "nameRegional": "ಹರೀಶ್ ಕುಮಾರ್ ಕೆ",
+          "phone": "9448549197",
+          "email": "scfinbbmp@gmail.com"
+        },
+        {
+          "designation": "Special Commissioner (FECC, Disaster Management, Public Relations and Coordination)",
+          "designationRegional": "ವಿಶೇಷ ಆಯುಕ್ತರು (ಎಫ್ಇಸಿಸಿ, ವಿಪತ್ತು ನಿರ್ವಹಣೆ, ಸಾರ್ವಜನಿಕ ಸಂಪರ್ಕ ಮತ್ತು ಸಮನ್ವಯ)",
+          "name": "Ramachandran",
+          "nameRegional": "ರಾಮಚಂದ್ರನ್",
+          "phone": "9480683000",
+          "email": "scfeccm2024@gmail.com"
+        },
+        {
+          "designation": "CEO, BSWML",
+          "designationRegional": "ಸಿಇಒ, ಬಿಎಸ್ಡಬ್ಲ್ಯೂಎಂಎಲ್",
+          "name": "Kareegowda",
+          "nameRegional": "ಕರೀಗೌಡ",
+          "phone": "7760504651",
+          "email": ""
+        },
+        {
+          "designation": "Head of the Legal Cell",
+          "designationRegional": "ಕಾನೂನು ಕೋಶದ ಮುಖ್ಯಸ್ಥರು",
+          "name": "Chandrashekar Patil",
+          "nameRegional": "ಚಂದ್ರಶೇಖರ್ ಪಾಟೀಲ್",
+          "phone": "9480683140",
+          "email": ""
+        },
+        {
+          "designation": "Additional Commissioner (Finance)",
+          "designationRegional": "ಹೆಚ್ಚುವರಿ ಆಯುಕ್ತರು (ಹಣಕಾಸು)",
+          "name": "Ajith Kumar Hegde",
+          "nameRegional": "ಅಜಿತ್ ಕುಮಾರ್ ಹೆಗ್ಡೆ",
+          "phone": "9449559122",
+          "email": ""
+        },
+        {
+          "designation": "Deputy Commissioner (Admin)",
+          "designationRegional": "ಉಪ ಆಯುಕ್ತರು (ಆಡಳಿತ)",
+          "name": "Ravindra",
+          "nameRegional": "ರವೀಂದ್ರ",
+          "phone": "9986047290",
+          "email": ""
+        },
+        {
+          "designation": "Deputy Commissioner (IT/TDR)",
+          "designationRegional": "ಉಪ ಆಯುಕ್ತರು (ಐಟಿ/ಟಿಡಿಆರ್)",
+          "name": "Gayatri Naik",
+          "nameRegional": "ಗಾಯತ್ರಿ ನಾಯಕ್",
+          "phone": "9448259312",
+          "email": ""
+        },
+        {
+          "designation": "Engineer In Chief, GBA & Technical Director (B-SMILE)",
+          "designationRegional": "ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಇನ್ ಚೀಫ್, ಜಿಬಿಎ ಮತ್ತು ತಾಂತ್ರಿಕ ನಿರ್ದೇಶಕರು (ಬಿ-ಸ್ಮೈಲ್)",
+          "name": "B S Prahalad",
+          "nameRegional": "ಬಿ ಎಸ್ ಪ್ರಹ್ಲಾದ್",
+          "phone": "9480683031",
+          "email": ""
+        },
+        {
+          "designation": "Chief Town Planner",
+          "designationRegional": "ಮುಖ್ಯ ನಗರ ಯೋಜನಾಧಿಕಾರಿ",
+          "name": "Sunil",
+          "nameRegional": "ಸುನೀಲ್",
+          "phone": "9480190409",
+          "email": ""
+        },
+        {
+          "designation": "Chief Account Officer",
+          "designationRegional": "ಮುಖ್ಯ ಲೆಕ್ಕಾಧಿಕಾರಿ",
+          "name": "Beena",
+          "nameRegional": "ಬೀನಾ",
+          "phone": "9980823770",
+          "email": ""
+        },
+        {
+          "designation": "COO, BSWML",
+          "designationRegional": "ಸಿಒಒ, ಬಿಎಸ್ಡಬ್ಲ್ಯೂಎಂಎಲ್",
+          "name": "Ramamani",
+          "nameRegional": "ರಾಮಮಣಿ",
+          "phone": "7348809438",
+          "email": ""
+        },
+        {
+          "designation": "Additional Director (Town Planning)",
+          "designationRegional": "ಹೆಚ್ಚುವರಿ ನಿರ್ದೇಶಕರು (ನಗರ ಯೋಜನೆ)",
+          "name": "Girish",
+          "nameRegional": "ಗಿರೀಶ್",
+          "phone": "9741880755",
+          "email": ""
+        },
+        {
+          "designation": "Chief Engineer (Projects & Coordination) I/C Technical Vigilance Cell",
+          "designationRegional": "ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ (ಯೋಜನೆಗಳು ಮತ್ತು ಸಮನ್ವಯ) ಐ/ಸಿ ತಾಂತ್ರಿಕ ಜಾಗೃತ ಕೋಶ",
+          "name": "Hemalatha",
+          "nameRegional": "ಹೇಮಲತಾ",
+          "phone": "9480684268",
+          "email": ""
+        },
+        {
+          "designation": "Chief Engineer (Projects Implementation Cell)",
+          "designationRegional": "ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ (ಯೋಜನೆ ಅನುಷ್ಠಾನ ಕೋಶ)",
+          "name": "S V Rajesh",
+          "nameRegional": "ಎಸ್ ವಿ ರಾಜೇಶ್",
+          "phone": "9035684040",
+          "email": ""
+        },
+        {
+          "designation": "Chief Engineer (B-SMILE)",
+          "designationRegional": "ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ (ಬಿ-ಸ್ಮೈಲ್)",
+          "name": "B G Raghavendra Prasad",
+          "nameRegional": "ಬಿ ಜಿ ರಾಘವೇಂದ್ರ ಪ್ರಸಾದ್",
+          "phone": "9480683176",
+          "email": ""
+        },
+        {
+          "designation": "Chief Engineer (OFC)",
+          "designationRegional": "ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ (ಒಎಫ್ಸಿ)",
+          "name": "S P Ranganath",
+          "nameRegional": "ಎಸ್ ಪಿ ರಂಗನಾಥ್",
+          "phone": "9480683190",
+          "email": ""
+        },
+        {
+          "designation": "Chief Engineer (Electrical)",
+          "designationRegional": "ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ (ವಿದ್ಯುತ್)",
+          "name": "Anand",
+          "nameRegional": "ಆನಂದ್",
+          "phone": "9480683882",
+          "email": ""
+        },
+        {
+          "designation": "Joint Director (Statistics)",
+          "designationRegional": "ಜಂಟಿ ನಿರ್ದೇಶಕರು (ಸಂಖ್ಯಾಶಾಸ್ತ್ರ)",
+          "name": "Mangal Das",
+          "nameRegional": "ಮಂಗಲ್ ದಾಸ್",
+          "phone": "9480683189",
+          "email": ""
+        },
+        {
+          "designation": "Joint Commissioner (Revenue) & Deputy Commissioner (Revenue, Estate, Market, Advertisement)",
+          "designationRegional": "ಜಂಟಿ ಆಯುಕ್ತರು (ಕಂದಾಯ) ಮತ್ತು ಉಪ ಆಯುಕ್ತರು (ಕಂದಾಯ, ಎಸ್ಟೇಟ್, ಮಾರುಕಟ್ಟೆ, ಜಾಹೀರಾತು)",
+          "name": "Lakshmidevi",
+          "nameRegional": "ಲಕ್ಷ್ಮೀದೇವಿ",
+          "phone": "9480684080",
+          "email": ""
+        },
+        {
+          "designation": "Joint Director Animal Husbandry",
+          "designationRegional": "ಜಂಟಿ ನಿರ್ದೇಶಕರು ಪಶುಸಂಗೋಪನೆ",
+          "name": "Chandraiah T",
+          "nameRegional": "ಚಂದ್ರಯ್ಯ ಟಿ",
+          "phone": "9902041310",
+          "email": "jointdirector01@gmail.com"
+        },
+        {
+          "designation": "Chief Veterinary Officer",
+          "designationRegional": "ಮುಖ್ಯ ಪಶುವೈದ್ಯಾಧಿಕಾರಿ",
+          "name": "Dr. Asha G.K",
+          "nameRegional": "ಡಾ. ಆಶಾ ಜಿ.ಕೆ",
+          "phone": "9844517829",
+          "email": "adahbommnahalli2021@gmail.com"
+        },
+        {
+          "designation": "Deputy Conservator of Forest",
+          "designationRegional": "ಉಪ ಅರಣ್ಯ ಸಂರಕ್ಷಣಾಧಿಕಾರಿ",
+          "name": "Sudarshan G K",
+          "nameRegional": "ಸುದರ್ಶನ್ ಜಿ ಕೆ",
+          "phone": "9481236649",
+          "email": ""
+        },
+        {
+          "designation": "Deputy Director (Horticulture)",
+          "designationRegional": "ಉಪ ನಿರ್ದೇಶಕರು (ತೋಟಗಾರಿಕೆ)",
+          "name": "Chandrashekar",
+          "nameRegional": "ಚಂದ್ರಶೇಖರ್",
+          "phone": "9535015189",
+          "email": ""
+        },
+        {
+          "designation": "Chief Health Officer (Public Health)",
+          "designationRegional": "ಮುಖ್ಯ ಆರೋಗ್ಯ ಅಧಿಕಾರಿ (ಸಾರ್ವಜನಿಕ ಆರೋಗ್ಯ)",
+          "name": "S S Madani",
+          "nameRegional": "ಎಸ್ ಎಸ್ ಮದನಿ",
+          "phone": "9845208571",
+          "email": ""
+        },
+        {
+          "designation": "Assistant Commissioner (Election)",
+          "designationRegional": "ಸಹಾಯಕ ಆಯುಕ್ತರು (ಚುನಾವಣೆ)",
+          "name": "Mahesh",
+          "nameRegional": "ಮಹೇಶ್",
+          "phone": "9741119632",
+          "email": ""
+        },
+        {
+          "designation": "Assistant Commissioner (Admin 1)",
+          "designationRegional": "ಸಹಾಯಕ ಆಯುಕ್ತರು (ಆಡಳಿತ 1)",
+          "name": "Girish Nandan",
+          "nameRegional": "ಗಿರೀಶ್ ನಂದನ್",
+          "phone": "9731598154",
+          "email": ""
+        },
+        {
+          "designation": "Assistant Commissioner (Admin-2) & Deputy Chief Information Officer (IT)",
+          "designationRegional": "ಸಹಾಯಕ ಆಯುಕ್ತರು (ಆಡಳಿತ-2) ಮತ್ತು ಉಪ ಮುಖ್ಯ ಮಾಹಿತಿ ಅಧಿಕಾರಿ (ಐಟಿ)",
+          "name": "Manjunath",
+          "nameRegional": "ಮಂಜುನಾಥ್",
+          "phone": "9902098754",
+          "email": ""
+        },
+        {
+          "designation": "Assistant Commissioner (Welfare)",
+          "designationRegional": "ಸಹಾಯಕ ಆಯುಕ್ತರು (ಕಲ್ಯಾಣ)",
+          "name": "Murulidhara H.T",
+          "nameRegional": "ಮುರುಳೀಧರ ಎಚ್.ಟಿ",
+          "phone": "7026934288",
+          "email": ""
+        },
+        {
+          "designation": "I/C Assistant Commissioner (Recruitment)",
+          "designationRegional": "ಐ/ಸಿ ಸಹಾಯಕ ಆಯುಕ್ತರು (ನೇಮಕಾತಿ)",
+          "name": "Shrinivas",
+          "nameRegional": "ಶ್ರೀನಿವಾಸ್",
+          "phone": "9480685483",
+          "email": ""
+        },
+        {
+          "designation": "Senior Assistant Director (Education)",
+          "designationRegional": "ಹಿರಿಯ ಸಹಾಯಕ ನಿರ್ದೇಶಕರು (ಶಿಕ್ಷಣ)",
+          "name": "Munishamappa",
+          "nameRegional": "ಮುನಿಶಾಮಪ್ಪ",
+          "phone": "9480180152",
+          "email": ""
+        },
+        {
+          "designation": "I/C Council Secretary",
+          "designationRegional": "ಐ/ಸಿ ಕೌನ್ಸಿಲ್ ಕಾರ್ಯದರ್ಶಿ",
+          "name": "Ramegowda",
+          "nameRegional": "ರಾಮೇಗೌಡ",
+          "phone": "9902909998",
+          "email": ""
+        }
+      ]
+    },
+    "gba_zone": {
+      "nameKey": "dept_gba_zone",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/home",
+      "geodataUrl": "https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025/resource/5e7856ef-7a27-4255-80ad-9b62e62aadbf",
+      "descriptionKey": "dept_gba_zone_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "parentDepartment": "gba_corporation",
+      "childDepartments": [
+        "gba_division"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        }
+      ]
+    },
+    "gba_division": {
+      "nameKey": "dept_gba_division",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/home",
+      "geodataUrl": "https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025",
+      "descriptionKey": "dept_gba_division_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "parentDepartment": "gba_zone",
+      "childDepartments": [
+        "gba_subdivision"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        }
+      ]
+    },
+    "gba_subdivision": {
+      "nameKey": "dept_gba_subdivision",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/home",
+      "geodataUrl": "https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025",
+      "descriptionKey": "dept_gba_subdivision_desc",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "parentDepartment": "gba_division",
+      "childDepartments": [
+        "gba_ward"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        }
+      ]
+    },
+    "gba_ward": {
+      "nameKey": "dept_gba_ward",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/home",
+      "geodataUrl": "https://data.opencity.in/dataset/gba-wards-delimitation-2025/resource/9013d656-8051-4e2d-9648-46efd0d86d3d",
+      "descriptionKey": "dept_gba_ward_desc",
+      "showWardNumber": true,
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "parentDepartment": "gba_subdivision",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        }
+      ]
+    },
+    "bescom_division": {
+      "nameKey": "dept_bescom_division",
+      "icon": "💡",
+      "websiteUrl": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en",
+      "geodataUrl": "https://data.opencity.in/dataset/bescom-boundary-maps/resource/38c3fe90-49ee-4cad-832f-b4b2d9982f7a",
+      "descriptionKey": "dept_bescom_division_desc",
+      "color": "#d97706",
+      "darkColor": "#fde68a",
+      "childDepartments": [
+        "bescom_subdivision"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1912"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "919449844640"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "helpline@bescom.co.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "NammaBESCOM"
+        }
+      ]
+    },
+    "bescom_subdivision": {
+      "nameKey": "dept_bescom_subdivision",
+      "icon": "💡",
+      "websiteUrl": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en",
+      "geodataUrl": "https://data.opencity.in/dataset/bescom-boundary-maps/resource/40e3e394-c231-4a13-a165-abb0ef6492fb",
+      "descriptionKey": "dept_bescom_subdivision_desc",
+      "color": "#d97706",
+      "darkColor": "#fde68a",
+      "showWardNumber": true,
+      "parentDepartment": "bescom_division",
+      "childDepartments": [
+        "bescom_section"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1912"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "919449844640"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "helpline@bescom.co.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "NammaBESCOM"
+        }
+      ]
+    },
+    "bescom_section": {
+      "nameKey": "dept_bescom_section",
+      "icon": "💡",
+      "websiteUrl": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en",
+      "geodataUrl": "https://data.opencity.in/dataset/bescom-boundary-maps/resource/45defb41-2938-4a69-869b-ab10c8559bc4",
+      "descriptionKey": "dept_bescom_section_desc",
+      "color": "#d97706",
+      "darkColor": "#fde68a",
+      "showWardNumber": true,
+      "parentDepartment": "bescom_subdivision",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1912"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "919449844640"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "helpline@bescom.co.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "NammaBESCOM"
+        }
+      ]
+    },
+    "bwssb_division": {
+      "nameKey": "dept_bwssb_division",
+      "icon": "💧",
+      "websiteUrl": "https://bwssb.karnataka.gov.in/7/service-station/en",
+      "geodataUrl": "https://data.opencity.in/dataset/bwssb-boundary-maps/resource/2abb7d3d-7168-447b-9c46-f933548b4f5d",
+      "descriptionKey": "dept_bwssb_division_desc",
+      "color": "#0891b2",
+      "darkColor": "#a5f3fc",
+      "childDepartments": [
+        "bwssb_subdivision"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1916"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "14420"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "08022238888"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "918762228888"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_call_center",
+          "value": "callcenter@bwssb.gov.in"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_public_relations_officer",
+          "value": "pro@bwssb.gov.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "chairmanbwssb"
+        }
+      ]
+    },
+    "bwssb_subdivision": {
+      "nameKey": "dept_bwssb_subdivision",
+      "icon": "💧",
+      "websiteUrl": "https://bwssb.karnataka.gov.in/7/service-station/en",
+      "geodataUrl": "https://data.opencity.in/dataset/bwssb-boundary-maps/resource/c9b44bab-65b6-45d8-a320-ae952d63fb05",
+      "descriptionKey": "dept_bwssb_subdivision_desc",
+      "color": "#0891b2",
+      "darkColor": "#a5f3fc",
+      "parentDepartment": "bwssb_division",
+      "childDepartments": [
+        "bwssb_service_station"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1916"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "14420"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "08022238888"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "918762228888"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_call_center",
+          "value": "callcenter@bwssb.gov.in"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_public_relations_officer",
+          "value": "pro@bwssb.gov.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "chairmanbwssb"
+        }
+      ]
+    },
+    "bwssb_service_station": {
+      "nameKey": "dept_bwssb_service_station",
+      "icon": "💧",
+      "websiteUrl": "https://bwssb.karnataka.gov.in/7/service-station/en",
+      "geodataUrl": "https://data.opencity.in/dataset/bwssb-boundary-maps/resource/7bdecf91-fa6e-4269-acab-ac91e7b4648c",
+      "descriptionKey": "dept_bwssb_service_station_desc",
+      "color": "#0891b2",
+      "darkColor": "#a5f3fc",
+      "parentDepartment": "bwssb_subdivision",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1916"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "14420"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "08022238888"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "918762228888"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_call_center",
+          "value": "callcenter@bwssb.gov.in"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_public_relations_officer",
+          "value": "pro@bwssb.gov.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "chairmanbwssb"
+        }
+      ]
+    },
+    "police_city": {
+      "nameKey": "dept_police_city",
+      "icon": "👮",
+      "group": "police_city",
+      "websiteUrl": "https://bcp.karnataka.gov.in/24/law-&-order-/en",
+      "geodataUrl": "https://data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india/resource/4056bac3-3870-49a1-a03f-d3c26288181f",
+      "descriptionKey": "dept_police_city_desc",
+      "color": "#dc2626",
+      "darkColor": "#fca5a5",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "112"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "BlrCityPolice"
+        }
+      ]
+    },
+    "police_traffic": {
+      "nameKey": "dept_police_traffic",
+      "icon": "🚔",
+      "group": "police_traffic",
+      "websiteUrl": "https://btp.karnataka.gov.in/btp_map_locations/en",
+      "geodataUrl": "https://data.opencity.in/dataset/bengaluru-traffic-police-jurisdictions/resource/3e7e6a4d-4dce-44ec-aef3-64278c30c06f",
+      "descriptionKey": "dept_police_traffic_desc",
+      "color": "#ef4444",
+      "darkColor": "#fecaca",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "112"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "blrcitytraffic"
+        }
+      ]
+    },
+    "bda": {
+      "nameKey": "dept_bda",
+      "icon": "🏗️",
+      "group": "bda",
+      "websiteUrl": "https://bdakarnataka.in/",
+      "geodataUrl": "https://www.bdakarnataka.in/api/media/bda-layouts/pdf_press_release/BDA_ZONE_MAP_1772690718245_827cc2bb.pdf",
+      "descriptionKey": "dept_bda_desc",
+      "color": "#8b5cf6",
+      "darkColor": "#ddd6fe",
+      "commonOfficials": [
+        {
+          "designation": "Chairman",
+          "designationRegional": "ಅಧ್ಯಕ್ಷರು",
+          "name": "N A Haris",
+          "nameRegional": "ಎನ್ ಎ ಹ್ಯಾರಿಸ್"
+        },
+        {
+          "designation": "Commissioner",
+          "designationRegional": "ಆಯುಕ್ತರು",
+          "name": "Major Manivannan P",
+          "nameRegional": "ಮೇಜರ್ ಮಣಿವಣ್ಣನ್ ಪಿ"
+        }
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "+919483166622"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "BDAOfficialGok"
+        },
+        {
+          "type": "instagram",
+          "labelKey": "contact_instagram",
+          "value": "bangaloredevelopmentauthority"
+        },
+        {
+          "type": "facebook",
+          "labelKey": "contact_facebook",
+          "value": "bangaloredevelopmentauthority"
+        }
+      ]
+    },
+    "election_ac": {
+      "nameKey": "dept_election_ac",
+      "icon": "🗳️",
+      "group": "election_ac",
+      "websiteUrl": "https://kla.kar.nic.in/",
+      "geodataUrl": "https://kgis.ksrsac.in/kgis/downloads.aspx",
+      "descriptionKey": "dept_election_ac_desc",
+      "color": "#f97316",
+      "darkColor": "#fed7aa",
+      "contacts": []
+    },
+    "election_pc": {
+      "nameKey": "dept_election_pc",
+      "icon": "🗳️",
+      "group": "election_pc",
+      "websiteUrl": "https://sansad.in/ls/",
+      "geodataUrl": "https://kgis.ksrsac.in/kgis/downloads.aspx",
+      "descriptionKey": "dept_election_pc_desc",
+      "color": "#ea580c",
+      "darkColor": "#fdba74",
+      "contacts": []
+    },
+    "admin_district": {
+      "nameKey": "dept_admin_district",
+      "icon": "🏦",
+      "websiteUrl": "https://karnataka.gov.in/",
+      "geodataUrl": "https://kgis.ksrsac.in/kgis/downloads.aspx",
+      "descriptionKey": "dept_admin_district_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "childDepartments": [
+        "admin_taluk"
+      ],
+      "contacts": []
+    },
+    "admin_taluk": {
+      "nameKey": "dept_admin_taluk",
+      "icon": "🏦",
+      "websiteUrl": "https://karnataka.gov.in/",
+      "geodataUrl": "https://kgis.ksrsac.in/kgis/downloads.aspx",
+      "descriptionKey": "dept_admin_taluk_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "parentDepartment": "admin_district",
+      "childDepartments": [
+        "admin_hobli"
+      ],
+      "contacts": []
+    },
+    "admin_hobli": {
+      "nameKey": "dept_admin_hobli",
+      "icon": "🏦",
+      "websiteUrl": "https://karnataka.gov.in/",
+      "geodataUrl": "https://github.com/samashti/KGIS",
+      "descriptionKey": "dept_admin_hobli_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "parentDepartment": "admin_taluk",
+      "childDepartments": [
+        "admin_village"
+      ],
+      "contacts": []
+    },
+    "admin_village": {
+      "nameKey": "dept_admin_village",
+      "icon": "🏦",
+      "websiteUrl": "https://karnataka.gov.in/",
+      "geodataUrl": "https://github.com/samashti/KGIS",
+      "descriptionKey": "dept_admin_village_desc",
+      "color": "#059669",
+      "darkColor": "#a7f3d0",
+      "parentDepartment": "admin_hobli",
+      "contacts": []
+    },
+    "pincode": {
+      "nameKey": "dept_pincode",
+      "icon": "📮",
+      "websiteUrl": "https://www.indiapost.gov.in/sites/PostalCircles/Karnataka/Pages/cpio.aspx",
+      "geodataUrl": "https://www.data.gov.in/catalog/all-india-pincode-boundary-geo-json",
+      "descriptionKey": "dept_pincode_desc",
+      "showWardNumber": true,
+      "sortBy": "wardNumber",
+      "color": "#7c3aed",
+      "darkColor": "#c4b5fd",
+      "contacts": []
+    },
+    "stamps_dro": {
+      "nameKey": "dept_stamps_dro",
+      "icon": "📝",
+      "websiteUrl": "https://igr.karnataka.gov.in/page/Contact+Us/District+Registrar+Officers/en",
+      "geodataUrl": "https://data.opencity.in/dataset/karnataka-and-bengaluru-stamps-and-duties-registrar-offices-maps/resource/d4a499a3-cee0-4f2f-b29b-9f259eaa4eda",
+      "descriptionKey": "dept_stamps_dro_desc",
+      "color": "#6b7280",
+      "darkColor": "#d1d5db",
+      "childDepartments": [
+        "stamps_sro"
+      ],
+      "contacts": []
+    },
+    "stamps_sro": {
+      "nameKey": "dept_stamps_sro",
+      "icon": "📝",
+      "websiteUrl": "https://igr.karnataka.gov.in/page/Contact+Us/Sub+Registrars/en",
+      "geodataUrl": "https://data.opencity.in/dataset/karnataka-and-bengaluru-stamps-and-duties-registrar-offices-maps/resource/a799823a-9768-438a-82a7-e3f11cb0da2b",
+      "descriptionKey": "dept_stamps_sro_desc",
+      "color": "#6b7280",
+      "darkColor": "#d1d5db",
+      "parentDepartment": "stamps_dro",
+      "contacts": []
+    },
+    "bbmp_zone": {
+      "nameKey": "dept_bbmp_zone",
+      "icon": "🏤",
+      "websiteUrl": "https://site.bbmp.gov.in/zonewiseofficers.html",
+      "geodataUrl": "https://data.opencity.in/dataset/bbmp-ward-information/resource/4723f667-b02b-45e5-a8fc-2bc6ee7bd8b9",
+      "descriptionKey": "dept_bbmp_zone_desc",
+      "color": "#8b5cf6",
+      "darkColor": "#c4b5fd",
+      "childDepartments": [
+        "bbmp_wards"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "919480685700"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_garbage_solid_waste",
+          "value": "919448197197"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "comm@bbmp.gov.in"
+        }
+      ]
+    },
+    "bbmp_wards": {
+      "nameKey": "dept_bbmp_wards",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/bbmp-wards-delimitation-2023/resource/7857d752-dda4-4e5e-b9e6-53146372f86b",
+      "descriptionKey": "dept_bbmp_wards_desc",
+      "showWardNumber": true,
+      "color": "#8b5cf6",
+      "darkColor": "#c4b5fd",
+      "parentDepartment": "bbmp_zone",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "919480685700"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_garbage_solid_waste",
+          "value": "919448197197"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "comm@bbmp.gov.in"
+        }
+      ]
+    },
+    "bbmp_wards_old": {
+      "nameKey": "dept_bbmp_wards_old",
+      "icon": "🏤",
+      "websiteUrl": "https://bbmp.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/bbmp-ward-information/resource/a0329df6-2924-43f4-8fe4-7a6ffcc1d53d",
+      "descriptionKey": "dept_bbmp_wards_old_desc",
+      "showWardNumber": true,
+      "color": "#7c3aed",
+      "darkColor": "#ddd6fe",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1533"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "919480685700"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "comm@bbmp.gov.in"
+        }
+      ]
+    }
+  }
+}

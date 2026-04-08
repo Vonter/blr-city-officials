@@ -2,20 +2,32 @@
   import { _ } from 'svelte-i18n';
   import { layers } from '../../assets/boundaries';
 
-  export let filename: string;
+  interface Props {
+    filename: string;
+  }
 
-  // Add type guard to ensure layers[filename] exists
-  $: layerInfo = layers[filename as keyof typeof layers];
+  let { filename }: Props = $props();
+
+  const layerInfo = $derived(layers[filename as keyof typeof layers]);
+
+  const sourceUrl = $derived.by(() => {
+    if (layerInfo?.geodata_url) return layerInfo.geodata_url;
+    let current = layerInfo?.parentDepartment;
+    while (current) {
+      const parent = layers[current];
+      if (parent?.geodata_url) return parent.geodata_url;
+      current = parent?.parentDepartment;
+    }
+    return '';
+  });
 </script>
 
-<div
-  class="p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-200 dark:border-neutral-700 shadow-sm"
->
+<div class="p-4 bg-white dark:bg-neutral-900 rounded-lg shadow-sm">
   {#if layerInfo}
     <div class="space-y-3">
-      {#if layerInfo?.geodata_url}
+      {#if sourceUrl}
         <a
-          href={layerInfo.geodata_url}
+          href={sourceUrl}
           class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 group"
           target="_blank"
           rel="noreferrer"
