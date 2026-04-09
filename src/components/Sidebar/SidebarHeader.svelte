@@ -45,15 +45,20 @@
     {#if onTitleClick}
       <button
         onclick={onTitleClick}
-        class="text-lg tracking-tight flex-1 text-left hover:underline hover:decoration-gray-300 dark:hover:decoration-gray-600 underline-offset-4 transition-all flex items-center gap-2 cursor-pointer"
+        title="Change city"
+        class="text-lg tracking-tight flex-1 text-left transition-all flex items-center gap-2 cursor-pointer group"
       >
         {#if logoUrl}
           <img src={logoUrl} alt="" class="h-7 w-7 object-contain" />
         {/if}
-        {title}
+        <span
+          class="underline decoration-gray-300 dark:decoration-gray-600 underline-offset-4 group-hover:decoration-gray-600 dark:group-hover:decoration-gray-400 transition-colors"
+        >
+          {title}
+        </span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-3.5 w-3.5 text-gray-400 dark:text-gray-500 shrink-0"
+          class="h-4 w-4 text-gray-400 dark:text-gray-500 shrink-0 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -62,7 +67,7 @@
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            d="M9 5l7 7-7 7"
+            d="M19 9l-7 7-7-7"
           />
         </svg>
       </button>
