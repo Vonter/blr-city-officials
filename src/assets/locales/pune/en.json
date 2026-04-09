@@ -18,6 +18,7 @@
   "dept_admin_taluk": "Taluk",
   "dept_pincode": "Pincode",
 
+  "dept_pmc_zone_fullform": "PMC (Pune Municipal Corporation)",
   "dept_pmc_zone_desc": "Pune Municipal Corporation is divided into 4 zones for administrative management of civic services across the city.",
   "dept_pmc_admin_ward_desc": "Administrative wards within PMC zones, each headed by an Assistant Commissioner overseeing local civic services.",
   "dept_pmc_electoral_ward_desc": "Electoral wards within PMC for local body elections, each represented by an elected corporator.",

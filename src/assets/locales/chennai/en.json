@@ -20,9 +20,11 @@
   "dept_admin_taluk": "Taluk",
   "dept_pincode": "Pincode",
 
+  "dept_gcc_region_fullform": "GCC (Greater Chennai Corporation)",
   "dept_gcc_region_desc": "Greater Chennai Corporation regions, the top-level administrative division with 3 regions covering the city.",
   "dept_gcc_zone_desc": "GCC administrative zones, each headed by a Zonal Officer overseeing ward-level services.",
   "dept_gcc_ward_desc": "GCC wards with elected councillors responsible for local civic issues. 200 wards as per 2022 delimitation.",
+  "dept_cmwssb_dae_fullform": "CMWSSB (Chennai Metropolitan Water Supply and Sewerage Board)",
   "dept_cmwssb_dae_desc": "CMWSSB District Assistant Engineer areas managing local water supply and sewerage infrastructure.",
   "dept_cmwssb_depot_desc": "CMWSSB depots for local water supply complaints, maintenance and service delivery.",
   "dept_election_ac_desc": "Assembly constituencies electing Members of Legislative Assembly to the Tamil Nadu Legislative Assembly.",

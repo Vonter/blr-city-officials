@@ -1,25 +1,26 @@
 import {
   getOfficialDetails,
   getWardName,
-  getWardNumber,
+  getBoundaryNumber,
   isRegionalLocale
 } from './helpers';
 
 export function formatDistrictName(
   wardName: string,
-  wardNumber: string
+  boundaryNumber: string
 ): string {
-  return wardNumber ? `${wardNumber}: ${wardName}` : wardName;
+  return boundaryNumber ? `${boundaryNumber}: ${wardName}` : wardName;
 }
 
 export function getLocalizedDistrictName(
   deptKey: string,
   areaName: string,
   officials: any[],
-  locale: string | null | undefined
+  locale: string | null | undefined,
+  boundaryNumber?: string
 ): string {
   const officialDetails = getOfficialDetails(deptKey, areaName, officials);
-  const wardNumber = getWardNumber(areaName);
+  const num = boundaryNumber ?? getBoundaryNumber(areaName);
   let name: string;
   if (
     officialDetails &&
@@ -31,5 +32,5 @@ export function getLocalizedDistrictName(
   } else {
     name = getWardName(areaName);
   }
-  return formatDistrictName(name, wardNumber);
+  return formatDistrictName(name, num);
 }

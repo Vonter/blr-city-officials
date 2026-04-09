@@ -39,7 +39,7 @@ function generateLayers(): ILayers {
       parentDepartment: dept.parentDepartment,
       childDepartments: dept.childDepartments,
       commonOfficials: dept.commonOfficials,
-      showWardNumber: dept.showWardNumber,
+      showBoundaryNumber: dept.showBoundaryNumber,
       sortBy: dept.sortBy
     };
   });

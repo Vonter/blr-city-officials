@@ -5,10 +5,10 @@ import { getBoundaryColor } from './colors';
 
 export const wardLabelExpression: any = [
   'case',
-  ['!=', ['get', 'wardNumber'], ''],
+  ['!=', ['get', 'boundaryNumber'], ''],
   [
     'concat',
-    ['get', 'wardNumber'],
+    ['get', 'boundaryNumber'],
     ': ',
     ['coalesce', ['get', 'wardName'], ['get', 'namecol']]
   ],

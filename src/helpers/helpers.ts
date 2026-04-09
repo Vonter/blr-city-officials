@@ -78,7 +78,7 @@ export function getWardName(namecol: string): string {
   return namecol;
 }
 
-export function getWardNumber(namecol: string): string {
+export function getBoundaryNumber(namecol: string): string {
   const colonMatch = namecol.match(/^(\d+):\s*.+$/);
   if (colonMatch) return colonMatch[1];
 
@@ -93,12 +93,12 @@ export function getWardNumber(namecol: string): string {
 
 export function sortedDistricts(
   features: Feature[],
-  sortBy?: 'wardNumber' | 'wardName'
+  sortBy?: 'boundaryNumber' | 'wardName'
 ): Feature[] {
-  if (sortBy === 'wardNumber') {
+  if (sortBy === 'boundaryNumber') {
     return features.sort((a, b) => {
-      const aNum = parseInt(a.properties?.['wardNumber'] || '0', 10) || 0;
-      const bNum = parseInt(b.properties?.['wardNumber'] || '0', 10) || 0;
+      const aNum = parseInt(a.properties?.['boundaryNumber'] || '0', 10) || 0;
+      const bNum = parseInt(b.properties?.['boundaryNumber'] || '0', 10) || 0;
       if (aNum !== bNum) return aNum - bNum;
       const aName =
         a.properties?.['wardName'] || a.properties?.['namecol'] || '';

@@ -20,6 +20,7 @@
   "dept_admin_mandal": "Mandal",
   "dept_pincode": "Pincode",
 
+  "dept_ghmc_corporation_fullform": "GHMC (Greater Hyderabad Municipal Corporation)",
   "dept_ghmc_corporation_desc": "Greater Hyderabad Municipal Corporation is responsible for civic administration across the Hyderabad metropolitan area.",
   "dept_ghmc_zone_desc": "Administrative zones within GHMC, each overseeing multiple wards for local governance.",
   "dept_ghmc_ward_desc": "Individual wards within GHMC, the basic unit of local representation with elected corporators.",

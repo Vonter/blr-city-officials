@@ -57,7 +57,7 @@
                   id: d.id,
                   namecol: d.namecol,
                   wardName: d.wardName,
-                  wardNumber: d.wardNumber
+                  boundaryNumber: d.boundaryNumber
                 },
                 geometry: null
               }) as unknown as Feature

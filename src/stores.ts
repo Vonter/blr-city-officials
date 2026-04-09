@@ -6,7 +6,11 @@ import { writable, get } from 'svelte/store';
 import { browser } from '$app/environment';
 import { MediaQuery } from 'svelte/reactivity';
 import { cityConfig, onCityChange } from './configs/config';
-import { findPolylabel, getWardName, getWardNumber } from './helpers/helpers';
+import {
+  findPolylabel,
+  getWardName,
+  getBoundaryNumber
+} from './helpers/helpers';
 import { scheduleIdle as scheduleIdleCb } from './helpers/scheduling';
 
 export const selectedBoundaryMap = writable<string | null>(null);
@@ -55,7 +59,9 @@ function enrichWardProperties(geojson: FeatureCollection): void {
     if (f.properties) {
       const namecol = f.properties['namecol'] || '';
       f.properties['wardName'] = getWardName(namecol);
-      f.properties['wardNumber'] = getWardNumber(namecol);
+      if (!f.properties['boundaryNumber']) {
+        f.properties['boundaryNumber'] = getBoundaryNumber(namecol);
+      }
     }
   }
 }

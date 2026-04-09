@@ -37,7 +37,7 @@ export const GET: RequestHandler = async ({ url, request }) => {
         districts: districts.map((d: any) => ({
           namecol: d.properties?.['namecol'],
           wardName: d.properties?.['wardName'],
-          wardNumber: d.properties?.['wardNumber']
+          boundaryNumber: d.properties?.['boundaryNumber']
         }))
       },
       {

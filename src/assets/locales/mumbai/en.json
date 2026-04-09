@@ -19,6 +19,7 @@
   "dept_admin_taluk": "Taluk",
   "dept_pincode": "Pincode",
 
+  "dept_bmc_ward_fullform": "BMC (Brihanmumbai Municipal Corporation)",
   "dept_bmc_ward_desc": "BMC administrative wards, each headed by an Assistant Commissioner overseeing civic services.",
   "dept_bmc_prabhag_desc": "BMC electoral wards (Prabhags) with elected corporators responsible for local civic issues.",
   "dept_police_city_desc": "Mumbai Police jurisdictions for law and order.",

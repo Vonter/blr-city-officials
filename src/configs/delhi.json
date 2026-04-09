@@ -121,8 +121,8 @@
       "websiteUrl": "https://www.indiapost.gov.in/sites/PostalCircles/Delhi/Pages/cpio.aspx",
       "geodataUrl": "https://data.opencity.in/dataset/india-pincode-maps-2025/resource/f36d8d37-b768-4f01-afab-47dcef5e85a9",
       "descriptionKey": "dept_pincode_desc",
-      "showWardNumber": true,
-      "sortBy": "wardNumber",
+      "showBoundaryNumber": true,
+      "sortBy": "boundaryNumber",
       "color": "#7c3aed",
       "darkColor": "#c4b5fd",
       "contacts": [

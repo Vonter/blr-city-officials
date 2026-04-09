@@ -20,7 +20,7 @@
   import {
     getOfficialDetails,
     getWardName,
-    getWardNumber,
+    getBoundaryNumber,
     resetZoom,
     sortedDistricts,
     isRegionalLocale
@@ -106,7 +106,7 @@
                   id: boundaryId,
                   namecol: d.namecol,
                   wardName: d.wardName,
-                  wardNumber: d.wardNumber
+                  boundaryNumber: d.boundaryNumber
                 },
                 geometry: null
               }) as unknown as Feature
@@ -144,10 +144,11 @@
   function displayNameWithNumber(
     namecol: string,
     wardName: string,
-    boundaryId: string | null
+    boundaryId: string | null,
+    boundaryNumber?: string
   ): string {
-    if (boundaryId && layers[boundaryId]?.showWardNumber) {
-      const num = getWardNumber(namecol);
+    if (boundaryId && layers[boundaryId]?.showBoundaryNumber) {
+      const num = getBoundaryNumber(namecol) || boundaryNumber;
       if (num) return `${num}: ${wardName}`;
     }
     return wardName;
@@ -156,6 +157,7 @@
   interface DistrictEntry {
     namecol: string;
     wardName: string;
+    boundaryNumber?: string;
   }
 
   function uniqueDistricts(
@@ -172,7 +174,8 @@
       seen.add(namecol);
       result.push({
         namecol,
-        wardName: f.properties?.['wardName'] || namecol
+        wardName: f.properties?.['wardName'] || namecol,
+        boundaryNumber: f.properties?.['boundaryNumber'] || undefined
       });
     }
     return result;
@@ -205,17 +208,25 @@
             isDetailPaneOpen ? 'visible' : 'hidden'
           }`}
         >
-          <div class="space-y-2">
+          <div class="space-y-3">
             {#if rootDeptKey && rootDeptKey !== boundaryMap.current && layers[rootDeptKey]?.descriptionKey}
-              {@const rootDesc = t.current(layers[rootDeptKey].descriptionKey)}
-              {#if rootDesc !== layers[rootDeptKey].descriptionKey}
-                <p>{rootDesc}</p>
+              {@const rootDescKey = layers[rootDeptKey].descriptionKey}
+              {@const rootDesc = t.current(rootDescKey)}
+              {#if rootDesc !== rootDescKey}
+                <p class="text-gray-600 dark:text-gray-400">{rootDesc}</p>
               {/if}
             {/if}
-            {#if layers[boundaryMap.current]?.descriptionKey && t.current(layers[boundaryMap.current].descriptionKey) !== layers[boundaryMap.current].descriptionKey}
-              <p>{t.current(layers[boundaryMap.current].descriptionKey)}</p>
-            {:else if layers[boundaryMap.current]?.description}
-              <p>{layers[boundaryMap.current].description}</p>
+            {#if boundaryMap.current && layers[boundaryMap.current]}
+              {@const currentLayer = layers[boundaryMap.current]!}
+              {#if currentLayer.descriptionKey && t.current(currentLayer.descriptionKey) !== currentLayer.descriptionKey}
+                <p class="text-gray-600 dark:text-gray-400">
+                  {t.current(currentLayer.descriptionKey)}
+                </p>
+              {:else if currentLayer.description}
+                <p class="text-gray-600 dark:text-gray-400">
+                  {currentLayer.description}
+                </p>
+              {/if}
             {/if}
           </div>
           {#if boundaryData}
@@ -268,7 +279,8 @@
           nameCol={displayNameWithNumber(
             entry.namecol,
             isRegionalLocale(loc.current) ? nameColRegional : entry.wardName,
-            boundaryMap.current
+            boundaryMap.current,
+            entry.boundaryNumber
           )}
           nameLong=""
         />

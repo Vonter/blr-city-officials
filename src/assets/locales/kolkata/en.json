@@ -23,10 +23,12 @@
   "dept_admin_taluk": "Sub-division",
   "dept_pincode": "Pincode",
 
+  "dept_kmc_borough_fullform": "KMC (Kolkata Municipal Corporation)",
   "dept_kmc_borough_desc": "Kolkata Municipal Corporation is divided into 16 boroughs (I through XVI), each headed by a Borough Chairperson and managing civic services locally.",
   "dept_kmc_ward_desc": "The 144 wards of KMC are the basic unit of local administration, each represented by an elected councillor.",
   "dept_police_division_desc": "Kolkata Police Commissionerate is organized into 10 territorial divisions, each headed by a Deputy Commissioner of Police.",
   "dept_police_station_desc": "Local police stations under each division handling law and order in their jurisdiction.",
+  "dept_cesc_region_fullform": "CESC (Calcutta Electric Supply Corporation)",
   "dept_cesc_region_desc": "CESC (Calcutta Electric Supply Corporation) operates through 6 regional offices serving Kolkata and surrounding areas.",
   "dept_election_pc_desc": "Parliamentary constituencies electing Members of Parliament to the Lok Sabha.",
   "dept_election_ac_desc": "Assembly constituencies electing Members of Legislative Assembly to the West Bengal Vidhan Sabha.",

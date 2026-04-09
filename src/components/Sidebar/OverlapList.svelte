@@ -14,7 +14,7 @@
   import {
     getOfficialDetails,
     getWardName,
-    getWardNumber,
+    getBoundaryNumber,
     isRegionalLocale
   } from '../../helpers/helpers';
   import { formatDistrictName } from '../../helpers/districtDisplay';
@@ -124,16 +124,16 @@
         const namecol = district.properties?.['namecol'] || '';
         const wardName =
           district.properties?.['wardName'] || getWardName(namecol);
-        const wardNumber =
-          district.properties?.['wardNumber'] || getWardNumber(namecol);
-        const displayName = formatDistrictName(wardName, wardNumber);
+        const boundaryNumber =
+          district.properties?.['boundaryNumber'] || getBoundaryNumber(namecol);
+        const displayName = formatDistrictName(wardName, boundaryNumber);
         const nameColRegional =
           officialDetails && officialDetails.length > 0 && officialDetails[0]
             ? getWardName(officialDetails[0].AreaRegional)
             : wardName;
         const displayRegional = formatDistrictName(
           nameColRegional || '',
-          wardNumber
+          boundaryNumber
         );
 
         group.entries.push({

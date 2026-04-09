@@ -56,8 +56,8 @@ export interface DepartmentConfig {
   descriptionKey?: string;
   color?: string;
   darkColor?: string;
-  showWardNumber?: boolean;
-  sortBy?: 'wardNumber' | 'wardName';
+  showBoundaryNumber?: boolean;
+  sortBy?: 'boundaryNumber' | 'wardName';
 }
 
 export interface OfficeLocation {
@@ -97,6 +97,6 @@ export interface ILayer {
   parentDepartment?: string;
   childDepartments?: string[];
   commonOfficials?: CommonOfficial[];
-  showWardNumber?: boolean;
-  sortBy?: 'wardNumber' | 'wardName';
+  showBoundaryNumber?: boolean;
+  sortBy?: 'boundaryNumber' | 'wardName';
 }

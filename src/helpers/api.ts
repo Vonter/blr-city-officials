@@ -4,7 +4,7 @@ import { cityConfig } from '../configs/config';
 interface BoundaryDistrict {
   namecol: string;
   wardName: string;
-  wardNumber: string;
+  boundaryNumber: string;
 }
 
 interface BoundaryDetailsResponse {
@@ -15,7 +15,7 @@ interface CoordinateDistrict {
   id: string;
   namecol: string;
   wardName: string;
-  wardNumber: string;
+  boundaryNumber: string;
 }
 
 interface CoordinateDetailsResponse {

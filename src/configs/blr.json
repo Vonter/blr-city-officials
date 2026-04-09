@@ -364,6 +364,7 @@
     },
     "gba_zone": {
       "nameKey": "dept_gba_zone",
+      "showBoundaryNumber": true,
       "icon": "🏤",
       "websiteUrl": "https://bbmp.gov.in/home",
       "geodataUrl": "https://data.opencity.in/dataset/greater-bengaluru-authority-corporations-delimitation-2025/resource/5e7856ef-7a27-4255-80ad-9b62e62aadbf",
@@ -428,7 +429,7 @@
       "websiteUrl": "https://bbmp.gov.in/home",
       "geodataUrl": "https://data.opencity.in/dataset/gba-wards-delimitation-2025/resource/9013d656-8051-4e2d-9648-46efd0d86d3d",
       "descriptionKey": "dept_gba_ward_desc",
-      "showWardNumber": true,
+      "showBoundaryNumber": true,
       "color": "#3b82f6",
       "darkColor": "#bfdbfe",
       "parentDepartment": "gba_subdivision",
@@ -482,7 +483,7 @@
       "descriptionKey": "dept_bescom_subdivision_desc",
       "color": "#d97706",
       "darkColor": "#fde68a",
-      "showWardNumber": true,
+      "showBoundaryNumber": true,
       "parentDepartment": "bescom_division",
       "childDepartments": [
         "bescom_section"
@@ -518,7 +519,7 @@
       "descriptionKey": "dept_bescom_section_desc",
       "color": "#d97706",
       "darkColor": "#fde68a",
-      "showWardNumber": true,
+      "showBoundaryNumber": true,
       "parentDepartment": "bescom_subdivision",
       "contacts": [
         {
@@ -859,8 +860,8 @@
       "websiteUrl": "https://www.indiapost.gov.in/sites/PostalCircles/Karnataka/Pages/cpio.aspx",
       "geodataUrl": "https://www.data.gov.in/catalog/all-india-pincode-boundary-geo-json",
       "descriptionKey": "dept_pincode_desc",
-      "showWardNumber": true,
-      "sortBy": "wardNumber",
+      "showBoundaryNumber": true,
+      "sortBy": "boundaryNumber",
       "color": "#7c3aed",
       "darkColor": "#c4b5fd",
       "contacts": []
@@ -929,7 +930,7 @@
       "websiteUrl": "https://bbmp.gov.in/",
       "geodataUrl": "https://data.opencity.in/dataset/bbmp-wards-delimitation-2023/resource/7857d752-dda4-4e5e-b9e6-53146372f86b",
       "descriptionKey": "dept_bbmp_wards_desc",
-      "showWardNumber": true,
+      "showBoundaryNumber": true,
       "color": "#8b5cf6",
       "darkColor": "#c4b5fd",
       "parentDepartment": "bbmp_zone",
@@ -962,7 +963,7 @@
       "websiteUrl": "https://bbmp.gov.in/",
       "geodataUrl": "https://data.opencity.in/dataset/bbmp-ward-information/resource/a0329df6-2924-43f4-8fe4-7a6ffcc1d53d",
       "descriptionKey": "dept_bbmp_wards_old_desc",
-      "showWardNumber": true,
+      "showBoundaryNumber": true,
       "color": "#7c3aed",
       "darkColor": "#ddd6fe",
       "contacts": [

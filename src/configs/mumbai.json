@@ -174,8 +174,8 @@
       "websiteUrl": "https://www.indiapost.gov.in/sites/PostalCircles/Maharashtra/Pages/cpio.aspx",
       "geodataUrl": "https://data.opencity.in/dataset/pincode-maps-of-cities/resource/001f4a52-fe99-4514-86a6-4abbd2790825",
       "descriptionKey": "dept_pincode_desc",
-      "showWardNumber": true,
-      "sortBy": "wardNumber",
+      "showBoundaryNumber": true,
+      "sortBy": "boundaryNumber",
       "color": "#7c3aed",
       "darkColor": "#c4b5fd",
       "contacts": [

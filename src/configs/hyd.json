@@ -191,8 +191,8 @@
       "websiteUrl": "https://www.indiapost.gov.in/",
       "geodataUrl": "https://data.opencity.in/dataset/pincode-maps-of-cities/resource/66915e76-fe5e-4322-a1b8-951d7f4bd455",
       "descriptionKey": "dept_pincode_desc",
-      "showWardNumber": true,
-      "sortBy": "wardNumber",
+      "showBoundaryNumber": true,
+      "sortBy": "boundaryNumber",
       "color": "#7c3aed",
       "darkColor": "#c4b5fd",
       "contacts": [

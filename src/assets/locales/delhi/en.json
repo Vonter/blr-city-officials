@@ -25,9 +25,13 @@
   "dept_admin_taluk": "Sub-division",
   "dept_pincode": "Pincode",
 
+  "dept_mcd_zone_fullform": "MCD (Municipal Corporation of Delhi)",
   "dept_mcd_zone_desc": "MCD administrative zones overseeing municipal services across Delhi.",
+  "dept_mcd_ward_fullform": "MCD (Municipal Corporation of Delhi)",
   "dept_mcd_ward_desc": "MCD wards with elected councillors responsible for local civic issues.",
+  "dept_djb_zone_fullform": "DJB (Delhi Jal Board)",
   "dept_djb_zone_desc": "Delhi Jal Board zones managing water supply and sewerage infrastructure.",
+  "dept_bses_division_fullform": "BSES (Bombay Suburban Electric Supply)",
   "dept_bses_division_desc": "BSES Rajdhani and BSES Yamuna electricity distribution divisions.",
   "dept_police_district_desc": "Delhi Police district jurisdictions for law and order.",
   "dept_police_traffic_desc": "Delhi Traffic Police jurisdictions for traffic management and enforcement.",

@@ -40,7 +40,7 @@ export const GET: RequestHandler = async ({ url, request }) => {
           id: feature.properties?.['id'],
           namecol: feature.properties?.['namecol'],
           wardName: feature.properties?.['wardName'],
-          wardNumber: feature.properties?.['wardNumber']
+          boundaryNumber: feature.properties?.['boundaryNumber']
         }))
       },
       {
