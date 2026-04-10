@@ -107,6 +107,7 @@
       "websiteUrl": "https://hyderabadpolice.gov.in/",
       "geodataUrl": "https://data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india/resource/df7b7a4e-5c00-4769-894e-1da24e612f11",
       "descriptionKey": "dept_police_city_desc",
+      "showWebsite": true,
       "color": "#dc2626",
       "darkColor": "#fca5a5",
       "contacts": [
@@ -119,6 +120,11 @@
           "type": "phone",
           "labelKey": "contact_other",
           "value": "100"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "web-pol-hyd@tspolice.gov.in"
         },
         {
           "type": "twitter",

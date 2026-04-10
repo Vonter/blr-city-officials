@@ -22,7 +22,10 @@
     resolveHierarchy,
     type HierarchyLevel
   } from '../../helpers/hierarchy';
-  import { CONTACT_LINK_CLASS } from '../../helpers/contactHelpers';
+  import {
+    CONTACT_LINK_CLASS,
+    getExtraContacts
+  } from '../../helpers/contactHelpers';
   import maplibregl from 'maplibre-gl';
   import { untrack } from 'svelte';
 
@@ -72,33 +75,12 @@
     }
   }
 
-  function isSocialMediaOnly(official: any): boolean {
-    return (
-      official.Twitter &&
-      !official.Phone &&
-      !official['E-Mail'] &&
-      (!official.Name || official.Name === '-')
-    );
-  }
-
   function isVisibleOfficial(official: any): boolean {
-    return (
-      !isSocialMediaOnly(official) &&
-      (official.Phone ||
-        official['E-Mail'] ||
-        official.Twitter ||
-        (official.Name && official.Name !== '-'))
+    return !!(
+      official.Phone ||
+      official['E-Mail'] ||
+      (official.Name && official.Name !== '-')
     );
-  }
-
-  function getSocialMediaContacts(
-    officials: any[]
-  ): import('../../configs/types').Contact[] {
-    return officials.filter(isSocialMediaOnly).map(o => ({
-      type: 'twitter' as const,
-      labelKey: 'contact_twitter',
-      value: o.Twitter.replace('https://x.com/', '')
-    }));
   }
 
   let hierarchyLevels: HierarchyLevel[] = $state([]);
@@ -151,7 +133,10 @@
     const deptContacts =
       config.defaultContacts?.filter((c: any) => !shownValues.has(c.value)) ||
       [];
-    const socialContacts = getSocialMediaContacts(level.officials);
+    const socialContacts = getExtraContacts(
+      level.officials,
+      layers[level.deptKey]?.showWebsite
+    );
     const hasContacts = deptContacts.length > 0 || socialContacts.length > 0;
     const hasOfficials = level.officials.filter(isVisibleOfficial).length > 0;
     const hasDefaultOfficials =
@@ -266,7 +251,10 @@
                   officialsData.current
                 )
               : null}
-            extraContacts={getSocialMediaContacts(level.officials)}
+            extraContacts={getExtraContacts(
+              level.officials,
+              layers[level.deptKey]?.showWebsite
+            )}
           />
 
           {#if level.officials.filter(isVisibleOfficial).length > 0}

@@ -40,7 +40,8 @@ function generateLayers(): ILayers {
       childDepartments: dept.childDepartments,
       commonOfficials: dept.commonOfficials,
       showBoundaryNumber: dept.showBoundaryNumber,
-      sortBy: dept.sortBy
+      sortBy: dept.sortBy,
+      showWebsite: dept.showWebsite
     };
   });
 

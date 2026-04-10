@@ -58,6 +58,7 @@ export interface DepartmentConfig {
   darkColor?: string;
   showBoundaryNumber?: boolean;
   sortBy?: 'boundaryNumber' | 'wardName';
+  showWebsite?: boolean;
 }
 
 export interface OfficeLocation {
@@ -68,7 +69,14 @@ export interface OfficeLocation {
 }
 
 export interface Contact {
-  type: 'phone' | 'email' | 'whatsapp' | 'twitter' | 'facebook' | 'instagram';
+  type:
+    | 'phone'
+    | 'email'
+    | 'whatsapp'
+    | 'twitter'
+    | 'facebook'
+    | 'instagram'
+    | 'website';
   labelKey: string;
   value: string;
 }
@@ -99,4 +107,5 @@ export interface ILayer {
   commonOfficials?: CommonOfficial[];
   showBoundaryNumber?: boolean;
   sortBy?: 'boundaryNumber' | 'wardName';
+  showWebsite?: boolean;
 }
