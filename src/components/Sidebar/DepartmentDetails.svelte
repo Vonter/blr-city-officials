@@ -35,42 +35,67 @@
     }
   );
 
-  const filteredContacts = $derived([
-    ...(config.defaultContacts?.filter(
+  const filteredDefaultContacts = $derived(
+    config.defaultContacts?.filter(
       (c: any) => !shownContactValues.has(c.value)
-    ) || []),
-    ...extraContacts
-  ]);
+    ) || []
+  );
 
   const isRegional = $derived(isRegionalLocale(locale));
 </script>
 
-{#if filteredContacts.length > 0}
+{#if extraContacts.length > 0}
   <div
     class="bg-white dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-neutral-700 break-words mb-4"
   >
-    <div class="border-gray-200 dark:border-neutral-600">
-      <div class="flex flex-wrap gap-2">
-        {#each filteredContacts as contact}
-          <a
-            href={getContactHref(contact)}
-            target={isExternalContact(contact.type) ? '_blank' : undefined}
-            rel={isExternalContact(contact.type)
-              ? 'noopener noreferrer'
-              : undefined}
-            class={CONTACT_LINK_CLASS}
-          >
-            <Icon
-              name={getContactIconName(contact.type)}
-              class="h-4 w-4 mr-2 flex-shrink-0"
-            />
-            <span class="text-xs text-gray-500 dark:text-gray-400 mr-2">
-              {$_(contact.labelKey)}:
-            </span>
-            <span class="truncate">{getContactDisplay(contact)}</span>
-          </a>
-        {/each}
-      </div>
+    <div class="flex flex-wrap gap-2">
+      {#each extraContacts as contact}
+        <a
+          href={getContactHref(contact)}
+          target={isExternalContact(contact.type) ? '_blank' : undefined}
+          rel={isExternalContact(contact.type)
+            ? 'noopener noreferrer'
+            : undefined}
+          class={CONTACT_LINK_CLASS}
+        >
+          <Icon
+            name={getContactIconName(contact.type)}
+            class="h-4 w-4 mr-2 flex-shrink-0"
+          />
+          <span class="text-xs text-gray-500 dark:text-gray-400 mr-2">
+            {$_(contact.labelKey)}:
+          </span>
+          <span class="truncate">{getContactDisplay(contact)}</span>
+        </a>
+      {/each}
+    </div>
+  </div>
+{/if}
+
+{#if filteredDefaultContacts.length > 0}
+  <div
+    class="bg-white dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-neutral-700 break-words mb-4"
+  >
+    <div class="flex flex-wrap gap-2">
+      {#each filteredDefaultContacts as contact}
+        <a
+          href={getContactHref(contact)}
+          target={isExternalContact(contact.type) ? '_blank' : undefined}
+          rel={isExternalContact(contact.type)
+            ? 'noopener noreferrer'
+            : undefined}
+          class={CONTACT_LINK_CLASS}
+        >
+          <Icon
+            name={getContactIconName(contact.type)}
+            class="h-4 w-4 mr-2 flex-shrink-0"
+          />
+          <span class="text-xs text-gray-500 dark:text-gray-400 mr-2">
+            {$_(contact.labelKey)}:
+          </span>
+          <span class="truncate">{getContactDisplay(contact)}</span>
+        </a>
+      {/each}
     </div>
   </div>
 {/if}

@@ -44,19 +44,29 @@
           "value": "1916"
         },
         {
-          "type": "phone",
-          "labelKey": "contact_other",
-          "value": "+912222620251"
-        },
-        {
-          "type": "email",
-          "labelKey": "contact_email",
-          "value": "commissioner@mcgm.gov.in"
+          "type": "twitter",
+          "labelKey": "contact_mybmc",
+          "value": "mybmc"
         },
         {
           "type": "twitter",
-          "labelKey": "contact_twitter",
-          "value": "mybmc"
+          "labelKey": "contact_storm_water_drains",
+          "value": "mybmcSWD"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_roads",
+          "value": "mybmcRoads"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_bridges",
+          "value": "mybmcBridges"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_health",
+          "value": "mybmcHealthDept"
         }
       ],
       "commonOfficials": [
@@ -79,26 +89,42 @@
         {
           "designation": "Municipal Commissioner",
           "designationRegional": "महानगरपालिका आयुक्त",
-          "name": "Bhushan Gagrani",
-          "nameRegional": "भूषण गगराणी",
-          "phone": "022-22620251",
+          "name": "Ashwini Bhide",
+          "nameRegional": "अश्विनी भिडे",
+          "phone": "",
           "email": "commissioner@mcgm.gov.in"
         },
         {
-          "designation": "Additional Municipal Commissioner (Projects)",
-          "designationRegional": "अतिरिक्त महानगरपालिका आयुक्त (प्रकल्प)",
-          "name": "Abhijit Bangar",
-          "nameRegional": "अभिजीत बांगर",
-          "phone": "",
-          "email": ""
+          "designation": " Additional Municipal Commissioner (City)",
+          "designationRegional": " अतिरिक्त महापालिका आयुक्त (शहर)",
+          "name": "Dr. Ashwini Joshi",
+          "nameRegional": "डॉ. अश्विनी जोशी",
+          "phone": "226202514227",
+          "email": "amc.city@mcgm.gov.in"
         },
         {
           "designation": "Additional Municipal Commissioner (Eastern Suburbs)",
-          "designationRegional": "अतिरिक्त महानगरपालिका आयुक्त (पूर्व उपनगर)",
-          "name": "Dr. Amit Saini",
-          "nameRegional": "डॉ. अमित सैनी",
-          "phone": "",
-          "email": ""
+          "designationRegional": " अतिरिक्त महापालिका आयुक्त (पूर्व उपनगरे)",
+          "name": "Avinash Dhakne",
+          "nameRegional": "डॉ. अविनाश ढाकणे",
+          "phone": "226202514213",
+          "email": "amc.es@mcgm.gov.in"
+        },
+        {
+          "designation": "Additional Municipal Commissioner (Project)",
+          "designationRegional": "अतिरिक्त महापालिका आयुक्त (प्रकल्प)",
+          "name": "Abhijit Chhaya Sudhakar Bangar",
+          "nameRegional": "श्री. अभिजीत छाया सुधाकर बांगर",
+          "phone": "226202514231",
+          "email": "amc.projects@mcgm.gov.in"
+        },
+        {
+          "designation": "Additional Municipal Commissioner (Western Suburbs)",
+          "designationRegional": "अतिरिक्त महापालिका आयुक्त (पश्चिम उपनगरे)",
+          "name": "Dr. Vipin Sharma",
+          "nameRegional": "डॉ. विपिन शर्मा",
+          "phone": "226202514281",
+          "email": "amc.ws@mcgm.gov.in"
         }
       ]
     },
