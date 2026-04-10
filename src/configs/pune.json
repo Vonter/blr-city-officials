@@ -145,6 +145,97 @@
         }
       ]
     },
+    "pcmc_zone": {
+      "nameKey": "dept_pcmc_zone",
+      "icon": "🏤",
+      "group": "pcmc",
+      "websiteUrl": "https://www.pcmcindia.gov.in/",
+      "geodataUrl": "https://smartgisda.pcmcindia.gov.in/CitizenPortal/#/dashbord",
+      "descriptionKey": "dept_pcmc_zone_desc",
+      "color": "#0891b2",
+      "darkColor": "#a5f3fc",
+      "childDepartments": ["pcmc_prabhag"],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "020-67333333"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "8888006666"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "egov@pcmcindia.gov.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "pcmcindiagovin"
+        }
+      ],
+      "commonOfficials": [
+        {
+          "designation": "Mayor",
+          "designationRegional": "महापौर",
+          "name": "Ravi Babasaheb Landge",
+          "nameRegional": "रवी बाबासाहेब लांडगे",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Deputy Mayor",
+          "designationRegional": "उपमहापौर",
+          "name": "Sharmila Babar",
+          "nameRegional": "शर्मिला बाबर",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Municipal Commissioner",
+          "designationRegional": "महानगरपालिका आयुक्त",
+          "name": "Dr. Vijay Suryawanshi",
+          "nameRegional": "डॉ. विजय सूर्यवंशी",
+          "phone": "020-67333333",
+          "email": "egov@pcmcindia.gov.in"
+        }
+      ]
+    },
+    "pcmc_prabhag": {
+      "nameKey": "dept_pcmc_prabhag",
+      "icon": "🏤",
+      "websiteUrl": "https://www.pcmcindia.gov.in/",
+      "geodataUrl": "https://smartgisda.pcmcindia.gov.in/CitizenPortal/#/dashbord",
+      "descriptionKey": "dept_pcmc_prabhag_desc",
+      "color": "#0e7490",
+      "darkColor": "#cffafe",
+      "parentDepartment": "pcmc_zone",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "020-67333333"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "8888006666"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "egov@pcmcindia.gov.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "pcmcindiagovin"
+        }
+      ]
+    },
     "election_ac": {
       "nameKey": "dept_election_ac",
       "icon": "🗳️",

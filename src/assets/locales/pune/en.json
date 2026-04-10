@@ -1,6 +1,7 @@
 {
   "pune_page_title": "Pune City Officials",
 
+  "group_pcmc": "PCMC",
   "group_pmc": "PMC",
   "group_election": "Election",
   "group_election_pc": "Lok Sabha",
@@ -8,6 +9,8 @@
   "group_admin": "Administration",
   "group_pincode": "Pincode",
 
+  "dept_pcmc_zone": "PCMC Zone",
+  "dept_pcmc_prabhag": "PCMC Prabhag",
   "dept_pmc_zone": "PMC Zone",
   "dept_pmc_admin_ward": "PMC Administrative Ward",
   "dept_pmc_electoral_ward": "PMC Electoral Ward",
@@ -18,6 +21,9 @@
   "dept_admin_taluk": "Taluk",
   "dept_pincode": "Pincode",
 
+  "dept_pcmc_zone_fullform": "PCMC (Pimpri-Chinchwad Municipal Corporation)",
+  "dept_pcmc_zone_desc": "Pimpri-Chinchwad Municipal Corporation (PCMC) is divided into 8 administrative zones (A–H), each covering 4 prabhags and headed by an Assistant Municipal Commissioner.",
+  "dept_pcmc_prabhag_desc": "Prabhag (multi-member ward) boundaries used for PCMC elections. The city has 32 prabhags, each electing 4 corporators for a total of 128 seats. The most recent election was held on 15 January 2026.",
   "dept_pmc_zone_fullform": "PMC (Pune Municipal Corporation)",
   "dept_pmc_zone_desc": "Pune Municipal Corporation is divided into 4 zones for administrative management of civic services across the city.",
   "dept_pmc_admin_ward_desc": "Administrative wards within PMC zones, each headed by an Assistant Commissioner overseeing local civic services.",
