@@ -11743,19 +11743,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Akkur PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಅಕ್ಕೂರು ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Amruthahally PS",
     "Designation": "-",
     "Name": "-",
@@ -11769,32 +11756,6 @@
     "OfficeLat": 13.05686,
     "OfficeLng": 77.59857,
     "OfficeName": "Amruthahally PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Amruthur PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಅಮೃತೂರು ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Andersonpet PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಆಂಡರ್ಸನ್‌ಪೇಟೆ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -11849,10 +11810,7 @@
     "Notes": "Ashoknagar PS",
     "AreaRegional": "ಅಶೋಕನಗರ ಪಿಎಸ್",
     "DesignationRegional": "-",
-    "NameRegional": "-",
-    "OfficeLat": 12.5818,
-    "OfficeLng": 77.36369,
-    "OfficeName": "Ashokanagara  PS"
+    "NameRegional": "-"
   },
   {
     "Department": "police_city",
@@ -11877,19 +11835,6 @@
     "Source": "https://bcp.karnataka.gov.in/24/law-&-order-/en",
     "Notes": "",
     "AreaRegional": "ಆವಲಹಳ್ಳಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Badavanahalli PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಬಡವನಹಳ್ಳಿ ಪಿಎಸ್",
     "DesignationRegional": "",
     "NameRegional": ""
   },
@@ -11920,23 +11865,7 @@
     "Notes": "",
     "AreaRegional": "ಬಾಗಲೂರು ಪಿಎಸ್",
     "DesignationRegional": "-",
-    "NameRegional": "-",
-    "OfficeLat": 12.83442,
-    "OfficeLng": 77.86883,
-    "OfficeName": "Bagalur PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Bagepalli PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಬಾಗೇಪಲ್ಲಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
+    "NameRegional": "-"
   },
   {
     "Department": "police_city",
@@ -11949,10 +11878,7 @@
     "Notes": "",
     "AreaRegional": "ಬನಶಂಕರಿ ಪಿಎಸ್",
     "DesignationRegional": "-",
-    "NameRegional": "-",
-    "OfficeLat": 13.11021,
-    "OfficeLng": 77.38248,
-    "OfficeName": "Banashankari PS"
+    "NameRegional": "-"
   },
   {
     "Department": "police_city",
@@ -11981,23 +11907,7 @@
     "Notes": "",
     "AreaRegional": "ಬಂಡೆಪಾಳ್ಯ ಪಿಎಸ್",
     "DesignationRegional": "-",
-    "NameRegional": "-",
-    "OfficeLat": 12.54202,
-    "OfficeLng": 77.38295,
-    "OfficeName": "Bandepalya PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Bangarpet PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಬಂಗಾರಪೇಟೆ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
+    "NameRegional": "-"
   },
   {
     "Department": "police_city",
@@ -12030,19 +11940,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Batalahalli PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಬ್ಯಾಟಲಹಳ್ಳಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Begur PS",
     "Designation": "-",
     "Name": "-",
@@ -12059,19 +11956,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Belakavadi PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಬೆಳಕವಾಡಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Bellanduru PS",
     "Designation": "-",
     "Name": "-",
@@ -12085,58 +11969,6 @@
     "OfficeLat": 12.919207,
     "OfficeLng": 77.66781,
     "OfficeName": "Bellanduru PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Bellavi PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಬೆಳ್ಳಾವಿ ಪಿ.ಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "BEML Nagar PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಬಿಇಎಂಎಲ್ ನಗರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Besagaraghalli PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಬೆಸಗರಹಳ್ಳಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Bethamangala PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಬೇತಮಂಗಲ ಪಿ.ಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -12249,19 +12081,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Chamarajanagar East PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಚಾಮರಾಜನಗರ ಪೂರ್ವ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Chamarajpet PS",
     "Designation": "-",
     "Name": "-",
@@ -12275,19 +12094,6 @@
     "OfficeLat": 12.96051,
     "OfficeLng": 77.56439,
     "OfficeName": "Chamarajpet PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Champion Reefs PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಚಾಂಪಿಯನ್ ರೀಫ್ಸ್ PS",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -12333,19 +12139,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Channapatna Town PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಚನ್ನಪಟ್ಟಣ ಟೌನ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "ChannarayapatnaPS",
     "Designation": "",
     "Name": "",
@@ -12354,45 +12147,6 @@
     "Source": "",
     "Notes": "",
     "AreaRegional": "ಚನ್ನರಾಯಪಟ್ಟಣ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Chelur PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಚೇಳೂರು ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Chikkaballapura Rural PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಚಿಕ್ಕಬಳ್ಳಾಪುರ ಗ್ರಾಮಾಂತರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Chikkaballapura Town PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಚಿಕ್ಕಬಳ್ಳಾಪುರ ಟೌನ್ ಪಿಎಸ್",
     "DesignationRegional": "",
     "NameRegional": ""
   },
@@ -12411,32 +12165,6 @@
     "OfficeLat": 13.17329,
     "OfficeLng": 77.63321,
     "OfficeName": "Chikkajala PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Chinthamani Rural PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಚಿಂತಾಮಣಿ ಗ್ರಾಮಾಂತರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Chinthamani TownPS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಚಿಂತಾಮಣಿ ಟೌನ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -12533,19 +12261,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Dibburahalli PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ದಿಬ್ಬೂರಹಳ್ಳಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Dobbespet PS",
     "Designation": "",
     "Name": "",
@@ -12607,10 +12322,7 @@
     "Notes": "",
     "AreaRegional": "ಎಲೆಕ್ಟ್ರಾನಿಕ್ ಸಿಟಿ ಪಿಎಸ್",
     "DesignationRegional": "-",
-    "NameRegional": "-",
-    "OfficeLat": 12.5024,
-    "OfficeLng": 77.3947,
-    "OfficeName": "Electronic City PS"
+    "NameRegional": "-"
   },
   {
     "Department": "police_city",
@@ -12672,84 +12384,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Gownapalli PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಗೌನಪಲ್ಲಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Gowribidanur Rural PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಗೌರಿಬಿದನೂರು ಗ್ರಾಮಾಂತರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Gowribidanur Town PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಗೌರಿಬಿದನೂರು ಟೌನ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Gubbi PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಗುಬ್ಬಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "GudibandePS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಗುಡಿಬಂಡೆಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Gulpet PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಗುಲ್ಪೇಟ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "H.A.L. PS",
     "Designation": "-",
     "Name": "-",
@@ -12779,19 +12413,6 @@
     "OfficeLat": 12.92015,
     "OfficeLng": 77.65139,
     "OfficeName": "H.S.R.Layout PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Halagur PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಹಲಗೂರು ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -12833,23 +12454,7 @@
     "Notes": "Hanumanthanagar PS",
     "AreaRegional": "ಹನುಮತಾನಗರ ಪಿಎಸ್",
     "DesignationRegional": "-",
-    "NameRegional": "-",
-    "OfficeLat": 12.56105,
-    "OfficeLng": 77.33413,
-    "OfficeName": "Hanumathanagar PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Hanur PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಹನೂರು ಪಿ.ಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
+    "NameRegional": "-"
   },
   {
     "Department": "police_city",
@@ -12879,19 +12484,6 @@
     "OfficeLat": 13.03839,
     "OfficeLng": 77.58966,
     "OfficeName": "Hebbal PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "HebburuPS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಹೆಬ್ಬೂರು ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -12927,19 +12519,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Hosahalli PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಹೊಸಹಳ್ಳಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Hosakote PS",
     "Designation": "",
     "Name": "",
@@ -12962,23 +12541,7 @@
     "Notes": "",
     "AreaRegional": "ಹುಳಿಮಾವು ಪಿಎಸ್",
     "DesignationRegional": "-",
-    "NameRegional": "-",
-    "OfficeLat": 12.52359,
-    "OfficeLng": 77.36002,
-    "OfficeName": "Hulimavu PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Huliyurdurga PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಹುಲಿಯೂರುದುರ್ಗ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
+    "NameRegional": "-"
   },
   {
     "Department": "police_city",
@@ -13149,19 +12712,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "K.M. Doddi PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕೆ.ಎಂ. ದೊಡ್ಡಿ ಪಿ.ಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "K.R. Puram PS",
     "Designation": "-",
     "Name": "-",
@@ -13223,32 +12773,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Kallambella PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕಲ್ಲಂಬೆಳ್ಳ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Kamasamudram PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕಾಮಸಮುದ್ರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Kanakapura Rural PS",
     "Designation": "",
     "Name": "",
@@ -13257,19 +12781,6 @@
     "Source": "",
     "Notes": "",
     "AreaRegional": "ಕನಕಪುರ ಗ್ರಾಮಾಂತರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Kanakapura Town PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕನಕಪುರ ಟೌನ್ ಪಿಎಸ್",
     "DesignationRegional": "",
     "NameRegional": ""
   },
@@ -13304,19 +12815,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "KencharlahalliPS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕೆಂಚಾರ್ಲಹಳ್ಳಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Kengeri PS",
     "Designation": "-",
     "Name": "-",
@@ -13330,32 +12828,6 @@
     "OfficeLat": 12.91048,
     "OfficeLng": 77.48157,
     "OfficeName": "Kengeri PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Kesthur PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕೆಸ್ತೂರು ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Kirugavalu PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕಿರುಗಾವಲು ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -13375,35 +12847,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Kodigenahalli PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕೊಡಿಗೇನಹಳ್ಳಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": "",
-    "OfficeLat": 13.062104,
-    "OfficeLng": 77.574066,
-    "OfficeName": "Kodigenahalli PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Kodihalli PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕೋಡಿಹಳ್ಳಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Kolala PS",
     "Designation": "",
     "Name": "",
@@ -13412,58 +12855,6 @@
     "Source": "",
     "Notes": "",
     "AreaRegional": "ಕೊಳಲ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Kolar Rural PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕೋಲಾರ ಗ್ರಾಮಾಂತರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Kolar Town PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕೋಲಾರ ಟೌನ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Kollegala Rural PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕೊಳ್ಳೇಗಾಲ ಗ್ರಾಮಾಂತರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Kollegala Town PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕೊಳ್ಳೇಗಾಲ ಟೌನ್ ಪಿಎಸ್",
     "DesignationRegional": "",
     "NameRegional": ""
   },
@@ -13485,32 +12876,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Koppa PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕೊಪ್ಪ ಪಿ.ಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Kora PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕೋರಾ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Koramangala PS",
     "Designation": "-",
     "Name": "-",
@@ -13520,23 +12885,7 @@
     "Notes": "",
     "AreaRegional": "ಕೋರಮಂಗಲ ಪಿಎಸ್",
     "DesignationRegional": "-",
-    "NameRegional": "-",
-    "OfficeLat": 12.56284,
-    "OfficeLng": 77.37168,
-    "OfficeName": "Koramangala PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Koratagere PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕೊರಟಗೆರೆ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
+    "NameRegional": "-"
   },
   {
     "Department": "police_city",
@@ -13601,19 +12950,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "kunigal PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಕುಣಿಗಲ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Kyathasadra PS",
     "Designation": "",
     "Name": "",
@@ -13622,19 +12958,6 @@
     "Source": "",
     "Notes": "",
     "AreaRegional": "ಕ್ಯಾತಸದ್ರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "LakkurPS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಲಕ್ಕೂರು ಪಿಎಸ್",
     "DesignationRegional": "",
     "NameRegional": ""
   },
@@ -13653,32 +12976,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "M.M. Hills PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಎಂ.ಎಂ. ಹಿಲ್ಸ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Maddur PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಮದ್ದೂರು ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Madhanayakanahally PS",
     "Designation": "-",
     "Name": "-",
@@ -13692,19 +12989,6 @@
     "OfficeLat": 13.06221,
     "OfficeLng": 77.46233,
     "OfficeName": "Madhanayakanahally PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Madhugiri PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಮಧುಗಿರಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -13782,32 +13066,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Malavalli Rural PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಮಳವಳ್ಳಿ ಗ್ರಾಮಾಂತರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Malavalli Town PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಮಳವಳ್ಳಿ ಟೌನ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Malleshwarm PS",
     "Designation": "-",
     "Name": "-",
@@ -13821,58 +13079,6 @@
     "OfficeLat": 12.99665,
     "OfficeLng": 77.56959,
     "OfficeName": "Malleshwarm PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Malur PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಮಾಲೂರು ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Mambali PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಮಾಂಬಲಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "ManchenahalliPS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಮಂಚೇನಹಳ್ಳಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Mandya Rural PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಮಂಡ್ಯ ಗ್ರಾಮಾಂತರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -13892,45 +13098,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Marikuppam PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಮಾರಿಕುಪ್ಪಂ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Masti PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಮಾಸ್ತಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Medigeshi PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಮೆಡಿಗೇಶಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Mico layout Bangalore PS",
     "Designation": "-",
     "Name": "-",
@@ -13940,62 +13107,7 @@
     "Notes": "",
     "AreaRegional": "ಮೈಕೋ ಲೇಔಟ್ ಬೆಂಗಳೂರು ಪಿಎಸ್",
     "DesignationRegional": "-",
-    "NameRegional": "-",
-    "OfficeLat": 12.54306,
-    "OfficeLng": 77.36379,
-    "OfficeName": "Mico layout Bangalore PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Mulbagal Rural PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಮುಳಬಾಗಲು ಗ್ರಾಮಾಂತರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Mulbagal Town PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಮುಳಬಾಗಲು ಟೌನ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Nandagudi PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ನಂದಗುಡಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Nandi Girighama PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ನಂದಿ ಗಿರಿಘಾಮ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
+    "NameRegional": "-"
   },
   {
     "Department": "police_city",
@@ -14012,32 +13124,6 @@
     "OfficeLat": 13.01237,
     "OfficeLng": 77.53671,
     "OfficeName": "Nandini Layout PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Nangli PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ನಂಗಲಿ ಪಿ.ಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "NarasapuraPS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ನರಸಾಪುರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -14067,19 +13153,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Oorgaum PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಊರ್ಗಾಂ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "parappana Agrahara",
     "Designation": "-",
     "Name": "-",
@@ -14090,45 +13163,6 @@
     "AreaRegional": "ಪರಪ್ಪನ ಅಗ್ರಹಾರ",
     "DesignationRegional": "-",
     "NameRegional": "-"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Patanayakanahalli PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಪಟನಾಯಕನಹಳ್ಳಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Pathapalya PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಪಾತಪಾಳ್ಯ ಪಿ.ಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Pavagada PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಪಾವಗಡ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -14173,10 +13207,7 @@
     "Notes": "",
     "AreaRegional": "ಪುಟ್ಟೇನಹಳ್ಳಿ ಪಿಎಸ್",
     "DesignationRegional": "-",
-    "NameRegional": "-",
-    "OfficeLat": 12.54865,
-    "OfficeLng": 77.34551,
-    "OfficeName": "Puttenahalli PS"
+    "NameRegional": "-"
   },
   {
     "Department": "police_city",
@@ -14299,45 +13330,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Ramapura PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ರಾಮಾಪುರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Rayalpad PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ರಾಯಲ್ಪಾಡ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Robertsonpet PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ರಾಬರ್ಟ್‌ಸನ್‌ಪೇಟೆ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "S.J. Park PS",
     "Designation": "-",
     "Name": "-",
@@ -14347,10 +13339,7 @@
     "Notes": "",
     "AreaRegional": "ಎಸ್.ಜೆ. ಪಾರ್ಕ್ ಪಿಎಸ್",
     "DesignationRegional": "-",
-    "NameRegional": "-",
-    "OfficeLat": 12.57396,
-    "OfficeLng": 77.34594,
-    "OfficeName": "S.J. Park PS"
+    "NameRegional": "-"
   },
   {
     "Department": "police_city",
@@ -14415,19 +13404,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Santemaralli PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಸಂತೆಮರಳ್ಳಿ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Sarjapura PS",
     "Designation": "",
     "Name": "",
@@ -14436,19 +13412,6 @@
     "Source": "",
     "Notes": "",
     "AreaRegional": "ಸರ್ಜಾಪುರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Sathanuru PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಸಾತನೂರು ಪಿ.ಎಸ್",
     "DesignationRegional": "",
     "NameRegional": ""
   },
@@ -14499,19 +13462,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Shidlagatta Town PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಶಿಡ್ಲಗಟ್ಟಾ ಟೌನ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Shivajinagar PS",
     "Designation": "-",
     "Name": "-",
@@ -14544,19 +13494,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Sira PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಸಿರಾ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Soladevanahalli PS",
     "Designation": "-",
     "Name": "-",
@@ -14570,19 +13507,6 @@
     "OfficeLat": 13.09343,
     "OfficeLng": 77.48904,
     "OfficeName": "Soladevanahalli PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Srinivasapura PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಶ್ರೀನಿವಾಸಪುರ ಪಿ.ಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -14647,19 +13571,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Sugatoor PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಸುಗಟೂರು ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Sulibele PS",
     "Designation": "",
     "Name": "",
@@ -14668,32 +13579,6 @@
     "Source": "",
     "Notes": "",
     "AreaRegional": "ಸೂಲಿಬೆಲೆ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "TailurPS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ತೈಲೂರು ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Talakadu PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ತಲಕಾಡು ಪಿಎಸ್",
     "DesignationRegional": "",
     "NameRegional": ""
   },
@@ -14712,19 +13597,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "TekalPS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಟೇಕಲ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Thalaghattapura PS",
     "Designation": "-",
     "Name": "-",
@@ -14738,19 +13610,6 @@
     "OfficeLat": 12.86902,
     "OfficeLng": 77.53629,
     "OfficeName": "Thalaghattapura PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Thilak Park PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ತಿಲಕ್ ಪಾರ್ಕ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -14777,32 +13636,6 @@
     "AreaRegional": "ತಿಲಕ್ ನಗರ ಪಿಎಸ್",
     "DesignationRegional": "-",
     "NameRegional": "-"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Tumakur Rural PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ತುಮಕೂರು ಗ್ರಾಮಾಂತರ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "Tumakur Town PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ತುಮಕೂರು ಟೌನ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
@@ -14851,19 +13684,6 @@
   },
   {
     "Department": "police_city",
-    "Area": "Vemagal PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ವೇಮಗಲ್ ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
     "Area": "Vidhana Soudha PS",
     "Designation": "-",
     "Name": "-",
@@ -14889,10 +13709,7 @@
     "Notes": "",
     "AreaRegional": "ವಿದ್ಯಾರಣ್ಯಪುರ ಪಿಎಸ್",
     "DesignationRegional": "-",
-    "NameRegional": "-",
-    "OfficeLat": 12.96902,
-    "OfficeLng": 77.51248,
-    "OfficeName": "Vidhyaranyapura  PS"
+    "NameRegional": "-"
   },
   {
     "Department": "police_city",
@@ -15028,32 +13845,6 @@
     "OfficeLat": 13.09474,
     "OfficeLng": 77.59442,
     "OfficeName": "Yelahanka PS"
-  },
-  {
-    "Department": "police_city",
-    "Area": "Yelandur PS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಯಳಂದೂರು ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
-  },
-  {
-    "Department": "police_city",
-    "Area": "YeldurPS",
-    "Designation": "",
-    "Name": "",
-    "Phone": "",
-    "E-Mail": "",
-    "Source": "",
-    "Notes": "",
-    "AreaRegional": "ಯಳದೂರು ಪಿಎಸ್",
-    "DesignationRegional": "",
-    "NameRegional": ""
   },
   {
     "Department": "police_city",
