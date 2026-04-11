@@ -3,6 +3,7 @@
   import 'maplibre-gl/dist/maplibre-gl.css';
   import Analytics from '../components/Analytics.svelte';
   import SEO from '../components/SEO.svelte';
+  import { page } from '$app/state';
 
   import type { Snippet } from 'svelte';
 
@@ -14,5 +15,5 @@
 {#if hasAnalytics}
   <Analytics />
 {/if}
-<SEO />
+<SEO title={page.params['city'] ? undefined : 'City Officials'} />
 {@render children()}
