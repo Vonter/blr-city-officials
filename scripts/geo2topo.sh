@@ -21,7 +21,7 @@ case "$CITY" in
   blr)     BBOX="77.22 12.67 77.84 13.33" ;;
   chennai) BBOX="79.9 12.65 80.45 13.4" ;;
   delhi)   BBOX="" ;;
-  hyd)     BBOX="78.1 17.1 78.9 17.7" ;;
+  hyd)     BBOX="77.9 16.9 79.15 18.0" ;;
   kolkata) BBOX="" ;;
   mumbai)  BBOX="72.3 18.6 73.5 19.6" ;;
   pune)    BBOX="73.5 18.1 74.35 18.95" ;;

@@ -16,29 +16,30 @@
     "defaultZoom": 10,
     "defaultCenter": [78.4867, 17.385],
     "maxBounds": [
-      [78.0, 17.0],
-      [79.0, 17.8]
+      [77.8, 16.8],
+      [79.2, 18.1]
     ]
   },
+  "overlapRenderDepartment": "hyd_ward",
   "seo": {
     "title": "Hyderabad City Officials",
-    "description": "Find your local jurisdiction and officials from GHMC, Police and more in Hyderabad.",
-    "keywords": "hyderabad,boundaries,ghmc,police,official,officers,telangana",
+    "description": "Find your local jurisdiction and officials from GHMC, CMC, MMC, Police and more in Hyderabad.",
+    "keywords": "hyderabad,boundaries,ghmc,cmc,mmc,cure,hmda,police,official,officers,telangana",
     "author": "Vivek Matthew",
     "baseUrl": "https://cityofficials.bengawalk.com/hyd",
     "image": "https://cityofficials.bengawalk.com/sharecard.jpg"
   },
   "departments": {
-    "ghmc_corporation": {
-      "nameKey": "dept_ghmc_corporation",
+    "hyd_corporation": {
+      "nameKey": "dept_hyd_corporation",
       "icon": "🏤",
       "websiteUrl": "https://www.ghmc.gov.in/",
-      "geodataUrl": "https://data.opencity.in/dataset/hyderabad-wards-info/resource/bc818c3d-9c7c-4047-a451-ba463d9710b2",
-      "descriptionKey": "dept_ghmc_corporation_desc",
+      "geodataUrl": "https://hyderabad.urbanobservatory.in/",
+      "descriptionKey": "dept_hyd_corporation_desc",
       "color": "#3b82f6",
       "darkColor": "#bfdbfe",
       "childDepartments": [
-        "ghmc_zone"
+        "hyd_zone"
       ],
       "contacts": [
         {
@@ -63,17 +64,17 @@
         }
       ]
     },
-    "ghmc_zone": {
-      "nameKey": "dept_ghmc_zone",
+    "hyd_zone": {
+      "nameKey": "dept_hyd_zone",
       "icon": "🏤",
       "websiteUrl": "https://www.ghmc.gov.in/",
-      "geodataUrl": "https://data.opencity.in/dataset/hyderabad-wards-info/resource/ecaab873-4dd3-42db-9813-b9c28b45ca68",
-      "descriptionKey": "dept_ghmc_zone_desc",
+      "geodataUrl": "https://hyderabad.urbanobservatory.in/",
+      "descriptionKey": "dept_hyd_zone_desc",
       "color": "#3b82f6",
       "darkColor": "#bfdbfe",
-      "parentDepartment": "ghmc_corporation",
+      "parentDepartment": "hyd_corporation",
       "childDepartments": [
-        "ghmc_ward"
+        "hyd_circle"
       ],
       "contacts": [
         {
@@ -83,15 +84,38 @@
         }
       ]
     },
-    "ghmc_ward": {
-      "nameKey": "dept_ghmc_ward",
+    "hyd_circle": {
+      "nameKey": "dept_hyd_circle",
       "icon": "🏤",
       "websiteUrl": "https://www.ghmc.gov.in/",
-      "geodataUrl": "https://data.opencity.in/dataset/hyderabad-wards-info/resource/14b033e3-3721-4149-8326-cc29420e062e",
-      "descriptionKey": "dept_ghmc_ward_desc",
+      "geodataUrl": "https://hyderabad.urbanobservatory.in/",
+      "descriptionKey": "dept_hyd_circle_desc",
+      "showBoundaryNumber": true,
       "color": "#3b82f6",
       "darkColor": "#bfdbfe",
-      "parentDepartment": "ghmc_zone",
+      "parentDepartment": "hyd_zone",
+      "childDepartments": [
+        "hyd_ward"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "040-21111111"
+        }
+      ]
+    },
+    "hyd_ward": {
+      "nameKey": "dept_hyd_ward",
+      "icon": "🏤",
+      "websiteUrl": "https://www.ghmc.gov.in/",
+      "geodataUrl": "https://hyderabad.urbanobservatory.in/",
+      "descriptionKey": "dept_hyd_ward_desc",
+      "showBoundaryNumber": true,
+      "sortBy": "wardName",
+      "color": "#3b82f6",
+      "darkColor": "#bfdbfe",
+      "parentDepartment": "hyd_circle",
       "contacts": [
         {
           "type": "phone",
@@ -130,6 +154,27 @@
           "type": "twitter",
           "labelKey": "contact_twitter",
           "value": "hydcitypolice"
+        }
+      ]
+    },
+    "hmda": {
+      "nameKey": "dept_hmda",
+      "icon": "🏙️",
+      "websiteUrl": "https://www.hmda.gov.in/",
+      "geodataUrl": "https://hyderabad.urbanobservatory.in/",
+      "descriptionKey": "dept_hmda_desc",
+      "color": "#0891b2",
+      "darkColor": "#a5f3fc",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "040-27018115"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "mc@hmda.gov.in"
         }
       ]
     },
@@ -206,6 +251,63 @@
           "type": "phone",
           "labelKey": "contact_helpline",
           "value": "1800-266-6868"
+        }
+      ]
+    },
+    "ghmc_zone_old": {
+      "nameKey": "dept_ghmc_zone_old",
+      "icon": "🏤",
+      "websiteUrl": "https://www.ghmc.gov.in/",
+      "geodataUrl": "https://hyderabad.urbanobservatory.in/",
+      "descriptionKey": "dept_ghmc_zone_old_desc",
+      "color": "#8b5cf6",
+      "darkColor": "#c4b5fd",
+      "childDepartments": [
+        "ghmc_circle_old"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "040-21111111"
+        }
+      ]
+    },
+    "ghmc_circle_old": {
+      "nameKey": "dept_ghmc_circle_old",
+      "icon": "🏤",
+      "websiteUrl": "https://www.ghmc.gov.in/",
+      "geodataUrl": "https://hyderabad.urbanobservatory.in/",
+      "descriptionKey": "dept_ghmc_circle_old_desc",
+      "color": "#8b5cf6",
+      "darkColor": "#c4b5fd",
+      "parentDepartment": "ghmc_zone_old",
+      "childDepartments": [
+        "ghmc_ward_old"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "040-21111111"
+        }
+      ]
+    },
+    "ghmc_ward_old": {
+      "nameKey": "dept_ghmc_ward_old",
+      "icon": "🏤",
+      "websiteUrl": "https://www.ghmc.gov.in/",
+      "geodataUrl": "https://hyderabad.urbanobservatory.in/",
+      "descriptionKey": "dept_ghmc_ward_old_desc",
+      "showBoundaryNumber": true,
+      "color": "#7c3aed",
+      "darkColor": "#ddd6fe",
+      "parentDepartment": "ghmc_circle_old",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "040-21111111"
         }
       ]
     }
