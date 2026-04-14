@@ -16,7 +16,7 @@
   "dept_election_pc": "Lok Sabha (MP)",
   "dept_election_ac": "State Assembly (MLA)",
   "dept_admin_district": "District",
-  "dept_admin_taluk": "Taluk",
+  "dept_admin_taluk": "Taluka",
   "dept_pincode": "Pincode",
 
   "dept_bmc_ward_fullform": "BMC (Brihanmumbai Municipal Corporation)",
@@ -26,7 +26,7 @@
   "dept_election_pc_desc": "Parliamentary constituencies electing Members of Parliament to the Lok Sabha.",
   "dept_election_ac_desc": "Assembly constituencies electing Members of Legislative Assembly to the Maharashtra Vidhan Sabha.",
   "dept_admin_district_desc": "Revenue district headed by the District Collector for general administration.",
-  "dept_admin_taluk_desc": "Taluks headed by Tahsildars for revenue collection and land administration.",
+  "dept_admin_taluk_desc": "Talukas headed by Tahsildars for revenue collection and land administration.",
   "dept_pincode_desc": "Postal PIN code areas served by India Post offices.",
 
   "contact_mybmc": "MyBMC",

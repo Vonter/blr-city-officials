@@ -41,28 +41,7 @@
       "childDepartments": [
         "hyd_zone"
       ],
-      "contacts": [
-        {
-          "type": "phone",
-          "labelKey": "contact_helpline",
-          "value": "040-21111111"
-        },
-        {
-          "type": "phone",
-          "labelKey": "contact_other",
-          "value": "1800-120-2020"
-        },
-        {
-          "type": "email",
-          "labelKey": "contact_email",
-          "value": "commissioner@ghmc.gov.in"
-        },
-        {
-          "type": "twitter",
-          "labelKey": "contact_twitter",
-          "value": "GHMCOnline"
-        }
-      ]
+      "contacts": []
     },
     "hyd_zone": {
       "nameKey": "dept_hyd_zone",
@@ -76,13 +55,7 @@
       "childDepartments": [
         "hyd_circle"
       ],
-      "contacts": [
-        {
-          "type": "phone",
-          "labelKey": "contact_helpline",
-          "value": "040-21111111"
-        }
-      ]
+      "contacts": []
     },
     "hyd_circle": {
       "nameKey": "dept_hyd_circle",
@@ -97,13 +70,7 @@
       "childDepartments": [
         "hyd_ward"
       ],
-      "contacts": [
-        {
-          "type": "phone",
-          "labelKey": "contact_helpline",
-          "value": "040-21111111"
-        }
-      ]
+      "contacts": []
     },
     "hyd_ward": {
       "nameKey": "dept_hyd_ward",
@@ -116,24 +83,20 @@
       "color": "#3b82f6",
       "darkColor": "#bfdbfe",
       "parentDepartment": "hyd_circle",
-      "contacts": [
-        {
-          "type": "phone",
-          "labelKey": "contact_helpline",
-          "value": "040-21111111"
-        }
-      ]
+      "contacts": []
     },
-    "police_city": {
-      "nameKey": "dept_police_city",
+    "police_commissionerate": {
+      "nameKey": "dept_police_commissionerate",
       "icon": "👮",
       "group": "police_city",
-      "websiteUrl": "https://hyderabadpolice.gov.in/",
-      "geodataUrl": "https://data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india/resource/df7b7a4e-5c00-4769-894e-1da24e612f11",
-      "descriptionKey": "dept_police_city_desc",
-      "showWebsite": true,
+      "websiteUrl": "https://www.tspolice.gov.in/",
+      "geodataUrl": "https://hyderabad.urbanobservatory.in/",
+      "descriptionKey": "dept_police_commissionerate_desc",
       "color": "#dc2626",
       "darkColor": "#fca5a5",
+      "childDepartments": [
+        "police_city"
+      ],
       "contacts": [
         {
           "type": "phone",
@@ -144,7 +107,21 @@
           "type": "phone",
           "labelKey": "contact_other",
           "value": "100"
-        },
+        }
+      ]
+    },
+    "police_city": {
+      "nameKey": "dept_police_city",
+      "icon": "👮",
+      "group": "police_city",
+      "parentDepartment": "police_commissionerate",
+      "websiteUrl": "https://hyderabadpolice.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india/resource/df7b7a4e-5c00-4769-894e-1da24e612f11",
+      "descriptionKey": "dept_police_city_desc",
+      "showWebsite": true,
+      "color": "#dc2626",
+      "darkColor": "#fca5a5",
+      "contacts": [
         {
           "type": "email",
           "labelKey": "contact_email",
@@ -157,9 +134,30 @@
         }
       ]
     },
+    "police_traffic": {
+      "nameKey": "dept_police_traffic",
+      "icon": "🚔",
+      "websiteUrl": "https://hyderabadpolice.gov.in/",
+      "geodataUrl": "https://hyderabad.urbanobservatory.in/",
+      "descriptionKey": "dept_police_traffic_desc",
+      "color": "#dc2626",
+      "darkColor": "#fca5a5",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "040-27852425"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "HYDTP"
+        }
+      ]
+    },
     "hmda": {
       "nameKey": "dept_hmda",
-      "icon": "🏙️",
+      "icon": "🏗️",
       "websiteUrl": "https://www.hmda.gov.in/",
       "geodataUrl": "https://hyderabad.urbanobservatory.in/",
       "descriptionKey": "dept_hmda_desc",

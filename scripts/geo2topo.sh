@@ -24,7 +24,7 @@ case "$CITY" in
   hyd)     BBOX="77.9 16.9 79.15 18.0" ;;
   kolkata) BBOX="" ;;
   mumbai)  BBOX="72.3 18.6 73.5 19.6" ;;
-  pune)    BBOX="73.5 18.1 74.35 18.95" ;;
+  pune)    BBOX="73.3 17.85 75.2 19.4" ;;
   *)       echo "Error: unknown city '${CITY}'" >&2; exit 1 ;;
 esac
 

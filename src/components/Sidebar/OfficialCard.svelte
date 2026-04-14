@@ -46,6 +46,17 @@
         <span class="truncate">{official['E-Mail']}</span>
       </a>
     {/if}
+    {#if official.WhatsApp}
+      <a
+        href="https://wa.me/{official.WhatsApp}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class={CONTACT_LINK_CLASS}
+      >
+        <Icon name="phone" class="h-4 w-4 mr-2 flex-shrink-0" />
+        <span class="truncate">{official.WhatsApp}</span>
+      </a>
+    {/if}
     {#if official.Twitter}
       <a
         href={official.Twitter}
