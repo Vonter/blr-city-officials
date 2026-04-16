@@ -265,7 +265,7 @@
         officials.current
       )}
       {@const nameColRegional =
-        officialDetails && officialDetails.length > 0 && officialDetails[0]
+        officialDetails && officialDetails.length > 0 && officialDetails[0]?.AreaRegional
           ? getWardName(officialDetails[0].AreaRegional)
           : entry.wardName}
       <div class={alternatingRowClass(index)}>

@@ -14,14 +14,15 @@
   ],
   "map": {
     "defaultZoom": 10,
-    "defaultCenter": [77.1025, 28.7041],
-    "maxBounds": [[76.5, 28.0], [77.8, 29.15]]
+    "defaultCenter": [77.2525, 28.6241],
+    "maxBounds": [[76.0, 27.5], [78.5, 29.5]],
+    "maxZoom": 20
   },
   "overlapRenderDepartment": "mcd_ward",
   "seo": {
-    "title": "Delhi City Officials",
-    "description": "Find your local jurisdiction and officials from MCD, Delhi Assembly, Lok Sabha and more in Delhi.",
-    "keywords": "delhi,boundaries,mcd,municipal corporation,election,mla,mp,official,officers,ward,district",
+    "title": "Delhi NCR City Officials",
+    "description": "Find your local jurisdiction and officials from MCD, Delhi Assembly, Lok Sabha, Gurgaon Police, Noida sectors and more in Delhi NCR.",
+    "keywords": "delhi,ncr,gurgaon,gurugram,noida,boundaries,mcd,mcg,municipal corporation,election,mla,mp,official,officers,ward,district,police,sector",
     "author": "Vivek Matthew",
     "baseUrl": "https://cityofficials.bengawalk.com/delhi",
     "image": "https://cityofficials.bengawalk.com/sharecard.jpg"
@@ -79,6 +80,76 @@
         }
       ]
     },
+    "gurgaon_ward": {
+      "nameKey": "dept_gurgaon_ward",
+      "icon": "🏤",
+      "websiteUrl": "https://www.mcg.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/gurugram-wards-map/resource/802f00d5-38ab-45a5-823b-45dd870fd572",
+      "descriptionKey": "dept_gurgaon_ward_desc",
+      "sortBy": "boundaryNumber",
+      "color": "#0891b2",
+      "darkColor": "#a5f3fc",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "0124-2340019"
+        }
+      ]
+    },
+    "gurgaon_police_zone": {
+      "nameKey": "dept_gurgaon_police_zone",
+      "icon": "👮",
+      "group": "gurgaon_police",
+      "websiteUrl": "https://gurugram.gov.in/police/",
+      "geodataUrl": "https://onemapdepts.gmda.gov.in/ggmpolice/",
+      "descriptionKey": "dept_gurgaon_police_zone_desc",
+      "color": "#b91c1c",
+      "darkColor": "#fca5a5",
+      "childDepartments": ["gurgaon_police_station"],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "112"
+        }
+      ]
+    },
+    "gurgaon_police_station": {
+      "nameKey": "dept_gurgaon_police_station",
+      "icon": "👮",
+      "group": "gurgaon_police",
+      "websiteUrl": "https://gurugram.gov.in/police/",
+      "geodataUrl": "https://onemapdepts.gmda.gov.in/ggmpolice/",
+      "descriptionKey": "dept_gurgaon_police_station_desc",
+      "color": "#dc2626",
+      "darkColor": "#fecaca",
+      "parentDepartment": "gurgaon_police_zone",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "112"
+        }
+      ]
+    },
+    "noida_sector": {
+      "nameKey": "dept_noida_sector",
+      "icon": "🏙️",
+      "websiteUrl": "https://noidaauthorityonline.in/",
+      "geodataUrl": "https://www.arcgis.com/home/item.html?id=c711ba97b899443b9b57c152a4f9e391",
+      "descriptionKey": "dept_noida_sector_desc",
+      "sortBy": "boundaryNumber",
+      "color": "#06b6d4",
+      "darkColor": "#a5f3fc",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "0120-2514024"
+        }
+      ]
+    },
     "admin_district": {
       "nameKey": "dept_admin_district",
       "icon": "🏦",
@@ -115,24 +186,6 @@
         }
       ]
     },
-    "pincode": {
-      "nameKey": "dept_pincode",
-      "icon": "📮",
-      "websiteUrl": "https://www.indiapost.gov.in/sites/PostalCircles/Delhi/Pages/cpio.aspx",
-      "geodataUrl": "https://data.opencity.in/dataset/india-pincode-maps-2025/resource/f36d8d37-b768-4f01-afab-47dcef5e85a9",
-      "descriptionKey": "dept_pincode_desc",
-      "showBoundaryNumber": true,
-      "sortBy": "boundaryNumber",
-      "color": "#7c3aed",
-      "darkColor": "#c4b5fd",
-      "contacts": [
-        {
-          "type": "phone",
-          "labelKey": "contact_helpline",
-          "value": "1800-266-6868"
-        }
-      ]
-    },
     "election_ac": {
       "nameKey": "dept_election_ac",
       "icon": "🗳️",
@@ -154,6 +207,24 @@
       "color": "#ea580c",
       "darkColor": "#fdba74",
       "contacts": []
+    },
+    "pincode": {
+      "nameKey": "dept_pincode",
+      "icon": "📮",
+      "websiteUrl": "https://www.indiapost.gov.in/sites/PostalCircles/Delhi/Pages/cpio.aspx",
+      "geodataUrl": "https://data.opencity.in/dataset/india-pincode-maps-2025/resource/f36d8d37-b768-4f01-afab-47dcef5e85a9",
+      "descriptionKey": "dept_pincode_desc",
+      "showBoundaryNumber": true,
+      "sortBy": "boundaryNumber",
+      "color": "#7c3aed",
+      "darkColor": "#c4b5fd",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1800-266-6868"
+        }
+      ]
     }
   }
 }

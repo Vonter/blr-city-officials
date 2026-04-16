@@ -288,7 +288,7 @@
         container,
         style: getDefaultBackgroundStyle(_darkMode.current),
         minZoom: 9,
-        maxZoom: 18,
+        maxZoom: cityConfig.map.maxZoom ?? 18,
         ...(cityConfig.map.maxBounds && {
           maxBounds: cityConfig.map.maxBounds
         }),

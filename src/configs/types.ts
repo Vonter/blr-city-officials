@@ -10,6 +10,7 @@ export interface CityConfig {
     defaultZoom: number;
     defaultCenter: [number, number];
     maxBounds?: [[number, number], [number, number]];
+    maxZoom?: number;
   };
   seo: {
     title: string;

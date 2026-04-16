@@ -1,11 +1,11 @@
 <script lang="ts">
   import { _, locale } from 'svelte-i18n';
   import { fromStore } from 'svelte/store';
-  import { selectedBoundaryMap, selectedDepartmentGroup } from '../../stores';
+  import { selectedBoundaryMap } from '../../stores';
   import { layers } from '../../assets/boundaries';
   import { cityConfig, isAllCitiesMode } from '../../configs/config';
   import { showCitySelector } from '../../stores';
-  import { getGroupKey } from '../../helpers/departmentGroup';
+  import { getGroupKey, findLowestLevelKey } from '../../helpers/departmentGroup';
   import { alternatingRowClass } from '../../helpers/styleUtils';
   import SidebarHeader from './SidebarHeader.svelte';
   import ShareButton from '../ShareButton.svelte';
@@ -89,8 +89,7 @@
         </button>
       {:else}
         <button
-          onclick={() =>
-            selectedBoundaryMap.set(group.keys[group.keys.length - 1])}
+          onclick={() => selectedBoundaryMap.set(findLowestLevelKey(group.keys))}
           class="block py-1.5 px-4 w-full text-left dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-neutral-700"
         >
           <span class="mr-1">{group.icon}</span>

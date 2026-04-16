@@ -79,14 +79,18 @@ export function getWardName(namecol: string): string {
 }
 
 export function getBoundaryNumber(namecol: string): string {
-  const colonMatch = namecol.match(/^(\d+):\s*.+$/);
+  const colonMatch = namecol.match(/^(\d+)\s*[A-Za-z]?\s*:\s*.+$/);
   if (colonMatch) return colonMatch[1];
 
-  const dashMatch = namecol.match(/^(\d+)-.+$/);
+  const dashMatch = namecol.match(/^(\d+)\s*[A-Za-z]?\s*-.+$/);
   if (dashMatch) return dashMatch[1];
 
   const prefixMatch = namecol.match(/^([A-Z]+\d+)\s+.+$/);
   if (prefixMatch) return prefixMatch[1];
+
+  // "Ward 1", "Sector 67", "Ward 21A", "Ward 139 A" → trailing number
+  const trailingMatch = namecol.match(/\s(\d+)(?:[\/\-]\d+)?\s*[A-Za-z]?$/);
+  if (trailingMatch) return trailingMatch[1];
 
   return '';
 }
@@ -104,13 +108,13 @@ export function sortedDistricts(
         a.properties?.['wardName'] || a.properties?.['namecol'] || '';
       const bName =
         b.properties?.['wardName'] || b.properties?.['namecol'] || '';
-      return aName.localeCompare(bName);
+      return aName.localeCompare(bName, undefined, { numeric: true });
     });
   }
   return features.sort((a, b) => {
     const aName = a.properties?.['wardName'] || a.properties?.['namecol'] || '';
     const bName = b.properties?.['wardName'] || b.properties?.['namecol'] || '';
-    return aName.localeCompare(bName);
+    return aName.localeCompare(bName, undefined, { numeric: true });
   });
 }
 
