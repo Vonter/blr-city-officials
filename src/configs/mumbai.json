@@ -50,23 +50,13 @@
         },
         {
           "type": "twitter",
-          "labelKey": "contact_storm_water_drains",
-          "value": "mybmcSWD"
-        },
-        {
-          "type": "twitter",
-          "labelKey": "contact_roads",
-          "value": "mybmcRoads"
-        },
-        {
-          "type": "twitter",
-          "labelKey": "contact_bridges",
-          "value": "mybmcBridges"
-        },
-        {
-          "type": "twitter",
           "labelKey": "contact_health",
           "value": "mybmcHealthDept"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_solid_waste_management",
+          "value": "mybmcSWM"
         }
       ],
       "commonOfficials": [
