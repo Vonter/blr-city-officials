@@ -123,11 +123,6 @@
       "darkColor": "#fca5a5",
       "contacts": [
         {
-          "type": "email",
-          "labelKey": "contact_email",
-          "value": "web-pol-hyd@tspolice.gov.in"
-        },
-        {
           "type": "twitter",
           "labelKey": "contact_twitter",
           "value": "hydcitypolice"
