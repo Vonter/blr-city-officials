@@ -54,7 +54,12 @@
         {
           "type": "twitter",
           "labelKey": "contact_twitter",
-          "value": "PMaborkar"
+          "value": "pmcpune"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "pmccarepune"
         }
       ],
       "commonOfficials": [
