@@ -53,7 +53,7 @@
         rel="noopener noreferrer"
         class={CONTACT_LINK_CLASS}
       >
-        <Icon name="phone" class="h-4 w-4 mr-2 flex-shrink-0" />
+        <Icon name="whatsapp" class="h-4 w-4 mr-2 flex-shrink-0" />
         <span class="truncate">{official.WhatsApp}</span>
       </a>
     {/if}

@@ -285,7 +285,7 @@
           "designationRegional": "ಉಪ ಅರಣ್ಯ ಸಂರಕ್ಷಣಾಧಿಕಾರಿ",
           "name": "Sudarshan G K",
           "nameRegional": "ಸುದರ್ಶನ್ ಜಿ ಕೆ",
-          "phone": "9481236649",
+          "phone": "9480683047",
           "email": ""
         },
         {
@@ -441,6 +441,105 @@
         }
       ]
     },
+    "bescom_zone": {
+      "nameKey": "dept_bescom_zone",
+      "icon": "💡",
+      "websiteUrl": "https://bescom.karnataka.gov.in/92/zones/en",
+      "geodataUrl": "https://data.opencity.in/dataset/bescom-boundary-maps",
+      "descriptionKey": "dept_bescom_zone_desc",
+      "color": "#d97706",
+      "darkColor": "#fde68a",
+      "childDepartments": [
+        "bescom_circle"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1912"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "919449844640"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_grievance_redressal",
+          "value": "919483191212"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_grievance_redressal",
+          "value": "919483191222"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "helpline@bescom.co.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "NammaBESCOM"
+        }
+      ],
+      "sources": [
+        "https://bescom.karnataka.gov.in/uploads/storage/slids/1715580125.jpg",
+        "https://bescom.karnataka.gov.in/uploads/storage/slids/1715580094.jpg",
+        "https://bescom.karnataka.gov.in/92/zones/en"
+      ]
+    },
+    "bescom_circle": {
+      "nameKey": "dept_bescom_circle",
+      "icon": "💡",
+      "websiteUrl": "https://bescom.karnataka.gov.in/92/zones/en",
+      "geodataUrl": "https://data.opencity.in/dataset/bescom-boundary-maps",
+      "descriptionKey": "dept_bescom_circle_desc",
+      "color": "#d97706",
+      "darkColor": "#fde68a",
+      "parentDepartment": "bescom_zone",
+      "childDepartments": [
+        "bescom_division"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1912"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "919449844640"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_grievance_redressal",
+          "value": "919483191212"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_grievance_redressal",
+          "value": "919483191222"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "helpline@bescom.co.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "NammaBESCOM"
+        }
+      ],
+      "sources": [
+        "https://bescom.karnataka.gov.in/uploads/storage/slids/1715580125.jpg",
+        "https://bescom.karnataka.gov.in/uploads/storage/slids/1715580094.jpg",
+        "https://bescom.karnataka.gov.in/92/zones/en"
+      ]
+    },
     "bescom_division": {
       "nameKey": "dept_bescom_division",
       "icon": "💡",
@@ -464,6 +563,16 @@
           "value": "919449844640"
         },
         {
+          "type": "whatsapp",
+          "labelKey": "contact_grievance_redressal",
+          "value": "919483191212"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_grievance_redressal",
+          "value": "919483191222"
+        },
+        {
           "type": "email",
           "labelKey": "contact_email",
           "value": "helpline@bescom.co.in"
@@ -473,7 +582,13 @@
           "labelKey": "contact_twitter",
           "value": "NammaBESCOM"
         }
-      ]
+      ],
+      "sources": [
+        "https://bescom.karnataka.gov.in/uploads/storage/slids/1715580125.jpg",
+        "https://bescom.karnataka.gov.in/uploads/storage/slids/1715580094.jpg",
+        "https://bescom.karnataka.gov.in/92/zones/en"
+      ],
+      "parentDepartment": "bescom_circle"
     },
     "bescom_subdivision": {
       "nameKey": "dept_bescom_subdivision",
@@ -500,6 +615,16 @@
           "value": "919449844640"
         },
         {
+          "type": "whatsapp",
+          "labelKey": "contact_grievance_redressal",
+          "value": "919483191212"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_grievance_redressal",
+          "value": "919483191222"
+        },
+        {
           "type": "email",
           "labelKey": "contact_email",
           "value": "helpline@bescom.co.in"
@@ -509,6 +634,11 @@
           "labelKey": "contact_twitter",
           "value": "NammaBESCOM"
         }
+      ],
+      "sources": [
+        "https://bescom.karnataka.gov.in/uploads/storage/slids/1715580125.jpg",
+        "https://bescom.karnataka.gov.in/uploads/storage/slids/1715580094.jpg",
+        "https://bescom.karnataka.gov.in/92/zones/en"
       ]
     },
     "bescom_section": {
@@ -533,6 +663,16 @@
           "value": "919449844640"
         },
         {
+          "type": "whatsapp",
+          "labelKey": "contact_grievance_redressal",
+          "value": "919483191212"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_grievance_redressal",
+          "value": "919483191222"
+        },
+        {
           "type": "email",
           "labelKey": "contact_email",
           "value": "helpline@bescom.co.in"
@@ -542,6 +682,11 @@
           "labelKey": "contact_twitter",
           "value": "NammaBESCOM"
         }
+      ],
+      "sources": [
+        "https://bescom.karnataka.gov.in/uploads/storage/slids/1715580125.jpg",
+        "https://bescom.karnataka.gov.in/uploads/storage/slids/1715580094.jpg",
+        "https://bescom.karnataka.gov.in/92/zones/en"
       ]
     },
     "bwssb_division": {
@@ -712,6 +857,90 @@
         }
       ]
     },
+    "police_traffic_dcp": {
+      "nameKey": "dept_police_traffic_dcp",
+      "icon": "🚔",
+      "group": "police_traffic",
+      "websiteUrl": "https://btp.karnataka.gov.in/btp_map_locations/en",
+      "geodataUrl": "https://data.opencity.in/dataset/bengaluru-traffic-police-jurisdictions",
+      "descriptionKey": "dept_police_traffic_dcp_desc",
+      "color": "#ef4444",
+      "darkColor": "#fecaca",
+      "childDepartments": [
+        "police_traffic_acp"
+      ],
+      "commonOfficials": [
+        {
+          "designation": "Joint Commissioner of Traffic",
+          "designationRegional": "ಜಂಟಿ ಪೊಲೀಸ್ ಆಯುಕ್ತರು (ಸಂಚಾರ)",
+          "name": "",
+          "nameRegional": "",
+          "phone": "9480801006",
+          "email": "addlcptrafficbcp@ksp.gov.in"
+        }
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "112"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "22942276"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "addlcptrafficbcp@ksp.gov.in"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "blrcitytraffic"
+        }
+      ]
+    },
+    "police_traffic_acp": {
+      "nameKey": "dept_police_traffic_acp",
+      "icon": "🚔",
+      "group": "police_traffic",
+      "websiteUrl": "https://btp.karnataka.gov.in/btp_map_locations/en",
+      "geodataUrl": "https://data.opencity.in/dataset/bengaluru-traffic-police-jurisdictions",
+      "descriptionKey": "dept_police_traffic_acp_desc",
+      "color": "#ef4444",
+      "darkColor": "#fecaca",
+      "parentDepartment": "police_traffic_dcp",
+      "childDepartments": [
+        "police_traffic"
+      ],
+      "commonOfficials": [
+        {
+          "designation": "ACP Traffic (Planning)",
+          "designationRegional": "ಸಹಾಯಕ ಪೊಲೀಸ್ ಆಯುಕ್ತರು, ಸಂಚಾರ (ಯೋಜನೆ)",
+          "name": "",
+          "nameRegional": "",
+          "phone": "9480801809",
+          "email": "abletrafficplanningbcp@ksp.gov.in"
+        },
+        {
+          "designation": "ACP Traffic (TTI & RSI)",
+          "designationRegional": "ಸಹಾಯಕ ಪೊಲೀಸ್ ಆಯುಕ್ತರು, ಸಂಚಾರ (ಟಿಟಿಐ ಮತ್ತು ಆರ್ಎಸ್ಐ)",
+          "name": "",
+          "nameRegional": "",
+          "phone": "9480801808",
+          "email": "ablettitrafficbcp@ksp.gov.in"
+        }
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "112"
+        }
+      ]
+    },
     "police_traffic": {
       "nameKey": "dept_police_traffic",
       "icon": "🚔",
@@ -721,11 +950,22 @@
       "descriptionKey": "dept_police_traffic_desc",
       "color": "#ef4444",
       "darkColor": "#fecaca",
+      "parentDepartment": "police_traffic_acp",
       "contacts": [
         {
           "type": "phone",
           "labelKey": "contact_helpline",
           "value": "112"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "22942276"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "addlcptrafficbcp@ksp.gov.in"
         },
         {
           "type": "twitter",

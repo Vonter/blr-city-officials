@@ -60,6 +60,7 @@ export interface DepartmentConfig {
   showBoundaryNumber?: boolean;
   sortBy?: 'boundaryNumber' | 'wardName';
   showWebsite?: boolean;
+  sources?: string[];
 }
 
 export interface OfficeLocation {
@@ -80,6 +81,8 @@ export interface Contact {
     | 'website';
   labelKey: string;
   value: string;
+  name?: string;
+  regionalName?: string;
 }
 
 export interface CommonOfficial {

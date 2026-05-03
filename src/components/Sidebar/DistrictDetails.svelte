@@ -79,6 +79,7 @@
     return !!(
       official.Phone ||
       official['E-Mail'] ||
+      official.WhatsApp ||
       (official.Name && official.Name !== '-')
     );
   }

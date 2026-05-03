@@ -25,7 +25,6 @@ export function getContactHref(contact: Contact): string {
 }
 
 export function getContactIconName(type: string): string {
-  if (type === 'whatsapp') return 'phone';
   if (type === 'website') return 'external-link';
   return type;
 }

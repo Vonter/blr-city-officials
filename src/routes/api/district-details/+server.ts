@@ -45,6 +45,7 @@ export const GET: RequestHandler = async ({ url, request }) => {
           NameRegional: o.NameRegional,
           Phone: o.Phone,
           'E-Mail': o['E-Mail'],
+          WhatsApp: o.WhatsApp,
           Twitter: o.Twitter,
           Source: o.Source,
           AreaRegional: o.AreaRegional,

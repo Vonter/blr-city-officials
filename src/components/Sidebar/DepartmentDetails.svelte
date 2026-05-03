@@ -44,12 +44,12 @@
   const isRegional = $derived(isRegionalLocale(locale));
 </script>
 
-{#if extraContacts.length > 0}
+{#if filteredDefaultContacts.length > 0}
   <div
     class="bg-white dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-neutral-700 break-words mb-4"
   >
     <div class="flex flex-wrap gap-2">
-      {#each extraContacts as contact}
+      {#each filteredDefaultContacts as contact}
         <a
           href={getContactHref(contact)}
           target={isExternalContact(contact.type) ? '_blank' : undefined}
@@ -72,12 +72,12 @@
   </div>
 {/if}
 
-{#if filteredDefaultContacts.length > 0}
+{#if extraContacts.length > 0}
   <div
     class="bg-white dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-neutral-700 break-words mb-4"
   >
     <div class="flex flex-wrap gap-2">
-      {#each filteredDefaultContacts as contact}
+      {#each extraContacts as contact}
         <a
           href={getContactHref(contact)}
           target={isExternalContact(contact.type) ? '_blank' : undefined}
